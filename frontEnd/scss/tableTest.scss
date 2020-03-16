@@ -1,0 +1,19 @@
+.vertical-align {
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+#loginVideo {
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#login-column, #video-column {
+    padding: 20px;
+    color: #112a50;
+    margin-bottom: 20px;
+    max-height: 320px;
+    max-width: 450px;
+}
