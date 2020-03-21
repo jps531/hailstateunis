@@ -1,0 +1,33 @@
+.vertical-align {
+    display: inline-flex;
+    align-items: center;
+    align-content: center;
+}
+
+#title {
+    padding: 20px;
+    color: #3b0811;
+}
+
+#seasons, #situations, #opponents, #search{
+    margin-bottom: 20px;
+}
+
+#filters{
+    justify-content: center;
+}
+
+.form-control{
+    display: inline-block;
+    width: 220px;
+}
+
+#table{
+    margin-left: -30px;
+    margin-right: -30px;
+}
+
+#opponentClear, #situationClear, #seasonClear, #searchClear{
+    margin-left: -10px;
+    margin-right: 10px;
+}

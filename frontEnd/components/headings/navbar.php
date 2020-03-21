@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../frontEnd/scss/navbar.scss">
+<link rel="stylesheet" href="components/scss/navbar.scss">
 
 <nav class="navbar navbar-dark navbar-expand-md">
   <a class="navbar-brand" href="testTest.php.tmp.html">

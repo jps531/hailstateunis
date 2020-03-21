@@ -1,0 +1,32 @@
+.table > tbody > tr > td, .table > tbody > tr > th, .table > thead > tr > th {
+    vertical-align: middle;
+    text-align: center;
+}
+
+btn{
+    opacity: 0;
+}
+
+.page-link, .page-link:hover{
+    color: #3b0811;
+}
+
+.page-item.active .page-link, .btn-secondary{
+    background-color: #3b0811;
+    border-color: #3b0811;
+}
+
+.page-item.active .page-link:hover, .btn-secondary:hover, .show > .btn-secondary.dropdown-toggle{
+    background-color: #4d2129;
+    border-color: #4d2129;
+}
+
+.pagination, .pagination-detail{
+    justify-content: center !important;
+    display: flex;
+    float: none !important;
+} 
+
+.pagination-info{
+    margin-right: 20px !important;
+}
