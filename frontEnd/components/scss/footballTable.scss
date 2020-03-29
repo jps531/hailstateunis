@@ -1,32 +1,181 @@
 .table > tbody > tr > td, .table > tbody > tr > th, .table > thead > tr > th {
     vertical-align: middle;
     text-align: center;
+    border: none;
+}
+
+.table thead tr,
+.table thead th {
+  border: none;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: transparent;
+}
+
+.mr-2{
+  margin-right: 0px !important;
+}
+
+td.aHelmet{
+  padding-right: 1px;
+}
+
+td.hHelmet{
+  padding-left: 1px;
+}
+
+span.badge.badge-success, span.badge.badge-danger{
+  text-transform: uppercase;
+}
+
+.table {
+    border-spacing: 0 0.3rem !important;
+  }
+
+.table td {
+  background: #f8f8f8;
+}
+
+.table tr{
+    padding-bottom: 10px;
+}
+
+.table td:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.table td:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 btn{
     opacity: 0;
 }
 
-.page-link, .page-link:hover{
-    color: #3b0811;
+.table{
+    margin:0 auto;
 }
 
-.page-item.active .page-link, .btn-secondary{
+.page-item.active .page-link{
     background-color: #3b0811;
     border-color: #3b0811;
 }
 
-.page-item.active .page-link:hover, .btn-secondary:hover, .show > .btn-secondary.dropdown-toggle{
-    background-color: #4d2129;
-    border-color: #4d2129;
+.page-link{
+    color: #3b0811;
 }
 
-.pagination, .pagination-detail{
-    justify-content: center !important;
-    display: flex;
-    float: none !important;
-} 
+.page-link:hover{
+    color: #462329;
+}
 
-.pagination-info{
-    margin-right: 20px !important;
+td.date.min-sm.sorting_1{
+  padding-right: 10px;
+}
+
+#footballTable_info{
+  white-space: normal;
+}
+
+#footballTable_length, #footballTable_info, #footballTable_paginate {
+  justify-content: center;
+  display: flex;
+  padding-bottom: 10px;
+  top: 38px;
+  left: 8px;
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child::before{
+  content: '+';
+  background-color: white;
+  color: #3b0811;
+  border-radius: 14px;
+  box-shadow: none;
+  top: 38px;
+  left: 8px;
+  font-weight: bold;
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child::before {
+  content: '-';
+  background-color: white;
+  color: #3b0811;
+  border-radius: 14px;
+  box-shadow: none;
+  font-weight: bold;
+}
+
+table.dataTable thead .sorting:before, table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_desc_disabled:before  {
+    font-style: normal;
+    -webkit-font-variant-ligatures: normal;
+            font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 90%;
+    line-height: 1.45em;
+    font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  }
+   
+  table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:after {
+    font-style: normal;
+    -webkit-font-variant-ligatures: normal;
+            font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 90%;
+    line-height: 1.45em;
+    font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  }
+
+  div.calendarDate {
+    font-size:.4em;
+    /*change calendarIcon size */
+    display: block;
+    position: relative;
+    width: 7em;
+    height: 7em;
+    background-color: #fff;
+    border-radius: 0.7em;
+    -moz-border-radius: 0.7em;
+    overflow: hidden;
+}
+div.calendarDate * {
+    display: block;
+    width: 100%;
+    font-size: 1em;
+    font-style: normal;
+    text-align: center;
+}
+div.calendarDate a {
+    position: absolute;
+    top: 0;
+    padding: 0.2em 0;
+    color: #fff;
+    background-color: #3b0811;
+}
+div.calendarDate a:hover {
+  color: #fff;
+}
+div.calendarDate em {
+    position: absolute;
+    bottom: 0em;
+    color: #fff;
+    padding-top:.2em;
+    height: 1.6em;
+    background-color: #3b0811;
+}
+div.calendarDate span {
+    font-size: 2.8em;
+    letter-spacing: -0.05em;
+    padding-top: 0.55em;
+    color: #2f2f2f;
 }

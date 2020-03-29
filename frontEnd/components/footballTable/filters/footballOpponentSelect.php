@@ -1,4 +1,4 @@
-<select class="selectpicker" data-live-search="true" data-actions-box="true" id="selectOpponent" title="Opponents">
+<select class="selectpicker" data-live-search="true" id="selectOpponent" title="Opponents"> 
   <optgroup label="SEC West">
     <option>Ole Miss</option>
   </optgroup>

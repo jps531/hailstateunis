@@ -31,12 +31,13 @@
       </div>
     </div>
     <div class="row" id="table">
-      <div class="col-md-12">
+      <div class="col-xs-12">
         <?php include "components/footballTable/footballTable.php"; ?>
       </div>
     </div>
   </div>
-  <script type="text/javascript" src="components/js/searchTable.js"></script> 
+  <script type="text/javascript" src="components/js/buildTable.js"></script> 
+  <script type="text/javascript" src="components/js/calenderIcon.js"></script> 
   </body>
 </html>
 

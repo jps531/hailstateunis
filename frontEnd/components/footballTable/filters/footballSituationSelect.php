@@ -1,4 +1,4 @@
-<select class="selectpicker" data-live-search="true" data-actions-box="true" id="selectSituation" title="Situations">
+<select class="selectpicker" data-live-search="true" id="selectSituation" title="Situations">
   <option>Black Jerseys</option>
   <option>Gold-Accented Alternates</option>
   <option>All-White</option>

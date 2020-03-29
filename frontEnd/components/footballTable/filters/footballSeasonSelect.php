@@ -1,4 +1,4 @@
-<select class="selectpicker" data-live-search="true" data-actions-box="true" title="Seasons" id="selectYear">
+<select class="selectpicker" data-live-search="true" title="Seasons" id="selectYear">
   <option>2019</option>
   <option>2018</option>
   <option>2017</option>
