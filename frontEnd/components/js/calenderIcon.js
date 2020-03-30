@@ -49,17 +49,13 @@ function getDateInfo(YYYYMMDD){
 
 function setDateIconInfo(date, j){
     getDateInfo(date);
-    console.log(dateInfo);
 
     document.getElementById("dayOfWeek-".concat(j)).innerHTML = dateInfo[0];
     document.getElementById("month-".concat(j)).innerHTML = dateInfo[1];
     document.getElementById("day-".concat(j)).innerHTML = dateInfo[2];
-    console.log('here');
 }
 
 for (j=0; j < 4; j++){
     var j_date = document.getElementById("date-".concat(j)).getAttribute('title');
-    console.log(j_date);
-    console.log(j);
     setDateIconInfo(j_date, j);
 }

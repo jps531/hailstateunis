@@ -36,8 +36,8 @@
       </div>
     </div>
   </div>
-  <script type="text/javascript" src="components/js/buildTable.js"></script> 
   <script type="text/javascript" src="components/js/calenderIcon.js"></script> 
+  <script type="text/javascript" src="components/js/buildTable.js"></script> 
   </body>
 </html>
 

@@ -14,6 +14,7 @@
       <th scope="col">W/L</th>
       <th scope="col" data-type="number">PF</th>
       <th scope="col" data-type="number">PA</th>
+      <th scope="col">Article</th>
       <th scope="col">Opponent</th>
     </tr>
   </thead>
@@ -68,7 +69,10 @@
       <td class="pa">
         <span class="badge badge-dark">38</span>
       </td>
-      <td class="opponent">
+      <td class="article" title="Bulldogs Lose Music City Bowl in All-White">
+        https://www.hailstateunis.com/2019-football-season/bulldogs-lose-music-city-bowl-in-all-white
+      </td>
+      <td class="opponent" title="Music City Bowls ACC">
         <span class="badge" style="background-color: #ca0e33; color: white;">Louisville</span>
       </td>
     </tr>
@@ -122,7 +126,10 @@
       <td class="pa">
         <span class="badge badge-secondary">20</span>
       </td>
-      <td class="opponent">
+      <td class="article" title="Mississippi State Brings Back the Gold, Beats Ole Miss to Keep the Egg">
+        https://www.hailstateunis.com/2019-football-season/mississippi-state-brings-back-the-gold-beats-ole-miss-to-keep-the-egg
+      </td>
+      <td class="opponent" title="SEC West">
         <span class="badge" style="background-color: #0e2143; color: #b62933;">Ole Miss</span>
       </td>
     </tr>
@@ -176,7 +183,10 @@
       <td class="pa">
         <span class="badge badge-secondary">7</span>
       </td>
-      <td class="opponent">
+      <td class="article" title="Bulldogs Win Big on Homecoming in All-Black">
+        https://www.hailstateunis.com/2019-football-season/bulldogs-win-big-on-homecoming-in-all-black
+      </td>
+      <td class="opponent" title="FCS Homecoming">
         <span class="badge" style="background-color: #42216e; color: white;">Abilene Christian</span>
       </td>
     </tr>
@@ -230,7 +240,10 @@
       <td class="pa">
         <span class="badge badge-secondary">3</span>
       </td>
-      <td class="opponent">
+      <td class="article" title="Bulldogs Steamroll Ole Miss, Win Back the Egg in White Helmets and Gray Pants">
+        https://www.hailstateunis.com/2018-football-season/bulldogs-steamroll-ole-miss-win-back-the-egg-in-white-helmets-and-gray-pants
+      </td>
+      <td class="opponent" title="SEC West">
         <span class="badge" style="background-color: #0e2143; color: #b62933;">Ole Miss</span>
       </td>
     </tr>

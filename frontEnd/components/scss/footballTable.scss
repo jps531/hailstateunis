@@ -88,6 +88,23 @@ td.date.min-sm.sorting_1{
   left: 8px;
 }
 
+#innerTable{
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  padding: 10px;
+}
+
+#innerArticle{
+  padding: 10px;
+}
+
+#innerTitle{
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
 table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child::before{
   content: '+';
   background-color: white;
@@ -137,7 +154,7 @@ table.dataTable thead .sorting:before, table.dataTable thead .sorting_asc:before
   }
 
   div.calendarDate {
-    font-size:.4em;
+    font-size:6px;
     /*change calendarIcon size */
     display: block;
     position: relative;
