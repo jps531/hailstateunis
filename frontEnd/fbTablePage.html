@@ -1,6 +1,7 @@
-
 <!doctype html>
 <html lang="en">
+
+  <!-- Head/Navbar/Styles -->
   <head>
     <title>Football Uniform History</title>
         <!-- Required meta tags -->
@@ -35,42 +36,57 @@
     <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap.min.js"></script>
     <script type="text/javascript" src="https:////cdn.datatables.net/plug-ins/1.10.20/sorting/title-string.js"></script>
-    <link rel="stylesheet" href="components/scss/tableTest.scss">
-    <link rel="stylesheet" href="components/scss/navbar.scss">
+    <link rel="stylesheet" href="components/scss/fbTablePage.scss">
+    <!-- Stylesheet -->
+<link rel="stylesheet" href="components/scss/navbar.scss">
 
+<!-- Navbar -->
 <nav class="navbar navbar-dark navbar-expand-md">
+
+  <!-- Brand -->
   <a class="navbar-brand" href="testTest.php.tmp.html">
     <img src="https://i.imgur.com/5Kqz72q.png" width="45" alt="" class="d-inline-block align-middle mr-2">
   </a>
+
+  <!-- Mobile Collapse Button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbarMd">
     <i class="fas fa-bars"></i>
   </button>
+
+  <!-- Navbar Links -->
   <div class="navbar-collapse collapse justify-content-end" id="collapsingNavbarMd">
     <ul class="nav navbar-nav text-center">
       <li class="nav-item">
-        <a class="nav-link" href="testTest.php.tmp.html">Home</a>
+        <a class="nav-link" href="fbTablePage.php">Home</a>
       </li>
     </ul>
   </div>
 </nav>  </head>
 
+  <!-- Body/Filters/Table -->
   <body>
     <div class="container">
+
+    <!-- Title -->
     <div class="row" id="title">
       <div class="col-md text-center">
         <h1>Mississippi State Football Uniform History</h1>
       </div>
     </div>
+
+    <!-- Filters -->
     <div class="row" id="filters">
       <div class="col-xs-3 text-center" id="seasons">
-        <select class="selectpicker" data-live-search="true" title="Seasons" id="selectYear">
+        <!-- Season Select -->
+<select class="selectpicker" data-live-search="true" title="Seasons" id="selectYear">
   <option>2019</option>
   <option>2018</option>
   <option>2017</option>
 </select>
 <button class="btn" id="seasonClear"><i class="fas fa-times-circle"></i></button>      </div>
       <div class="col-xs-3 text-center" id="situations">
-        <select class="selectpicker" data-live-search="true" id="selectSituation" title="Situations">
+        <!-- Situation Select -->
+<select class="selectpicker" data-live-search="true" id="selectSituation" title="Situations">
   <option>Black Jerseys</option>
   <option>Gold-Accented Alternates</option>
   <option>All-White</option>
@@ -78,7 +94,8 @@
 <button class="btn" id="situationClear"><i class="fas fa-times-circle"></i></button>
       </div>
       <div class="col-xs-3 text-center" id="opponents">
-        <select class="selectpicker" data-live-search="true" id="selectOpponent" title="Opponents"> 
+        <!-- Opponent Select -->
+<select class="selectpicker" data-live-search="true" id="selectOpponent" title="Opponents"> 
   <optgroup label="SEC West">
     <option>Ole Miss</option>
   </optgroup>
@@ -91,14 +108,21 @@
 </select>
 <button class="btn" id="opponentClear"><i class="fas fa-times-circle"></i></button>      </div>
       <div class="col-xs-3 text-center" id="search">
-        <input class="form-control" id="fbSearch" type="text" placeholder="Search.." autocomplete="off">
+        <!-- Search Field -->
+<input class="form-control" id="fbSearch" type="text" placeholder="Search.." autocomplete="off">
 <button class="btn" id="searchClear"><i class="fas fa-times-circle"></i></button>      </div>
     </div>
+
+    <!-- Table -->
     <div class="row" id="table">
       <div class="col-xs-12">
-        <link rel="stylesheet" href="components/scss/footballTable.scss">
+        <!-- Styling -->
+<link rel="stylesheet" href="components/scss/footballTable.scss">
 
+<!-- Football Table -->
 <table class="table table-sm nowrap" id="footballTable" style="width:95%">
+
+  <!-- Table Head -->
   <thead>
     <tr>
       <th scope="col" data-type="number">Season</th>
@@ -116,7 +140,11 @@
       <th scope="col">Opponent</th>
     </tr>
   </thead>
+
+  <!-- Table Body -->
   <tbody class="list" id="footballTableBody">
+
+    <!-- Game 0 -->
     <tr id="game-0">
       <td class="season">
         <span class="badge" style="background-color: #3b0811; color: white;">2019</span>
@@ -174,6 +202,8 @@
         <span class="badge" style="background-color: #ca0e33; color: white;">Louisville</span>
       </td>
     </tr>
+
+    <!-- Game 1 -->
     <tr id="game-1">
       <td class="season">
         <span class="badge" style="background-color: #3b0811; color: white;">2019</span>
@@ -231,6 +261,8 @@
         <span class="badge" style="background-color: #0e2143; color: #b62933;">Ole Miss</span>
       </td>
     </tr>
+
+    <!-- Game 2 -->
     <tr id="game-2">
       <td class="season">
         <span class="badge" style="background-color: #3b0811; color: white;">2019</span>
@@ -288,6 +320,8 @@
         <span class="badge" style="background-color: #42216e; color: white;">Abilene Christian</span>
       </td>
     </tr>
+
+    <!-- Game 3 -->
     <tr id="game-3">
       <td class="season">
         <span class="badge" style="background-color: #3b0811; color: white;">2018</span>
@@ -346,11 +380,21 @@
       </td>
     </tr>
   </tbody>
+
+  <!-- Table Footer -->
+  <tfoot>
+    <tr>
+      <td colspan="13" id="footerRow">
+        <div class="container" id="winLossTotal"></div>
+      </td>
+    </tr>
+  </tfoot>
 </table>      </div>
     </div>
   </div>
+
+  <!-- Javascript -->
   <script type="text/javascript" src="components/js/calenderIcon.js"></script> 
   <script type="text/javascript" src="components/js/buildTable.js"></script> 
   </body>
 </html>
-

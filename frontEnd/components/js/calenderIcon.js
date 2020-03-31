@@ -1,3 +1,5 @@
+//-----------
+// Initialize Arrays
 var dateInfo = [];
 
 var months = [
@@ -24,7 +26,10 @@ var daysOfWeek = [
     ['Saturday' , '5'],
     ['Sunday' , '6']
 ]
+//-----------
 
+//-----------
+// Functions- Create Calendar Icon
 function getDateInfo(YYYYMMDD){
     var date = new Date(YYYYMMDD);
     var dayOfWeek = date.getDay();
@@ -54,8 +59,12 @@ function setDateIconInfo(date, j){
     document.getElementById("month-".concat(j)).innerHTML = dateInfo[1];
     document.getElementById("day-".concat(j)).innerHTML = dateInfo[2];
 }
+//-----------
 
+//-----------
+// Create Calendar Icons for All Table Rows
 for (j=0; j < 4; j++){
     var j_date = document.getElementById("date-".concat(j)).getAttribute('title');
     setDateIconInfo(j_date, j);
 }
+//-----------

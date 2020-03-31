@@ -1,14 +1,10 @@
-.vertical-align {
-    display: inline-flex;
-    align-items: center;
-    align-content: center;
-}
-
+/*** page title ***/
 #title {
     padding: 20px;
     color: #3b0811;
 }
 
+/*** filters ***/
 #seasons, #situations, #opponents, #search{
     margin-bottom: 20px;
 }
@@ -22,11 +18,12 @@
     width: 220px;
 }
 
-#table{
-    justify-content: center;
-}
-
 #opponentClear, #situationClear, #seasonClear, #searchClear{
     margin-left: -10px;
     margin-right: 10px;
+}
+
+/*** table container ***/
+#table{
+    justify-content: center;
 }

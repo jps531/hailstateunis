@@ -1,3 +1,4 @@
+<!-- Opponent Select -->
 <select class="selectpicker" data-live-search="true" id="selectOpponent" title="Opponents"> 
   <optgroup label="SEC West">
     <option>Ole Miss</option>

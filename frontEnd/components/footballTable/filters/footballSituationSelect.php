@@ -1,3 +1,4 @@
+<!-- Situation Select -->
 <select class="selectpicker" data-live-search="true" id="selectSituation" title="Situations">
   <option>Black Jerseys</option>
   <option>Gold-Accented Alternates</option>

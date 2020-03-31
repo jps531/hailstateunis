@@ -1,6 +1,10 @@
+<!-- Styling -->
 <link rel="stylesheet" href="components/scss/footballTable.scss">
 
+<!-- Football Table -->
 <table class="table table-sm nowrap" id="footballTable" style="width:95%">
+
+  <!-- Table Head -->
   <thead>
     <tr>
       <th scope="col" data-type="number">Season</th>
@@ -18,7 +22,11 @@
       <th scope="col">Opponent</th>
     </tr>
   </thead>
+
+  <!-- Table Body -->
   <tbody class="list" id="footballTableBody">
+
+    <!-- Game 0 -->
     <tr id="game-0">
       <td class="season">
         <span class="badge" style="background-color: #3b0811; color: white;">2019</span>
@@ -76,6 +84,8 @@
         <span class="badge" style="background-color: #ca0e33; color: white;">Louisville</span>
       </td>
     </tr>
+
+    <!-- Game 1 -->
     <tr id="game-1">
       <td class="season">
         <span class="badge" style="background-color: #3b0811; color: white;">2019</span>
@@ -133,6 +143,8 @@
         <span class="badge" style="background-color: #0e2143; color: #b62933;">Ole Miss</span>
       </td>
     </tr>
+
+    <!-- Game 2 -->
     <tr id="game-2">
       <td class="season">
         <span class="badge" style="background-color: #3b0811; color: white;">2019</span>
@@ -190,6 +202,8 @@
         <span class="badge" style="background-color: #42216e; color: white;">Abilene Christian</span>
       </td>
     </tr>
+
+    <!-- Game 3 -->
     <tr id="game-3">
       <td class="season">
         <span class="badge" style="background-color: #3b0811; color: white;">2018</span>
@@ -248,4 +262,13 @@
       </td>
     </tr>
   </tbody>
+
+  <!-- Table Footer -->
+  <tfoot>
+    <tr>
+      <td colspan="13" id="footerRow">
+        <div class="container" id="winLossTotal"></div>
+      </td>
+    </tr>
+  </tfoot>
 </table>

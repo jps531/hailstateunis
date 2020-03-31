@@ -1,3 +1,4 @@
+<!-- Season Select -->
 <select class="selectpicker" data-live-search="true" title="Seasons" id="selectYear">
   <option>2019</option>
   <option>2018</option>
