@@ -5,7 +5,7 @@
 <nav class="navbar navbar-dark navbar-expand-md">
 
   <!-- Brand -->
-  <a class="navbar-brand" href="testTest.php.tmp.html">
+  <a class="navbar-brand" href="landingPage.php">
     <img src="https://i.imgur.com/5Kqz72q.png" width="45" alt="" class="d-inline-block align-middle mr-2">
   </a>
 
@@ -18,7 +18,16 @@
   <div class="navbar-collapse collapse justify-content-end" id="collapsingNavbarMd">
     <ul class="nav navbar-nav text-center">
       <li class="nav-item">
-        <a class="nav-link" href="fbTablePage.php">Home</a>
+        <a class="nav-link" href="fbTablePage.php">Football</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="bbTablePage.php">Baseball</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="mbkTablePage.php">Men's Basketball</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="wbkTablePage.php">Women's Basketball</a>
       </li>
     </ul>
   </div>

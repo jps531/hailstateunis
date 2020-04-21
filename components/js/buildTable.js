@@ -1,7 +1,25 @@
 //-----------
+// Load Filters
+$(function(){ $("#selectOpponent").selectpicker('render'); })
+$(function(){ $("#selectSituation").selectpicker('render'); })
+$(function(){ $("#selectYear").selectpicker('render'); })
+//-----------
+
+//-----------
 // Initialize Table
 var table = $('#footballTable').DataTable( {
-                "lengthMenu": [ [10, 2, 11, 12, 13, 14, 15, -1], [10, 2, 11, 12, 13, 14, 15, "All"] ],
+                "lengthMenu": [ [5, 10, 15, 20, 25, 40, 50, -1], [5, 10, 15, 20, 25, 40, 50, "All"] ],
+                "iDisplayLength":  10,
+                language: {
+                  paginate: {
+                    next: '<i class="fa fa-chevron-right" ></i>',
+                    previous: '<i class="fa fa-chevron-left" ></i>'
+                  }
+                },
+                fixedHeader: {
+                  header: true,
+                  footer: true
+                },
                 responsive: {
 
                   // Set Breakpoints
@@ -71,7 +89,7 @@ var table = $('#footballTable').DataTable( {
                 ],
 
                 // Table Options
-                "order": [[ 1, 'desc' ]],
+                "order": [[ 1, 'asc' ]],
                 searching: true,
                 dom: 'ltipr'
               });
@@ -96,10 +114,18 @@ $(function() {
 // Opponent Select
 $(document).ready(function(){
   $("#selectOpponent").on("change", function() {
-    table
-        .columns( 12 )
-        .search( this.value )
-        .draw();
+    if (this.value == ""){
+      table
+      .columns( 12 )
+      .search(this.value)
+      .draw();
+    }
+    else{
+      table
+          .columns( 12 )
+          .search( "^" + this.value + "$", true, false, true)
+          .draw();
+    }
   });
 });
 
@@ -111,12 +137,21 @@ $(function() {
 
 //-----------
 // Season Select
+var pageLength;
+
 $(document).ready(function(){
   $("#selectYear").on("change", function() {
     table
     .columns( 0 )
     .search( this.value )
     .draw();
+    if (this.value != ''){
+      pageLength = table.page.len();
+      table.page.len(-1).draw();
+    }
+    else if (table.page.len() == -1){
+      table.page.len(pageLength).draw();
+    }
   });
 });
 
@@ -131,7 +166,81 @@ $(function() {
 // Siutation Select
 $(document).ready(function(){
   $("#selectSituation").on("change", function() {
-    table.search( this.value ).draw();
+
+    console.log(this.value);
+    
+    if (this.value == 'All Alternates'){
+      table.columns(4).search('alternates').draw();
+    }
+
+    else if (this.value == 'Bulldog Helmets'){
+      table.columns(5).search('bulldog').draw();
+    }
+
+    else if (this.value == 'Shiny Maroon Helmets'){
+      table.columns(5).search('shiny maroon').draw();
+    }
+
+    else if (this.value == 'White Helmets'){
+      table.columns(5).search('white').draw();
+    }
+
+    else if (this.value == 'Maroon Jerseys'){
+      table.columns(6).search('maroon').draw();
+    }
+
+    else if (this.value == 'White Jerseys'){
+      table.columns(6).search('white').draw();
+    }
+
+    else if (this.value == 'Maroon Pants'){
+      table.columns(7).search('maroon').draw();
+    }
+
+    else if (this.value == 'White Pants'){
+      table.columns(7).search('white').draw();
+    }
+
+    else if (this.value == 'DWS 100'){
+      table.columns(6).search('dws 100').draw();
+    }
+
+    else if (this.value == 'August'){
+      table.columns(1).search('-08-').draw();
+    }
+
+    else if (this.value == 'September'){
+      table.columns(1).search('-09-').draw();
+    }
+
+    else if (this.value == 'October'){
+      table.columns(1).search('-10-').draw();
+    }
+
+    else if (this.value == 'November'){
+      table.columns(1).search('-11-').draw();
+    }
+
+    else if (this.value == 'December'){
+      table.columns(1).search('-12-').draw();
+    }
+
+    else if (this.value == 'January'){
+      table.columns(1).search('-01-').draw();
+    }
+
+    else if (this.value == 'White at Home'){
+      table.search('/white/ home').draw();
+    }
+
+    else if (!this.value){
+      table.columns().search(this.value).draw();
+      table.search(this.value).draw();
+    }
+
+    else{
+      table.search(this.value).draw();
+    }
   });
 });
 
@@ -147,11 +256,13 @@ $(function() {
 var wlTotal = '';
 var wins = 0;
 var losses = 0;
+var ties = 0;
 
 // Calculate Wins + Losses
 function getRecord(){
   wins = 0;
   losses = 0;
+  ties = 0;
   for (z=0; z < table.rows().count(); z++){
     if (table.row(z, {search:'applied'})[0].length > 0){
       if (table.cell(z,8).data().toString().includes('Win')){
@@ -160,6 +271,9 @@ function getRecord(){
       if (table.cell(z,8).data().toString().includes('Loss')){
         losses += 1;
       }
+      if (table.cell(z,8).data().toString().includes('TIE')){
+        ties += 1;
+      }
     }
     else{
     }
@@ -167,11 +281,11 @@ function getRecord(){
 }
 
 // Create String to Display
-function makeString(wins, losses){
+function makeString(wins, losses, ties){
   wlTotal = '<span class="badge badge-';
 
   if (wins + losses > 0){
-    percentage = (wins / (wins + losses)).toFixed(3);
+    percentage = ((wins + (.5 * ties)) / (wins + losses + ties)).toFixed(3);
   }
   else{
     percentage = 'no';
@@ -190,29 +304,38 @@ function makeString(wins, losses){
   }
 
   if (wins != 1 && losses != 1){
-    wlTotal += wins + ' Wins, ' + losses + ' Losses (' + percentage + ' Record)';
+    wlTotal += wins + ' Wins, ' + losses + ' Losses';
   }
   else if (wins == 1 && losses != 1){
-    wlTotal += wins + ' Win, ' + losses + ' Losses (' + percentage + ' Record)';
+    wlTotal += wins + ' Win, ' + losses + ' Losses';
   }
   else if (wins != 1 && losses == 1){
-    wlTotal += wins + ' Wins, ' + losses + ' Loss (' + percentage + ' Record)';
+    wlTotal += wins + ' Wins, ' + losses + ' Loss';
   }
   else if (wins == 1 && losses == 1){
-    wlTotal += wins + ' Win, ' + losses + ' Loss (' + percentage + ' Record)</span>';
+    wlTotal += wins + ' Win, ' + losses + ' Loss';
   }
+
+  if (ties == 1){
+    wlTotal += ', ' + ties + ' Tie';
+  }
+  else if (ties >= 1){
+    wlTotal += ', ' + ties + ' Ties';
+  }
+
+  wlTotal += ' (' + percentage + ' Record)</span>';
 }
 
 // Display String for Full Table
 getRecord();
-makeString(wins, losses);
+makeString(wins, losses, ties);
 document.getElementById('winLossTotal').innerHTML = wlTotal;
 
 // Alter String Each Time the Table is Filtered
 $(function() {
   table.on( 'search', function () {
     getRecord();
-    makeString(wins, losses);
+    makeString(wins, losses, ties);
     document.getElementById('winLossTotal').innerHTML = wlTotal;
   });
 });

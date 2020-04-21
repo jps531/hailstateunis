@@ -17,6 +17,7 @@
     <div class="row" id="title">
       <div class="col-md text-center">
         <h1>Mississippi State Football Uniform History</h1>
+        <?php include "components/footballTable/footballAboutModal.php"; ?>
       </div>
     </div>
 
@@ -45,7 +46,6 @@
   </div>
 
   <!-- Javascript -->
-  <script type="text/javascript" src="components/js/calenderIcon.js"></script> 
   <script type="text/javascript" src="components/js/buildTable.js"></script> 
   </body>
 </html>
