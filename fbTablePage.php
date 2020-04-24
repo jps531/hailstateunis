@@ -5,7 +5,7 @@
   <head>
     <title>Football Uniform History</title>
     <?php include "components/headings/head.php"; ?>
-    <link rel="stylesheet" href="components/scss/fbTablePage.scss">
+    <link rel="stylesheet" href="components/scss/tablePages.scss">
     <?php include "components/headings/navbar.php"; ?>
   </head>
 
@@ -46,6 +46,6 @@
   </div>
 
   <!-- Javascript -->
-  <script type="text/javascript" src="components/js/buildTable.js"></script> 
+  <script type="text/javascript" src="components/js/fbBuildTable.js"></script> 
   </body>
 </html>

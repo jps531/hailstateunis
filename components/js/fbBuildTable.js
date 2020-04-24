@@ -79,6 +79,7 @@ var table = $('#footballTable').DataTable( {
                 // Column Definitions
                 "columnDefs": [
                   {"orderable": false, 'targets': [2,3,4,5,6,7] },
+                  {"type": "num", 'targets': [9,10]},
                   {"className": "all", 'targets': [0,4,8,12]},
                   {"className": "min-lg", 'targets': [5,6,7]},
                   {"className": "min-md", 'targets': [2,3]},
@@ -166,8 +167,6 @@ $(function() {
 // Siutation Select
 $(document).ready(function(){
   $("#selectSituation").on("change", function() {
-
-    console.log(this.value);
     
     if (this.value == 'All Alternates'){
       table.columns(4).search('alternates').draw();

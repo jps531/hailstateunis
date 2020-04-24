@@ -79,6 +79,50 @@ span.badge.badge-success, span.badge.badge-danger{
   text-transform: uppercase;
 }
 
+#ncaa td{
+  background: #c6e9ff;
+}
+
+#secT td, #secChampionship td{
+  background: #ffd085;
+}
+
+#sweetSixteen td, #eliteEight td{
+  background: #ffcbc6;
+}
+
+#finalFour96 td{
+  background: #8ee8e4;
+}
+
+#finalFour17 td{
+  background: #c7ec81;
+}
+
+#finalFour18 td{
+  background: #c099ff;
+}
+
+#nationalChampionship td{
+  background: #dbb979;
+}
+
+#bowlGames td{
+  background: #ececec;
+}
+
+#wnit td{
+  background: #6e7cf2;
+}
+
+#nit td{
+  background: #a989dd;
+}
+
+#nitFinalFour td{
+  background: #ffc279;
+}
+
 /*** table footer ***/
 #winLossTotal{
   display: flex;
@@ -105,11 +149,12 @@ span.badge.badge-success, span.badge.badge-danger{
   color: #462329;
 }
 
-#footballTable_info{
+#footballTable_info, #mbkTable_info{
   white-space: normal;
 }
 
-#footballTable_length, #footballTable_info, #footballTable_paginate {
+#footballTable_length, #footballTable_info, #footballTable_paginate,
+#mbkTable_length, #mbkTable_info, #mbkTable_paginate {
   justify-content: center;
   display: flex;
   padding-bottom: 10px;

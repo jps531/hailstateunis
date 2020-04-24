@@ -1,5 +1,5 @@
 <!-- Styling -->
-<link rel="stylesheet" href="components/scss/footballTable.scss">
+<link rel="stylesheet" href="components/scss/tables.scss">
 
 <!-- Football Table -->
 <table class="table table-sm nowrap" id="footballTable" style="width:95%">
@@ -16,8 +16,8 @@
       <th scope="col">Jersey</th>
       <th scope="col">Pants</th>
       <th scope="col">W/L</th>
-      <th scope="col" data-type="number">PF</th>
-      <th scope="col" data-type="number">PA</th>
+      <th scope="col">PF</th>
+      <th scope="col">PA</th>
       <th scope="col">Article</th>
       <th scope="col">Opponent</th>
     </tr>
@@ -28,7 +28,7 @@
 
   <!-- Connect to Database -->
   <?php 
-  include "data/databaseConnection.php"; 
+  include "data/fbDatabaseConnection.php"; 
 
   // Perform Query
   $sql = "SELECT * FROM `game`\n"
@@ -70,14 +70,23 @@
       if ($row["gameID"] == "26"){
         $headcoach = 'Greg Knox';
       }
-
       else{
         $headcoach = $row["head_coach"];
       }
 
+      if ($row["location"] == 'bowl games'){
+        $rowID = 'bowlGames';
+      }
+      else if ($row["location"] == 'sec championships'){
+        $rowID = 'secChampionship';
+      }
+      else{
+        $rowID = 'regularSeason';
+      }
+
       $gameday = $row["gameday"][5] . $row["gameday"][6] . "-" . $row["gameday"][8] . $row["gameday"][9];
 
-      echo "<tr id='game-" . $row["gameID"] . "'>
+      echo "<tr id='" . $rowID . "'>
               <td class='season' data-sort='" . $row["gameday"] . "'>
                 <span class='badge' style='background-color: #3b0811; color: white;'>" . $row["yr"] . "</span>
               </td>
@@ -119,10 +128,10 @@
               <td class='result'>
                 <span class='badge badge-" . $resultColor . "'>" . $row["result"] . "</span>
               </td>
-              <td class='pf'>
+              <td class='pf' data-sort='" . $row["points_for"] . "'>
                 <span class='badge badge-" . $stateBadge . "'>" . $row["points_for"] . "</span>
               </td>
-              <td class='pa'>
+              <td class='pa' data-sort='" . $row["points_against"] . "'>
                 <span class='badge badge-" . $opponentBadge . "'>" . $row["points_against"] . "</span>
               </td>
               <td class='article' title=\"" . $row["article_title"] . "\" data-search='" . $headcoach . "'>

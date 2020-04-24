@@ -18,8 +18,8 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
-CREATE DATABASE footballTableData;
-use footballTableData;
+CREATE DATABASE mbkTableData;
+use mbkTableData;
 
 CREATE TABLE season (yr YEAR,
 					 head_coach VARCHAR(30),
@@ -28,35 +28,13 @@ CREATE TABLE season (yr YEAR,
 					 sec_wins INTEGER,
 					 sec_losses INTEGER,
 					 PRIMARY KEY (yr));
-
-CREATE TABLE pants (pantsID INTEGER,
-				    pColor VARCHAR(30),
-					pName VARCHAR(50),
-					pImage VARCHAR(100),
-					PRIMARY KEY (pantsID));
 					 
-CREATE TABLE jersey (jerseyID INTEGER,
-				     jColor VARCHAR(30),
-					 jName VARCHAR(50),
-					 jImage VARCHAR(100),
-					 PRIMARY KEY (jerseyID));
-					 
-CREATE TABLE helmet (helmetID INTEGER,
-				     hColor VARCHAR(30),
-					 hName VARCHAR(50),
-					 hImage VARCHAR(100),
-					 PRIMARY KEY (helmetID));
-					 
-CREATE TABLE combination (comboID INTEGER,
-						  helmetID INTEGER,
-						  jerseyID INTEGER,
-						  pantsID INTEGER,
-						  cName VARCHAR(100),
-						  cImage VARCHAR(100),
-						  PRIMARY KEY (comboID, helmetID, jerseyID, pantsID),
-						  FOREIGN KEY (helmetID) REFERENCES helmet(helmetID),
-						  FOREIGN KEY (jerseyID) REFERENCES jersey(jerseyID),
-						  FOREIGN KEY (pantsID) REFERENCES pants(pantsID));
+CREATE TABLE uniform (comboID INTEGER,
+						  uniformID INTEGER,
+						  uColor VARCHAR(30),
+						  uName VARCHAR(100),
+						  uImage VARCHAR(100),
+						  PRIMARY KEY (uniformID));
 						  
 CREATE TABLE opponent (opponentName VARCHAR(30),
 					   conference VARCHAR(30),
@@ -71,13 +49,10 @@ CREATE TABLE game (gameID INTEGER,
 				   result VARCHAR(10),
 				   points_for INTEGER,
 				   points_against INTEGER,
+				   type VARCHAR(50),
 				   location VARCHAR(30),
-				   comboID INTEGER,
-				   away_helmet VARCHAR(100),
-				   home_helmet VARCHAR(100),
-				   article_title VARCHAR(100),
-				   article_link VARCHAR(200),
-				   PRIMARY KEY (gameID, comboID),
+				   uniformID INTEGER,
+				   PRIMARY KEY (gameID, uniformID),
 				   FOREIGN KEY (yr) REFERENCES season(yr),
 				   FOREIGN KEY (opponentName) REFERENCES opponent(opponentName),
-				   FOREIGN KEY (comboID) REFERENCES combination(comboID));
+				   FOREIGN KEY (uniformID) REFERENCES uniform(uniformID));
