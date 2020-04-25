@@ -21,232 +21,113 @@
 
   <!-- Table Body -->
   <tbody class="list" id="mbkTableBody">
-    <tr>
-      <td data-sort = '2020-03-07'>
-        <span class='badge' style='background-color: #3b0811; color: white;'>19-2020</span>
-      </td>
-      <td data-sort = '2020-03-07'>
-        <span class='badge badge-secondary'>03-07</span>
-      </td>
-      <td>
-        <span class='badge badge-dark'>Saturday</span>
-      </td>
-      <td>
-        <span class='badge' style='background-color: #f4ad3d; color: #202846;'>SEC</span>
-      </td>
-      <td data-search = 'maroon'>
-        <a href="https://i.imgur.com/NE3Bj1B.png" data-fancybox>
-          <img src="https://i.imgur.com/NE3Bj1B.png" height="80" alt="" class="d-inline-block align-middle mr-2">
-        </a>
-      </td>
-      <td>
-        <span class='badge badge-success'>Win</span>
-      </td>
-      <td>
-        <span class='badge badge-dark'>69</span>
-      </td>
-      <td>
-        <span class='badge badge-secondary'>44</span>
-      </td>
-      <td>
-        <span class='badge' style='background-color: #0e2143; color: #d2233a;'>Ole Miss</span>
-      </td>
-    </tr>
-    <!-- New Row -->
-    <tr>
-      <td data-sort = '2020-02-25'>
-        <span class='badge' style='background-color: #3b0811; color: white;'>19-2020</span>
-      </td>
-      <td data-sort = '2020-02-25'>
-        <span class='badge badge-secondary'>02-25</span>
-      </td>
-      <td>
-        <span class='badge badge-dark'>Tuesday</span>
-      </td>
-      <td>
-        <span class='badge' style='background-color: #f4ad3d; color: #202846;'>SEC</span>
-      </td>
-      <td data-search = 'white'>
-        <a href="https://i.imgur.com/VJlmiXu.png" data-fancybox>
-          <img src="https://i.imgur.com/VJlmiXu.png" height="80" alt="" class="d-inline-block align-middle mr-2">
-        </a>
-      </td>
-      <td>
-        <span class='badge badge-success'>Win</span>
-      </td>
-      <td>
-        <span class='badge badge-dark'>80</span>
-      </td>
-      <td>
-        <span class='badge badge-secondary'>73</span>
-      </td>
-      <td>
-        <span class='badge' style='background-color: #91002a; color: white;'>Alabama</span>
-      </td>
-    </tr>
-    <!-- New Row -->
-    <tr>
-      <td data-sort = '2020-01-11'>
-        <span class='badge' style='background-color: #3b0811; color: white;'>19-2020</span>
-      </td>
-      <td data-sort = '2020-01-11'>
-        <span class='badge badge-secondary'>02-11</span>
-      </td>
-      <td>
-        <span class='badge badge-dark'>Tuesday</span>
-      </td>
-      <td>
-        <span class='badge' style='background-color: #f4ad3d; color: #202846;'>SEC</span>
-      </td>
-      <td data-search = 'black'>
-        <a href="https://i.imgur.com/ow5lT04.png" data-fancybox>
-          <img src="https://i.imgur.com/ow5lT04.png" height="80" alt="" class="d-inline-block align-middle mr-2">
-        </a>
-      </td>
-      <td>
-        <span class='badge badge-danger'>Loss</span>
-      </td>
-      <td>
-        <span class='badge badge-secondary'>58</span>
-      </td>
-      <td>
-        <span class='badge badge-dark'>83</span>
-      </td>
-      <td>
-        <span class='badge' style='background-color: #0e2143; color: #d2233a;'>Ole Miss</span>
-      </td>
-    </tr>
-    <!-- New Row -->
-    <tr>
-      <td data-sort = '2019-12-18'>
-        <span class='badge' style='background-color: #3b0811; color: white;'>19-2020</span>
-      </td>
-      <td data-sort = '2019-12-18'>
-        <span class='badge badge-secondary'>12-18</span>
-      </td>
-      <td>
-        <span class='badge badge-dark'>Wednesday</span>
-      </td>
-      <td>
-        <span class='badge badge-info'>Non-Conference</span>
-      </td>
-      <td data-search = 'cream'>
-        <a href="https://i.imgur.com/KarpxuU.png" data-fancybox>
-          <img src="https://i.imgur.com/KarpxuU.png" height="80" alt="" class="d-inline-block align-middle mr-2">
-        </a>
-      </td>
-      <td>
-        <span class='badge badge-success'>Win</span>
-      </td>
-      <td>
-        <span class='badge badge-dark'>77</span>
-      </td>
-      <td>
-        <span class='badge badge-secondary'>68</span>
-      </td>
-      <td>
-        <span class='badge' style='background-color: #91002a; color: white;'>Radford</span>
-      </td>
-    </tr>
-    <!-- New Row -->
-    <tr>
-      <td data-sort = '2019-12-14'>
-        <span class='badge' style='background-color: #3b0811; color: white;'>19-2020</span>
-      </td>
-      <td data-sort = '2019-12-14'>
-        <span class='badge badge-secondary'>12-14</span>
-      </td>
-      <td>
-        <span class='badge badge-dark'>Saturday</span>
-      </td>
-      <td>
-        <span class='badge badge-info'>Non-Conference</span>
-      </td>
-      <td data-search = 'gray'>
-        <a href="https://i.imgur.com/uk3YgEC.png" data-fancybox>
-          <img src="https://i.imgur.com/uk3YgEC.png" height="80" alt="" class="d-inline-block align-middle mr-2">
-        </a>
-      </td>
-      <td>
-        <span class='badge badge-success'>Win</span>
-      </td>
-      <td>
-        <span class='badge badge-dark'>67</span>
-      </td>
-      <td>
-        <span class='badge badge-secondary'>61</span>
-      </td>
-      <td>
-        <span class='badge' style='background-color: #b2b1b1; color: #5e3788;'>Kansas State</span>
-      </td>
-    </tr>
-    <!-- New Row -->
-    <tr id='ncaa'>
-      <td data-sort = '2019-03-22'>
-        <span class='badge' style='background-color: #3b0811; color: white;'>18-2019</span>
-      </td>
-      <td data-sort = '2019-03-22'>
-        <span class='badge badge-secondary'>03-22</span>
-      </td>
-      <td>
-        <span class='badge badge-dark'>Friday</span>
-      </td>
-      <td>
-        <span class='badge' style='background-color: #0065a8; color: white;'>Round of 64</span>
-      </td>
-      <td data-search = 'white'>
-        <a href="https://i.imgur.com/UsIc8Id.png" data-fancybox>
-          <img src="https://i.imgur.com/UsIc8Id.png" height="80" alt="" class="d-inline-block align-middle mr-2">
-        </a>
-      </td>
-      <td>
-        <span class='badge badge-danger'>Loss</span>
-      </td>
-      <td>
-        <span class='badge badge-secondary'>76</span>
-      </td>
-      <td>
-        <span class='badge badge-dark'>80</span>
-      </td>
-      <td>
-        <span class='badge' style='background-color: #002244; color: #d2001c;'>Liberty</span>
-      </td>
-    </tr>
-    <!-- New Row -->
-    <tr id='secT'>
-      <td data-sort = '2019-03-15'>
-        <span class='badge' style='background-color: #3b0811; color: white;'>18-2019</span>
-      </td>
-      <td data-sort = '2019-03-15'>
-        <span class='badge badge-secondary'>03-15</span>
-      </td>
-      <td>
-        <span class='badge badge-dark'>Friday</span>
-      </td>
-      <td>
-        <span class='badge' style='background-color: #202846; color: #f4ad3d;'>SECT Quarterfinals</span>
-      </td>
-      <td data-search = 'maroon'>
-        <a href="https://i.imgur.com/fRnhOQJ.png" data-fancybox>
-          <img src="https://i.imgur.com/fRnhOQJ.png" height="80" alt="" class="d-inline-block align-middle mr-2">
-        </a>
-      </td>
-      <td>
-        <span class='badge badge-danger'>Loss</span>
-      </td>
-      <td>
-        <span class='badge badge-secondary'>76</span>
-      </td>
-      <td>
-        <span class='badge badge-dark'>83</span>
-      </td>
-      <td>
-        <span class='badge' style='background-color: #e9863d; color: white;'>Tennessee</span>
-      </td>
-    </tr>
-  </tbody>
+
+  <!-- Connect to Database -->
+  <?php 
+  include "data/mbkDatabaseConnection.php"; 
+
+  // Perform Query
+  $sql = "SELECT * FROM `game`\n"
+
+    . "INNER JOIN `season` ON game.yr = season.yr\n"
+
+    . "INNER JOIN `uniform` ON game.uniformID = uniform.uniformID\n"
+
+    . "INNER JOIN `opponent` ON game.opponentName = opponent.opponentName";
+
+  $result = $conn->query($sql);
+
+  // output data of each row
+  if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+
+      if ($row["result"] == "Loss"){
+        $resultColor = 'danger';
+        $stateBadge = 'secondary';
+        $opponentBadge = 'dark';
+      }
+      else if ($row["result"] == "Win"){
+        $resultColor = 'success';
+        $stateBadge = 'dark';
+        $opponentBadge = 'secondary';
+      }
+      else{
+        $resultColor = 'warning';
+        $stateBadge = 'secondary';
+        $opponentBadge = 'secondary';
+      }
+
+      if ($row["type"] == "SEC"){
+        $typeBadge = "' style='background-color: #f4ad3d; color: #202846;'>";
+      }
+      else if ($row["type"] == "Non-Conference"){
+        $typeBadge = " badge-info'>";
+      }
+      else if ($row["location"] == "secT"){
+        $typeBadge = "' style='background-color: #202846; color: #f4ad3d;'>";
+      }
+      else if ($row["location"] == "nit"){
+        $typeBadge = "' style='background-color: #812990; color: #f7931e;'>";
+      }
+      else if ($row["location"] == "ncaa"){
+        $typeBadge = "' style='background-color: #0065A8; color: white;'>";
+      }
+      else if ($row["location"] == "ncaaSsEe"){
+        $typeBadge = "' style='background-color: #d70d2a; color: white;'>";
+      }
+      else if ($row["location"] == "finalFour96"){
+        $typeBadge = "' style='background-color: #3eb3af; color: white;'>";
+      }
+
+      $month = $row["gameday"][5] . $row["gameday"][6];
+      $day = $row["gameday"][8] . $row["gameday"][9];
+      $year = $row["gameday"][0] . $row["gameday"][1] . $row["gameday"][2] . $row["gameday"][3];
+      $gameday = $month . "-" . $day;
+
+      echo "<tr id='" . $row["location"] . "'>
+              <td class='season' data-sort='" . $row["gameday"] . "'>
+                <span class='badge' style='background-color: #3b0811; color: white;'>" . $row["yr"] . "</span>
+              </td>
+              <td class='date' data-sort='" . $row["gameday"] . "'>
+                <div class='calendarDate' id=date-" . $row["gameID"] . "' title='" . $row["gameday"] . "'>
+                <span class='badge badge-secondary'>" . $gameday . "</span>
+                </div>
+              </td>
+              <td class='day' data-search='" . $row["gameday"] . "'>
+                <span id='DoW' class='badge badge-dark'>" . date("l", mktime(0,0,0,$month,$day,$year)) . "</span>
+              </td>
+              <td class='type' data-search='" . $row["type"] . "'>
+                <span class='badge" . $typeBadge . $row["type"] . "</span>
+              </td>
+              <td class='uniform' data-search='" . $row["uName"] . "'>
+                <a href='" . $row["uImage"] . "' data-fancybox>
+                  <img src='" . $row["uImage"] . "' height='80' alt='' class='d-inline-block align-middle mr-2'
+                </a>
+              </td>
+              <td class='result' data-search ='" . $row["head_coach"] . $row["result"] . "'>
+                <span class='badge badge-" . $resultColor . "'>" . $row["result"] . "</span>
+              </td>
+              <td class='pf' data-sort='" . $row["points_for"] . "'>
+                <span class='badge badge-" . $stateBadge . "'>" . $row["points_for"] . "</span>
+              </td>
+              <td class='pa' data-sort='" . $row["points_against"] . "'>
+                <span class='badge badge-" . $opponentBadge . "'>" . $row["points_against"] . "</span>
+              </td>
+              <td class='opponent' data-search='" . $row["opponentName"] . "'>
+                <span class='badge' style='background-color: " . $row["colorA"] . "; color: "  . $row["colorB"] .  ";'>" . $row["opponentName"] . "</span>
+              </td>
+            </tr>";
+    }
+  }
+  else {
+    echo "0 results";
+  }
+  $conn->close();
+
+  ?>
 
   <!-- Table Footer -->
+  </tbody>
   <tfoot>
     <tr>
       <td colspan="9" id="footerRow">

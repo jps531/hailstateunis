@@ -21,7 +21,7 @@ SET time_zone = "+00:00";
 CREATE DATABASE mbkTableData;
 use mbkTableData;
 
-CREATE TABLE season (yr YEAR,
+CREATE TABLE season (yr VARCHAR(7),
 					 head_coach VARCHAR(30),
 					 wins INTEGER,
 					 losses INTEGER,
@@ -29,8 +29,7 @@ CREATE TABLE season (yr YEAR,
 					 sec_losses INTEGER,
 					 PRIMARY KEY (yr));
 					 
-CREATE TABLE uniform (comboID INTEGER,
-						  uniformID INTEGER,
+CREATE TABLE uniform (uniformID INTEGER NOT NULL AUTO_INCREMENT,
 						  uColor VARCHAR(30),
 						  uName VARCHAR(100),
 						  uImage VARCHAR(100),
@@ -42,8 +41,8 @@ CREATE TABLE opponent (opponentName VARCHAR(30),
 					   colorB VARCHAR(30),
 					   PRIMARY KEY (opponentName));				 
 						
-CREATE TABLE game (gameID INTEGER,
-				   yr YEAR,
+CREATE TABLE game (gameID INTEGER NOT NULL AUTO_INCREMENT,
+				   yr VARCHAR(7),
 				   gameday DATE,
 				   opponentName VARCHAR(30),
 				   result VARCHAR(10),

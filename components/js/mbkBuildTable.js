@@ -155,6 +155,8 @@ $(function() {
 $(document).ready(function(){
   $("#mbkSelectSituation").on("change", function() {
 
+    $searchTerm = this.value;
+
     if (this.value == 'November'){
       mbkTable.columns(1).search('-11-').draw();
     }
@@ -180,8 +182,19 @@ $(document).ready(function(){
       mbkTable.search(this.value).draw();
     }
 
-    else{
+    else if (this.value == 'white' || this.value == 'maroon' || this.value == 'black' || this.value == 'gray' || this.value == 'cream'){
       mbkTable.columns(4).search(this.value).draw();
+    }
+
+    else{
+      if (this.value == "SEC Tournament"){
+        $searchTerm = 'secT';
+      }
+      else if (this.value == "NCAA Tournament"){
+        $searchTerm = 'ncaa';
+      }
+      
+      mbkTable.search($searchTerm).draw();
     }
   });
 });
@@ -281,22 +294,4 @@ $(function() {
     document.getElementById('winLossTotal').innerHTML = wlTotal;
   });
 });
-//-----------
-
-//-----------
-// Get Day of Week
-function dayOfWeek() {
-  var d = new Date('2020-03-07');
-  var weekday = new Array(7);
-  weekday[0] = "Monday";
-  weekday[1] = "Tuesday";
-  weekday[2] = "Wednesday";
-  weekday[3] = "Thursday";
-  weekday[4] = "Friday";
-  weekday[5] = "Saturday";
-  weekday[6] = "Sunday";
-
-  var n = weekday[d.getDay()];
-  document.getElementById("demo").innerHTML = n;
-}
 //-----------
