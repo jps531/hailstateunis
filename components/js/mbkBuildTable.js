@@ -182,7 +182,7 @@ $(document).ready(function(){
       mbkTable.search(this.value).draw();
     }
 
-    else if (this.value == 'white' || this.value == 'maroon' || this.value == 'black' || this.value == 'gray' || this.value == 'cream'){
+    else if (this.value == 'White' || this.value == 'Maroon' || this.value == 'Black' || this.value == 'Gray' || this.value == 'Cream'){
       mbkTable.columns(4).search(this.value).draw();
     }
 

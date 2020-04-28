@@ -79,6 +79,18 @@ span.badge.badge-success, span.badge.badge-danger{
   text-transform: uppercase;
 }
 
+#neutral td {
+  background: #f0f0f0;
+}
+
+#road td {
+  background: #e8e8e8;
+}
+
+#bowlGames td{
+  background: #ececec;
+}
+
 #ncaa td{
   background: #c6e9ff;
 }
@@ -107,20 +119,16 @@ span.badge.badge-success, span.badge.badge-danger{
   background: #dbb979;
 }
 
-#bowlGames td{
-  background: #ececec;
-}
-
 #wnit td{
   background: #6e7cf2;
 }
 
 #nit td{
-  background: #a989dd;
+  background: #ac90db;
 }
 
 #nitFinalFour td{
-  background: #ffc279;
+  background: #ffb966;
 }
 
 /*** table footer ***/
