@@ -1,30 +1,39 @@
 <!-- Situation Select -->
-<select class="selectpicker" data-live-search="true" id="selectSituation" title="Situations">
+<select class="selectpicker" data-live-search="true" id="fbSituationA" title="Situation A">
   <optgroup label="Alternates">
     <option>All Alternates</option>
-    <option>Black Jerseys</option>
     <option>Egg Bowl Alternates</option>
   </optgroup>
-  <optgroup label="Unique Elements">
+  <optgroup label="Bowl Games">
+    <option>Bowl Games</option>
+  </optgroup>
+  <optgroup label="Helmets">
+    <option>Shiny Maroon Helmets</option>
     <option>White Helmets</option>
-    <option>Bulldog Helmets</option>
-    <option>Gray Pants</option>
     <option>Matte Maroon Helmets</option>
     <option>Silver Helmets</option>
+    <option>Gold Helmets</option>
+    <option>Bulldog Helmets</option>
   </optgroup>
-  <optgroup label="Common Elements">
-    <option>Shiny Maroon Helmets</option>
+  <optgroup label="Jerseys">
     <option>Maroon Jerseys</option>
     <option>White Jerseys</option>
-    <option>Maroon Pants</option>
-    <option>White Pants</option>
+    <option>Black Jerseys</option>
+    <option>Gray Jerseys</option>
   </optgroup>
-  <optgroup label="Monochrome Looks">
+  <optgroup label="Pants">
+    <option>White Pants</option>
+    <option>Maroon Pants</option>
+    <option>Gray Pants</option>
+    <option>Silver Pants</option>
+  </optgroup>
+  <optgroup label="Monochrome Maroon">
     <option>Monochrome Maroon</option>
-    <option>All-White</option>
+  </optgroup>
+  <optgroup label="White at Home">
+    <option>White at Home</option>
   </optgroup>
   <optgroup label="Patches">
-    <option>Bowl Games</option>
     <option>DWS 100</option>
     <option>Nick Bell</option>
   </optgroup>
@@ -41,6 +50,15 @@
     <option>December</option>
     <option>January</option>
   </optgroup>
+  <optgroup label="Days">
+    <option>Monday</option>
+    <option>Tuesday</option>
+    <option>Wednesday</option>
+    <option>Thursday</option>
+    <option>Friday</option>
+    <option>Saturday</option>
+    <option>Sunday</option>
+  </optgroup>
   <optgroup label="Head Coaches">
     <option>Mike Leach</option>
     <option>Joe Moorhead</option>
@@ -54,9 +72,6 @@
     <option>Paul Davis</option>
     <option>Allyn McKeen</option>
     <option>Ralph Sasse</option>
-  </optgroup>
-  <optgroup label="Rare Occurences">
-    <option>White at Home</option>
   </optgroup>
   <optgroup label="Maroon Helmet Combinations">
     <option>Maroon/Maroon/White</option>
@@ -98,4 +113,4 @@
     <option>Gold/Maroon/Maroon</option>
   </optgroup>
 </select>
-<button class="btn" id="situationClear"><i class="fas fa-times-circle"></i></button>
+<button class="btn" id="fbSitAClear"><i class="fas fa-times-circle"></i></button>

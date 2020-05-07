@@ -5,11 +5,11 @@
 }
 
 /*** filters ***/
-#seasons, #situations, #opponents, #search{
+#seasons, #situationA, #situationB, #opponents, #search{
     margin-bottom: 20px;
 }
 
-#filters{
+#filters, #filtersRowTwo{
     justify-content: center;
 }
 
@@ -18,8 +18,8 @@
     width: 220px;
 }
 
-#opponentClear, #situationClear, #seasonClear, #searchClear, 
-#mbkOpponentClear, #mbkSituationClear, #mbkSeasonClear, #mbkSearchClear{
+#opponentClear, #fbSitAClear, #fbSitBClear, #seasonClear, #searchClear, 
+#mbkOpponentClear, #mbkSitAClear, #mbkSitBClear, #mbkSeasonClear, #mbkSearchClear{
     margin-left: -10px;
     margin-right: 10px;
 }

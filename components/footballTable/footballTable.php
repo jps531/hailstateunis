@@ -81,16 +81,19 @@
         $rowID = 'secChampionship';
       }
       else{
-        $rowID = 'regularSeason';
+        $rowID = $row["location"];
       }
 
-      $gameday = $row["gameday"][5] . $row["gameday"][6] . "-" . $row["gameday"][8] . $row["gameday"][9];
+      $month = $row["gameday"][5] . $row["gameday"][6];
+      $day = $row["gameday"][8] . $row["gameday"][9];
+      $year = $row["gameday"][0] . $row["gameday"][1] . $row["gameday"][2] . $row["gameday"][3];
+      $gameday = $month . "-" . $day;
 
       echo "<tr id='" . $rowID . "'>
               <td class='season' data-sort='" . $row["gameday"] . "'>
                 <span class='badge' style='background-color: #3b0811; color: white;'>" . $row["yr"] . "</span>
               </td>
-              <td class='date' data-search='" . $row["gameday"] . "'>
+              <td class='date' data-search='" . $row["gameday"] . date("l", mktime(0,0,0,$month,$day,$year)) . "'>
                 <div class='calendarDate' id=date-" . $row["gameID"] . "' title='" . $row["gameday"] . "'>
                 <span class='badge badge-secondary'>" . $gameday . "</span>
                 </div>

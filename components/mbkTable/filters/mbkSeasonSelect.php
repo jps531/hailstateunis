@@ -1,5 +1,5 @@
 <!-- Season Select -->
-<select class="selectpicker" data-live-search="true" title="Seasons" id="mbkSelectYear">
+<select class="selectpicker" data-live-search="true" title="Season(s)" id="mbkSelectYear" multiple>
 <optgroup label="Ben Howland">
   <option>19-2020</option>
   <option>18-2019</option>

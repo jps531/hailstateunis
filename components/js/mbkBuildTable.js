@@ -1,8 +1,18 @@
 //-----------
 // Load Filters
-$(function(){ $("#mbkSelectOpponent").selectpicker('render'); })
-$(function(){ $("#mbkSelectSituation").selectpicker('render'); })
+$(function(){ $("#mbkOpponent").selectpicker('render'); })
+$(function(){ $("#mbkSituationA").selectpicker('render'); })
+$(function(){ $("#mbkSituationB").selectpicker('render'); })
 $(function(){ $("#mbkSelectYear").selectpicker('render'); })
+$.fn.selectpicker.Constructor.DEFAULTS.multipleSeparator = ' | ';
+window.onload = function(){
+  if ($("#mbkSelectYear").val().length){
+    $("#mbkSelectYear").val('').trigger('change');
+  }
+  if ($("#mbkOpponent").val().length){
+    $("#mbkOpponent").val('').trigger('change');
+  }
+};
 //-----------
 
 //-----------
@@ -103,16 +113,15 @@ $(function() {
 $(document).ready(function(){
   $("#mbkOpponent").on("change", function() {
     if (this.value == ""){
-      mbkTable
-      .columns( 8 )
-      .search(this.value)
-      .draw();
+      mbkTable.columns(8).search(this.value).draw();
     }
     else{
-      mbkTable
-          .columns( 8 )
-          .search( "^" + this.value + "$", true, false, true)
-          .draw();
+      var regEx = $(this).find(':selected').map(function() {
+        return "^" + $( this ).text() + "$";
+      })
+      .get()
+      .join( "|" );
+      mbkTable.column(8).search(regEx, true, false).draw();
     }
   });
 });
@@ -126,15 +135,22 @@ $(function() {
 //-----------
 // Season Select
 var pageLength;
+var resetLength = true;
 
 $(document).ready(function(){
   $("#mbkSelectYear").on("change", function() {
-    mbkTable
-    .columns( 0 )
-    .search( this.value )
-    .draw();
+    var regEx = $(this).find(':selected').map(function() {
+      return $( this ).text();
+    })
+    .get()
+    .join( "|" );
+    mbkTable.column(0).search(regEx, true, false).draw();
+
     if (this.value != ''){
-      pageLength = mbkTable.page.len();
+      if (resetLength){
+        pageLength = mbkTable.page.len();
+        resetLength = false;
+      }
       mbkTable.page.len(-1).draw();
     }
     else if (mbkTable.page.len() == -1){
@@ -151,57 +167,277 @@ $(function() {
 //-----------
 
 //-----------
-// Siutation Select
+// Siutation A Select
+var mbkOptSelectedA = [];
+
 $(document).ready(function(){
-  $("#mbkSelectSituation").on("change", function() {
+  $("#mbkSituationA").on("change", function() {
+    var regExA = $(this).find(':selected').map(function() {
+      return $( this ).text();
+    })
+    .get()
+    .join( "|" );
 
-    $searchTerm = this.value;
-
-    if (this.value == 'November'){
-      mbkTable.columns(1).search('-11-').draw();
+    if (regExA.includes('November')){
+      regExA = regExA.concat("|-11-");
     }
 
-    else if (this.value == 'December'){
-      mbkTable.columns(1).search('-12-').draw();
+    else if (regExA.includes('December')){
+      regExA = regExA.concat("|-12-");
     }
 
-    else if (this.value == 'January'){
-      mbkTable.columns(1).search('-01-').draw();
+    else if (regExA.includes('January')){
+      regExA = regExA.concat("|-01-");
     }
 
-    else if (this.value == 'February'){
-      mbkTable.columns(1).search('-02-').draw();
+    else if (regExA.includes('February')){
+      regExA = regExA.concat("|-02-");
     }
 
-    else if (this.value == 'March'){
-      mbkTable.columns(1).search('-03-').draw();
+    else if (regExA.includes('March')){
+      regExA = regExA.concat("|-03-");
     }
 
-    else if (!this.value){
-      mbkTable.columns().search(this.value).draw();
-      mbkTable.search(this.value).draw();
+    else if (this.value == "SEC Tournament"){
+      regExA = regExA.concat("|secT");
     }
 
-    else if (this.value == 'White' || this.value == 'Maroon' || this.value == 'Black' || this.value == 'Gray' || this.value == 'Cream'){
-      mbkTable.columns(4).search(this.value).draw();
+    else if (this.value == "NCAA Tournament"){
+      regExA = regExA.concat("|ncaa");
     }
-
+    
+    // Months
+    if(regExA.includes('|-11-')||
+        regExA.includes('|-12-')||
+        regExA.includes('|-01-')||
+        regExA.includes('|-02-')||
+        regExA.includes('|-03-')){
+      disableOptGroup("mbkSituationB",1);
+      mbkTable.column(1).search(regExA, true, false).draw();
+      mbkOptSelectedA.push(1);
+    }
     else{
-      if (this.value == "SEC Tournament"){
-        $searchTerm = 'secT';
-      }
-      else if (this.value == "NCAA Tournament"){
-        $searchTerm = 'ncaa';
-      }
-      
-      mbkTable.search($searchTerm).draw();
+      enableOptGroup("mbkSituationB",1);
+      situationToggleElse(1,mbkOptSelectedA);
+    }
+
+    // Days
+    if(regExA.includes('Mond')||
+        regExA.includes('Tues')||
+        regExA.includes('Wedn')||
+        regExA.includes('Thur')||
+        regExA.includes('Frid')||
+        regExA.includes('Satu')||
+        regExA.includes('Sund')){
+      disableOptGroup("mbkSituationB",2);
+      mbkTable.column(2).search(regExA, true, false).draw();
+      mbkOptSelectedA.push(2);
+    }
+    else{
+      enableOptGroup("mbkSituationB",2);
+      situationToggleElse(2,mbkOptSelectedA);
+    }
+
+    // Head Coaches
+    if(regExA.includes('Ben')||
+        regExA.includes('Rick')||
+        regExA.includes('Rich')||
+        regExA.includes('Jim')||
+        regExA.includes('Babe')){
+      disableOptGroup("mbkSituationB",3);
+      mbkTable.column(5).search(regExA, true, false).draw();
+      mbkOptSelectedA.push(5);
+    }
+    else{
+      enableOptGroup("mbkSituationB",3);
+      situationToggleElse(3,mbkOptSelectedA);
+    }
+
+    // Tournaments
+    if(regExA.includes('SEC')||
+        regExA.includes('NCAA')||
+        regExA.includes('NIT')||
+        regExA.includes('Round')||
+        regExA.includes('Sweet')||
+        regExA.includes('Elite')||
+        regExA.includes('Final')||
+        regExA.includes('Reg')){
+      disableOptGroup("mbkSituationB",4);
+      disableOptGroup("mbkSituationB",5);
+      disableOptGroup("mbkSituationB",6);
+      disableOptGroup("mbkSituationB",7);
+      mbkTable.column(3).search(regExA, true, false).draw();
+      mbkOptSelectedA.push(3);
+    }
+    else{
+      enableOptGroup("mbkSituationB",4);
+      enableOptGroup("mbkSituationB",5);
+      enableOptGroup("mbkSituationB",6);
+      enableOptGroup("mbkSituationB",7);
+      situationToggleElse(4,mbkOptSelectedA);
+    }
+    
+    // Uniform Colors
+    if (regExA.includes('White')||
+        regExA.includes('Maroon')||
+        regExA.includes('Black')||
+        regExA.includes('Gray')||
+        regExA.includes('Cream')){
+      disableOptGroup("mbkSituationB",0);
+      mbkTable.column(4).search(regExA, true, false).draw();
+      mbkOptSelectedA.push(4);
+    }
+    else{
+      enableOptGroup("mbkSituationB",0);
+      situationToggleElse(4,mbkOptSelectedA);
     }
   });
 });
 
 $(function() {
-  $('#mbkSituationClear').click(function() {
-    $("#mbkSelectSituation").val('').trigger('change');
+  $('#mbkSitAClear').click(function() {
+    $("#mbkSituationA").val('').trigger('change');
+    for(var k=0; k<5; k++){
+      enableOptGroup("mbkSituationB",k);
+    }
+  });
+});
+//-----------
+
+//-----------
+// Siutation B Select
+var mbkOptSelectedB = [];
+
+$(document).ready(function(){
+  $("#mbkSituationB").on("change", function() {
+    var regExB = $(this).find(':selected').map(function() {
+      return $( this ).text();
+    })
+    .get()
+    .join( "|" );
+
+    if (regExB.includes('November')){
+      regExB = regExB.concat("|-11-");
+    }
+
+    if (regExB.includes('December')){
+      regExB = regExB.concat("|-12-");
+    }
+
+    if (regExB.includes('January')){
+      regExB = regExB.concat("|-01-");
+    }
+
+    if (regExB.includes('February')){
+      regExB = regExB.concat("|-02-");
+    }
+
+    if (regExB.includes('March')){
+      regExB = regExB.concat("|-03-");
+    }
+
+    if (this.value == "SEC Tournament"){
+      regExB = regExB.concat("|secT");
+    }
+
+    if (this.value == "NCAA Tournament"){
+      regExB = regExB.concat("|ncaa");
+    }
+    
+    // Months
+    if(regExB.includes('|-11-')||
+        regExB.includes('|-12-')||
+        regExB.includes('|-01-')||
+        regExB.includes('|-02-')||
+        regExB.includes('|-03-')){
+      disableOptGroup("mbkSituationA",1);
+      mbkTable.column(1).search(regExB, true, false).draw();
+      mbkOptSelectedB.push(1);
+    }
+    else{
+      enableOptGroup("mbkSituationA",1);
+      situationToggleElse(1,mbkOptSelectedB);
+    }
+
+    // Days
+    if(regExB.includes('Mond')||
+        regExB.includes('Tues')||
+        regExB.includes('Wedn')||
+        regExB.includes('Thur')||
+        regExB.includes('Frid')||
+        regExB.includes('Satu')||
+        regExB.includes('Sund')){
+      disableOptGroup("mbkSituationA",2);
+      mbkTable.column(2).search(regExB, true, false).draw();
+      mbkOptSelectedB.push(2);
+    }
+    else{
+      enableOptGroup("mbkSituationA",2);
+      situationToggleElse(2,mbkOptSelectedB);
+    }
+
+    // Head Coaches
+    if(regExB.includes('Ben')||
+        regExB.includes('Rick')||
+        regExB.includes('Rich')||
+        regExB.includes('Jim')||
+        regExB.includes('Babe')){
+      disableOptGroup("mbkSituationA",3);
+      mbkTable.column(5).search(regExB, true, false).draw();
+      mbkOptSelectedB.push(5);
+    }
+    else{
+      enableOptGroup("mbkSituationA",3);
+      situationToggleElse(5,mbkOptSelectedB);
+    }
+
+    // Tournaments
+    if(regExB.includes('SEC')||
+        regExB.includes('NCAA')||
+        regExB.includes('NIT')||
+        regExB.includes('Round')||
+        regExB.includes('Sweet')||
+        regExB.includes('Elite')||
+        regExB.includes('Final')||
+        regExB.includes('Reg')){
+      disableOptGroup("mbkSituationA",4);
+      disableOptGroup("mbkSituationA",5);
+      disableOptGroup("mbkSituationA",6);
+      disableOptGroup("mbkSituationA",7);
+      mbkTable.column(3).search(regExB, true, false).draw();
+      mbkOptSelectedB.push(3);
+    }
+    else{
+      enableOptGroup("mbkSituationA",4);
+      enableOptGroup("mbkSituationA",5);
+      enableOptGroup("mbkSituationA",6);
+      enableOptGroup("mbkSituationA",7);
+      situationToggleElse(3,mbkOptSelectedB);
+    }
+    
+    // Uniform Colors
+    if (regExB.includes('White')||
+        regExB.includes('Maroon')||
+        regExB.includes('Black')||
+        regExB.includes('Gray')||
+        regExB.includes('Cream')){
+      disableOptGroup("mbkSituationA",0);
+      mbkTable.column(4).search(regExB, true, false).draw();
+      mbkOptSelectedB.push(4);
+    }
+    else{
+      enableOptGroup("mbkSituationA",0);
+      situationToggleElse(4,mbkOptSelectedB);
+    }
+  });
+});
+
+$(function() {
+  $('#mbkSitBClear').click(function() {
+    $("#mbkSituationB").val('').trigger('change');
+    for(var k=0; k<5; k++){
+      enableOptGroup("mbkSituationA",k);
+    }
   });
 });
 //-----------
@@ -294,4 +530,38 @@ $(function() {
     document.getElementById('winLossTotal').innerHTML = wlTotal;
   });
 });
+//-----------
+
+//-----------
+// Situation Functions
+
+// Function to disable optgroup
+function disableOptGroup(selectID, optGroupIndex){
+  var selectobject;
+  selectobject = document.getElementById(selectID).getElementsByTagName("optgroup");
+  selectobject[optGroupIndex].disabled = true;
+  selectID = "#" + selectID;
+  $(selectID).selectpicker('refresh');
+}
+
+// Function to re-enable optgroup
+function enableOptGroup(selectID, optGroupIndex){
+  var selectobject;
+  selectobject = document.getElementById(selectID).getElementsByTagName("optgroup");
+  selectobject[optGroupIndex].disabled = false;
+  selectID = "#" + selectID;
+  $(selectID).selectpicker('refresh');
+}
+
+// Situation Toggle Else Function
+function situationToggleElse(columnNumber,optSelect){
+  if (optSelect.includes(columnNumber)){
+    mbkTable.columns(columnNumber).search('').draw();
+    for (z=0;z<optSelect.length;z++){
+      if(optSelect[z] == columnNumber){
+        optSelect.splice(z,1);
+      }
+    }
+  }
+}
 //-----------

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 25, 2020 at 12:08 AM
+-- Generation Time: May 07, 2020 at 03:17 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -67,9 +67,9 @@ INSERT INTO `game` (`gameID`, `yr`, `gameday`, `opponentName`, `result`, `points
 (15, 2018, '2018-11-17', 'Arkansas', 'Win', 52, 6, 'home', 12, 'https://i.imgur.com/KA92dgy.png', 'https://i.imgur.com/XahGwVz.png', 'Mississippi State Wears \'Statesman\' Alternate Uniforms in 52-6 Thrashing of Arkansas', 'https://www.hailstateunis.com/2018-football-season/mississippi-state-wears-statesman-alternate-uniforms-in-52-6-trashing-of-arkansas'),
 (16, 2018, '2018-11-10', 'Alabama', 'Loss', 0, 24, 'road', 13, 'https://i.imgur.com/vfNgKFa.png', 'https://i.imgur.com/oXypdot.png', 'Bulldog Defense Continues to Excel in All-White at Alabama', 'https://www.hailstateunis.com/2018-football-season/bulldog-defense-continues-to-excel-in-all-white-at-alabama'),
 (17, 2018, '2018-11-03', 'Louisiana Tech', 'Win', 45, 3, 'home', 14, 'https://i.imgur.com/NTyiOKv.png', 'https://i.imgur.com/XmB3LPF.png', 'Mississippi State Wins Homecoming Game 45-3 over Louisiana Tech', 'https://www.hailstateunis.com/2018-football-season/mississippi-state-wins-homecoming-game-45-3-over-louisiana-tech'),
-(18, 2018, '2018-10-26', 'Texas A&M', 'Win', 28, 13, 'home', 16, 'https://i.imgur.com/GM8iaqE.png', 'https://i.imgur.com/XmB3LPF.png', 'In All-Maroon, Mississippi State Earns Third Consecutive Win over Texas A&M', 'https://www.hailstateunis.com/2018-football-season/in-all-maroon-mississippi-state-gets-third-consecutive-win-over-texas-am'),
-(19, 2018, '2018-10-19', 'LSU', 'Loss', 3, 19, 'road', 18, 'https://i.imgur.com/vfNgKFa.png', 'https://i.imgur.com/plNyJ5A.png', 'LSU\'s Alternates, State\'s New Combo Lead to Unique Uniform Matchup in Baton Rouge', 'https://www.hailstateunis.com/2018-football-season/lsus-alternates-states-new-combo-lead-to-unique-uniform-matchup-in-baton-rouge'),
-(20, 2018, '2018-10-05', 'Auburn', 'Win', 23, 9, 'home', 14, 'https://i.imgur.com/RCUr1HC.png', 'https://i.imgur.com/XmB3LPF.png', 'Bulldogs Top #8 Auburn in Matte-Maroon-White', 'https://www.hailstateunis.com/2018-football-season/bulldogs-top-8-auburn-in-matte-maroon-white'),
+(18, 2018, '2018-10-27', 'Texas A&M', 'Win', 28, 13, 'home', 16, 'https://i.imgur.com/GM8iaqE.png', 'https://i.imgur.com/XmB3LPF.png', 'In All-Maroon, Mississippi State Earns Third Consecutive Win over Texas A&M', 'https://www.hailstateunis.com/2018-football-season/in-all-maroon-mississippi-state-gets-third-consecutive-win-over-texas-am'),
+(19, 2018, '2018-10-20', 'LSU', 'Loss', 3, 19, 'road', 18, 'https://i.imgur.com/vfNgKFa.png', 'https://i.imgur.com/plNyJ5A.png', 'LSU\'s Alternates, State\'s New Combo Lead to Unique Uniform Matchup in Baton Rouge', 'https://www.hailstateunis.com/2018-football-season/lsus-alternates-states-new-combo-lead-to-unique-uniform-matchup-in-baton-rouge'),
+(20, 2018, '2018-10-06', 'Auburn', 'Win', 23, 9, 'home', 14, 'https://i.imgur.com/RCUr1HC.png', 'https://i.imgur.com/XmB3LPF.png', 'Bulldogs Top #8 Auburn in Matte-Maroon-White', 'https://www.hailstateunis.com/2018-football-season/bulldogs-top-8-auburn-in-matte-maroon-white'),
 (21, 2018, '2018-09-29', 'Florida', 'Loss', 6, 13, 'home', 17, 'https://i.imgur.com/x6tS2zr.png', 'https://i.imgur.com/XmB3LPF.png', 'Matte-Maroon-Gray Worn Against Florida', 'https://www.hailstateunis.com/2018-football-season/matte-maroon-gray-worn-against-florida'),
 (22, 2018, '2018-09-22', 'Kentucky', 'Loss', 7, 28, 'road', 19, 'https://i.imgur.com/hIyHgS3.png', 'https://i.imgur.com/hw8FTAG.png', 'Uniforms Look Incredible at Kentucky ​in Matte-White-Gray Combo', 'https://www.hailstateunis.com/2018-football-season/uniforms-look-incredible-at-kentucky-in-matte-white-gray-combo'),
 (23, 2018, '2018-09-15', 'Louisiana', 'Win', 56, 10, 'home', 14, 'https://i.imgur.com/FHK2UTL.png', 'https://i.imgur.com/XmB3LPF.png', 'Bulldogs Trounce Ragin Cajuns as Matte Helmets Return', 'https://www.hailstateunis.com/2018-football-season/bulldogs-trounce-ragin-cajuns-as-matte-helmets-return'),
@@ -133,7 +133,7 @@ INSERT INTO `game` (`gameID`, `yr`, `gameday`, `opponentName`, `result`, `points
 (81, 2013, '2013-11-16', 'Alabama', 'Loss', 7, 20, 'home', 56, 'https://i.imgur.com/UuWuDBC.png', 'https://i.imgur.com/yLF1zS7.png', 'Week 10: Alabama 20 Mississippi State 7', 'https://www.hailstateunis.com/2013-football-season/week-10-alabama-20-mississippi-state-7'),
 (82, 2013, '2013-11-09', 'Texas A&M', 'Loss', 41, 51, 'road', 61, 'https://i.imgur.com/GHcwlH4.png', 'https://i.imgur.com/pIoBuEi.png', 'Week 9: Mississippi State 41 Texas A&M 51', 'https://www.hailstateunis.com/2013-football-season/week-9-mississippi-state-41-texas-am-51'),
 (83, 2013, '2013-11-02', 'South Carolina', 'Loss', 16, 34, 'road', 60, 'https://i.imgur.com/s7tWnuJ.png', 'https://i.imgur.com/YtP9j3s.png', 'Week 8: Mississippi State 16 South Carolina 34', 'https://www.hailstateunis.com/2013-football-season/week-8-mississippi-state-16-south-carolina-34'),
-(84, 2013, '2013-10-23', 'Kentucky', 'Win', 28, 22, 'home', 57, 'https://i.imgur.com/gutv0cl.png', 'https://i.imgur.com/6Od9Uza.png', 'Week 7: Kentucky 22 Mississippi State 28', 'https://www.hailstateunis.com/2013-football-season/week-7-kentucky-22-mississippi-state-28'),
+(84, 2013, '2013-10-24', 'Kentucky', 'Win', 28, 22, 'home', 57, 'https://i.imgur.com/gutv0cl.png', 'https://i.imgur.com/6Od9Uza.png', 'Week 7: Kentucky 22 Mississippi State 28', 'https://www.hailstateunis.com/2013-football-season/week-7-kentucky-22-mississippi-state-28'),
 (85, 2013, '2013-10-12', 'Bowling Green', 'Win', 21, 20, 'home', 58, 'https://i.imgur.com/P72xRqI.png', 'https://i.imgur.com/yLF1zS7.png', 'Week 6: Bowling Green 20 Mississippi State 21', 'https://www.hailstateunis.com/2013-football-season/week-6-bowling-green-20-mississippi-state-21'),
 (86, 2013, '2013-10-05', 'LSU', 'Loss', 26, 59, 'home', 56, 'https://i.imgur.com/oJwY4Us.png', 'https://i.imgur.com/yLF1zS7.png', 'Week 5: LSU 59 Mississippi State 26', 'https://www.hailstateunis.com/2013-football-season/week-5-lsu-59-mississippi-state-26'),
 (87, 2013, '2013-09-21', 'Troy', 'Win', 62, 7, 'home', 56, 'https://i.imgur.com/eB2OD0d.png', 'https://i.imgur.com/yLF1zS7.png', 'Week 4: Troy 7 Mississippi State 62', 'https://www.hailstateunis.com/2013-football-season/week-4-troy-7-mississippi-state-62'),
@@ -261,7 +261,7 @@ INSERT INTO `game` (`gameID`, `yr`, `gameday`, `opponentName`, `result`, `points
 (209, 2003, '2003-09-27', 'LSU', 'Loss', 6, 41, 'home', 106, 'https://i.imgur.com/LGTwJPs.png', 'https://i.imgur.com/cTxmruz.png', NULL, NULL),
 (210, 2003, '2003-09-20', 'Houston', 'Loss', 35, 42, 'road', 107, 'https://i.imgur.com/cKPbemh.png', 'https://i.imgur.com/8X9EFjv.png', NULL, NULL),
 (211, 2003, '2003-09-13', 'Tulane', 'Loss', 28, 31, 'road', 107, 'https://i.imgur.com/cKPbemh.png', 'https://i.imgur.com/h0m1qXV.png', NULL, NULL),
-(212, 2003, '2003-08-31', 'Oregon', 'Loss', 34, 42, 'home', 108, 'https://i.imgur.com/fFtUIzA.png', 'https://i.imgur.com/cTxmruz.png', NULL, NULL),
+(212, 2003, '2003-08-30', 'Oregon', 'Loss', 34, 42, 'home', 108, 'https://i.imgur.com/fFtUIzA.png', 'https://i.imgur.com/cTxmruz.png', NULL, NULL),
 (213, 2002, '2002-11-28', 'Ole Miss', 'Loss', 12, 24, 'road', 109, 'https://i.imgur.com/i1BehvV.png', 'https://i.imgur.com/k2QyFAj.png', NULL, NULL),
 (214, 2002, '2002-11-23', 'Arkansas', 'Loss', 19, 26, 'home', 105, 'https://i.imgur.com/ahx3Eow.png', 'https://i.imgur.com/cTxmruz.png', NULL, NULL),
 (215, 2002, '2002-11-16', 'Tennessee', 'Loss', 17, 35, 'home', 105, 'https://i.imgur.com/qQMG9xK.png', 'https://i.imgur.com/cTxmruz.png', NULL, NULL),
@@ -282,7 +282,7 @@ INSERT INTO `game` (`gameID`, `yr`, `gameday`, `opponentName`, `result`, `points
 (230, 2001, '2001-10-20', 'LSU', 'Loss', 0, 42, 'home', 110, 'https://i.imgur.com/LGTwJPs.png', 'https://i.imgur.com/uI6YOyz.png', NULL, NULL),
 (231, 2001, '2001-10-13', 'Troy', 'Loss', 9, 21, 'home', 113, 'https://i.imgur.com/174YH8x.png', 'https://i.imgur.com/cTxmruz.png', NULL, NULL),
 (232, 2001, '2001-10-06', 'Auburn', 'Loss', 14, 16, 'road', 112, 'https://i.imgur.com/cKPbemh.png', 'https://i.imgur.com/4X8jjYq.png', NULL, NULL),
-(233, 2001, '2001-09-29', 'Florida', 'Loss', 0, 52, 'home', 111, 'https://i.imgur.com/i1BehvV.png', 'https://i.imgur.com/prt2bar.png', NULL, NULL),
+(233, 2001, '2001-09-29', 'Florida', 'Loss', 0, 52, 'road', 111, 'https://i.imgur.com/i1BehvV.png', 'https://i.imgur.com/prt2bar.png', NULL, NULL),
 (234, 2001, '2001-09-20', 'South Carolina', 'Loss', 14, 16, 'home', 113, 'https://i.imgur.com/bHpQyn4.png', 'https://i.imgur.com/cTxmruz.png', NULL, NULL),
 (235, 2001, '2001-09-03', 'Memphis', 'Win', 30, 10, 'home', 110, 'https://i.imgur.com/5D7pByZ.png', 'https://i.imgur.com/uI6YOyz.png', NULL, NULL),
 (236, 2000, '2000-12-31', 'Texas A&M', 'Win', 43, 41, 'bowl games', 117, 'https://i.imgur.com/i1BehvV.png', 'https://i.imgur.com/PmcnV73.png', NULL, NULL),

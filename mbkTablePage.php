@@ -26,12 +26,17 @@
       <div class="col-xs-3 text-center" id="seasons">
         <?php include "components/mbkTable/filters/mbkSeasonSelect.php"; ?>
       </div>
-      <div class="col-xs-3 text-center" id="situations">
-        <?php include "components/mbkTable/filters/mbkSituationSelect.php"; ?>
-      </div>
       <div class="col-xs-3 text-center" id="opponents">
         <?php include "components/mbkTable/filters/mbkOpponentSelect.php"; ?>
       </div>
+      <div class="col-xs-3 text-center" id="situationA">
+        <?php include "components/mbkTable/filters/mbkSituationA.php"; ?>
+      </div>
+      <div class="col-xs-3 text-center" id="situationB">
+        <?php include "components/mbkTable/filters/mbkSituationB.php"; ?>
+      </div>
+    </div>
+    <div class="row" id="filtersRowTwo">
       <div class="col-xs-3 text-center" id="search">
         <?php include "components/mbkTable/filters/searchMbkTable.php"; ?>
       </div>

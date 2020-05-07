@@ -66,7 +66,7 @@
       else if ($row["location"] == "secT"){
         $typeBadge = "' style='background-color: #202846; color: #f4ad3d;'>";
       }
-      else if ($row["location"] == "nit" || $row["location"] == "nitFinalFour"){
+      else if ($row["location"] == "nit" || $row["location"] == "nitSemis"){
         $typeBadge = "' style='background-color: #812990; color: #f7931e;'>";
       }
       else if ($row["location"] == "ncaa"){
@@ -93,7 +93,7 @@
                 <span class='badge badge-secondary'>" . $gameday . "</span>
                 </div>
               </td>
-              <td class='day' data-search='" . $row["gameday"] . "'>
+              <td class='day' data-search='" . date("l", mktime(0,0,0,$month,$day,$year)) . "'>
                 <span id='DoW' class='badge badge-dark'>" . date("l", mktime(0,0,0,$month,$day,$year)) . "</span>
               </td>
               <td class='type' data-search='" . $row["type"] . $row["location"] . "'>
