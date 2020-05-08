@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 08, 2020 at 04:28 AM
+-- Generation Time: May 08, 2020 at 04:29 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `mbkTableData`
+-- Database: `wbkTableData`
 --
 
 -- --------------------------------------------------------
@@ -231,11 +231,11 @@ INSERT INTO `opponent` (`opponentName`, `conference`, `colorA`, `colorB`) VALUES
 ('Virginia', 'ACC', '#f14d24', '#091f40'),
 ('Virginia Tech', 'ACC', '#43020e', '#ff6600'),
 ('W Carolina', 'Southern', '#6b18a5', '#d5aa71'),
-('W Kentucky', 'Conference USA', '#b01e24', 'white'),
 ('Wake Forest', 'ACC', 'black', '#bba16a'),
 ('Washington', 'Pac 12', '#3c2e81', '#e9bc77'),
 ('Washington St.', 'Pac 12', '#8b1435', 'white'),
 ('West Virginia', 'Big 12', '#002855', '#eaaa00'),
+('Western Kentucky', 'Conference USA', '#b01e24', 'white'),
 ('Western Michigan', 'MAC', '#c19958', '#35261c'),
 ('Winthrop', 'Big South', '#881e31', '#ffb305'),
 ('Wofford', 'Southern', '#886e4c', 'black'),

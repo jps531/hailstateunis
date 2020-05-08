@@ -26,12 +26,6 @@
     <option>Gray Pants</option>
     <option>Silver Pants</option>
   </optgroup>
-  <optgroup label="Monochrome Maroon">
-    <option>Monochrome Maroon</option>
-  </optgroup>
-  <optgroup label="White at Home">
-    <option>White at Home</option>
-  </optgroup>
   <optgroup label="Patches">
     <option>DWS 100</option>
     <option>Nick Bell</option>

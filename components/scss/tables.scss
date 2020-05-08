@@ -158,12 +158,13 @@ span.badge.badge-success, span.badge.badge-danger{
   color: #462329;
 }
 
-#footballTable_info, #mbkTable_info{
+#footballTable_info, #mbkTable_info, #wbkTable_info{
   white-space: normal;
 }
 
 #footballTable_length, #footballTable_info, #footballTable_paginate,
-#mbkTable_length, #mbkTable_info, #mbkTable_paginate {
+#mbkTable_length, #mbkTable_info, #mbkTable_paginate,
+#wbkTable_length, #wbkTable_info, #wbkTable_paginate {
   justify-content: center;
   display: flex;
   padding-bottom: 10px;

@@ -1,23 +1,23 @@
 //-----------
 // Load Filters
-$(function(){ $("#mbkOpponent").selectpicker('render'); })
-$(function(){ $("#mbkSituationA").selectpicker('render'); })
-$(function(){ $("#mbkSituationB").selectpicker('render'); })
-$(function(){ $("#mbkSelectYear").selectpicker('render'); })
+$(function(){ $("#wbkOpponent").selectpicker('render'); })
+$(function(){ $("#wbkSituationA").selectpicker('render'); })
+$(function(){ $("#wbkSituationB").selectpicker('render'); })
+$(function(){ $("#wbkSelectYear").selectpicker('render'); })
 $.fn.selectpicker.Constructor.DEFAULTS.multipleSeparator = ' | ';
 window.onload = function(){
-  if ($("#mbkSelectYear").val().length){
-    $("#mbkSelectYear").val('').trigger('change');
+  if ($("#wbkSelectYear").val().length){
+    $("#wbkSelectYear").val('').trigger('change');
   }
-  if ($("#mbkOpponent").val().length){
-    $("#mbkOpponent").val('').trigger('change');
+  if ($("#wbkOpponent").val().length){
+    $("#wbkOpponent").val('').trigger('change');
   }
 };
 //-----------
 
 //-----------
 // Initialize Table
-var mbkTable = $('#mbkTable').DataTable( {
+var wbkTable = $('#wbkTable').DataTable( {
                 "lengthMenu": [ [5, 10, 15, 20, 25, 40, 50, -1], [5, 10, 15, 20, 25, 40, 50, "All"] ],
                 "iDisplayLength":  10,
                 language: {
@@ -96,14 +96,14 @@ var mbkTable = $('#mbkTable').DataTable( {
 //-----------
 // Search Bar
 $(document).ready(function(){
-    $("#mbkSearch").on("keyup", function() {
-      mbkTable.search( this.value ).draw();
+    $("#wbkSearch").on("keyup", function() {
+      wbkTable.search( this.value ).draw();
     });
   });
 
 $(function() {
-  $('#mbkSearchClear').click(function() {
-    $("#mbkSearch").val('').trigger('keyup');
+  $('#wbkSearchClear').click(function() {
+    $("#wbkSearch").val('').trigger('keyup');
   });
 });
 //-----------
@@ -111,9 +111,9 @@ $(function() {
 //-----------
 // Opponent Select
 $(document).ready(function(){
-  $("#mbkOpponent").on("change", function() {
+  $("#wbkOpponent").on("change", function() {
     if (this.value == ""){
-      mbkTable.columns(8).search(this.value).draw();
+      wbkTable.columns(8).search(this.value).draw();
     }
     else{
       var regEx = $(this).find(':selected').map(function() {
@@ -121,14 +121,14 @@ $(document).ready(function(){
       })
       .get()
       .join( "|" );
-      mbkTable.column(8).search(regEx, true, false).draw();
+      wbkTable.column(8).search(regEx, true, false).draw();
     }
   });
 });
 
 $(function() {
-  $('#mbkOpponentClear').click(function() {
-    $("#mbkOpponent").val('').trigger('change');
+  $('#wbkOpponentClear').click(function() {
+    $("#wbkOpponent").val('').trigger('change');
   });
 });
 
@@ -138,40 +138,40 @@ var pageLength;
 var resetLength = true;
 
 $(document).ready(function(){
-  $("#mbkSelectYear").on("change", function() {
+  $("#wbkSelectYear").on("change", function() {
     var regEx = $(this).find(':selected').map(function() {
       return $( this ).text();
     })
     .get()
     .join( "|" );
-    mbkTable.column(0).search(regEx, true, false).draw();
+    wbkTable.column(0).search(regEx, true, false).draw();
 
     if (this.value != ''){
       if (resetLength){
-        pageLength = mbkTable.page.len();
+        pageLength = wbkTable.page.len();
         resetLength = false;
       }
-      mbkTable.page.len(-1).draw();
+      wbkTable.page.len(-1).draw();
     }
-    else if (mbkTable.page.len() == -1){
-      mbkTable.page.len(pageLength).draw();
+    else if (wbkTable.page.len() == -1){
+      wbkTable.page.len(pageLength).draw();
     }
   });
 });
 
 $(function() {
-  $('#mbkSeasonClear').click(function() {
-    $("#mbkSelectYear").val('').trigger('change');
+  $('#wbkSeasonClear').click(function() {
+    $("#wbkSelectYear").val('').trigger('change');
   });
 });
 //-----------
 
 //-----------
 // Siutation A Select
-var mbkOptSelectedA = [];
+var wbkOptSelectedA = [];
 
 $(document).ready(function(){
-  $("#mbkSituationA").on("change", function() {
+  $("#wbkSituationA").on("change", function() {
     var regExA = $(this).find(':selected').map(function() {
       return $( this ).text();
     })
@@ -198,6 +198,10 @@ $(document).ready(function(){
       regExA = regExA.concat("|-03-");
     }
 
+    else if (regExA.includes('April')){
+      regExA = regExA.concat("|-04-");
+    }
+
     else if (this.value == "SEC Tournament"){
       regExA = regExA.concat("|secT");
     }
@@ -211,14 +215,15 @@ $(document).ready(function(){
         regExA.includes('|-12-')||
         regExA.includes('|-01-')||
         regExA.includes('|-02-')||
-        regExA.includes('|-03-')){
-      disableOptGroup("mbkSituationB",1);
-      mbkTable.column(1).search(regExA, true, false).draw();
-      mbkOptSelectedA.push(1);
+        regExA.includes('|-03-')||
+        regExA.includes('|-04-')){
+      disableOptGroup("wbkSituationB",1);
+      wbkTable.column(1).search(regExA, true, false).draw();
+      wbkOptSelectedA.push(1);
     }
     else{
-      enableOptGroup("mbkSituationB",1);
-      situationToggleElse(1,mbkOptSelectedA);
+      enableOptGroup("wbkSituationB",1);
+      situationToggleElse(1,wbkOptSelectedA);
     }
 
     // Days
@@ -229,28 +234,26 @@ $(document).ready(function(){
         regExA.includes('Frid')||
         regExA.includes('Satu')||
         regExA.includes('Sund')){
-      disableOptGroup("mbkSituationB",2);
-      mbkTable.column(2).search(regExA, true, false).draw();
-      mbkOptSelectedA.push(2);
+      disableOptGroup("wbkSituationB",2);
+      wbkTable.column(2).search(regExA, true, false).draw();
+      wbkOptSelectedA.push(2);
     }
     else{
-      enableOptGroup("mbkSituationB",2);
-      situationToggleElse(2,mbkOptSelectedA);
+      enableOptGroup("wbkSituationB",2);
+      situationToggleElse(2,wbkOptSelectedA);
     }
 
     // Head Coaches
-    if(regExA.includes('Ben')||
-        regExA.includes('Rick')||
-        regExA.includes('Rich')||
-        regExA.includes('Jim')||
-        regExA.includes('Babe')){
-      disableOptGroup("mbkSituationB",3);
-      mbkTable.column(5).search(regExA, true, false).draw();
-      mbkOptSelectedA.push(5);
+    if(regExA.includes('Nikki')||
+        regExA.includes('Vic')||
+        regExA.includes('Sharon')){
+      disableOptGroup("wbkSituationB",3);
+      wbkTable.column(5).search(regExA, true, false).draw();
+      wbkOptSelectedA.push(5);
     }
     else{
-      enableOptGroup("mbkSituationB",3);
-      situationToggleElse(5,mbkOptSelectedA);
+      enableOptGroup("wbkSituationB",3);
+      situationToggleElse(5,wbkOptSelectedA);
     }
 
     // Regular Season and Tournaments
@@ -258,52 +261,54 @@ $(document).ready(function(){
         regExA.includes('Road')||
         regExA.includes('Neutral')||
         regExA.includes('SEC')||
+        regExA.includes('SEC')||
         regExA.includes('NCAA')||
-        regExA.includes('NIT')||
+        regExA.includes('WNIT')||
         regExA.includes('Round')||
         regExA.includes('Sweet')||
         regExA.includes('Elite')||
         regExA.includes('Final')||
-        regExA.includes('Reg')){
-      disableOptGroup("mbkSituationB",4);
-      disableOptGroup("mbkSituationB",5);
-      disableOptGroup("mbkSituationB",6);
-      disableOptGroup("mbkSituationB",7);
-      disableOptGroup("mbkSituationB",8);
-      mbkTable.column(3).search(regExA, true, false).draw();
-      mbkOptSelectedA.push(3);
+        regExA.includes('National')){
+      disableOptGroup("wbkSituationB",4);
+      disableOptGroup("wbkSituationB",5);
+      disableOptGroup("wbkSituationB",6);
+      disableOptGroup("wbkSituationB",7);
+      disableOptGroup("wbkSituationB",8);
+      wbkTable.column(3).search(regExA, true, false).draw();
+      wbkOptSelectedA.push(3);
     }
     else{
-      enableOptGroup("mbkSituationB",4);
-      enableOptGroup("mbkSituationB",5);
-      enableOptGroup("mbkSituationB",6);
-      enableOptGroup("mbkSituationB",7);
-      enableOptGroup("mbkSituationB",8);
-      situationToggleElse(3,mbkOptSelectedA);
+      enableOptGroup("wbkSituationB",4);
+      enableOptGroup("wbkSituationB",5);
+      enableOptGroup("wbkSituationB",6);
+      enableOptGroup("wbkSituationB",7);
+      enableOptGroup("wbkSituationB",8);
+      situationToggleElse(3,wbkOptSelectedA);
     }
     
     // Uniform Colors
     if (regExA.includes('White')||
         regExA.includes('Maroon')||
         regExA.includes('Black')||
+        regExA.includes('Pink')||
         regExA.includes('Gray')||
         regExA.includes('Cream')){
-      disableOptGroup("mbkSituationB",0);
-      mbkTable.column(4).search(regExA, true, false).draw();
-      mbkOptSelectedA.push(4);
+      disableOptGroup("wbkSituationB",0);
+      wbkTable.column(4).search(regExA, true, false).draw();
+      wbkOptSelectedA.push(4);
     }
     else{
-      enableOptGroup("mbkSituationB",0);
-      situationToggleElse(4,mbkOptSelectedA);
+      enableOptGroup("wbkSituationB",0);
+      situationToggleElse(4,wbkOptSelectedA);
     }
   });
 });
 
 $(function() {
-  $('#mbkSitAClear').click(function() {
-    $("#mbkSituationA").val('').trigger('change');
+  $('#wbkSitAClear').click(function() {
+    $("#wbkSituationA").val('').trigger('change');
     for(var k=0; k<5; k++){
-      enableOptGroup("mbkSituationB",k);
+      enableOptGroup("wbkSituationB",k);
     }
   });
 });
@@ -311,10 +316,10 @@ $(function() {
 
 //-----------
 // Siutation B Select
-var mbkOptSelectedB = [];
+var wbkOptSelectedB = [];
 
 $(document).ready(function(){
-  $("#mbkSituationB").on("change", function() {
+  $("#wbkSituationB").on("change", function() {
     var regExB = $(this).find(':selected').map(function() {
       return $( this ).text();
     })
@@ -341,6 +346,10 @@ $(document).ready(function(){
       regExB = regExB.concat("|-03-");
     }
 
+    if (regExB.includes('April')){
+      regExB = regExB.concat("|-04-");
+    }
+
     if (this.value == "SEC Tournament"){
       regExB = regExB.concat("|secT");
     }
@@ -354,14 +363,15 @@ $(document).ready(function(){
         regExB.includes('|-12-')||
         regExB.includes('|-01-')||
         regExB.includes('|-02-')||
-        regExB.includes('|-03-')){
-      disableOptGroup("mbkSituationA",1);
-      mbkTable.column(1).search(regExB, true, false).draw();
-      mbkOptSelectedB.push(1);
+        regExB.includes('|-03-')||
+        regExB.includes('|-04-')){
+      disableOptGroup("wbkSituationA",1);
+      wbkTable.column(1).search(regExB, true, false).draw();
+      wbkOptSelectedB.push(1);
     }
     else{
-      enableOptGroup("mbkSituationA",1);
-      situationToggleElse(1,mbkOptSelectedB);
+      enableOptGroup("wbkSituationA",1);
+      situationToggleElse(1,wbkOptSelectedB);
     }
 
     // Days
@@ -372,80 +382,80 @@ $(document).ready(function(){
         regExB.includes('Frid')||
         regExB.includes('Satu')||
         regExB.includes('Sund')){
-      disableOptGroup("mbkSituationA",2);
-      mbkTable.column(2).search(regExB, true, false).draw();
-      mbkOptSelectedB.push(2);
+      disableOptGroup("wbkSituationA",2);
+      wbkTable.column(2).search(regExB, true, false).draw();
+      wbkOptSelectedB.push(2);
     }
     else{
-      enableOptGroup("mbkSituationA",2);
-      situationToggleElse(2,mbkOptSelectedB);
+      enableOptGroup("wbkSituationA",2);
+      situationToggleElse(2,wbkOptSelectedB);
     }
 
     // Head Coaches
-    if(regExB.includes('Ben')||
-        regExB.includes('Rick')||
-        regExB.includes('Rich')||
-        regExB.includes('Jim')||
-        regExB.includes('Babe')){
-      disableOptGroup("mbkSituationA",3);
-      mbkTable.column(5).search(regExB, true, false).draw();
-      mbkOptSelectedB.push(5);
+    if(regExB.includes('Nikki')||
+        regExB.includes('Vic')||
+        regExB.includes('Sharon')){
+      disableOptGroup("wbkSituationA",3);
+      wbkTable.column(5).search(regExB, true, false).draw();
+      wbkOptSelectedB.push(5);
     }
     else{
-      enableOptGroup("mbkSituationA",3);
-      situationToggleElse(5,mbkOptSelectedB);
+      enableOptGroup("wbkSituationA",3);
+      situationToggleElse(5,wbkOptSelectedB);
     }
-    // Regular Season and Tournaments
+
+    // Regular Season amd Tournaments
     if(regExB.includes('Home')||
         regExB.includes('Road')||
         regExB.includes('Neutral')||
         regExB.includes('SEC')||
         regExB.includes('NCAA')||
-        regExB.includes('NIT')||
+        regExB.includes('WNIT')||
         regExB.includes('Round')||
         regExB.includes('Sweet')||
         regExB.includes('Elite')||
         regExB.includes('Final')||
-        regExB.includes('Reg')){
-      disableOptGroup("mbkSituationA",4);
-      disableOptGroup("mbkSituationA",5);
-      disableOptGroup("mbkSituationA",6);
-      disableOptGroup("mbkSituationA",7);
-      disableOptGroup("mbkSituationA",8);
-      mbkTable.column(3).search(regExB, true, false).draw();
-      mbkOptSelectedB.push(3);
+        regExB.includes('National')){
+      disableOptGroup("wbkSituationA",4);
+      disableOptGroup("wbkSituationA",5);
+      disableOptGroup("wbkSituationA",6);
+      disableOptGroup("wbkSituationA",7);
+      disableOptGroup("wbkSituationA",8);
+      wbkTable.column(3).search(regExB, true, false).draw();
+      wbkOptSelectedB.push(3);
     }
     else{
-      enableOptGroup("mbkSituationA",4);
-      enableOptGroup("mbkSituationA",5);
-      enableOptGroup("mbkSituationA",6);
-      enableOptGroup("mbkSituationA",7);
-      enableOptGroup("mbkSituationA",8);
-      situationToggleElse(3,mbkOptSelectedB);
+      enableOptGroup("wbkSituationA",4);
+      enableOptGroup("wbkSituationA",5);
+      enableOptGroup("wbkSituationA",6);
+      enableOptGroup("wbkSituationA",7);
+      enableOptGroup("wbkSituationA",8);
+      situationToggleElse(3,wbkOptSelectedB);
     }
     
     // Uniform Colors
     if (regExB.includes('White')||
         regExB.includes('Maroon')||
         regExB.includes('Black')||
+        regExB.includes('Pink')||
         regExB.includes('Gray')||
         regExB.includes('Cream')){
-      disableOptGroup("mbkSituationA",0);
-      mbkTable.column(4).search(regExB, true, false).draw();
-      mbkOptSelectedB.push(4);
+      disableOptGroup("wbkSituationA",0);
+      wbkTable.column(4).search(regExB, true, false).draw();
+      wbkOptSelectedB.push(4);
     }
     else{
-      enableOptGroup("mbkSituationA",0);
-      situationToggleElse(4,mbkOptSelectedB);
+      enableOptGroup("wbkSituationA",0);
+      situationToggleElse(4,wbkOptSelectedB);
     }
   });
 });
 
 $(function() {
-  $('#mbkSitBClear').click(function() {
-    $("#mbkSituationB").val('').trigger('change');
+  $('#wbkSitBClear').click(function() {
+    $("#wbkSituationB").val('').trigger('change');
     for(var k=0; k<5; k++){
-      enableOptGroup("mbkSituationA",k);
+      enableOptGroup("wbkSituationA",k);
     }
   });
 });
@@ -463,15 +473,15 @@ function getRecord(){
   wins = 0;
   losses = 0;
   ties = 0;
-  for (z=0; z < mbkTable.rows().count(); z++){
-    if (mbkTable.row(z, {search:'applied'})[0].length > 0){
-      if (mbkTable.cell(z,5).data().toString().includes('Win')){
+  for (z=0; z < wbkTable.rows().count(); z++){
+    if (wbkTable.row(z, {search:'applied'})[0].length > 0){
+      if (wbkTable.cell(z,5).data().toString().includes('Win')){
         wins += 1;
       }
-      if (mbkTable.cell(z,5).data().toString().includes('Loss')){
+      if (wbkTable.cell(z,5).data().toString().includes('Loss')){
         losses += 1;
       }
-      if (mbkTable.cell(z,5).data().toString().includes('TIE')){
+      if (wbkTable.cell(z,5).data().toString().includes('TIE')){
         ties += 1;
       }
     }
@@ -533,7 +543,7 @@ document.getElementById('winLossTotal').innerHTML = wlTotal;
 
 // Alter String Each Time the Table is Filtered
 $(function() {
-  mbkTable.on( 'search', function () {
+  wbkTable.on( 'search', function () {
     getRecord();
     makeString(wins, losses, ties);
     document.getElementById('winLossTotal').innerHTML = wlTotal;
@@ -565,7 +575,7 @@ function enableOptGroup(selectID, optGroupIndex){
 // Situation Toggle Else Function
 function situationToggleElse(columnNumber,optSelect){
   if (optSelect.includes(columnNumber)){
-    mbkTable.columns(columnNumber).search('').draw();
+    wbkTable.columns(columnNumber).search('').draw();
     for (z=0;z<optSelect.length;z++){
       if(optSelect[z] == columnNumber){
         optSelect.splice(z,1);

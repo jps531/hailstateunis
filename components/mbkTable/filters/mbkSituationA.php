@@ -31,6 +31,11 @@
     <option>Jim Hatfield</option>
     <option>Babe McCarthy</option>
   </optgroup>
+  <optgroup label="Regular Season">
+    <option>Home</option>
+    <option>Road</option>
+    <option>Neutral</option>
+  </optgroup>
   <optgroup label="Tournaments">
     <option>NCAA Tournament</option>
     <option>NIT</option>

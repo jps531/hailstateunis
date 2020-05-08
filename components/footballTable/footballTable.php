@@ -93,7 +93,7 @@
               <td class='season' data-sort='" . $row["gameday"] . "'>
                 <span class='badge' style='background-color: #3b0811; color: white;'>" . $row["yr"] . "</span>
               </td>
-              <td class='date' data-search='" . $row["gameday"] . date("l", mktime(0,0,0,$month,$day,$year)) . "'>
+              <td class='date' data-search='" . $row["gameday"] . "'>
                 <div class='calendarDate' id=date-" . $row["gameID"] . "' title='" . $row["gameday"] . "'>
                 <span class='badge badge-secondary'>" . $gameday . "</span>
                 </div>
@@ -128,7 +128,7 @@
                   <img src='" . $row["pImage"] . "' height='80' alt='' class='d-inline-block align-middle mr-2'
                 </a>
               </td>
-              <td class='result'>
+              <td class='result' data-search='" . $row["result"] . " " . date("l", mktime(0,0,0,$month,$day,$year)) . "'>
                 <span class='badge badge-" . $resultColor . "'>" . $row["result"] . "</span>
               </td>
               <td class='pf' data-sort='" . $row["points_for"] . "'>

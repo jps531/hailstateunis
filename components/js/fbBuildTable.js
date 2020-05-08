@@ -302,20 +302,16 @@ $(document).ready(function(){
     if(regExA.includes('Bowl Games')){
       disableOptGroup("fbSituationB",1);
       disableOptGroup("fbSituationB",6);
-      disableOptGroup("fbSituationB",8);
       table.column(3).search(regExA, true, false).draw();
       fbOptSelectedA.push(1);
     }
     else{
       situationToggleElse(1,3,fbOptSelectedA);
-      if (!fbOptSelectedA.includes(1)){
+      if (!fbOptSelectedA.includes(6) && !fbOptSelectedA.includes(1)){
         enableOptGroup("fbSituationB",1);
       }
-      if (!fbOptSelectedA.includes(6)){
+      if (!fbOptSelectedA.includes(6) && !fbOptSelectedA.includes(1)){
         enableOptGroup("fbSituationB",6);
-      }
-      if (!fbOptSelectedA.includes(8)){
-        enableOptGroup("fbSituationB",8);
       }
     }
 
@@ -358,95 +354,53 @@ $(document).ready(function(){
       }
     }
 
-    // Monochrome Maroon
-    if(regExA.includes('Monochrome')){
-      disableOptGroup("fbSituationB",3);
-      disableOptGroup("fbSituationB",4);
+    // Patches
+    if(regExA.includes('dws 100')||regExA.includes('Nick Bell')){
       disableOptGroup("fbSituationB",5);
       table.column(4).search(regExA, true, false).draw();
       fbOptSelectedA.push(5);
     }
     else{
       situationToggleElse(5,4,fbOptSelectedA);
-      if (!fbOptSelectedA.includes(3)){
-        enableOptGroup("fbSituationB",3);
-      }
-      if (!fbOptSelectedA.includes(4)){
-        enableOptGroup("fbSituationB",4);
-      }
       if (!fbOptSelectedA.includes(5)){
         enableOptGroup("fbSituationB",5);
       }
     }
 
-    // White at Home
-    if(regExA.includes('White at Home')){
-      disableOptGroup("fbSituationB",3);
+    // Regular Season
+    if(regExA.includes('Home')||
+        regExA.includes('Road')||
+        regExA.includes('Neutral')){
+      disableOptGroup("fbSituationB",1);
       disableOptGroup("fbSituationB",6);
-      disableOptGroup("fbSituationB",8);
-      table.search('/white/ home').draw();
+      table.column(3).search(regExA, true, false).draw();
       fbOptSelectedA.push(6);
     }
     else{
-      if (fbOptSelectedA.includes(6)){
-        table.search('').draw();
-        for (z=0;z<fbOptSelectedA.length;z++){
-          if(fbOptSelectedA[z] == 6){
-            fbOptSelectedA.splice(z,1);
-          }
-        }
+      situationToggleElse(6,3,fbOptSelectedA);
+      if (!fbOptSelectedA.includes(6) && !fbOptSelectedA.includes(1)){
+        enableOptGroup("fbSituationB",1);
       }
-      if (!fbOptSelectedA.includes(3)){
-        enableOptGroup("fbSituationB",3);
-      }
-      if (!fbOptSelectedA.includes(6)){
+      if (!fbOptSelectedA.includes(6) && !fbOptSelectedA.includes(1)){
         enableOptGroup("fbSituationB",6);
-      }
-      if (!fbOptSelectedA.includes(8)){
-        enableOptGroup("fbSituationB",8);
-      }
-    }
-
-    // Patches
-    if(regExA.includes('dws 100')||regExA.includes('Nick Bell')){
-      disableOptGroup("fbSituationB",7);
-      table.column(4).search(regExA, true, false).draw();
-      fbOptSelectedA.push(7);
-    }
-    else{
-      situationToggleElse(7,4,fbOptSelectedA);
-      if (!fbOptSelectedA.includes(7)){
-        enableOptGroup("fbSituationB",7);
-      }
-    }
-
-    // Regular Season
-    if(regExA.includes('Home')||regExA.includes('Road')||regExA.includes('Neutral')){
-      disableOptGroup("fbSituationB",8);
-      table.column(3).search(regExA, true, false).draw();
-      fbOptSelectedA.push(8);
-    }
-    else{
-      situationToggleElse(8,3,fbOptSelectedA);
-      if (!fbOptSelectedA.includes(8)){
-        enableOptGroup("fbSituationB",8);
       }
     }
 
     // Months
-    if(regExA.includes('|-11-')||
+    if(regExA.includes('|-08-')||
+        regExA.includes('|-09-')||
+        regExA.includes('|-10-')||
+        regExA.includes('|-11-')||
         regExA.includes('|-12-')||
-        regExA.includes('|-01-')||
-        regExA.includes('|-02-')||
-        regExA.includes('|-03-')){
-      disableOptGroup("fbSituationB",9);
+        regExA.includes('|-01-')){
+      disableOptGroup("fbSituationB",7);
       table.column(1).search(regExA, true, false).draw();
-      fbOptSelectedA.push(9);
+      fbOptSelectedA.push(7);
     }
     else{
-      situationToggleElse(9,1,fbOptSelectedA);
-      if (!fbOptSelectedA.includes(9)){
-        enableOptGroup("fbSituationB",9);
+      situationToggleElse(7,1,fbOptSelectedA);
+      if (!fbOptSelectedA.includes(7)){
+        enableOptGroup("fbSituationB",7);
       }
     }
 
@@ -458,14 +412,14 @@ $(document).ready(function(){
         regExA.includes('Frid')||
         regExA.includes('Satu')||
         regExA.includes('Sund')){
-      disableOptGroup("fbSituationB",10);
-      table.column(1).search(regExA, true, false).draw();
-      fbOptSelectedA.push(10);
+      disableOptGroup("fbSituationB",8);
+      table.column(8).search(regExA, true, false).draw();
+      fbOptSelectedA.push(8);
     }
     else{
-      situationToggleElse(10,1,fbOptSelectedA);
-      if (!fbOptSelectedA.includes(10)){
-        enableOptGroup("fbSituationB",10);
+      situationToggleElse(8,8,fbOptSelectedA);
+      if (!fbOptSelectedA.includes(8)){
+        enableOptGroup("fbSituationB",8);
       }
     }
 
@@ -482,35 +436,35 @@ $(document).ready(function(){
         regExA.includes('Paul')||
         regExA.includes('Allyn')||
         regExA.includes('Ralph')){
-      disableOptGroup("fbSituationB",11);
+      disableOptGroup("fbSituationB",9);
       table.column(11).search(regExA, true, false).draw();
-      fbOptSelectedA.push(11);
+      fbOptSelectedA.push(9);
     }
     else{
-      situationToggleElse(11,11,fbOptSelectedA);
-      if (!fbOptSelectedA.includes(11)){
-        enableOptGroup("fbSituationB",11);
+      situationToggleElse(9,11,fbOptSelectedA);
+      if (!fbOptSelectedA.includes(9)){
+        enableOptGroup("fbSituationB",9);
       }
     }
 
     // Combinations
     if(regExA.includes('/')){
+      disableOptGroup("fbSituationB",10);
+      disableOptGroup("fbSituationB",11);
       disableOptGroup("fbSituationB",12);
       disableOptGroup("fbSituationB",13);
       disableOptGroup("fbSituationB",14);
-      disableOptGroup("fbSituationB",15);
-      disableOptGroup("fbSituationB",16);
       table.column(4).search(regExA, true, false).draw();
-      fbOptSelectedA.push(12);
+      fbOptSelectedA.push(10);
     }
     else{
-      situationToggleElse(12,4,fbOptSelectedA);
-      if (!fbOptSelectedA.includes(12)){
+      situationToggleElse(10,4,fbOptSelectedA);
+      if (!fbOptSelectedA.includes(10)){
+        enableOptGroup("fbSituationB",10);
+        enableOptGroup("fbSituationB",11);
         enableOptGroup("fbSituationB",12);
         enableOptGroup("fbSituationB",13);
         enableOptGroup("fbSituationB",14);
-        enableOptGroup("fbSituationB",15);
-        enableOptGroup("fbSituationB",16);
       }
     }
   });
@@ -641,20 +595,16 @@ $(document).ready(function(){
     if(regExB.includes('Bowl Games')){
       disableOptGroup("fbSituationA",1);
       disableOptGroup("fbSituationA",6);
-      disableOptGroup("fbSituationA",8);
       table.column(3).search(regExB, true, false).draw();
       fbOptSelectedB.push(1);
     }
     else{
       situationToggleElse(1,3,fbOptSelectedB);
-      if (!fbOptSelectedB.includes(1)){
+      if (!fbOptSelectedB.includes(6) && !fbOptSelectedA.includes(1)){
         enableOptGroup("fbSituationA",1);
       }
-      if (!fbOptSelectedB.includes(6)){
+      if (!fbOptSelectedB.includes(6) && !fbOptSelectedA.includes(1)){
         enableOptGroup("fbSituationA",6);
-      }
-      if (!fbOptSelectedB.includes(8)){
-        enableOptGroup("fbSituationA",8);
       }
     }
 
@@ -697,95 +647,53 @@ $(document).ready(function(){
       }
     }
 
-    // Monochrome Maroon
-    if(regExB.includes('Monochrome')){
-      disableOptGroup("fbSituationA",3);
-      disableOptGroup("fbSituationA",4);
+    // Patches
+    if(regExB.includes('dws 100')||regExB.includes('Nick Bell')){
       disableOptGroup("fbSituationA",5);
       table.column(4).search(regExB, true, false).draw();
       fbOptSelectedB.push(5);
     }
     else{
       situationToggleElse(5,4,fbOptSelectedB);
-      if (!fbOptSelectedB.includes(3)){
-        enableOptGroup("fbSituationA",3);
-      }
-      if (!fbOptSelectedB.includes(4)){
-        enableOptGroup("fbSituationA",4);
-      }
       if (!fbOptSelectedB.includes(5)){
         enableOptGroup("fbSituationA",5);
       }
     }
 
-    // White at Home
-    if(regExB.includes('White at Home')){
-      disableOptGroup("fbSituationA",3);
+    // Regular Season
+    if(regExB.includes('Home')||
+        regExB.includes('Road')||
+        regExB.includes('Neutral')){
+      disableOptGroup("fbSituationA",1);
       disableOptGroup("fbSituationA",6);
-      disableOptGroup("fbSituationA",8);
-      table.search('/white/ home').draw();
+      table.column(3).search(regExB, true, false).draw();
       fbOptSelectedB.push(6);
     }
     else{
-      if (fbOptSelectedB.includes(6)){
-        table.search('').draw();
-        for (z=0;z<fbOptSelectedB.length;z++){
-          if(fbOptSelectedB[z] == 6){
-            fbOptSelectedB.splice(z,1);
-          }
-        }
+      situationToggleElse(6,3,fbOptSelectedB);
+      if (!fbOptSelectedB.includes(6) && !fbOptSelectedA.includes(1)){
+        enableOptGroup("fbSituationA",1);
       }
-      if (!fbOptSelectedB.includes(3)){
-        enableOptGroup("fbSituationA",3);
-      }
-      if (!fbOptSelectedB.includes(6)){
+      if (!fbOptSelectedB.includes(6) && !fbOptSelectedA.includes(1)){
         enableOptGroup("fbSituationA",6);
-      }
-      if (!fbOptSelectedB.includes(8)){
-        enableOptGroup("fbSituationA",8);
-      }
-    }
-
-    // Patches
-    if(regExB.includes('dws 100')||regExB.includes('Nick Bell')){
-      disableOptGroup("fbSituationA",7);
-      table.column(4).search(regExB, true, false).draw();
-      fbOptSelectedB.push(7);
-    }
-    else{
-      situationToggleElse(7,4,fbOptSelectedB);
-      if (!fbOptSelectedB.includes(7)){
-        enableOptGroup("fbSituationA",7);
-      }
-    }
-
-    // Regular Season
-    if(regExB.includes('Home')||regExB.includes('Road')||regExB.includes('Neutral')){
-      disableOptGroup("fbSituationA",8);
-      table.column(3).search(regExB, true, false).draw();
-      fbOptSelectedB.push(8);
-    }
-    else{
-      situationToggleElse(8,3,fbOptSelectedB);
-      if (!fbOptSelectedB.includes(8)){
-        enableOptGroup("fbSituationA",8);
       }
     }
 
     // Months
-    if(regExB.includes('|-11-')||
+    if(regExB.includes('|-08-')||
+        regExB.includes('|-09-')||
+        regExB.includes('|-10-')||
+        regExB.includes('|-11-')||
         regExB.includes('|-12-')||
-        regExB.includes('|-01-')||
-        regExB.includes('|-02-')||
-        regExB.includes('|-03-')){
-      disableOptGroup("fbSituationA",9);
+        regExB.includes('|-01-')){
+      disableOptGroup("fbSituationA",7);
       table.column(1).search(regExB, true, false).draw();
-      fbOptSelectedB.push(9);
+      fbOptSelectedB.push(7);
     }
     else{
-      situationToggleElse(9,1,fbOptSelectedB);
-      if (!fbOptSelectedB.includes(9)){
-        enableOptGroup("fbSituationA",9);
+      situationToggleElse(7,1,fbOptSelectedB);
+      if (!fbOptSelectedB.includes(7)){
+        enableOptGroup("fbSituationA",7);
       }
     }
 
@@ -797,14 +705,14 @@ $(document).ready(function(){
         regExB.includes('Frid')||
         regExB.includes('Satu')||
         regExB.includes('Sund')){
-      disableOptGroup("fbSituationA",10);
-      table.column(1).search(regExB, true, false).draw();
-      fbOptSelectedB.push(10);
+      disableOptGroup("fbSituationA",8);
+      table.column(8).search(regExB, true, false).draw();
+      fbOptSelectedB.push(8);
     }
     else{
-      situationToggleElse(10,1,fbOptSelectedB);
-      if (!fbOptSelectedB.includes(10)){
-        enableOptGroup("fbSituationA",10);
+      situationToggleElse(8,8,fbOptSelectedB);
+      if (!fbOptSelectedB.includes(8)){
+        enableOptGroup("fbSituationA",8);
       }
     }
 
@@ -821,35 +729,35 @@ $(document).ready(function(){
         regExB.includes('Paul')||
         regExB.includes('Allyn')||
         regExB.includes('Ralph')){
-      disableOptGroup("fbSituationA",11);
+      disableOptGroup("fbSituationA",9);
       table.column(11).search(regExB, true, false).draw();
-      fbOptSelectedB.push(11);
+      fbOptSelectedB.push(9);
     }
     else{
-      situationToggleElse(11,11,fbOptSelectedB);
-      if (!fbOptSelectedB.includes(11)){
-        enableOptGroup("fbSituationA",11);
+      situationToggleElse(9,11,fbOptSelectedB);
+      if (!fbOptSelectedB.includes(9)){
+        enableOptGroup("fbSituationA",9);
       }
     }
 
     // Combinations
     if(regExB.includes('/')){
+      disableOptGroup("fbSituationA",10);
+      disableOptGroup("fbSituationA",11);
       disableOptGroup("fbSituationA",12);
       disableOptGroup("fbSituationA",13);
       disableOptGroup("fbSituationA",14);
-      disableOptGroup("fbSituationA",15);
-      disableOptGroup("fbSituationA",16);
       table.column(4).search(regExB, true, false).draw();
-      fbOptSelectedB.push(12);
+      fbOptSelectedB.push(10);
     }
     else{
-      situationToggleElse(12,4,fbOptSelectedB);
-      if (!fbOptSelectedB.includes(12)){
+      situationToggleElse(10,4,fbOptSelectedB);
+      if (!fbOptSelectedB.includes(10)){
+        enableOptGroup("fbSituationA",10);
+        enableOptGroup("fbSituationA",11);
         enableOptGroup("fbSituationA",12);
         enableOptGroup("fbSituationA",13);
         enableOptGroup("fbSituationA",14);
-        enableOptGroup("fbSituationA",15);
-        enableOptGroup("fbSituationA",16);
       }
     }
   });
