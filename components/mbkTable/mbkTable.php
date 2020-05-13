@@ -75,7 +75,7 @@
       else if ($row["location"] == "ncaaSsEe"){
         $typeBadge = "' style='background-color: #d70d2a; color: white;'>";
       }
-      else if ($row["location"] == "finalFour96"){
+      else if ($row["location"] == "ncaaFinalFour96"){
         $typeBadge = "' style='background-color: #3eb3af; color: white;'>";
       }
 

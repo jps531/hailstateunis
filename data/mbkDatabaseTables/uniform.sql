@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 29, 2020 at 04:42 AM
+-- Generation Time: May 11, 2020 at 09:55 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -87,12 +87,12 @@ INSERT INTO `uniform` (`uniformID`, `uColor`, `uName`, `uImage`) VALUES
 (45, 'white', '2010 white uniforms varnado', 'https://i.imgur.com/sleeamq.png'),
 (46, 'maroon', '2009 ncaa maroon uniforms stewart', 'https://i.imgur.com/MUfEBNJ.png'),
 (47, 'maroon', '2009 maroon uniforms stewart', 'https://i.imgur.com/5HFjuCW.png'),
-(48, 'white', '2009 white uniforms varnado', 'blob:https://imgur.com/21501e8d-1244-487b-aa43-7cf8ea3df41a'),
+(48, 'white', '2009 white uniforms varnado', 'https://i.imgur.com/3nC6QHq.png'),
 (49, 'maroon', '2008 ncaa maroon uniforms gordon', 'https://i.imgur.com/WrVn5Kk.png'),
 (50, 'maroon', '2008 maroon uniforms gordon', 'https://i.imgur.com/7VXLYIU.png'),
 (51, 'white', '2008 ncaa white uniforms rhodes', 'https://i.imgur.com/7VoDc0Z.png'),
 (52, 'white', '2008 white uniforms rhodes', 'https://i.imgur.com/o4IgtWt.png'),
-(53, 'white', '2006 throwback white uniforms', 'https://i.imgur.com/IpiDKdh.png'),
+(53, 'white', '2006 throwback white uniforms edmondson', 'https://i.imgur.com/dIH9QwJ.png'),
 (54, 'maroon', '2006 maroon uniforms gordon', 'https://i.imgur.com/iL2IAZ7.png'),
 (55, 'white', '2006 white uniforms rhodes', 'https://i.imgur.com/zjK2bFc.png'),
 (56, 'maroon', '2007 maroon uniforms gordon', 'https://i.imgur.com/zKQ0tBB.png'),
@@ -117,14 +117,15 @@ INSERT INTO `uniform` (`uniformID`, `uColor`, `uName`, `uImage`) VALUES
 (75, 'white', '1999 white uniforms washington', 'https://i.imgur.com/vW8sWoc.png'),
 (76, 'maroon', '1994 maroon uniforms dampier', 'https://i.imgur.com/9MZ24KH.png'),
 (77, 'maroon', '1995 maroon uniforms dampier', 'https://i.imgur.com/oZAfb0D.png'),
-(78, 'white', '1995 maroon uniforms wilson', 'https://i.imgur.com/ewZzfuy.png'),
+(78, 'white', '1995 white uniforms wilson', 'https://i.imgur.com/ewZzfuy.png'),
 (79, 'maroon', '1996 maroon uniforms jones', 'https://i.imgur.com/rdh3yhu.png'),
 (80, 'white', '1996 white uniforms wilson', 'https://i.imgur.com/bOpLdFa.png'),
 (81, 'maroon', '1963 maroon uniforms', 'https://i.imgur.com/DemEJhK.png'),
 (82, 'white', '1979 white uniforms', 'https://i.imgur.com/7zfkmOk.png'),
 (83, 'maroon', '1990 maroon uniforms', 'https://i.imgur.com/9Kk5KuW.png'),
 (84, 'white', '1990 white uniforms', 'https://i.imgur.com/agAK6Eb.png'),
-(85, 'white', '1991 white uniforms', 'https://i.imgur.com/zATgPXX.png');
+(85, 'white', '1991 white uniforms', 'https://i.imgur.com/zATgPXX.png'),
+(86, 'maroon', '2006 throwback maroon uniforms slater', 'https://i.imgur.com/hSKyCty.png');
 
 --
 -- Indexes for dumped tables
@@ -144,7 +145,7 @@ ALTER TABLE `uniform`
 -- AUTO_INCREMENT for table `uniform`
 --
 ALTER TABLE `uniform`
-  MODIFY `uniformID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
+  MODIFY `uniformID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

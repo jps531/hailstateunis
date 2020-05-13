@@ -42,21 +42,22 @@
     <option>SEC Tournament</option>
   </optgroup>
   <optgroup label="NCAA Tournament">
-    <option>Round of 64</option>
-    <option>Round of 32</option>
-    <option>Sweet Sixteen</option>
-    <option>Elite Eight</option>
-    <option>Final Four</option>
+    <option>NCAA Round of 64</option>
+    <option>NCAA Round of 32</option>
+    <option>NCAA Sweet Sixteen</option>
+    <option>NCAA Elite Eight</option>
+    <option>NCAA Final Four</option>
     <option>National Championship</option>
   </optgroup>
   <optgroup label="WNIT">
-    <option>WNIT First Round</option>
-    <option>WNIT Second Round</option>
-    <option>WNIT Third Round</option>
+    <option>WNIT Round of 64</option>
+    <option>WNIT Round of 32</option>
+    <option>WNIT Round of 16</option>
     <option>WNIT Quarterfinals</option>
   </optgroup>
   <optgroup label="SEC Tournament">
     <option>SECT First Round</option>
+    <option>SECT Second Round</option>
     <option>SECT Quarterfinals</option>
     <option>SECT Semifinals</option>
     <option>SECT Championship</option>

@@ -42,11 +42,11 @@
     <option>SEC Tournament</option>
   </optgroup>
   <optgroup label="NCAA Tournament">
-    <option>Round of 64</option>
-    <option>Round of 32</option>
-    <option>Sweet Sixteen</option>
-    <option>Elite Eight</option>
-    <option>Final Four</option>
+    <option>NCAA Round of 64</option>
+    <option>NCAA Round of 32</option>
+    <option>NCAA Sweet Sixteen</option>
+    <option>NCAA Elite Eight</option>
+    <option>NCAA Final Four</option>
     <option>Regional 3rd Place</option>
   </optgroup>
   <optgroup label="NIT">

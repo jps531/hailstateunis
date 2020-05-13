@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 07, 2020 at 08:57 PM
+-- Generation Time: May 11, 2020 at 09:54 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -54,7 +54,51 @@ INSERT INTO `uniform` (`uniformID`, `uColor`, `uName`, `uImage`) VALUES
 (12, 'white', '2019 ncaa white state uniforms holmes', 'https://i.imgur.com/tE8oSNT.png'),
 (13, 'cream', '2019 harlem cream uniforms espinoza-hunter', 'https://i.imgur.com/9cqG1sM.png'),
 (14, 'cream', '2019 ncaa harlem cream uniforms espinoza-hunter', 'https://i.imgur.com/Vwd1DoV.png'),
-(15, 'pink', '2019 pink uniforms scott', 'https://i.imgur.com/IxkSwgj.png');
+(15, 'pink', '2019 pink uniforms scott', 'https://i.imgur.com/IxkSwgj.png'),
+(16, 'white', '2017 white uniforms vivians', 'https://i.imgur.com/A7n7fdg.png'),
+(17, 'white', '2018 ncaa white uniforms vivians', 'https://i.imgur.com/QJiZtUS.png'),
+(18, 'white', '2018 final four white uniforms vivians', 'https://i.imgur.com/23h7adC.png'),
+(19, 'maroon', '2018 maroon uniforms william', 'https://i.imgur.com/HezkBRv.png'),
+(20, 'black', '2017 black uniforms mccowan', 'https://i.imgur.com/xLesJvl.png'),
+(21, 'white', '2018 white state uniforms johnson', 'https://i.imgur.com/veQRcE2.png'),
+(22, 'gray', '2018 gray uniforms schaefer', 'https://i.imgur.com/1WZeE04.png'),
+(23, 'pink', '2018 pink uniforms holmes', 'https://i.imgur.com/zud1pmm.png'),
+(24, 'white', '2017 made in march white uniforms vivians', 'https://i.imgur.com/gBeuq79.png'),
+(25, 'white', '2017 ncaa made in march white uniforms vivians', 'https://i.imgur.com/LZYZVOu.png'),
+(26, 'maroon', '2017 ncaa made in march maroon uniforms william', 'https://i.imgur.com/ceXX316.png'),
+(27, 'maroon', '2017 final four made in march maroon uniforms william', 'https://i.imgur.com/8Ywj4PU.png'),
+(28, 'maroon', '2017 maroon uniforms william', 'https://i.imgur.com/ZHrp7ZI.png'),
+(29, 'white', '2017 white state uniforms dillingham', 'https://i.imgur.com/NVSUD0C.png'),
+(30, 'gray', '2017 gray uniforms richardson', 'https://i.imgur.com/MFiDPGt.png'),
+(31, 'white', '2016 white pink uniforms okorie', 'https://i.imgur.com/4oUBolk.png'),
+(32, 'white', '2015 white uniforms vivians', 'https://i.imgur.com/TnqXvvq.png'),
+(33, 'white', '2015 ncaa white uniforms vivians', 'https://i.imgur.com/SonKmkf.png'),
+(34, 'maroon', '2016 maroon uniforms william', 'https://i.imgur.com/V3BEqPi.png'),
+(35, 'maroon', '2016 ncaa maroon uniforms william', 'https://i.imgur.com/PvKDNDF.png'),
+(36, 'black', '2014 black uniforms dillingham', 'https://i.imgur.com/h418HVz.png'),
+(37, 'maroon', '2015 maroon uniforms alwal', 'https://i.imgur.com/Rl2xAeN.png'),
+(38, 'maroon', '2015 ncaa maroon uniforms alwal', 'https://i.imgur.com/9FE2RWR.png'),
+(39, 'white', '2014 white uniforms alwal', 'https://i.imgur.com/ZBpMfF0.png'),
+(40, 'maroon', '2014 maroon uniforms richardson', 'https://i.imgur.com/HlF0vdr.png'),
+(41, 'pink', '2014 pink uniforms grant', 'https://i.imgur.com/s7jBy1k.png'),
+(42, 'white', '2013 white uniforms alwal', 'https://i.imgur.com/pPpg5Fw.png'),
+(43, 'maroon', '2013 maroon uniforms grant', 'https://i.imgur.com/3HSMkWB.png'),
+(44, 'white', '2013 white pink uniforms williams', 'https://i.imgur.com/fE1QVgO.png'),
+(45, 'maroon', '2012 maroon uniforms porter', 'https://i.imgur.com/TOarYUd.png'),
+(46, 'maroon', '2011 maroon uniforms govero', 'https://i.imgur.com/bCzn5Lh.png'),
+(47, 'white', '2010 white uniforms rack', 'https://i.imgur.com/Wr3G7tl.png'),
+(48, 'white', '2010 ncaa white uniforms rack', 'https://i.imgur.com/bbRnUOy.png'),
+(49, 'maroon', '2010 maroon uniforms mokango', 'https://i.imgur.com/eIjA2Ku.png'),
+(50, 'maroon', '2010 ncaa maroon uniforms mokango', 'https://i.imgur.com/Q97PjIM.png'),
+(51, 'white', '2009 white uniforms rack', 'https://i.imgur.com/e1V4uxV.png'),
+(52, 'maroon', '2009 maroon uniforms lumanu', 'https://i.imgur.com/wL8nswo.png'),
+(53, 'maroon', '2009 ncaa maroon uniforms lumanu', 'https://i.imgur.com/877gEfG.png'),
+(54, 'maroon', '2008 maroon uniforms grimes', 'https://i.imgur.com/YCGKk3T.png'),
+(55, 'white', '2007 white uniforms jackson', 'https://i.imgur.com/IBPpyPN.png'),
+(56, 'maroon', '2007 maroon uniforms rack', 'https://i.imgur.com/uO7OFu8.png'),
+(57, 'white', '2011 white uniforms', 'https://i.imgur.com/6bi5LZE.png'),
+(58, 'black', '2012 black uniforms', 'https://i.imgur.com/fnjCJx1.png'),
+(59, 'black', '2011 black uniforms', 'https://i.imgur.com/6SzDIkq.png');
 
 --
 -- Indexes for dumped tables
@@ -74,7 +118,7 @@ ALTER TABLE `uniform`
 -- AUTO_INCREMENT for table `uniform`
 --
 ALTER TABLE `uniform`
-  MODIFY `uniformID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `uniformID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -75,11 +75,14 @@
       else if ($row["location"] == "ncaaSsEe"){
         $typeBadge = "' style='background-color: #d70d2a; color: white;'>";
       }
-      else if ($row["location"] == "finalFour17"){
+      else if ($row["location"] == "ncaaFinalFour17"){
         $typeBadge = "' style='background-color: black; color: #b2e84c;'>";
       }
-      else if ($row["location"] == "finalFour18"){
+      else if ($row["location"] == "ncaaFinalFour18"){
         $typeBadge = "' style='background-color: #2f1947; color: #e25d33;'>";
+      }
+      else if ($row["location"] == "ncaaNationalChampionship"){
+        $typeBadge = "' style='background-color: #7B6A48; color: white;'>";
       }
 
       $month = $row["gameday"][5] . $row["gameday"][6];
