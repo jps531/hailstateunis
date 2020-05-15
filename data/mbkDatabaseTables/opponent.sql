@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 13, 2020 at 07:50 AM
+-- Generation Time: May 14, 2020 at 08:01 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -57,6 +57,7 @@ INSERT INTO `opponent` (`opponentName`, `conference`, `colorA`, `colorB`) VALUES
 ('Baylor', 'Big 12', '#003926', '#ffab09'),
 ('Beth-Cookman', 'Mid-Eastern', '#870035', '#febb0c'),
 ('Boise State', 'Mountian West', '#003d8f', '#f3552e'),
+('Boston College', 'ACC', '#b69452', '#84061c'),
 ('Bowling Green', 'MAC', '#4f2c1d', '#fe5000'),
 ('Bradley', 'Missouri Valley', '#ba232e', 'b5b4b4'),
 ('Butler', 'Big East', '#002346', 'white'),
@@ -127,6 +128,7 @@ INSERT INTO `opponent` (`opponentName`, `conference`, `colorA`, `colorB`) VALUES
 ('Loyola Chicago', 'Missouri Valley', '#571d1f', '#fdb814'),
 ('LSU', 'SEC', '#f4ac3d', '#2c1359'),
 ('Maine', 'America East', '#032a53', '#3098d4'),
+('Manhattan', 'MAAC', '#00703c', 'white'),
 ('Marquette', 'Big East', '#003476', '#ffc800'),
 ('McNeese St.', 'Southland', '#07569e', '#fcd209'),
 ('Memphis', 'American', '#144bbf', 'white'),
@@ -148,6 +150,7 @@ INSERT INTO `opponent` (`opponentName`, `conference`, `colorA`, `colorB`) VALUES
 ('NC Central', 'Mid-Eastern', '#a5002a', '#9fa1a4'),
 ('NC State', 'ACC', '#b51231', 'white'),
 ('Nebraska', 'Big Ten', '#e41c38', 'white'),
+('New Mexico', 'Mountain West', '#aaa9a9', '#be1e2e'),
 ('New Mexico St.', 'WAC', '#710820', 'white'),
 ('New Orleans', 'Southland', '#192857', '#2772b3'),
 ('Nicholls State', 'Southland', '#b0b7bb', '#c41230'),
@@ -179,6 +182,7 @@ INSERT INTO `opponent` (`opponentName`, `conference`, `colorA`, `colorB`) VALUES
 ('Rider', 'MAAC', '#9d0035', '#c2c3c6'),
 ('Saint Louis', 'Atlantic 10', '#004c99', 'white'),
 ('Saint Mary\'s', 'West Coast', '#06315b', '#d80024'),
+('Saint Peter\'s', 'MAAC', '#082946', '#007cc1'),
 ('Sam Houston St.', 'Southland', '#ff6813', 'white'),
 ('Samford', 'Southern', '#0c2341', '#c00c31'),
 ('San Diego', 'West Coast', '#003d82', '#66beee'),

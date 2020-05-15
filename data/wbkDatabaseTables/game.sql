@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 11, 2020 at 09:54 PM
+-- Generation Time: May 14, 2020 at 08:53 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -87,11 +87,11 @@ INSERT INTO `game` (`gameID`, `yr`, `gameday`, `opponentName`, `result`, `points
 (39, '19-2020', '2019-12-21', 'Virginia', 'Win', 72, 59, 'Non-Conference', 'neutral', 2),
 (40, '19-2020', '2019-12-29', 'Little Rock', 'Win', 89, 50, 'Non-Conference', 'home', 1),
 (41, '18-2019', '2019-03-03', 'South Carolina', 'Win', 68, 64, 'SEC', 'road', 8),
-(42, '18-2019', '2019-02-28', 'LSU', 'Win', 76, 56, 'SEC', 'home', 7),
+(42, '18-2019', '2019-02-28', 'LSU', 'Win', 76, 56, 'SEC', 'home', 6),
 (43, '18-2019', '2019-02-24', 'Vanderbilt', 'Win', 86, 70, 'SEC', 'home', 13),
 (44, '18-2019', '2019-02-21', 'Ole Miss', 'Win', 80, 66, 'SEC', 'road', 9),
 (45, '18-2019', '2019-02-17', 'Texas A&M', 'Win', 92, 64, 'SEC', 'road', 8),
-(46, '18-2019', '2019-02-14', 'Missouri', 'Loss', 67, 75, 'SEC', 'home', 7),
+(46, '18-2019', '2019-02-14', 'Missouri', 'Loss', 67, 75, 'SEC', 'home', 6),
 (47, '18-2019', '2019-02-10', 'Tennessee', 'Win', 91, 63, 'SEC', 'home', 15),
 (48, '18-2019', '2019-02-03', 'Alabama', 'Win', 65, 49, 'SEC', 'road', 8),
 (49, '18-2019', '2019-01-31', 'LSU', 'Win', 68, 35, 'SEC', 'road', 8),
@@ -377,7 +377,35 @@ INSERT INTO `game` (`gameID`, `yr`, `gameday`, `opponentName`, `result`, `points
 (343, '10-2011', '2011-01-16', 'Kentucky', 'Loss', 60, 72, 'SEC', 'road', 46),
 (344, '10-2011', '2011-01-13', 'LSU', 'Loss', 55, 72, 'SEC', 'home', 57),
 (345, '10-2011', '2011-01-09', 'Arkansas', 'Loss', 56, 61, 'SEC', 'home', 57),
-(346, '10-2011', '2011-01-06', 'Vanderbilt', 'Loss', 44, 65, 'SEC', 'road', 46);
+(346, '10-2011', '2011-01-06', 'Vanderbilt', 'Loss', 44, 65, 'SEC', 'road', 46),
+(347, '05-2006', '2006-03-02', 'Florida', 'Loss', 83, 98, 'SECT First Round', 'secT', 60),
+(348, '04-2005', '2005-03-03', 'Arkansas', 'Loss', 73, 80, 'SECT First Round', 'secT', 61),
+(349, '03-2004', '2004-03-05', 'Tennessee', 'Loss', 57, 67, 'SECT Quarterfinals', 'secT', 65),
+(350, '03-2004', '2004-03-04', 'Arkansas', 'Win', 79, 74, 'SECT First Round', 'secT', 63),
+(351, '02-2003', '2003-03-08', 'Tennessee', 'Loss', 75, 79, 'SECT Semifinals', 'secT', 65),
+(352, '02-2003', '2003-03-07', 'South Carolina', 'Win', 79, 75, 'SECT Quarterfinals', 'secT', 64),
+(353, '01-2002', '2002-02-28', 'Kentucky', 'Loss', 72, 75, 'SECT First Round', 'secT', 67),
+(354, '00-2001', '2001-03-01', 'Arkansas', 'Loss', 76, 94, 'SECT First Round', 'secT', 69),
+(355, '99-2000', '2000-03-05', 'Tennessee', 'Loss', 67, 70, 'SECT Championship', 'secT', 69),
+(356, '99-2000', '2000-03-04', 'Georgia', 'Win', 62, 61, 'SECT Semifinals', 'secT', 69),
+(357, '99-2000', '2000-03-03', 'Auburn', 'Win', 66, 56, 'SECT Quarterfinals', 'secT', 69),
+(358, '99-2000', '2000-03-02', 'Ole Miss', 'Win', 75, 59, 'SECT First Round', 'secT', 68),
+(359, '98-1999', '1999-02-26', 'Georgia', 'Loss', 66, 72, 'SECT Quarterfinals', 'secT', 70),
+(360, '98-1999', '1999-02-25', 'Arkansas', 'Win', 79, 70, 'SECT First Round', 'secT', 71),
+(361, '97-1998', '1998-02-27', 'Tennessee', 'Loss', 60, 88, 'SECT Quarterfinals', 'secT', 72),
+(362, '97-1998', '1998-02-26', 'Kentucky', 'Win', 67, 48, 'SECT First Round', 'secT', 72),
+(363, '04-2005', '2005-03-17', 'Arkansas State', 'Loss', 61, 78, 'WNIT Round of 32', 'wnit', 62),
+(364, '00-2001', '2001-03-20', 'James Madison', 'Loss', 61, 63, 'WNIT Quarterfinals', 'wnit', 67),
+(365, '00-2001', '2001-03-17', 'Illinois', 'Win', 86, 77, 'WNIT Round of 16', 'wnit', 69),
+(366, '00-2001', '2001-03-15', 'Georgia Tech', 'Win', 77, 73, 'WNIT Round of 32', 'wnit', 67),
+(367, '97-1998', '1998-03-15', 'Baylor', 'Loss', 70, 75, 'WNIT Round of 16', 'wnit', 72),
+(368, '02-2003', '2003-03-24', 'New Mexico', 'Loss', 61, 73, 'NCAA Round of 32', 'ncaa', 64),
+(369, '02-2003', '2003-03-22', 'Manhattan', 'Win', 73, 47, 'NCAA Round of 64', 'ncaa', 64),
+(370, '01-2002', '2002-03-17', 'Texas Tech', 'Loss', 55, 77, 'NCAA Round of 32', 'ncaa', 66),
+(371, '01-2002', '2002-03-15', 'Boston College', 'Win', 65, 59, 'NCAA Round of 64', 'ncaa', 66),
+(372, '99-2000', '2000-03-19', 'UAB', 'Loss', 72, 78, 'NCAA Round of 32', 'ncaa', 68),
+(373, '99-2000', '2000-03-17', 'Saint Peter\'s', 'Win', 94, 60, 'NCAA Round of 64', 'ncaa', 68),
+(374, '98-1999', '1999-03-13', 'NC State', 'Loss', 57, 76, 'NCAA Round of 64', 'ncaa', 71);
 
 --
 -- Indexes for dumped tables
@@ -400,7 +428,7 @@ ALTER TABLE `game`
 -- AUTO_INCREMENT for table `game`
 --
 ALTER TABLE `game`
-  MODIFY `gameID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=347;
+  MODIFY `gameID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=375;
 
 --
 -- Constraints for dumped tables

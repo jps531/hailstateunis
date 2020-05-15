@@ -451,7 +451,7 @@ INSERT INTO `game` (`gameID`, `yr`, `gameday`, `opponentName`, `result`, `points
 (463, '09-2010', '2009-11-27', 'Richmond', 'Loss', 62, 63, 'Non-Conference', 'neutral', 45),
 (464, '09-2010', '2009-11-24', 'Texas Pan-Am', 'Win', 75, 50, 'Non-Conference', 'home', 45),
 (465, '09-2010', '2009-11-21', 'Beth-Cookman', 'Win', 67, 51, 'Non-Conference', 'home', 45),
-(466, '09-2010', '2009-11-19', 'SE Louisiana', 'Loss', 82, 67, 'Non-Conference', 'home', 45),
+(466, '09-2010', '2009-11-19', 'SE Louisiana', 'Win', 82, 67, 'Non-Conference', 'home', 45),
 (467, '09-2010', '2009-11-13', 'Rider', 'Loss', 74, 88, 'Non-Conference', 'home', 45),
 (468, '09-2010', '2010-03-06', 'Tennessee', 'Loss', 59, 75, 'SEC', 'home', 45),
 (469, '09-2010', '2010-03-03', 'Auburn', 'Loss', 80, 89, 'SEC', 'road', 44),

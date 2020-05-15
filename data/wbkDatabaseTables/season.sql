@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 07, 2020 at 08:58 PM
+-- Generation Time: May 14, 2020 at 07:47 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -42,6 +42,12 @@ CREATE TABLE `season` (
 --
 
 INSERT INTO `season` (`yr`, `head_coach`, `wins`, `losses`, `sec_wins`, `sec_losses`) VALUES
+('00-2001', 'Sharon Fanning-Otis', 17, 14, 4, 10),
+('01-2002', 'Sharon Fanning-Otis', 19, 12, 8, 6),
+('02-2003', 'Sharon Fanning-Otis', 24, 8, 10, 4),
+('03-2004', 'Sharon Fanning-Otis', 14, 15, 7, 7),
+('04-2005', 'Sharon Fanning-Otis', 17, 11, 6, 8),
+('05-2006', 'Sharon Fanning-Otis', 6, 22, 1, 13),
 ('06-2007', 'Sharon Fanning-Otis', 17, 13, 7, 7),
 ('07-2008', 'Sharon Fanning-Otis', 16, 15, 4, 10),
 ('08-2009', 'Sharon Fanning-Otis', 23, 10, 8, 6),
@@ -55,7 +61,10 @@ INSERT INTO `season` (`yr`, `head_coach`, `wins`, `losses`, `sec_wins`, `sec_los
 ('16-2017', 'Vic Schaefer', 34, 5, 13, 3),
 ('17-2018', 'Vic Schaefer', 37, 2, 16, 0),
 ('18-2019', 'Vic Schaefer', 33, 3, 15, 1),
-('19-2020', 'Vic Schaefer', 27, 6, 13, 3);
+('19-2020', 'Vic Schaefer', 27, 6, 13, 3),
+('97-1998', 'Sharon Fanning-Otis', 14, 15, 4, 10),
+('98-1999', 'Sharon Fanning-Otis', 17, 11, 7, 7),
+('99-2000', 'Sharon Fanning-Otis', 24, 8, 8, 6);
 
 --
 -- Indexes for dumped tables

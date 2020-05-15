@@ -20,6 +20,15 @@
   <option>08-2009</option>
   <option>07-2008</option>
   <option>06-2007</option>
+  <option>05-2006</option>
+  <option>04-2005</option>
+  <option>03-2004</option>
+  <option>02-2003</option>
+  <option>01-2002</option>
+  <option>00-2001</option>
+  <option>99-2000</option>
+  <option>98-1999</option>
+  <option>97-1998</option>
 </optgroup>
 </select>
 <button class="btn" id="wbkSeasonClear"><i class="fas fa-times-circle"></i></button>

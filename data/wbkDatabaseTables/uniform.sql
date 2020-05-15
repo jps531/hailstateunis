@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 11, 2020 at 09:54 PM
+-- Generation Time: May 14, 2020 at 07:38 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -98,7 +98,20 @@ INSERT INTO `uniform` (`uniformID`, `uColor`, `uName`, `uImage`) VALUES
 (56, 'maroon', '2007 maroon uniforms rack', 'https://i.imgur.com/uO7OFu8.png'),
 (57, 'white', '2011 white uniforms', 'https://i.imgur.com/6bi5LZE.png'),
 (58, 'black', '2012 black uniforms', 'https://i.imgur.com/fnjCJx1.png'),
-(59, 'black', '2011 black uniforms', 'https://i.imgur.com/6SzDIkq.png');
+(59, 'black', '2011 black uniforms', 'https://i.imgur.com/6SzDIkq.png'),
+(60, 'maroon', '2006 maroon uniforms mckinney', 'https://i.imgur.com/UvnAJRD.png'),
+(61, 'white', '2005 white uniforms burns', 'https://i.imgur.com/FUrgE1E.png'),
+(62, 'maroon', '2005 maroon uniforms tan', 'https://i.imgur.com/vCXJ4bz.png'),
+(63, 'white', '2004 white uniforms burns', 'https://i.imgur.com/j51fX81.png'),
+(64, 'white', '2003 white uniforms thomas', 'https://i.imgur.com/Z8QIRrd.png'),
+(65, 'maroon', '2003 maroon uniforms tan', 'https://i.imgur.com/gsadece.png'),
+(66, 'maroon', '2002 maroon uniforms tan', 'https://i.imgur.com/6aPKCG9.png'),
+(67, 'white', '2001 white uniforms thomas', 'https://i.imgur.com/bveLWDN.png'),
+(68, 'white', '2000 white uniforms thomas', 'https://i.imgur.com/dBCzOdz.png'),
+(69, 'maroon', '2000 maroon uniforms fambrough', 'https://i.imgur.com/hasFsh9.png'),
+(70, 'maroon', '1999 maroon uniforms Perry', 'https://i.imgur.com/u1ZykDm.png'),
+(71, 'white', '1998 white uniforms graham', 'https://i.imgur.com/UhQLC4A.png'),
+(72, 'maroon', '1998 maroon uniforms thompson', 'https://i.imgur.com/BSk3sqA.png');
 
 --
 -- Indexes for dumped tables
@@ -118,7 +131,7 @@ ALTER TABLE `uniform`
 -- AUTO_INCREMENT for table `uniform`
 --
 ALTER TABLE `uniform`
-  MODIFY `uniformID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+  MODIFY `uniformID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
