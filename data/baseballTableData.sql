@@ -21,19 +21,35 @@ SET time_zone = "+00:00";
 CREATE DATABASE baseballTableData;
 use baseballTableData;
 
-CREATE TABLE season (yr VARCHAR(7),
+CREATE TABLE season (yr YEAR,
 					 head_coach VARCHAR(30),
 					 wins INTEGER,
 					 losses INTEGER,
 					 sec_wins INTEGER,
 					 sec_losses INTEGER,
-					 PRIMARY KEY (yr));
+					 PRIMARY KEY (yr, head_coach));
+
+CREATE TABLE hat (hatID INTEGER NOT NULL AUTO_INCREMENT,
+				  hName VARCHAR(50),
+				  hColor VARCHAR(30),
+				  PRIMARY KEY (hatID));
 					 
+CREATE TABLE jersey (jerseyID INTEGER NOT NULL AUTO_INCREMENT,
+					 jName VARCHAR(50),
+				     jColor VARCHAR(30),
+					 jType VARCHAR(30),
+					 jAttribute VARCHAR(30),
+					 PRIMARY KEY (jerseyID));
+
 CREATE TABLE uniform (uniformID INTEGER NOT NULL AUTO_INCREMENT,
-						  uColor VARCHAR(30),
-						  uName VARCHAR(100),
-						  uImage VARCHAR(100),
-						  PRIMARY KEY (uniformID));
+					  hatID INTEGER,
+					  jerseyID INTEGER,
+					  pantsColor VARCHAR(30),
+					  uName VARCHAR(100),
+					  uImage VARCHAR(100),
+					  PRIMARY KEY (uniformID),
+					  FOREIGN KEY (hatID) REFERENCES hat(hatID),
+					  FOREIGN KEY (jerseyID) REFERENCES jersey(jerseyID));
 						  
 CREATE TABLE opponent (opponentName VARCHAR(30),
 					   conference VARCHAR(30),
@@ -42,7 +58,7 @@ CREATE TABLE opponent (opponentName VARCHAR(30),
 					   PRIMARY KEY (opponentName));				 
 						
 CREATE TABLE game (gameID INTEGER NOT NULL AUTO_INCREMENT,
-				   yr VARCHAR(7),
+				   yr YEAR,
 				   gameday DATE,
 				   opponentName VARCHAR(30),
 				   result VARCHAR(10),
@@ -50,7 +66,10 @@ CREATE TABLE game (gameID INTEGER NOT NULL AUTO_INCREMENT,
 				   points_against INTEGER,
 				   type VARCHAR(50),
 				   location VARCHAR(30),
+				   dh boolean not null default 0,
 				   uniformID INTEGER,
+				   article_title VARCHAR(100),
+				   article_link VARCHAR(200),
 				   PRIMARY KEY (gameID, uniformID),
 				   FOREIGN KEY (yr) REFERENCES season(yr),
 				   FOREIGN KEY (opponentName) REFERENCES opponent(opponentName),

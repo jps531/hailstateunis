@@ -35,13 +35,11 @@
 
     . "INNER JOIN `season` ON game.yr = season.yr\n"
 
-    . "INNER JOIN `combination` ON game.comboID = combination.comboID\n"
+    . "INNER JOIN `uniform` ON game.uniformID = uniform.uniformID\n"
 
-    . "INNER JOIN `helmet` ON combination.helmetID = helmet.helmetID\n"
+    . "INNER JOIN `hat` ON uniform.hatID = hat.hatID\n"
 
-    . "INNER JOIN `jersey` ON combination.jerseyID = jersey.jerseyID\n"
-
-    . "INNER JOIN `pants` ON combination.pantsID = pants.pantsID\n"
+    . "INNER JOIN `jersey` ON uniform.jerseyID = jersey.jerseyID\n"
 
     . "INNER JOIN `opponent` ON game.opponentName = opponent.opponentName";
 
@@ -108,9 +106,9 @@
                   <img src='" . $row["home_helmet"] . "' height='80' alt='' class='d-inline-block align-middle mr-2'
                 </a>
               </td>
-              <td class='combination' data-search='" . $row["cName"] . "'>
-                <a href='" . $row["cImage"] . "' data-fancybox>
-                  <img src='" . $row["cImage"] . "' height='80' alt='' class='d-inline-block align-middle mr-2'
+              <td class='combination' data-search='" . $row["uName"] . "'>
+                <a href='" . $row["uImage"] . "' data-fancybox>
+                  <img src='" . $row["uImage"] . "' height='80' alt='' class='d-inline-block align-middle mr-2'
                 </a>
               </td>
               <td class='helmet' data-search='" . $row["hName"] . "'>
