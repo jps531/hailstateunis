@@ -9,16 +9,19 @@
     <tr>
       <th scope="col" data-type="number">Season</th>
       <th scope="col">Date</th>
-      <th scope="col">Away</th>
-      <th scope="col">Home</th>
+      <th scope="col">Day</th>
+      <th scope="col">Game Type</th>
       <th scope="col">Combination</th>
-      <th scope="col">Helmet</th>
-      <th scope="col">Jersey</th>
-      <th scope="col">Pants</th>
       <th scope="col">W/L</th>
       <th scope="col">PF</th>
       <th scope="col">PA</th>
       <th scope="col">Article</th>
+      <th scope="col">Hat</th>
+      <th scope="col">Jersey</th>
+      <th scope="col">Pants</th>
+      <th scope="col">Jersey Name</th>
+      <th scope="col">Jersey Attribute</th>
+      <th scope="col">Jersey Type</th>
       <th scope="col">Opponent</th>
     </tr>
   </thead>
@@ -82,6 +85,66 @@
         $rowID = $row["location"];
       }
 
+      $typeBadge = " badge-info'>";
+
+      if (strpos($row["type"], "SEC") !== false){
+        $typeBadge = "' style='background-color: #f4ad3d; color: #202846;'>";
+      }
+      else if (strpos($row["type"], "Non-Conference") !== false){
+        $typeBadge = " badge-info'>";
+      }
+      else if (strpos($row["type"], "Midweek") !== false){
+        $typeBadge = " badge-info'>";
+      }
+      else if (strpos($row["location"], "Starkville") !== false){
+        $typeBadge = "' style='background-color: #3b0811; color: white;'>";
+      }
+      else if (strpos($row["location"], "Nashville") !== false){
+        $typeBadge = "' style='background-color: #b8a160; color: black;'>";
+      }
+      else if (strpos($row["location"], "Tallahassee") !== false){
+        $typeBadge = "' style='background-color: #520f20; color: #c6ab79;'>";
+      }
+      else if (strpos($row["location"], "BatonRouge") !== false){
+        $typeBadge = "' style='background-color: #2c1359; color: #f4ac3d;'>";
+      }
+      else if (strpos($row["location"], "Hattiesburg") !== false){
+        $typeBadge = "' style='background-color: black; color: #ffc209;'>";
+      }
+      else if (strpos($row["location"], "Lafayette") !== false){
+        $typeBadge = "' style='background-color: #a60d1d; color: white;'>";
+      }
+      else if (strpos($row["location"], "Charlottesville") !== false){
+        $typeBadge = "' style='background-color: #f14d24; color: #091f40;'>";
+      }
+      else if (strpos($row["location"], "Atlanta") !== false){
+        $typeBadge = "' style='background-color: #b5a269; color: #012441;'>";
+      }
+      else if (strpos($row["location"], "Gainesville") !== false){
+        $typeBadge = "' style='background-color: #273991; color: #ea2600;'>";
+      }
+      else if (strpos($row["location"], "Clemson") !== false){
+        $typeBadge = "' style='background-color: #e12c08; color: white;'>";
+      }
+      else if (strpos($row["location"], "CoralGables") !== false){
+        $typeBadge = "' style='background-color: #005030; color: #f05a00;'>";
+      }
+      else if (strpos($row["location"], "Fullerton") !== false){
+        $typeBadge = "' style='background-color: #072348; color: #f08031;'>";
+      }
+      else if (strpos($row["location"], "Columbus") !== false){
+        $typeBadge = "' style='background-color: #d0073b; color: #b2b8be;'>";
+      }
+      else if (strpos($row["location"], "secT") !== false){
+        $typeBadge = "' style='background-color: #202846; color: #f4ad3d;'>";
+      }
+      else if (strpos($row["location"], "CWS") !== false){
+        $typeBadge = "' style='background-color: #0065A8; color: white;'>";
+      }
+      else if ($row["location"] == "ncaaNationalChampionship"){
+        $typeBadge = "' style='background-color: #7B6A48; color: white;'>";
+      }
+
       $month = $row["gameday"][5] . $row["gameday"][6];
       $day = $row["gameday"][8] . $row["gameday"][9];
       $year = $row["gameday"][0] . $row["gameday"][1] . $row["gameday"][2] . $row["gameday"][3];
@@ -96,34 +159,15 @@
                 <span class='badge badge-secondary'>" . $gameday . "</span>
                 </div>
               </td>
-              <td class='aHelmet' data-search='" . $row["conference"] . "'>
-                <a href='" . $row["away_helmet"] . "' data-fancybox>
-                  <img src='" . $row["away_helmet"] . "' height='80' alt='' class='d-inline-block align-middle mr-2'
-                </a>
+              <td class='day' data-search='" . date("l", mktime(0,0,0,$month,$day,$year)) . "'>
+                <span id='DoW' class='badge badge-dark'>" . date("l", mktime(0,0,0,$month,$day,$year)) . "</span>
               </td>
-              <td class='hHelmet' data-search='" . $row["location"] . "'>
-                <a href='" . $row["home_helmet"] . "' data-fancybox>
-                  <img src='" . $row["home_helmet"] . "' height='80' alt='' class='d-inline-block align-middle mr-2'
-                </a>
+              <td class='type' data-search='" . $row["type"] . $row["location"] . "'>
+                <span class='badge" . $typeBadge . $row["type"] . "</span>
               </td>
-              <td class='combination' data-search='" . $row["uName"] . "'>
+              <td class='uniform' data-search='" . $row["uName"] . "'>
                 <a href='" . $row["uImage"] . "' data-fancybox>
                   <img src='" . $row["uImage"] . "' height='80' alt='' class='d-inline-block align-middle mr-2'
-                </a>
-              </td>
-              <td class='helmet' data-search='" . $row["hName"] . "'>
-                <a href='" . $row["hImage"] . "' data-fancybox>
-                  <img src='" . $row["hImage"] . "' height='80' alt='' class='d-inline-block align-middle mr-2'
-                </a>
-              </td>
-              <td class='jersey' data-search='" . $row["jName"] . "'>
-                <a href='" . $row["jImage"] . "' data-fancybox>
-                  <img src='" . $row["jImage"] . "' height='80' alt='' class='d-inline-block align-middle mr-2'
-                </a>
-              </td>
-              <td class='pants' data-search='" . $row["pName"] . "'>
-                <a href='" . $row["pImage"] . "' data-fancybox>
-                  <img src='" . $row["pImage"] . "' height='80' alt='' class='d-inline-block align-middle mr-2'
                 </a>
               </td>
               <td class='result' data-search='" . $row["result"] . " " . date("l", mktime(0,0,0,$month,$day,$year)) . "'>
@@ -138,6 +182,12 @@
               <td class='article' title=\"" . $row["article_title"] . "\" data-search='" . $headcoach . "'>
               " . $row["article_link"] . "
               </td>
+              <td class='hat'>" . $row["hColor"] . "</td>
+              <td class='jersey'>" . $row["jColor"] . "</td>
+              <td class='pants'>" . $row["pantsColor"] . "</td>
+              <td class='jerseyName'>" . $row["jName"] . "</td>
+              <td class='jerseyAttribute'>" . $row["jAttribute"] . "</td>
+              <td class='jerseyType'>" . $row["jType"] . "</td>
               <td class='opponent' data-search='" . $row["opponentName"] . "'>
                 <span class='badge' style='background-color: " . $row["colorA"] . "; color: "  . $row["colorB"] .  ";'>" . $row["opponentName"] . "</span>
               </td>
@@ -155,7 +205,7 @@
   </tbody>
   <tfoot>
     <tr>
-      <td colspan="13" id="footerRow">
+      <td colspan="16" id="footerRow">
         <div class="container" id="winLossTotal"></div>
       </td>
     </tr>

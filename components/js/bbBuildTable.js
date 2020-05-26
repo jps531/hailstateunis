@@ -19,7 +19,7 @@ window.onload = function(){
 
 //-----------
 // Initialize Table
-var table = $('#baseballTable').DataTable( {
+var baseballTable = $('#baseballTable').DataTable( {
                 "lengthMenu": [ [5, 10, 15, 20, 25, 40, 50, -1], [5, 10, 15, 20, 25, 40, 50, "All"] ],
                 "iDisplayLength":  10,
                 language: {
@@ -37,11 +37,11 @@ var table = $('#baseballTable').DataTable( {
                   // Set Breakpoints
                   breakpoints: [
                     {name: 'xl', width: Infinity},
-                    {name: 'lg', width: 1150},
-                    {name: 'md', width: 992},
-                    {name: 'sm', width: 768},
-                    {name: 'xs', width: 550},
-                    {name: 'xxs', width: 375}
+                    {name: 'lg', width: 900},
+                    {name: 'md', width: 800},
+                    {name: 'sm', width: 650},
+                    {name: 'xs', width: 475},
+                    {name: 'xxs', width: 425}
                   ],
 
                   // Customize Expanded Row
@@ -50,39 +50,27 @@ var table = $('#baseballTable').DataTable( {
                         var data = '';
 
                         // Article Link
-                        if (api.cell(rowIdx,11).data()){
+                        if (api.cell(rowIdx,8).data()){
                           data += '<div class="container" id="innerArticle"><a class="btn btn-outline-dark btn-block" target="_blank" href="' +
-                          api.cell(rowIdx, 11).data() +
+                          api.cell(rowIdx, 8).data() +
                           '" style="white-space:normal" role="button">' + 
-                          api.cell(rowIdx, 11).node().title + '</a></div>';
+                          api.cell(rowIdx, 8).node().title + '</a></div>';
                         }
 
-                        // Helmet Matchup
-                        if (columns[2].hidden){
+                        // Type/Result
+                        if (columns[3].hidden){
                           data += '<div class="container" id="innerTable"><table><thead></thead><tbody>';
-                          data += '<tr><td id="innerTitle">Helmet Matchup</td></tr>';
-                          data += '<tr><td>' + api.cell(rowIdx, 2).data() + api.cell(rowIdx, 3).data() + '</td></tr>';
-                          data += '</tbody></table></div>';
-                        }
-
-                        // Uniform Combination
-                        if (columns[5].hidden){
-                          data += '<div class="container" id="innerTable"><table><thead></thead><tbody>';
-                          data += '<tr><td id="innerTitle">Uniform Combination</td></tr>';
-                          data += '<tr><td>' + api.cell(rowIdx, 5).data() + api.cell(rowIdx, 6).data() + api.cell(rowIdx, 7).data() + '</td></tr>';
-                          data += '</tbody></table></div>';
-                        }
+                          data += '<tr><td colspan="2">' + api.cell(rowIdx, 3).data() + ' ' + api.cell(rowIdx, 5).data() + '</td></tr>';
                         
-                        // Final Score
-                        if (columns[9].hidden){
-                          data += '<div class="container" id="innerTable"><table><thead></thead><tbody>';
-                          data += '<tr><td id="innerTitle" colspan="2">Final Score</td></tr>';
-                          data += '<tr><td><span class="badge" style="background-color: #3b0811; color: white;">Mississippi State</span></td><td>' + 
-                                  api.cell(rowIdx, 12).data() +'</td></tr>';
-                          data += '<tr><td>' + api.cell(rowIdx, 9).data() + '</td><td>' + api.cell(rowIdx, 10).data() +'</td></tr>';
-                          data += '</tbody></table></div>';
+                          // Final Score
+                          if (columns[6].hidden){
+                            data += '<tr><td id="innerTitle" colspan="2">Final Score</td></tr>';
+                            data += '<tr><td><span class="badge" style="background-color: #3b0811; color: white;">Mississippi State</span></td><td>' + 
+                                    api.cell(rowIdx, 15).data() +'</td></tr>';
+                            data += '<tr><td>' + api.cell(rowIdx, 6).data() + '</td><td>' + api.cell(rowIdx, 7).data() +'</td></tr>';
+                            data += '</tbody></table></div>';
+                          }
                         }
-
                         return data;
                     }
                   }
@@ -90,14 +78,15 @@ var table = $('#baseballTable').DataTable( {
 
                 // Column Definitions
                 "columnDefs": [
-                  {"orderable": false, 'targets': [2,3,4,5,6,7] },
-                  {"type": "num", 'targets': [9,10]},
-                  {"className": "all", 'targets': [0,4,8,12]},
-                  {"className": "min-lg", 'targets': [5,6,7]},
-                  {"className": "min-md", 'targets': [2,3]},
-                  {"className": "min-sm", 'targets': [9,10]},
-                  {"className": "min-xs", 'targets': [1]},
-                  {"className": "none", 'targets': [11]},
+                  {"orderable": false, 'targets': [4,8,9,10,11,12,13,14] },
+                  {"type": "num", 'targets': [6,7]},
+                  {"className": "all", 'targets': [0,4,15]},
+                  {"className": "min-xl", 'targets': [2]},
+                  {"className": "min-lg", 'targets': [3]},
+                  {"className": "min-md", 'targets': [6,7]},
+                  {"className": "min-sm", 'targets': [1]},
+                  {"className": "min-xs", 'targets': [5]},
+                  {"className": "none", 'targets': [8,9,10,11,12,13,14]},
                   {type: 'title-string', targets: 1}
                 ],
 
@@ -112,7 +101,7 @@ var table = $('#baseballTable').DataTable( {
 // Search Bar
 $(document).ready(function(){
     $("#bbSearch").on("keyup", function() {
-      table.search( this.value ).draw();
+      baseballTable.search( this.value ).draw();
     });
   });
 
@@ -128,8 +117,8 @@ $(function() {
 $(document).ready(function(){
   $("#bbSelectOpponent").on("change", function() {
     if (this.value == ""){
-      table
-      .columns(12)
+      baseballTable
+      .columns(15)
       .search(this.value)
       .draw();
     }
@@ -139,7 +128,7 @@ $(document).ready(function(){
       })
       .get()
       .join( "|" );
-      table.column(12).search(regEx, true, false).draw();
+      baseballTable.column(15).search(regEx, true, false).draw();
     }
   });
 });
@@ -162,17 +151,17 @@ $(document).ready(function(){
     })
     .get()
     .join( "|" );
-    table.column(0).search(regEx, true, false).draw();
+    baseballTable.column(0).search(regEx, true, false).draw();
 
     if (this.value != ''){
       if (resetLength){
-        pageLength = table.page.len();
+        pageLength = baseballTable.page.len();
         resetLength = false;
       }
-      table.page.len(-1).draw();
+      baseballTable.page.len(-1).draw();
     }
-    else if (table.page.len() == -1){
-      table.page.len(pageLength).draw();
+    else if (baseballTable.page.len() == -1){
+      baseballTable.page.len(pageLength).draw();
     }
   });
 });
@@ -288,7 +277,7 @@ $(document).ready(function(){
     // Alternates
     if(regExA.includes('Alternates')){
       disableOptGroup("bbSituationB",0);
-      table.column(4).search(regExA, true, false).draw();
+      baseballTable.column(4).search(regExA, true, false).draw();
       bbOptSelectedA.push(0);
     }
     else{
@@ -302,7 +291,7 @@ $(document).ready(function(){
     if(regExA.includes('Bowl Games')){
       disableOptGroup("bbSituationB",1);
       disableOptGroup("bbSituationB",6);
-      table.column(3).search(regExA, true, false).draw();
+      baseballTable.column(3).search(regExA, true, false).draw();
       bbOptSelectedA.push(1);
     }
     else{
@@ -318,7 +307,7 @@ $(document).ready(function(){
     // Helmets
     if(regExA.includes('Helmets|')){
       disableOptGroup("bbSituationB",2);
-      table.column(5).search(regExA, true, false).draw();
+      baseballTable.column(5).search(regExA, true, false).draw();
       bbOptSelectedA.push(2);
     }
     else{
@@ -331,7 +320,7 @@ $(document).ready(function(){
     // Jerseys
     if(regExA.includes('Jerseys')){
       disableOptGroup("bbSituationB",3);
-      table.column(6).search(regExA, true, false).draw();
+      baseballTable.column(6).search(regExA, true, false).draw();
       bbOptSelectedA.push(3);
     }
     else{
@@ -344,7 +333,7 @@ $(document).ready(function(){
     // Pants
     if(regExA.includes('Pants')){
       disableOptGroup("bbSituationB",4);
-      table.column(7).search(regExA, true, false).draw();
+      baseballTable.column(7).search(regExA, true, false).draw();
       bbOptSelectedA.push(4);
     }
     else{
@@ -357,7 +346,7 @@ $(document).ready(function(){
     // Patches
     if(regExA.includes('dws 100')||regExA.includes('Nick Bell')){
       disableOptGroup("bbSituationB",5);
-      table.column(4).search(regExA, true, false).draw();
+      baseballTable.column(4).search(regExA, true, false).draw();
       bbOptSelectedA.push(5);
     }
     else{
@@ -373,7 +362,7 @@ $(document).ready(function(){
         regExA.includes('Neutral')){
       disableOptGroup("bbSituationB",1);
       disableOptGroup("bbSituationB",6);
-      table.column(3).search(regExA, true, false).draw();
+      baseballTable.column(3).search(regExA, true, false).draw();
       bbOptSelectedA.push(6);
     }
     else{
@@ -394,7 +383,7 @@ $(document).ready(function(){
         regExA.includes('|-12-')||
         regExA.includes('|-01-')){
       disableOptGroup("bbSituationB",7);
-      table.column(1).search(regExA, true, false).draw();
+      baseballTable.column(1).search(regExA, true, false).draw();
       bbOptSelectedA.push(7);
     }
     else{
@@ -413,7 +402,7 @@ $(document).ready(function(){
         regExA.includes('Satu')||
         regExA.includes('Sund')){
       disableOptGroup("bbSituationB",8);
-      table.column(8).search(regExA, true, false).draw();
+      baseballTable.column(8).search(regExA, true, false).draw();
       bbOptSelectedA.push(8);
     }
     else{
@@ -437,7 +426,7 @@ $(document).ready(function(){
         regExA.includes('Allyn')||
         regExA.includes('Ralph')){
       disableOptGroup("bbSituationB",9);
-      table.column(11).search(regExA, true, false).draw();
+      baseballTable.column(11).search(regExA, true, false).draw();
       bbOptSelectedA.push(9);
     }
     else{
@@ -454,7 +443,7 @@ $(document).ready(function(){
       disableOptGroup("bbSituationB",12);
       disableOptGroup("bbSituationB",13);
       disableOptGroup("bbSituationB",14);
-      table.column(4).search(regExA, true, false).draw();
+      baseballTable.column(4).search(regExA, true, false).draw();
       bbOptSelectedA.push(10);
     }
     else{
@@ -581,7 +570,7 @@ $(document).ready(function(){
     // Alternates
     if(regExB.includes('Alternates')){
       disableOptGroup("bbSituationA",0);
-      table.column(4).search(regExB, true, false).draw();
+      baseballTable.column(4).search(regExB, true, false).draw();
       bbOptSelectedB.push(0);
     }
     else{
@@ -595,7 +584,7 @@ $(document).ready(function(){
     if(regExB.includes('Bowl Games')){
       disableOptGroup("bbSituationA",1);
       disableOptGroup("bbSituationA",6);
-      table.column(3).search(regExB, true, false).draw();
+      baseballTable.column(3).search(regExB, true, false).draw();
       bbOptSelectedB.push(1);
     }
     else{
@@ -611,7 +600,7 @@ $(document).ready(function(){
     // Helmets
     if(regExB.includes('Helmets|')){
       disableOptGroup("bbSituationA",2);
-      table.column(5).search(regExB, true, false).draw();
+      baseballTable.column(5).search(regExB, true, false).draw();
       bbOptSelectedB.push(2);
     }
     else{
@@ -624,7 +613,7 @@ $(document).ready(function(){
     // Jerseys
     if(regExB.includes('Jerseys')){
       disableOptGroup("bbSituationA",3);
-      table.column(6).search(regExB, true, false).draw();
+      baseballTable.column(6).search(regExB, true, false).draw();
       bbOptSelectedB.push(3);
     }
     else{
@@ -637,7 +626,7 @@ $(document).ready(function(){
     // Pants
     if(regExB.includes('Pants')){
       disableOptGroup("bbSituationA",4);
-      table.column(7).search(regExB, true, false).draw();
+      baseballTable.column(7).search(regExB, true, false).draw();
       bbOptSelectedB.push(4);
     }
     else{
@@ -650,7 +639,7 @@ $(document).ready(function(){
     // Patches
     if(regExB.includes('dws 100')||regExB.includes('Nick Bell')){
       disableOptGroup("bbSituationA",5);
-      table.column(4).search(regExB, true, false).draw();
+      baseballTable.column(4).search(regExB, true, false).draw();
       bbOptSelectedB.push(5);
     }
     else{
@@ -666,7 +655,7 @@ $(document).ready(function(){
         regExB.includes('Neutral')){
       disableOptGroup("bbSituationA",1);
       disableOptGroup("bbSituationA",6);
-      table.column(3).search(regExB, true, false).draw();
+      baseballTable.column(3).search(regExB, true, false).draw();
       bbOptSelectedB.push(6);
     }
     else{
@@ -687,7 +676,7 @@ $(document).ready(function(){
         regExB.includes('|-12-')||
         regExB.includes('|-01-')){
       disableOptGroup("bbSituationA",7);
-      table.column(1).search(regExB, true, false).draw();
+      baseballTable.column(1).search(regExB, true, false).draw();
       bbOptSelectedB.push(7);
     }
     else{
@@ -706,7 +695,7 @@ $(document).ready(function(){
         regExB.includes('Satu')||
         regExB.includes('Sund')){
       disableOptGroup("bbSituationA",8);
-      table.column(8).search(regExB, true, false).draw();
+      baseballTable.column(8).search(regExB, true, false).draw();
       bbOptSelectedB.push(8);
     }
     else{
@@ -730,7 +719,7 @@ $(document).ready(function(){
         regExB.includes('Allyn')||
         regExB.includes('Ralph')){
       disableOptGroup("bbSituationA",9);
-      table.column(11).search(regExB, true, false).draw();
+      baseballTable.column(11).search(regExB, true, false).draw();
       bbOptSelectedB.push(9);
     }
     else{
@@ -747,7 +736,7 @@ $(document).ready(function(){
       disableOptGroup("bbSituationA",12);
       disableOptGroup("bbSituationA",13);
       disableOptGroup("bbSituationA",14);
-      table.column(4).search(regExB, true, false).draw();
+      baseballTable.column(4).search(regExB, true, false).draw();
       bbOptSelectedB.push(10);
     }
     else{
@@ -782,15 +771,15 @@ function getRecord(){
   wins = 0;
   losses = 0;
   ties = 0;
-  for (z=0; z < table.rows().count(); z++){
-    if (table.row(z, {search:'applied'})[0].length > 0){
-      if (table.cell(z,8).data().toString().includes('Win')){
+  for (z=0; z < baseballTable.rows().count(); z++){
+    if (baseballTable.row(z, {search:'applied'})[0].length > 0){
+      if (baseballTable.cell(z,5).data().toString().includes('Win')){
         wins += 1;
       }
-      if (table.cell(z,8).data().toString().includes('Loss')){
+      if (baseballTable.cell(z,5).data().toString().includes('Loss')){
         losses += 1;
       }
-      if (table.cell(z,8).data().toString().includes('TIE')){
+      if (baseballTable.cell(z,5).data().toString().includes('TIE')){
         ties += 1;
       }
     }
@@ -852,7 +841,7 @@ document.getElementById('winLossTotal').innerHTML = wlTotal;
 
 // Alter String Each Time the Table is Filtered
 $(function() {
-  table.on( 'search', function () {
+  baseballTable.on( 'search', function () {
     getRecord();
     makeString(wins, losses, ties);
     document.getElementById('winLossTotal').innerHTML = wlTotal;
@@ -884,7 +873,7 @@ function enableOptGroup(selectID, optGroupIndex){
 // Situation Toggle Else Function
 function situationToggleElse(targetNumber,columnNumber,optSelect){
   if (optSelect.includes(targetNumber)){
-    table.columns(columnNumber).search('').draw();
+    baseballTable.columns(columnNumber).search('').draw();
     for (z=0;z<optSelect.length;z++){
       if(optSelect[z] == targetNumber){
         optSelect.splice(z,1);

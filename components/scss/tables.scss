@@ -92,7 +92,7 @@ span.badge.badge-success, span.badge.badge-danger{
   background: #d4d8e2;
 }
 
-#ncaa td{
+#ncaa td, #ncaaCWS td{
   background: #c6e9ff;
 }
 
@@ -130,6 +130,46 @@ span.badge.badge-success, span.badge.badge-danger{
 
 #nitSemis td{
   background: #ffb966;
+}
+
+#ncaaStarkvilleRegional td, #ncaaTallahassee td, #ncaaLafayetteRegional td, #ncaaColumbusRegional td{
+  background: #fdc8d0;
+}
+
+#ncaaStarkvilleSuper td{
+  background: #df9ba5;
+}
+
+#ncaaNashvilleSuper td{
+  background: #ceba80;
+}
+
+#ncaaHattiesburgRegional td{
+  background: #c8c8c8;
+}
+
+#ncaaBatonRougeSuper td{
+  background: #9877d2;
+}
+
+#ncaaCharlottesvilleSuper td, #ncaaClemsonSuper td{
+  background: #e3946e;
+}
+
+#ncaaClemsonRegional td{
+  background: #ffb591;
+}
+
+#ncaaAtlantaRegional td{
+  background: #e1ce96;
+}
+ 
+#ncaaGainesvilleSuper td, #ncaaFullertonSuper td{
+  background: #95a3e3;
+}
+
+#ncaaCoralGablesRegional td{
+  background: #a5e1c9;
 }
 
 /*** table footer ***/

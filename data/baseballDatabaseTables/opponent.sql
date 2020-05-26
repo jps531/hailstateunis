@@ -66,7 +66,7 @@ INSERT INTO `opponent` (`opponentName`, `conference`, `colorA`, `colorB`) VALUES
 ('Cal St. Fullerton', 'Big West', '#072348', '#f08031'),
 ('Centenary', 'D-III', '#950034', 'white'),
 ('Central Arkansas', 'Southland', '#552784', 'white'),
-('Central Michgian', 'MAC', '#f7c145', '#611031'),
+('Central Michigan', 'MAC', '#f7c145', '#611031'),
 ('Charleston Southern', 'Big South', '#012650', '#a8996e'),
 ('Chattanooga', 'Southern', '#072e54', '#ffb500'),
 ('Cincinnati', 'American', 'black', '#e51937'),
