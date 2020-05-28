@@ -65,7 +65,6 @@ INSERT INTO `season` (`yr`, `head_coach`, `wins`, `losses`, `sec_wins`, `sec_los
 (2015, 'John Cohen', 24, 30, 8, 22),
 (2016, 'John Cohen', 44, 18, 21, 9),
 (2017, 'Andy Cannizaro', 40, 27, 17, 13),
-(2018, 'Andy Cannizaro', 0, 3, 0, 0),
 (2018, 'Gary Henderson', 39, 26, 15, 15),
 (2019, 'Chris Lemonis', 52, 15, 20, 10),
 (2020, 'Chris Lemonis', 12, 4, 0, 0);

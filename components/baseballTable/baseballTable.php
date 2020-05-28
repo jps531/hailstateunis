@@ -22,6 +22,7 @@
       <th scope="col">Jersey Name</th>
       <th scope="col">Jersey Attribute</th>
       <th scope="col">Jersey Type</th>
+      <th scope="col">Doubleheader</th>
       <th scope="col">Opponent</th>
     </tr>
   </thead>
@@ -68,8 +69,8 @@
         $opponentBadge = 'secondary';
       }
 
-      if ($row["gameID"] == "26"){
-        $headcoach = 'Greg Knox';
+      if ($row["gameID"] == "156" || $row["gameID"] == "157" || $row["gameID"] == "158"){
+        $headcoach = 'Andy Cannizaro';
       }
       else{
         $headcoach = $row["head_coach"];
@@ -87,7 +88,7 @@
 
       $typeBadge = " badge-info'>";
 
-      if (strpos($row["type"], "SEC") !== false){
+      if (strpos($row["type"], "SEC Game") !== false){
         $typeBadge = "' style='background-color: #f4ad3d; color: #202846;'>";
       }
       else if (strpos($row["type"], "Non-Conference") !== false){
@@ -145,6 +146,16 @@
         $typeBadge = "' style='background-color: #7B6A48; color: white;'>";
       }
 
+      if ($row["dh"] == "1"){
+        $dh = "Adoubleheader";
+      }
+      else if ($row["dh"] == "2"){
+        $dh = "Bdoubleheader";
+      }
+      else{
+        $dh = "";
+      }
+
       $month = $row["gameday"][5] . $row["gameday"][6];
       $day = $row["gameday"][8] . $row["gameday"][9];
       $year = $row["gameday"][0] . $row["gameday"][1] . $row["gameday"][2] . $row["gameday"][3];
@@ -188,6 +199,7 @@
               <td class='jerseyName'>" . $row["jName"] . "</td>
               <td class='jerseyAttribute'>" . $row["jAttribute"] . "</td>
               <td class='jerseyType'>" . $row["jType"] . "</td>
+              <td class='doubleheader'>" . $dh . "</td>
               <td class='opponent' data-search='" . $row["opponentName"] . "'>
                 <span class='badge' style='background-color: " . $row["colorA"] . "; color: "  . $row["colorB"] .  ";'>" . $row["opponentName"] . "</span>
               </td>
@@ -205,7 +217,7 @@
   </tbody>
   <tfoot>
     <tr>
-      <td colspan="16" id="footerRow">
+      <td colspan="17" id="footerRow">
         <div class="container" id="winLossTotal"></div>
       </td>
     </tr>

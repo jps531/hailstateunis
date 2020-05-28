@@ -80,18 +80,18 @@ var baseballTable = $('#baseballTable').DataTable( {
                 "columnDefs": [
                   {"orderable": false, 'targets': [4,8,9,10,11,12,13,14] },
                   {"type": "num", 'targets': [6,7]},
-                  {"className": "all", 'targets': [0,4,15]},
+                  {"className": "all", 'targets': [0,4,16]},
                   {"className": "min-xl", 'targets': [2]},
                   {"className": "min-lg", 'targets': [3]},
                   {"className": "min-md", 'targets': [6,7]},
                   {"className": "min-sm", 'targets': [1]},
                   {"className": "min-xs", 'targets': [5]},
-                  {"className": "none", 'targets': [8,9,10,11,12,13,14]},
+                  {"className": "none", 'targets': [8,9,10,11,12,13,14,15]},
                   {type: 'title-string', targets: 1}
                 ],
 
                 // Table Options
-                "order": [[ 1, 'asc' ]],
+                "order": [[ 1, 'asc' ], [15, 'asc']],
                 searching: true,
                 dom: 'ltipr'
               });
@@ -118,7 +118,7 @@ $(document).ready(function(){
   $("#bbSelectOpponent").on("change", function() {
     if (this.value == ""){
       baseballTable
-      .columns(15)
+      .columns(16)
       .search(this.value)
       .draw();
     }
@@ -128,7 +128,7 @@ $(document).ready(function(){
       })
       .get()
       .join( "|" );
-      baseballTable.column(15).search(regEx, true, false).draw();
+      baseballTable.column(16).search(regEx, true, false).draw();
     }
   });
 });

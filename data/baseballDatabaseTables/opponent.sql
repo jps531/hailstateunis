@@ -183,7 +183,7 @@ INSERT INTO `opponent` (`opponentName`, `conference`, `colorA`, `colorB`) VALUES
 ('Old Dominion', 'Conference USA', '#003a69', '#b0b6bb'),
 ('Ole Miss', 'SEC', '#0e2143', '#d2233a'),
 ('Oral Roberts', 'Summit League', '#0d1f40', '#c4b588'),
-('Oregon', 'Pac 12', '#173d35', '#ffe115'),
+('Oregon', 'Pac 12', '#05834f', '#ffe115'),
 ('Oregon State', 'Pac 12', '#db4405', 'black'),
 ('Penn State', 'Big Ten', '#032759', 'white'),
 ('Pepperdine', 'West Coast', '#052158', '#e07c3b'),
