@@ -11,7 +11,7 @@
       <th scope="col">Date</th>
       <th scope="col">Day</th>
       <th scope="col">Game Type</th>
-      <th scope="col">Combination</th>
+      <th scope="col">Uniform</th>
       <th scope="col">W/L</th>
       <th scope="col">PF</th>
       <th scope="col">PA</th>
@@ -139,10 +139,10 @@
       else if (strpos($row["location"], "secT") !== false){
         $typeBadge = "' style='background-color: #202846; color: #f4ad3d;'>";
       }
-      else if (strpos($row["location"], "CWS") !== false){
+      else if (strpos($row["location"], "ncaaCWS") !== false){
         $typeBadge = "' style='background-color: #0065A8; color: white;'>";
       }
-      else if ($row["location"] == "ncaaNationalChampionship"){
+      else if (strpos($row["location"], "ncaaNationalChampionshipCWS") !== false){
         $typeBadge = "' style='background-color: #7B6A48; color: white;'>";
       }
 
