@@ -134,7 +134,7 @@
         $typeBadge = "' style='background-color: #072348; color: #f08031;'>";
       }
       else if (strpos($row["location"], "Columbus") !== false){
-        $typeBadge = "' style='background-color: #d0073b; color: #b2b8be;'>";
+        $typeBadge = "' style='background-color: #d0073b; color: white;'>";
       }
       else if (strpos($row["location"], "secT") !== false){
         $typeBadge = "' style='background-color: #202846; color: #f4ad3d;'>";
