@@ -17,85 +17,46 @@
     <option>Tennessee</option>
     <option>Vanderbilt</option>
   </optgroup>
-  <optgroup label="ACC">
-    <option>Clemson</option>
-    <option>Georgia Tech</option>
-    <option>Louisville</option>
-    <option>Miami FL</option>
-    <option>NC State</option>
-    <option>North Carolina</option>
-    <option>Syracuse</option>
-    <option>Wake Forest</option>
-  </optgroup>
-  <optgroup label="Big 12">
-    <option>Baylor</option>
-    <option>Kansas</option>
-    <option>Kansas State</option>
-    <option>Oklahoma State</option>
-    <option>Texas</option>
-    <option>West Virginia</option>
-  </optgroup>
-  <optgroup label="Big Ten">
-    <option>Illinois</option>
-    <option>Iowa</option>
-    <option>Michigan</option>
-    <option>Nebraska</option>
-    <option>Northwestern</option>
-  </optgroup>
-  <optgroup label="Pac 12">
-    <option>Oregon</option>
-  </optgroup>
-  <optgroup label="Independent">
-    <option>BYU</option>
-    <option>UMass</option>
-  </optgroup>
-  <optgroup label="American">
-    <option>Houston</option>
-    <option>Memphis</option>
-    <option>Navy</option>
-    <option>Tulane</option>
-    <option>UCF</option>
-  </optgroup>
-  <optgroup label="Conference USA">
-    <option>Louisiana Tech</option>
-    <option>Middle Tennessee</option>
-    <option>Rice</option>
-    <option>Southern Miss</option>
-    <option>UAB</option>
-  </optgroup>
-  <optgroup label="MAC">
-    <option>Bowling Green</option>
-    <option>Miami OH</option>
-  </optgroup>
-  <optgroup label="Mountian West">
-    <option>Air Force</option>
-    <option>Colorado State</option>
-  </optgroup>
-  <optgroup label="Sun Belt">
-    <option>Arkansas State</option>
-    <option>Louisiana</option>
-    <option>South Alabama</option>
-    <option>Troy</option>
-    <option>UL Monroe</option>
-  </optgroup>
-  <optgroup label="FCS">
-    <option>Abilene Christian</option>
-    <option>Alcorn State</option>
-    <option>Cal St. Fullerton</option>
-    <option>Charleston Southern</option>
-    <option>Duquesne</option>
-    <option>East Tennessee St.</option>
-    <option>Gardner-Webb</option>
-    <option>Georgetown</option>
-    <option>Jackson State</option>
-    <option>Jacksonville State</option>
-    <option>Maine</option>
-    <option>Murray State</option>
-    <option>Northwestern State</option>
-    <option>Samford</option>
-    <option>SE Louisiana</option>
-    <option>Stephen F. Austin</option>
-    <option>UT Martin</option>
-  </optgroup>
+
+  <!-- Connect to Database -->
+  <?php 
+    include "data/bbDatabaseConnection.php"; 
+
+    // Perform Query
+    $sql = "SELECT DISTINCT game.opponentName, opponent.conference FROM `game`
+            INNER JOIN `opponent` ON game.opponentName = opponent.opponentName
+            ORDER BY `opponent`.`conference` ASC, `opponent`.`opponentName` ASC";
+    $result = $conn->query($sql);
+
+    // output data of each row
+    if ($result->num_rows > 0) {
+      $currentConference = "SEC";
+      $waitlist = array("SEC", "D-II", "D-III");
+      $rows = array();
+      while($row = $result->fetch_assoc()) {
+        array_push($rows, $row);
+      }
+      conferenceLoopFalse($waitlist, $rows);
+    } 
+    else {
+      echo "0 results";
+    }
+
+    function conferenceLoopFalse($groupName, $rows) {
+      for($s = 0; $s < count($rows); $s++) {  
+        if (in_array($rows[$s]["conference"], $groupName) === false){
+          if ($currentConference !== $rows[$s]["conference"]){
+            echo "</optgroup>";
+            $currentConference = $rows[$s]["conference"];
+            echo "<optgroup label='" . $currentConference . "'>";
+          }
+          echo "<option>" . $rows[$s]["opponentName"] . "</option>";
+        }
+      }
+    }
+
+    $conn->close();
+  ?>
+
 </select>
 <button class="btn" id="bbOpponentClear"><i class="fas fa-times-circle"></i></button>

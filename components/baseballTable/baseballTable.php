@@ -23,6 +23,7 @@
       <th scope="col">Jersey Attribute</th>
       <th scope="col">Jersey Type</th>
       <th scope="col">Doubleheader</th>
+      <th scope="col">SBW</th>
       <th scope="col">Opponent</th>
     </tr>
   </thead>
@@ -67,6 +68,15 @@
         $resultColor = 'warning';
         $stateBadge = 'secondary';
         $opponentBadge = 'secondary';
+      }
+
+      $SBWarray = array("2069","2070","2071","1998","1999","2000","1931","1932","1933","1934","1863","1864","1865",
+                        "1794","1795","1796","1744","1745","1746","1684","1685","1686","116","117","118","48","49","50");
+      if (in_array($row["gameID"], $SBWarray)){
+        $SBW = "Super Bulldog Weekend SBW";
+      }
+      else{
+        $SBW = "";
       }
 
       if ($row["gameID"] == "156" || $row["gameID"] == "157" || $row["gameID"] == "158"){
@@ -200,6 +210,7 @@
               <td class='jerseyAttribute'>" . $row["jAttribute"] . "</td>
               <td class='jerseyType'>" . $row["jType"] . "</td>
               <td class='doubleheader'>" . $dh . "</td>
+              <td class='sbw'>" . $SBW . "</td>
               <td class='opponent' data-search='" . $row["opponentName"] . "'>
                 <span class='badge' style='background-color: " . $row["colorA"] . "; color: "  . $row["colorB"] .  ";'>" . $row["opponentName"] . "</span>
               </td>
@@ -217,7 +228,7 @@
   </tbody>
   <tfoot>
     <tr>
-      <td colspan="17" id="footerRow">
+      <td colspan="18" id="footerRow">
         <div class="container" id="winLossTotal"></div>
       </td>
     </tr>

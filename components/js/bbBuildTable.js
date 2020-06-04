@@ -66,7 +66,7 @@ var baseballTable = $('#baseballTable').DataTable( {
                           if (columns[6].hidden){
                             data += '<tr><td id="innerTitle" colspan="2">Final Score</td></tr>';
                             data += '<tr><td><span class="badge" style="background-color: #3b0811; color: white;">Mississippi State</span></td><td>' + 
-                                    api.cell(rowIdx, 16).data() +'</td></tr>';
+                                    api.cell(rowIdx, 17).data() +'</td></tr>';
                             data += '<tr><td>' + api.cell(rowIdx, 6).data() + '</td><td>' + api.cell(rowIdx, 7).data() +'</td></tr>';
                             data += '</tbody></table></div>';
                           }
@@ -80,13 +80,13 @@ var baseballTable = $('#baseballTable').DataTable( {
                 "columnDefs": [
                   {"orderable": false, 'targets': [4,8,9,10,11,12,13,14] },
                   {"type": "num", 'targets': [6,7]},
-                  {"className": "all", 'targets': [0,4,16]},
+                  {"className": "all", 'targets': [0,4,17]},
                   {"className": "min-xl", 'targets': [2]},
                   {"className": "min-lg", 'targets': [3]},
                   {"className": "min-md", 'targets': [6,7]},
                   {"className": "min-sm", 'targets': [1]},
                   {"className": "min-xs", 'targets': [5]},
-                  {"className": "none", 'targets': [8,9,10,11,12,13,14,15]},
+                  {"className": "none", 'targets': [8,9,10,11,12,13,14,15,16]},
                   {type: 'title-string', targets: 1}
                 ],
 
@@ -118,7 +118,7 @@ $(document).ready(function(){
   $("#bbSelectOpponent").on("change", function() {
     if (this.value == ""){
       baseballTable
-      .columns(16)
+      .columns(7)
       .search(this.value)
       .draw();
     }
@@ -128,7 +128,7 @@ $(document).ready(function(){
       })
       .get()
       .join( "|" );
-      baseballTable.column(16).search(regEx, true, false).draw();
+      baseballTable.column(17).search(regEx, true, false).draw();
     }
   });
 });
