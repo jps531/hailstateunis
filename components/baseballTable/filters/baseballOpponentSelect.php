@@ -59,4 +59,4 @@
   ?>
 
 </select>
-<button class="btn" id="bbOpponentClear"><i class="fas fa-times-circle"></i></button>
+<button class="btn clear" id="bbOpponentClear"><i class="fas fa-times-circle"></i></button>

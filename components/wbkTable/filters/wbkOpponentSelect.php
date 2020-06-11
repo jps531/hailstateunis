@@ -72,4 +72,4 @@
   ?>
 
 </select>
-<button class="btn" id="wbkOpponentClear"><i class="fas fa-times-circle"></i></button>
+<button class="btn clear" id="wbkOpponentClear"><i class="fas fa-times-circle"></i></button>

@@ -21,6 +21,8 @@
               <p>- Every Regional game since the 2000 season</p>
               <p>- Every SEC Tournament game since the 2005 season</p>
               <p>- Every single game since the 2011 season</p>
+              <p>Every game from 2014 to Present expands with a link to the corresponding HailStateUnis.com blog post. 
+                Blog posts from 2017 to Present contain full articles with commentary on that game's uniform choice.</p>
               <p>I feel very confident in the accuracy of the combinations listed in this table; I was able to find photo/video evidence
                   for all but a handful of games. Notes on those games are below; please let me know if you have any information about any 
                   of them so that I can update the combination and/or remove the game from the list: </p>

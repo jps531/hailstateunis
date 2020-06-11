@@ -31,4 +31,4 @@
 ?>
 
 </select>
-<button class="btn" id="seasonClear"><i class="fas fa-times-circle"></i></button>
+<button class="btn clear" id="seasonClear"><i class="fas fa-times-circle"></i></button>

@@ -1,5 +1,5 @@
-<!-- Situation Select -->
-<select class="selectpicker" data-live-search="true" id="fbSituationB" title="Situation B">
+<!-- Uniform Select -->
+<select class="selectpicker" data-live-search="true" id="fbUniformA" title="Uniform A">
 <optgroup label="Alternates">
     <option>All Alternates</option>
     <option>Egg Bowl Alternates</option>
@@ -106,4 +106,4 @@
     <option>Gold/Maroon/Maroon</option>
   </optgroup>
 </select>
-<button class="btn" id="fbSitBClear"><i class="fas fa-times-circle"></i></button>
+<button class="btn clear" id="fbUniformAClear"><i class="fas fa-times-circle"></i></button>

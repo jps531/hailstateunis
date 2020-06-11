@@ -21,24 +21,52 @@
       </div>
     </div>
 
-    <!-- Filters -->
-    <div class="row" id="filters">
-      <div class="col-xs-3 text-center" id="seasons">
-        <?php include "components/footballTable/filters/footballSeasonSelect.php"; ?>
-      </div>
-      <div class="col-xs-3 text-center" id="opponents">
-        <?php include "components/footballTable/filters/footballOpponentSelect.php"; ?>
-      </div>
-      <div class="col-xs-3 text-center" id="situationA">
-      <?php include "components/footballTable/filters/footballSituationA.php"; ?>
-      </div>
-      <div class="col-xs-3 text-center" id="situationB">
-      <?php include "components/footballTable/filters/footballSituationB.php"; ?>
+    <!-- Filter Collapse Button -->
+    <div class="row" id="filterCollapse">
+      <div class="col-sm-9">
+        <button class="btn btn-block" type="button" data-toggle="collapse" data-target="#filters" aria-expanded="false" aria-controls="collapseExample" 
+                style="background-color: #3b0811; color: white;">
+          Filter
+        </button>
       </div>
     </div>
-    <div class="row" id="filtersRowTwo">
-      <div class="col-xs-3 text-center" id="search">
-      <?php include "components/footballTable/filters/searchFootballTable.php"; ?>
+
+    <!-- Filters -->
+    <div class="container collapse" id="filters">
+      <div class="row" id="filtersSubrowA">
+        <div class="col-xs-3 text-center" id="seasons">
+          <?php include "components/footballTable/filters/footballSeasonSelect.php"; ?>
+        </div>
+        <div class="col-xs-3 text-center" id="opponents">
+          <?php include "components/footballTable/filters/footballOpponentSelect.php"; ?>
+        </div>
+      </div>
+      <div class="row" id="filtersSubrowB">
+        <div class="col-xs-3 text-center" id="uniformA">
+          <?php include "components/footballTable/filters/footballUniformA.php"; ?>
+        </div>
+        <div class="col-xs-3 text-center" id="uniformB">
+          <?php include "components/footballTable/filters/footballUniformA.php"; ?>
+        </div>
+        <div class="col-xs-3 text-center" id="uniformC">
+          <?php include "components/footballTable/filters/footballUniformA.php"; ?>
+        </div>
+      </div>
+      <div class="row" id="filtersSubrowC">
+        <div class="col-xs-3 text-center" id="gameA">
+          <?php include "components/footballTable/filters/footballGameA.php"; ?>
+        </div>
+        <div class="col-xs-3 text-center" id="gameB">
+          <?php include "components/footballTable/filters/footballGameB.php"; ?>
+        </div>
+        <div class="col-xs-3 text-center" id="gameC">
+          <?php include "components/footballTable/filters/footballGameC.php"; ?>
+        </div>
+      </div>
+      <div class="row" id="filtersRowTwo">
+        <div class="col-xs-3 text-center" id="search">
+          <?php include "components/footballTable/filters/searchFootballTable.php"; ?>
+        </div>
       </div>
     </div>
 
@@ -51,6 +79,12 @@
   </div>
 
   <!-- Javascript -->
-  <script type="text/javascript" src="components/js/fbBuildTable.js"></script> 
+  <script type="module" src="components/js/footballFilters/fbOpponentFilter.js"></script>
+  <script type="module" src="components/js/footballFilters/fbSeasonFilter.js"></script>
+  <!--<script type="module" src="components/js/footballFilters/fbUniformFiltersApp.js"></script>-->
+  <!--<script type="module" src="components/js/footballFilters/fbUniformFilters.js"></script>-->
+  <script type="module" src="components/js/footballFilters/fbGameFiltersApp.js"></script>
+  <script type="module" src="components/js/footballFilters/fbGameFilters.js"></script>
+  <script type="module" src="components/js/fbBuildTable.js"></script>
   </body>
 </html>

@@ -106,4 +106,4 @@
     <option>Gold/Maroon/Maroon</option>
   </optgroup>
 </select>
-<button class="btn" id="bbSitBClear"><i class="fas fa-times-circle"></i></button>
+<button class="btn clear" id="bbSitBClear"><i class="fas fa-times-circle"></i></button>

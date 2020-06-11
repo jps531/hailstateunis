@@ -89,7 +89,7 @@ var mbkTable = $('#mbkTable').DataTable( {
                 // Table Options
                 "order": [[ 1, 'asc' ]],
                 searching: true,
-                dom: 'ltipr'
+                dom: 'tpilr'
               });
 //-----------
 
@@ -110,6 +110,9 @@ $(function() {
 
 //-----------
 // Opponent Select
+var pageLengthOpp;
+var resetLengthOpp = true;
+
 $(document).ready(function(){
   $("#mbkOpponent").on("change", function() {
     if (this.value == ""){
@@ -123,6 +126,17 @@ $(document).ready(function(){
       .join( "|" );
       mbkTable.column(8).search(regEx, true, false).draw();
     }
+
+    if (this.value != ''){
+      if (resetLengthOpp){
+        pageLengthOpp = baseballTable.page.len();
+        resetLengthOpp = false;
+      }
+      baseballTable.page.len(-1).draw();
+    }
+    else if (baseballTable.page.len() == -1){
+      baseballTable.page.len(pageLengthOpp).draw();
+    }
   });
 });
 
@@ -134,8 +148,8 @@ $(function() {
 
 //-----------
 // Season Select
-var pageLength;
-var resetLength = true;
+var pageLengthSzn;
+var resetLengthSzn = true;
 
 $(document).ready(function(){
   $("#mbkSelectYear").on("change", function() {
@@ -147,14 +161,14 @@ $(document).ready(function(){
     mbkTable.column(0).search(regEx, true, false).draw();
 
     if (this.value != ''){
-      if (resetLength){
-        pageLength = mbkTable.page.len();
-        resetLength = false;
+      if (resetLengthSzn){
+        pageLengthSzn = mbkTable.page.len();
+        resetLengthSzn = false;
       }
       mbkTable.page.len(-1).draw();
     }
     else if (mbkTable.page.len() == -1){
-      mbkTable.page.len(pageLength).draw();
+      mbkTable.page.len(pageLengthSzn).draw();
     }
   });
 });

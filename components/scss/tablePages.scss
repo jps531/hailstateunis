@@ -5,12 +5,53 @@
 }
 
 /*** filters ***/
-#seasons, #situationA, #situationB, #opponents, #search{
+#seasons, #opponents, #search,
+#uniformA, #uniformB, #uniformC,
+#gameA, #gameB, #gameC{
     margin-bottom: 20px;
+    margin-left: 5px;
 }
 
-#filters, #filtersRowTwo{
+#uniformB, #uniformC, #gameB, #gameC{
+    display: none;
+}
+
+#filtersRowTwo, #filtersSubrowB, #filtersSubrowC{
     justify-content: center;
+    padding-top: 20px;
+}
+
+#filtersSubrowA{
+    justify-content: center;
+}
+
+#filtersSubrowB{
+    background-color: #dbdbdb;
+}
+
+#filtersSubrowC{
+    background-color: #cbcbcb;
+}
+
+#filtersRowTwo{
+    background-color: #bbbbbb;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+
+#filters{
+    background: #ebebeb;
+    max-width: 826px;
+    border-radius: 10px;
+    padding: 15px;
+    padding-bottom: 0px;
+    margin-bottom: 15px;
+}
+
+#filterCollapse{
+    justify-content: center;
+    padding-bottom: 15px;
 }
 
 .form-control{
@@ -18,12 +59,9 @@
     width: 220px;
 }
 
-#opponentClear, #fbSitAClear, #fbSitBClear, #seasonClear, #searchClear, 
-#mbkOpponentClear, #mbkSitAClear, #mbkSitBClear, #mbkSeasonClear, #mbkSearchClear,
-#wbkOpponentClear, #wbkSitAClear, #wbkSitBClear, #wbkSeasonClear, #wbkSearchClear,
-#bbOpponentClear, #bbSitAClear, #bbSitBClear, #bbSeasonClear, #bbSearchClear{
+.clear{
     margin-left: -10px;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 /*** table container ***/

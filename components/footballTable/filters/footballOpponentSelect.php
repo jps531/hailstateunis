@@ -63,4 +63,4 @@
   ?>
 
 </select>
-<button class="btn" id="opponentClear"><i class="fas fa-times-circle"></i></button>
+<button class="btn clear" id="opponentClear"><i class="fas fa-times-circle"></i></button>

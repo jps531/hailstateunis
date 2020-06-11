@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 03, 2020 at 05:39 AM
+-- Generation Time: Jun 05, 2020 at 08:34 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -153,7 +153,7 @@ INSERT INTO `game` (`gameID`, `yr`, `gameday`, `opponentName`, `result`, `points
 (101, 2012, '2012-09-15', 'Troy', 'Win', 30, 24, 'road', 69, 'https://i.imgur.com/s7tWnuJ.png', 'https://i.imgur.com/FIQdu6D.png', 'Mississippi State 30 Troy 24', 'https://www.hailstateunis.com/2012-football-season/-mississippi-state-30-troy-24'),
 (102, 2012, '2012-09-08', 'Auburn', 'Win', 28, 10, 'home', 65, 'https://i.imgur.com/RCUr1HC.png', 'https://i.imgur.com/yLF1zS7.png', 'Mississippi State 28 Auburn 10', 'https://www.hailstateunis.com/2012-football-season/mississippi-state-28-auburn-10'),
 (103, 2012, '2012-09-01', 'Jackson State', 'Win', 56, 9, 'home', 64, 'https://i.imgur.com/dAqHkTo.png', 'https://i.imgur.com/yLF1zS7.png', 'Mississippi State 56 Jackson State 9', 'https://www.hailstateunis.com/2012-football-season/mississippi-state-56-jackson-state-9'),
-(104, 2011, '2011-12-30', 'Wake Forest', 'Win', 23, 17, 'musicCityBowl', 73, 'https://i.imgur.com/ZMl57vX.png', 'https://i.imgur.com/eqgfBd5.png', NULL, NULL),
+(104, 2011, '2011-12-30', 'Wake Forest', 'Win', 23, 17, 'musicCityBowl', 73, 'https://i.imgur.com/ZMl57vX.png', 'https://i.imgur.com/eqgfBd5.png', 'Bowl Game Uniform History', 'https://www.hailstateunis.com/bowl-game-uniform-history.html'),
 (105, 2011, '2011-11-26', 'Ole Miss', 'Win', 31, 3, 'home', 74, 'https://i.imgur.com/nd7Wt3F.png', 'https://i.imgur.com/AZ7e2eZ.png', NULL, NULL),
 (106, 2011, '2011-11-19', 'Arkansas', 'Loss', 17, 44, 'road', 76, 'https://i.imgur.com/AYps5Go.png', 'https://i.imgur.com/RSLiAmy.png', NULL, NULL),
 (107, 2011, '2011-11-12', 'Alabama', 'Loss', 7, 24, 'home', 79, 'https://i.imgur.com/wQGGbUO.png', 'https://i.imgur.com/MYjdNZB.png', NULL, NULL),
@@ -166,7 +166,7 @@ INSERT INTO `game` (`gameID`, `yr`, `gameday`, `opponentName`, `result`, `points
 (114, 2011, '2011-09-15', 'LSU', 'Loss', 6, 19, 'home', 79, 'https://i.imgur.com/oJwY4Us.png', 'https://i.imgur.com/MYjdNZB.png', NULL, NULL),
 (115, 2011, '2011-09-10', 'Auburn', 'Loss', 34, 41, 'road', 76, 'https://i.imgur.com/AYps5Go.png', 'https://i.imgur.com/RRfRSxT.png', NULL, NULL),
 (116, 2011, '2011-09-01', 'Memphis', 'Win', 59, 14, 'road', 76, 'https://i.imgur.com/AYps5Go.png', 'https://i.imgur.com/tfnMxv3.png', NULL, NULL),
-(117, 2010, '2011-01-01', 'Michigan', 'Win', 52, 14, 'gatorBowl', 80, 'https://i.imgur.com/M3IlI3J.png', 'https://i.imgur.com/QxobWVM.png', NULL, NULL),
+(117, 2010, '2011-01-01', 'Michigan', 'Win', 52, 14, 'gatorBowl', 80, 'https://i.imgur.com/M3IlI3J.png', 'https://i.imgur.com/QxobWVM.png', 'Bowl Game Uniform History', 'https://www.hailstateunis.com/bowl-game-uniform-history.html'),
 (118, 2010, '2010-11-27', 'Ole Miss', 'Win', 31, 23, 'road', 81, 'https://i.imgur.com/M3IlI3J.png', 'https://i.imgur.com/asImcGN.png', NULL, NULL),
 (119, 2010, '2010-11-20', 'Arkansas', 'Loss', 31, 38, 'home', 84, 'https://i.imgur.com/ARpA5Ee.png', 'https://i.imgur.com/VR83Xff.png', NULL, NULL),
 (120, 2010, '2010-11-13', 'Alabama', 'Loss', 10, 30, 'road', 82, 'https://i.imgur.com/M3IlI3J.png', 'https://i.imgur.com/omymTFr.png', NULL, NULL),
@@ -203,7 +203,7 @@ INSERT INTO `game` (`gameID`, `yr`, `gameday`, `opponentName`, `result`, `points
 (151, 2008, '2008-09-13', 'Auburn', 'Loss', 2, 3, 'home', 94, 'https://i.imgur.com/RCUr1HC.png', 'https://i.imgur.com/KGwEJln.png', NULL, NULL),
 (152, 2008, '2008-09-06', 'SE Louisiana', 'Win', 34, 10, 'home', 95, 'https://i.imgur.com/1RVcqoC.png', 'https://i.imgur.com/KGwEJln.png', NULL, NULL),
 (153, 2008, '2008-08-30', 'Louisiana Tech', 'Loss', 14, 22, 'road', 92, 'https://i.imgur.com/X5gZ9RS.png', 'https://i.imgur.com/HfwpNT6.png', NULL, NULL),
-(154, 2007, '2007-12-29', 'UCF', 'Win', 10, 3, 'libertyBowl', 97, 'https://i.imgur.com/b3V3NpL.png', 'https://i.imgur.com/KGwEJln.png', NULL, NULL),
+(154, 2007, '2007-12-29', 'UCF', 'Win', 10, 3, 'libertyBowl', 97, 'https://i.imgur.com/b3V3NpL.png', 'https://i.imgur.com/KGwEJln.png', 'Bowl Game Uniform History', 'https://www.hailstateunis.com/bowl-game-uniform-history.html'),
 (155, 2007, '2007-11-23', 'Ole Miss', 'Win', 17, 14, 'home', 100, 'https://i.imgur.com/nd7Wt3F.png', 'https://i.imgur.com/KGwEJln.png', NULL, NULL),
 (156, 2007, '2007-11-17', 'Arkansas', 'Loss', 31, 45, 'road', 98, 'https://i.imgur.com/X5gZ9RS.png', 'https://i.imgur.com/RSLiAmy.png', NULL, NULL),
 (157, 2007, '2007-11-10', 'Alabama', 'Win', 17, 12, 'home', 100, 'https://i.imgur.com/pSylmRn.png', 'https://i.imgur.com/KGwEJln.png', NULL, NULL),
@@ -285,20 +285,20 @@ INSERT INTO `game` (`gameID`, `yr`, `gameday`, `opponentName`, `result`, `points
 (233, 2001, '2001-09-29', 'Florida', 'Loss', 0, 52, 'road', 111, 'https://i.imgur.com/i1BehvV.png', 'https://i.imgur.com/prt2bar.png', NULL, NULL),
 (234, 2001, '2001-09-20', 'South Carolina', 'Loss', 14, 16, 'home', 113, 'https://i.imgur.com/bHpQyn4.png', 'https://i.imgur.com/cTxmruz.png', NULL, NULL),
 (235, 2001, '2001-09-03', 'Memphis', 'Win', 30, 10, 'home', 110, 'https://i.imgur.com/5D7pByZ.png', 'https://i.imgur.com/uI6YOyz.png', NULL, NULL),
-(236, 2000, '2000-12-31', 'Texas A&M', 'Win', 43, 41, 'independenceBowl', 117, 'https://i.imgur.com/i1BehvV.png', 'https://i.imgur.com/PmcnV73.png', NULL, NULL),
+(236, 2000, '2000-12-31', 'Texas A&M', 'Win', 43, 41, 'independenceBowl', 117, 'https://i.imgur.com/i1BehvV.png', 'https://i.imgur.com/PmcnV73.png', 'Bowl Game Uniform History', 'https://www.hailstateunis.com/bowl-game-uniform-history.html'),
 (237, 2000, '2000-11-23', 'Ole Miss', 'Loss', 30, 45, 'road', 112, 'https://i.imgur.com/cKPbemh.png', 'https://i.imgur.com/k2QyFAj.png', NULL, NULL),
 (238, 2000, '2000-11-18', 'Arkansas', 'Loss', 10, 17, 'home', 113, 'https://i.imgur.com/BvkPqFx.png', 'https://i.imgur.com/cTxmruz.png', NULL, NULL),
 (239, 2000, '2000-11-11', 'Alabama', 'Win', 29, 7, 'home', 113, 'https://i.imgur.com/CMeu9sa.png', 'https://i.imgur.com/cTxmruz.png', NULL, NULL),
 (240, 2000, '2000-11-04', 'Kentucky', 'Win', 35, 17, 'road', 112, 'https://i.imgur.com/cKPbemh.png', 'https://i.imgur.com/pZbXSwF.png', NULL, NULL),
-(241, 2000, '2000-10-28', 'Middle Tennessee', 'Win', 61, 35, 'home', 113, 'https://i.imgur.com/PM25WAj.png', 'https://i.imgur.com/cTxmruz.png', NULL, NULL),
-(242, 2000, '2000-10-21', 'LSU', 'Loss', 38, 45, 'road', 113, 'https://i.imgur.com/cKPbemh.png', 'https://i.imgur.com/rsOr4qk.png', NULL, NULL),
-(243, 2000, '2000-10-07', 'Auburn', 'Win', 17, 10, 'home', 113, 'https://i.imgur.com/ejRSH63.png', 'https://i.imgur.com/cTxmruz.png', NULL, NULL);
+(241, 2000, '2000-10-28', 'Middle Tennessee', 'Win', 61, 35, 'home', 113, 'https://i.imgur.com/PM25WAj.png', 'https://i.imgur.com/cTxmruz.png', NULL, NULL);
 INSERT INTO `game` (`gameID`, `yr`, `gameday`, `opponentName`, `result`, `points_for`, `points_against`, `location`, `comboID`, `away_helmet`, `home_helmet`, `article_title`, `article_link`) VALUES
+(242, 2000, '2000-10-21', 'LSU', 'Loss', 38, 45, 'road', 113, 'https://i.imgur.com/cKPbemh.png', 'https://i.imgur.com/rsOr4qk.png', NULL, NULL),
+(243, 2000, '2000-10-07', 'Auburn', 'Win', 17, 10, 'home', 113, 'https://i.imgur.com/ejRSH63.png', 'https://i.imgur.com/cTxmruz.png', NULL, NULL),
 (244, 2000, '2000-09-30', 'Florida', 'Win', 47, 35, 'home', 113, 'https://i.imgur.com/LovCmnY.png', 'https://i.imgur.com/cTxmruz.png', NULL, NULL),
 (245, 2000, '2000-09-23', 'South Carolina', 'Loss', 19, 23, 'road', 114, 'https://i.imgur.com/cKPbemh.png', 'https://i.imgur.com/6ol0OfJ.png', NULL, NULL),
 (246, 2000, '2000-09-14', 'BYU', 'Win', 44, 28, 'road', 114, 'https://i.imgur.com/cKPbemh.png', 'https://i.imgur.com/HGBL9eo.png', NULL, NULL),
 (247, 2000, '2000-09-02', 'Memphis', 'Win', 17, 3, 'road', 114, 'https://i.imgur.com/cKPbemh.png', 'https://i.imgur.com/ixRTrVT.png', NULL, NULL),
-(248, 1999, '1999-12-30', 'Clemson', 'Win', 17, 7, 'peachBowl', 116, 'https://i.imgur.com/QSsRWz1.png', 'https://i.imgur.com/cTxmruz.png', NULL, NULL),
+(248, 1999, '1999-12-30', 'Clemson', 'Win', 17, 7, 'peachBowl', 116, 'https://i.imgur.com/QSsRWz1.png', 'https://i.imgur.com/cTxmruz.png', 'Bowl Game Uniform History', 'https://www.hailstateunis.com/bowl-game-uniform-history.html'),
 (249, 1999, '1999-11-25', 'Ole Miss', 'Win', 23, 20, 'home', 113, 'https://i.imgur.com/Ji5VmMw.png', 'https://i.imgur.com/cTxmruz.png', NULL, NULL),
 (250, 1999, '1999-11-20', 'Arkansas', 'Loss', 9, 14, 'road', 112, 'https://i.imgur.com/cKPbemh.png', 'https://i.imgur.com/beFo22M.png', NULL, NULL),
 (251, 1999, '1999-11-13', 'Alabama', 'Loss', 7, 19, 'road', 114, 'https://i.imgur.com/cKPbemh.png', 'https://i.imgur.com/5npSt03.png', NULL, NULL),
@@ -310,7 +310,7 @@ INSERT INTO `game` (`gameID`, `yr`, `gameday`, `opponentName`, `result`, `points
 (257, 1999, '1999-09-18', 'Oklahoma State', 'Win', 29, 11, 'home', 113, 'https://i.imgur.com/caWxcqA.png', 'https://i.imgur.com/cTxmruz.png', NULL, NULL),
 (258, 1999, '1999-09-11', 'Memphis', 'Win', 13, 10, 'home', 113, 'https://i.imgur.com/5D7pByZ.png', 'https://i.imgur.com/cTxmruz.png', NULL, NULL),
 (259, 1999, '1999-09-04', 'Middle Tennessee', 'Win', 40, 7, 'home', 113, 'https://i.imgur.com/PM25WAj.png', 'https://i.imgur.com/cTxmruz.png', NULL, NULL),
-(260, 1998, '1999-01-01', 'Texas', 'Loss', 11, 38, 'cottonBowl', 115, 'https://i.imgur.com/cKPbemh.png', 'https://i.imgur.com/1Cbaaqj.png', NULL, NULL),
+(260, 1998, '1999-01-01', 'Texas', 'Loss', 11, 38, 'cottonBowl', 115, 'https://i.imgur.com/cKPbemh.png', 'https://i.imgur.com/1Cbaaqj.png', 'Bowl Game Uniform History', 'https://www.hailstateunis.com/bowl-game-uniform-history.html'),
 (261, 1998, '1998-12-05', 'Tennessee', 'Loss', 14, 24, 'secChampionship', 114, 'https://i.imgur.com/cKPbemh.png', 'https://i.imgur.com/4ANu8kF.png', NULL, NULL),
 (262, 1998, '1998-09-05', 'Vanderbilt', 'Win', 42, 0, 'home', 113, 'https://i.imgur.com/hM9xdmx.png', 'https://i.imgur.com/cTxmruz.png', NULL, NULL),
 (263, 1998, '1998-09-12', 'Memphis', 'Win', 14, 6, 'road', 112, 'https://i.imgur.com/cKPbemh.png', 'https://i.imgur.com/ON3JcFP.png', NULL, NULL),
@@ -356,7 +356,7 @@ INSERT INTO `game` (`gameID`, `yr`, `gameday`, `opponentName`, `result`, `points
 (303, 1995, '1995-09-16', 'Baylor', 'Win', 30, 21, 'road', 124, 'https://i.imgur.com/KT2wcuK.png', 'https://i.imgur.com/LmrYAS8.png', NULL, NULL),
 (304, 1995, '1995-09-09', 'LSU', 'Loss', 16, 34, 'home', 127, 'https://i.imgur.com/LGTwJPs.png', 'https://i.imgur.com/WaRLxCE.png', NULL, NULL),
 (305, 1995, '1995-09-02', 'Memphis', 'Win', 28, 18, 'home', 127, 'https://i.imgur.com/XrZAqbR.png', 'https://i.imgur.com/WaRLxCE.png', NULL, NULL),
-(306, 1994, '1995-01-01', 'NC State', 'Loss', 24, 28, 'peachBowl', 128, 'https://i.imgur.com/KT2wcuK.png', 'https://i.imgur.com/Bxxe9Bc.png', NULL, NULL),
+(306, 1994, '1995-01-01', 'NC State', 'Loss', 24, 28, 'peachBowl', 128, 'https://i.imgur.com/KT2wcuK.png', 'https://i.imgur.com/Bxxe9Bc.png', 'Bowl Game Uniform History', 'https://www.hailstateunis.com/bowl-game-uniform-history.html'),
 (307, 1994, '1994-11-26', 'Ole Miss', 'Win', 21, 17, 'road', 129, 'https://i.imgur.com/KT2wcuK.png', 'https://i.imgur.com/3CinmI7.png', NULL, NULL),
 (308, 1994, '1994-11-12', 'Alabama', 'Loss', 25, 29, 'home', 131, 'https://i.imgur.com/CMeu9sa.png', 'https://i.imgur.com/WaRLxCE.png', NULL, NULL),
 (309, 1994, '1994-11-05', 'Arkansas', 'Win', 17, 7, 'home', 131, 'https://i.imgur.com/ZWRQ4rq.png', 'https://i.imgur.com/WaRLxCE.png', NULL, NULL),
@@ -379,7 +379,7 @@ INSERT INTO `game` (`gameID`, `yr`, `gameday`, `opponentName`, `result`, `points
 (326, 1993, '1993-09-25', 'Tulane', 'Win', 36, 10, 'road', 133, 'https://i.imgur.com/KT2wcuK.png', 'https://i.imgur.com/MOmdWoG.png', NULL, NULL),
 (327, 1993, '1993-09-11', 'LSU', 'Loss', 16, 18, 'home', 134, 'https://i.imgur.com/LGTwJPs.png', 'https://i.imgur.com/WaRLxCE.png', NULL, NULL),
 (328, 1993, '1993-09-04', 'Memphis', 'Loss', 35, 45, 'home', 134, 'https://i.imgur.com/Q3ToVcy.png', 'https://i.imgur.com/WaRLxCE.png', NULL, NULL),
-(329, 1992, '1993-01-02', 'North Carolina', 'Loss', 17, 21, 'peachBowl', 135, 'https://i.imgur.com/KT2wcuK.png', 'https://i.imgur.com/IiFlTCs.png', NULL, NULL),
+(329, 1992, '1993-01-02', 'North Carolina', 'Loss', 17, 21, 'peachBowl', 135, 'https://i.imgur.com/KT2wcuK.png', 'https://i.imgur.com/IiFlTCs.png', 'Bowl Game Uniform History', 'https://www.hailstateunis.com/bowl-game-uniform-history.html'),
 (330, 1992, '1992-11-28', 'Ole Miss', 'Loss', 10, 17, 'road', 136, 'https://i.imgur.com/KT2wcuK.png', 'https://i.imgur.com/3CinmI7.png', NULL, NULL),
 (331, 1992, '1992-11-14', 'Alabama', 'Loss', 21, 30, 'home', 137, 'https://i.imgur.com/pQVWncw.png', 'https://i.imgur.com/WaRLxCE.png', NULL, NULL),
 (332, 1992, '1992-11-07', 'Arkansas', 'Win', 10, 3, 'home', 137, 'https://i.imgur.com/ZWRQ4rq.png', 'https://i.imgur.com/WaRLxCE.png', NULL, NULL),
@@ -391,7 +391,7 @@ INSERT INTO `game` (`gameID`, `yr`, `gameday`, `opponentName`, `result`, `points
 (338, 1992, '1992-09-19', 'Memphis', 'Win', 20, 16, 'road', 136, 'https://i.imgur.com/KT2wcuK.png', 'https://i.imgur.com/XgCOzus.png', NULL, NULL),
 (339, 1992, '1992-09-12', 'LSU', 'Loss', 3, 24, 'road', 136, 'https://i.imgur.com/KT2wcuK.png', 'https://i.imgur.com/rsOr4qk.png', NULL, NULL),
 (340, 1992, '1992-09-05', 'Texas', 'Win', 28, 10, 'road', 136, 'https://i.imgur.com/KT2wcuK.png', 'https://i.imgur.com/1Cbaaqj.png', NULL, NULL),
-(341, 1991, '1991-12-29', 'Air Force', 'Loss', 15, 38, 'libertyBowl', 140, 'https://i.imgur.com/XEAIZ9J.png', 'https://i.imgur.com/WaRLxCE.png', NULL, NULL),
+(341, 1991, '1991-12-29', 'Air Force', 'Loss', 15, 38, 'libertyBowl', 140, 'https://i.imgur.com/XEAIZ9J.png', 'https://i.imgur.com/WaRLxCE.png', 'Bowl Game Uniform History', 'https://www.hailstateunis.com/bowl-game-uniform-history.html'),
 (342, 1991, '1991-11-23', 'Ole Miss', 'Win', 24, 9, 'home', 139, 'https://i.imgur.com/Bct8oiH.png', 'https://i.imgur.com/WaRLxCE.png', NULL, NULL),
 (343, 1991, '1991-11-16', 'LSU', 'Win', 28, 19, 'road', 138, 'https://i.imgur.com/KT2wcuK.png', 'https://i.imgur.com/rsOr4qk.png', NULL, NULL),
 (344, 1991, '1991-11-02', 'Alabama', 'Loss', 7, 13, 'road', 138, 'https://i.imgur.com/KT2wcuK.png', 'https://i.imgur.com/oPbNyXF.png', NULL, NULL),
@@ -502,7 +502,7 @@ INSERT INTO `game` (`gameID`, `yr`, `gameday`, `opponentName`, `result`, `points
 (449, 1982, '1982-09-18', 'Memphis', 'Win', 41, 17, 'road', 156, 'https://i.imgur.com/nMAPliR.png', 'https://i.imgur.com/eqSCR8q.png', NULL, NULL),
 (450, 1982, '1982-09-11', 'Arkansas State', 'Win', 31, 10, 'home', 157, 'https://i.imgur.com/Q8td9i7.png', 'https://i.imgur.com/CWaJKWV.png', NULL, NULL),
 (451, 1982, '1982-09-04', 'Tulane', 'Win', 30, 21, 'road', 156, 'https://i.imgur.com/nMAPliR.png', 'https://i.imgur.com/igRgIck.png', NULL, NULL),
-(452, 1981, '1981-12-31', 'Kansas', 'Win', 10, 0, 'hallOfFameBowl', 160, 'https://i.imgur.com/2a22V3o.png', 'https://i.imgur.com/CWaJKWV.png', NULL, NULL),
+(452, 1981, '1981-12-31', 'Kansas', 'Win', 10, 0, 'hallOfFameBowl', 160, 'https://i.imgur.com/2a22V3o.png', 'https://i.imgur.com/CWaJKWV.png', 'Bowl Game Uniform History', 'https://www.hailstateunis.com/bowl-game-uniform-history.html'),
 (453, 1981, '1981-11-21', 'Ole Miss', 'Loss', 17, 21, 'neutral', 159, 'https://i.imgur.com/MToK5g2.png', 'https://i.imgur.com/CWaJKWV.png', NULL, NULL),
 (454, 1981, '1981-11-14', 'LSU', 'Win', 17, 9, 'road', 159, 'https://i.imgur.com/nMAPliR.png', 'https://i.imgur.com/rsOr4qk.png', NULL, NULL),
 (455, 1981, '1981-11-07', 'Southern Miss', 'Loss', 6, 7, 'neutral', 158, 'https://i.imgur.com/nMAPliR.png', 'https://i.imgur.com/UQinjrF.png', NULL, NULL),
@@ -514,7 +514,7 @@ INSERT INTO `game` (`gameID`, `yr`, `gameday`, `opponentName`, `result`, `points
 (461, 1981, '1981-09-26', 'Florida', 'Win', 28, 7, 'neutral', 159, 'https://i.imgur.com/LovCmnY.png', 'https://i.imgur.com/CWaJKWV.png', NULL, NULL),
 (462, 1981, '1981-09-19', 'Vanderbilt', 'Win', 29, 9, 'home', 159, 'https://i.imgur.com/KCA6Oyq.png', 'https://i.imgur.com/CWaJKWV.png', NULL, NULL),
 (463, 1981, '1981-09-05', 'Memphis', 'Win', 20, 3, 'neutral', 159, 'https://i.imgur.com/PQfL3GD.png', 'https://i.imgur.com/CWaJKWV.png', NULL, NULL),
-(464, 1980, '1980-12-27', 'Nebraska', 'Loss', 17, 31, 'sunBowl', 161, 'https://i.imgur.com/nMAPliR.png', 'https://i.imgur.com/IOpeBIY.png', NULL, NULL),
+(464, 1980, '1980-12-27', 'Nebraska', 'Loss', 17, 31, 'sunBowl', 161, 'https://i.imgur.com/nMAPliR.png', 'https://i.imgur.com/IOpeBIY.png', 'Bowl Game Uniform History', 'https://www.hailstateunis.com/bowl-game-uniform-history.html'),
 (465, 1980, '1980-11-22', 'Ole Miss', 'Win', 19, 14, 'neutral', 161, 'https://i.imgur.com/nMAPliR.png', 'https://i.imgur.com/sRSnqrz.png', NULL, NULL),
 (466, 1980, '1980-11-15', 'LSU', 'Win', 55, 31, 'neutral', 162, 'https://i.imgur.com/LGTwJPs.png', 'https://i.imgur.com/CWaJKWV.png', NULL, NULL),
 (467, 1980, '1980-11-01', 'Alabama', 'Win', 6, 3, 'neutral', 162, 'https://i.imgur.com/pQVWncw.png', 'https://i.imgur.com/CWaJKWV.png', NULL, NULL),
@@ -526,10 +526,10 @@ INSERT INTO `game` (`gameID`, `yr`, `gameday`, `opponentName`, `result`, `points
 (473, 1980, '1980-09-20', 'Vanderbilt', 'Win', 24, 14, 'road', 161, 'https://i.imgur.com/nMAPliR.png', 'https://i.imgur.com/sqxq4l2.png', NULL, NULL),
 (474, 1980, '1980-09-13', 'Louisiana Tech', 'Win', 31, 11, 'home', 162, 'https://i.imgur.com/OiKpe69.png', 'https://i.imgur.com/CWaJKWV.png', NULL, NULL),
 (475, 1980, '1980-10-06', 'Memphis', 'Win', 34, 7, 'road', 161, 'https://i.imgur.com/nMAPliR.png', 'https://i.imgur.com/i99LNfH.png', NULL, NULL),
-(476, 1974, '1974-12-28', 'North Carolina', 'Win', 26, 24, 'sunBowl', 163, 'https://i.imgur.com/VvbKrmC.png', 'https://i.imgur.com/wC3TMM8.png', NULL, NULL),
-(477, 1963, '1963-12-21', 'NC State', 'Win', 16, 12, 'libertyBowl', 164, 'https://i.imgur.com/qUgyqd1.png', 'https://i.imgur.com/kO8o4Hz.png', NULL, NULL),
-(478, 1940, '1941-01-01', 'Georgetown', 'Win', 14, 7, 'orangeBowl', 165, 'https://i.imgur.com/kgJ8NTo.png', 'https://i.imgur.com/36usISD.png', NULL, NULL),
-(479, 1936, '1937-01-01', 'Duquesne', 'Loss', 12, 13, 'orangeBowl', 166, 'https://i.imgur.com/IgRHcPz.png', 'https://i.imgur.com/8xwAt9m.png', NULL, NULL);
+(476, 1974, '1974-12-28', 'North Carolina', 'Win', 26, 24, 'sunBowl', 163, 'https://i.imgur.com/VvbKrmC.png', 'https://i.imgur.com/wC3TMM8.png', 'Bowl Game Uniform History', 'https://www.hailstateunis.com/bowl-game-uniform-history.html'),
+(477, 1963, '1963-12-21', 'NC State', 'Win', 16, 12, 'libertyBowl', 164, 'https://i.imgur.com/qUgyqd1.png', 'https://i.imgur.com/kO8o4Hz.png', 'Bowl Game Uniform History', 'https://www.hailstateunis.com/bowl-game-uniform-history.html'),
+(478, 1940, '1941-01-01', 'Georgetown', 'Win', 14, 7, 'orangeBowl', 165, 'https://i.imgur.com/kgJ8NTo.png', 'https://i.imgur.com/36usISD.png', 'Bowl Game Uniform History', 'https://www.hailstateunis.com/bowl-game-uniform-history.html'),
+(479, 1936, '1937-01-01', 'Duquesne', 'Loss', 12, 13, 'orangeBowl', 166, 'https://i.imgur.com/IgRHcPz.png', 'https://i.imgur.com/8xwAt9m.png', 'Bowl Game Uniform History', 'https://www.hailstateunis.com/bowl-game-uniform-history.html');
 
 --
 -- Indexes for dumped tables

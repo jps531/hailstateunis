@@ -21,24 +21,52 @@
       </div>
     </div>
 
-    <!-- Filters -->
-    <div class="row" id="filters">
-      <div class="col-xs-3 text-center" id="seasons">
-        <?php include "components/baseballTable/filters/baseballSeasonSelect.php"; ?>
-      </div>
-      <div class="col-xs-3 text-center" id="opponents">
-        <?php include "components/baseballTable/filters/baseballOpponentSelect.php"; ?>
-      </div>
-      <div class="col-xs-3 text-center" id="situationA">
-        <?php include "components/baseballTable/filters/baseballSituationA.php"; ?>
-      </div>
-      <div class="col-xs-3 text-center" id="situationB">
-        <?php include "components/baseballTable/filters/baseballSituationB.php"; ?>
+    <!-- Filter Collapse Button -->
+    <div class="row" id="filterCollapse">
+      <div class="col-sm-9">
+        <button class="btn btn-block" type="button" data-toggle="collapse" data-target="#filters" aria-expanded="false" aria-controls="collapseExample" 
+                style="background-color: #3b0811; color: white;">
+          Filter
+        </button>
       </div>
     </div>
-    <div class="row" id="filtersRowTwo">
-      <div class="col-xs-3 text-center" id="search">
-        <?php include "components/baseballTable/filters/searchBaseballTable.php"; ?>
+
+    <!-- Filters -->
+    <div class="container collapse" id="filters">
+      <div class="row" id="filtersSubrowA">
+        <div class="col-xs-3 text-center" id="seasons">
+          <?php include "components/baseballTable/filters/baseballSeasonSelect.php"; ?>
+        </div>
+        <div class="col-xs-3 text-center" id="opponents">
+          <?php include "components/baseballTable/filters/baseballOpponentSelect.php"; ?>
+        </div>
+      </div>
+      <div class="row" id="filtersSubrowB">
+        <div class="col-xs-3 text-center" id="uniformA">
+          <?php include "components/baseballTable/filters/baseballSituationA.php"; ?>
+        </div>
+        <div class="col-xs-3 text-center" id="uniformB">
+          <?php include "components/baseballTable/filters/baseballSituationA.php"; ?>
+        </div>
+        <div class="col-xs-3 text-center" id="uniformC">
+          <?php include "components/baseballTable/filters/baseballSituationA.php"; ?>
+        </div>
+      </div>
+      <div class="row" id="filtersSubrowC">
+        <div class="col-xs-3 text-center" id="gameA">
+          <?php include "components/baseballTable/filters/baseballSituationB.php"; ?>
+        </div>
+        <div class="col-xs-3 text-center" id="gameB">
+          <?php include "components/baseballTable/filters/baseballSituationB.php"; ?>
+        </div>
+        <div class="col-xs-3 text-center" id="gameC">
+          <?php include "components/baseballTable/filters/baseballSituationB.php"; ?>
+        </div>
+      </div>
+      <div class="row" id="filtersRowTwo">
+        <div class="col-xs-3 text-center" id="search">
+          <?php include "components/baseballTable/filters/searchBaseballTable.php"; ?>
+        </div>
       </div>
     </div>
 

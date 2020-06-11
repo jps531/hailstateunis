@@ -63,4 +63,4 @@
     <option>SECT Championship</option>
   </optgroup>
 </select>
-<button class="btn" id="wbkSitBClear"><i class="fas fa-times-circle"></i></button>
+<button class="btn clear" id="wbkSitBClear"><i class="fas fa-times-circle"></i></button>
