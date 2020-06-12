@@ -1,25 +1,12 @@
 //-----------
 // Load Filters
-$(function(){ $("#bbSelectYear").selectpicker('render'); })
-$(function(){ $("#bbSelectOpponent").selectpicker('render'); })
 $(function(){ $("#bbSituationA").selectpicker('render'); })
 $(function(){ $("#bbSituationB").selectpicker('render'); })
-
-$.fn.selectpicker.Constructor.DEFAULTS.multipleSeparator = ' | ';
-
-window.onload = function(){
-  if ($("#bbSelectYear").val().length){
-    $("#bbSelectYear").val('').trigger('change');
-  }
-  if ($("#bbSelectOpponent").val().length){
-    $("#bbSelectOpponent").val('').trigger('change');
-  }
-};
 //-----------
 
 //-----------
 // Initialize Table
-var baseballTable = $('#baseballTable').DataTable( {
+export var baseballTable = $('#baseballTable').DataTable( {
                 "lengthMenu": [ [5, 10, 15, 20, 25, 40, 50, -1], [5, 10, 15, 20, 25, 40, 50, "All"] ],
                 "iDisplayLength":  10,
                 language: {
@@ -108,81 +95,6 @@ $(document).ready(function(){
 $(function() {
   $('#bbSearchClear').click(function() {
     $("#bbSearch").val('').trigger('keyup');
-  });
-});
-//-----------
-
-//-----------
-// Opponent Select
-var pageLengthOpp;
-var resetLengthOpp = true;
-
-$(document).ready(function(){
-  $("#bbSelectOpponent").on("change", function() {
-    if (this.value == ""){
-      baseballTable
-      .columns(17)
-      .search(this.value)
-      .draw();
-    }
-    else{
-      var regEx = $(this).find(':selected').map(function() {
-        return "^" + $( this ).text() + "$";
-      })
-      .get()
-      .join( "|" );
-      baseballTable.column(17).search(regEx, true, false).draw();
-    }
-
-    if (this.value != ''){
-      if (resetLengthOpp){
-        pageLengthOpp = baseballTable.page.len();
-        resetLengthOpp = false;
-      }
-      baseballTable.page.len(-1).draw();
-    }
-    else if (baseballTable.page.len() == -1){
-      baseballTable.page.len(pageLengthOpp).draw();
-    }
-  });
-});
-
-$(function() {
-  $('#bbOpponentClear').click(function() {
-    $("#bbSelectOpponent").val('').trigger('change');
-  });
-});
-
-//-----------
-// Season Select
-var pageLengthSzn;
-var resetLengthSzn = true;
-
-$(document).ready(function(){
-  $("#bbSelectYear").on("change", function() {
-    var regEx = $(this).find(':selected').map(function() {
-      return $( this ).text();
-    })
-    .get()
-    .join( "|" );
-    baseballTable.column(0).search(regEx, true, false).draw();
-
-    if (this.value != ''){
-      if (resetLengthSzn){
-        pageLengthSzn = baseballTable.page.len();
-        resetLengthSzn = false;
-      }
-      baseballTable.page.len(-1).draw();
-    }
-    else if (baseballTable.page.len() == -1){
-      baseballTable.page.len(pageLengthSzn).draw();
-    }
-  });
-});
-
-$(function() {
-  $('#bbSeasonClear').click(function() {
-    $("#bbSelectYear").val('').trigger('change');
   });
 });
 //-----------
@@ -785,7 +697,7 @@ function getRecord(){
   wins = 0;
   losses = 0;
   ties = 0;
-  for (z=0; z < baseballTable.rows().count(); z++){
+  for (var z=0; z < baseballTable.rows().count(); z++){
     if (baseballTable.row(z, {search:'applied'})[0].length > 0){
       if (baseballTable.cell(z,5).data().toString().includes('Win')){
         wins += 1;
@@ -805,6 +717,7 @@ function getRecord(){
 // Create String to Display
 function makeString(wins, losses, ties){
   wlTotal = '<span class="badge badge-';
+  var percentage;
 
   if (wins + losses > 0){
     percentage = ((wins + (.5 * ties)) / (wins + losses + ties)).toFixed(3);
@@ -888,7 +801,7 @@ function enableOptGroup(selectID, optGroupIndex){
 function situationToggleElse(targetNumber,columnNumber,optSelect){
   if (optSelect.includes(targetNumber)){
     baseballTable.columns(columnNumber).search('').draw();
-    for (z=0;z<optSelect.length;z++){
+    for (var z=0;z<optSelect.length;z++){
       if(optSelect[z] == targetNumber){
         optSelect.splice(z,1);
       }

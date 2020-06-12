@@ -1,23 +1,12 @@
 //-----------
 // Load Filters
-$(function(){ $("#wbkOpponent").selectpicker('render'); })
 $(function(){ $("#wbkSituationA").selectpicker('render'); })
 $(function(){ $("#wbkSituationB").selectpicker('render'); })
-$(function(){ $("#wbkSelectYear").selectpicker('render'); })
-$.fn.selectpicker.Constructor.DEFAULTS.multipleSeparator = ' | ';
-window.onload = function(){
-  if ($("#wbkSelectYear").val().length){
-    $("#wbkSelectYear").val('').trigger('change');
-  }
-  if ($("#wbkOpponent").val().length){
-    $("#wbkOpponent").val('').trigger('change');
-  }
-};
 //-----------
 
 //-----------
 // Initialize Table
-var wbkTable = $('#wbkTable').DataTable( {
+export var wbkTable = $('#wbkTable').DataTable( {
                 "lengthMenu": [ [5, 10, 15, 20, 25, 40, 50, -1], [5, 10, 15, 20, 25, 40, 50, "All"] ],
                 "iDisplayLength":  10,
                 language: {
@@ -104,78 +93,6 @@ $(document).ready(function(){
 $(function() {
   $('#wbkSearchClear').click(function() {
     $("#wbkSearch").val('').trigger('keyup');
-  });
-});
-//-----------
-
-//-----------
-// Opponent Select
-var pageLengthOpp;
-var resetLengthOpp = true;
-
-$(document).ready(function(){
-  $("#wbkOpponent").on("change", function() {
-    if (this.value == ""){
-      wbkTable.columns(8).search(this.value).draw();
-    }
-    else{
-      var regEx = $(this).find(':selected').map(function() {
-        return "^" + $( this ).text() + "$";
-      })
-      .get()
-      .join( "|" );
-      wbkTable.column(8).search(regEx, true, false).draw();
-    }
-
-    if (this.value != ''){
-      if (resetLengthOpp){
-        pageLengthOpp = baseballTable.page.len();
-        resetLengthOpp = false;
-      }
-      baseballTable.page.len(-1).draw();
-    }
-    else if (baseballTable.page.len() == -1){
-      baseballTable.page.len(pageLengthOpp).draw();
-    }
-  });
-});
-
-$(function() {
-  $('#wbkOpponentClear').click(function() {
-    $("#wbkOpponent").val('').trigger('change');
-  });
-});
-
-//-----------
-// Season Select
-var pageLengthSzn;
-var resetLengthSzn = true;
-
-$(document).ready(function(){
-  $("#wbkSelectYear").on("change", function() {
-    var regEx = $(this).find(':selected').map(function() {
-      return $( this ).text();
-    })
-    .get()
-    .join( "|" );
-    wbkTable.column(0).search(regEx, true, false).draw();
-
-    if (this.value != ''){
-      if (resetLengthSzn){
-        pageLengthSzn = wbkTable.page.len();
-        resetLengthSzn = false;
-      }
-      wbkTable.page.len(-1).draw();
-    }
-    else if (wbkTable.page.len() == -1){
-      wbkTable.page.len(pageLengthSzn).draw();
-    }
-  });
-});
-
-$(function() {
-  $('#wbkSeasonClear').click(function() {
-    $("#wbkSelectYear").val('').trigger('change');
   });
 });
 //-----------
@@ -487,7 +404,7 @@ function getRecord(){
   wins = 0;
   losses = 0;
   ties = 0;
-  for (z=0; z < wbkTable.rows().count(); z++){
+  for (var z=0; z < wbkTable.rows().count(); z++){
     if (wbkTable.row(z, {search:'applied'})[0].length > 0){
       if (wbkTable.cell(z,5).data().toString().includes('Win')){
         wins += 1;
@@ -507,6 +424,7 @@ function getRecord(){
 // Create String to Display
 function makeString(wins, losses, ties){
   wlTotal = '<span class="badge badge-';
+  var percentage;
 
   if (wins + losses > 0){
     percentage = ((wins + (.5 * ties)) / (wins + losses + ties)).toFixed(3);
@@ -590,7 +508,7 @@ function enableOptGroup(selectID, optGroupIndex){
 function situationToggleElse(columnNumber,optSelect){
   if (optSelect.includes(columnNumber)){
     wbkTable.columns(columnNumber).search('').draw();
-    for (z=0;z<optSelect.length;z++){
+    for (var z=0;z<optSelect.length;z++){
       if(optSelect[z] == columnNumber){
         optSelect.splice(z,1);
       }

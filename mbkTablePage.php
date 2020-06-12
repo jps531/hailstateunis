@@ -79,6 +79,12 @@
   </div>
 
   <!-- Javascript -->
-  <script type="text/javascript" src="components/js/mbkBuildTable.js"></script> 
+  <script type="module" src="components/js/mbkFilters/mbkOpponentFilter.js"></script>
+  <script type="module" src="components/js/mbkFilters/mbkSeasonFilter.js"></script>
+  <!--<script type="module" src="components/js/mbkFilters/mbkUniformFiltersApp.js"></script>-->
+  <!--<script type="module" src="components/js/mbkFilters/mbkUniformFilters.js"></script>-->
+  <!--<script type="module" src="components/js/mbkFilters/mbkGameFiltersApp.js"></script>-->
+  <!--<script type="module" src="components/js/mbkFilters/mbkGameFilters.js"></script>-->
+  <script type="module" src="components/js/mbkBuildTable.js"></script> 
   </body>
 </html>

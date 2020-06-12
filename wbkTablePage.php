@@ -79,6 +79,12 @@
   </div>
 
   <!-- Javascript -->
-  <script type="text/javascript" src="components/js/wbkBuildTable.js"></script> 
+  <script type="module" src="components/js/wbkFilters/wbkOpponentFilter.js"></script>
+  <script type="module" src="components/js/wbkFilters/wbkSeasonFilter.js"></script>
+  <!--<script type="module" src="components/js/wbkFilters/wbkUniformFiltersApp.js"></script>-->
+  <!--<script type="module" src="components/js/wbkFilters/wbkUniformFilters.js"></script>-->
+  <!--<script type="module" src="components/js/wbkFilters/wbkGameFiltersApp.js"></script>-->
+  <!--<script type="module" src="components/js/wbkFilters/wbkGameFilters.js"></script>-->
+  <script type="module" src="components/js/wbkBuildTable.js"></script> 
   </body>
 </html>
