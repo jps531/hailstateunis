@@ -1,5 +1,5 @@
 <!-- Uniform Select -->
-<select class="selectpicker" data-live-search="true" id="fbUniformA" title="Uniform A">
+<select class="selectpicker" data-live-search="true" id="fbUniformB" title="Uniform B">
 <optgroup label="Alternates">
     <option>All Alternates</option>
     <option>Egg Bowl Alternates</option>
@@ -31,4 +31,4 @@
     <option>Nick Bell</option>
   </optgroup>
 </select>
-<button class="btn clear" id="fbUniformAClear"><i class="fas fa-times-circle"></i></button>
+<button class="btn clear" id="fbUniformBClear"><i class="fas fa-times-circle"></i></button>

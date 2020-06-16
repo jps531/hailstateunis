@@ -20,10 +20,10 @@ export function enableOptGroup(selectID, optGroupIndex){
 }
   
 // Situation Toggle Else Function
-export function situationToggleElse(targetNumber,columnNumber,optSelect){
+export function situationToggleElse(targetNumber,columnNumber,optSelect,table){
     if (optSelect.includes(targetNumber)){
-        baseballTable.columns(columnNumber).search('').draw();
-        for (z=0;z<optSelect.length;z++){
+        table.columns(columnNumber).search('').draw();
+        for (var z=0;z<optSelect.length;z++){
             if(optSelect[z] == targetNumber){
                 optSelect.splice(z,1);
             }

@@ -1,9 +1,7 @@
 <!-- Game Select -->
 <select class="selectpicker" data-live-search="true" id="fbGameB" title="Game B">
-  <optgroup label="Bowl Games">
+<optgroup label="Game Type">
     <option>Bowl Games</option>
-  </optgroup>
-  <optgroup label="Regular Season">
     <option>Home</option>
     <option>Road</option>
     <option>Neutral</option>

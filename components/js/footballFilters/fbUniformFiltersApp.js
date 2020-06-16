@@ -14,7 +14,6 @@ var testSelects = {A: 1, B: 0, C: 0};
 // 0: Disabled
 var enabled = {A: 1, B: 1, C: 1, D: 1, E: 1};
 
-// 5: Group 5 Selected
 // 4: Group 4 Selected
 // 3: Group 3 Selected
 // 2: Group 2 Selected
@@ -23,12 +22,11 @@ var enabled = {A: 1, B: 1, C: 1, D: 1, E: 1};
 // -1: No Group Selected
 var selected = {A: -1, B: -1, C: -1};
 
-var bowlGames = ["Bowl Games"];
-var regularSeason = ["Home", "Road", "Neutral"];
-var months = ["August","September","October","November","December","January"];
-var days = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
-var headCoaches = ["Ralph Sassee","Allyn McKeen","Paul Davis","Bob Tyler","Emory Bellard","Rockey Felker",
-                   "Jackie Sherill","Sylvester Croom","Dan Mullen","Greg Knox","Joe Moorhead","Mike Leach"];
+var alternates = ["All Alternates","Egg Bowl Alternates"];
+var helmets = ["Maroon Helmets","Shiny Maroon Helmets","Matte Maroon Helmets","White Helmets","Silver Helmets","Gold Helmets","Bulldog Helmets"];
+var jerseys = ["Maroon Jerseys","White Helmets","Black Jerseys","Gray Jerseys"];
+var pants = ["White Pants","Maroon Pants","Black Pants","Gray Pants","Silver Pants"];
+var patches = ["DWS 100","Nick Bell"];
 
 // Select A
 $(document).ready(function (){
@@ -65,34 +63,34 @@ $(document).ready(function (){
             if(!testSelects.B){
                 $('#fbUniformA').selectpicker('toggle');
                 testSelects.B = 1;
-                $('#gameB').show();
+                $('#uniformB').show();
             }
 
             // If Select C isn't visible and Select B has a value, make Select C visible
             else if(!testSelects.C && testSelects.B == 2){
                 $('#fbUniformA').selectpicker('toggle');
                 testSelects.C = 1;
-                $('#gameC').show();
+                $('#uniformC').show();
             }
 
             // Classify value by Option Group
-            if(jQuery.inArray(this.value, bowlGames) !== -1){
+            if(jQuery.inArray(this.value, alternates) !== -1){
                 enabled.A = 0;
                 selected.A = 0;
             }
-            else if(jQuery.inArray(this.value, regularSeason) !== -1){
+            else if(jQuery.inArray(this.value, helmets) !== -1){
                 enabled.B = 0;
                 selected.A = 1;
             }
-            else if(jQuery.inArray(this.value, months) !== -1){
+            else if(jQuery.inArray(this.value, jerseys) !== -1){
                 enabled.C = 0;
                 selected.A = 2;
             }
-            else if(jQuery.inArray(this.value, days) !== -1){
+            else if(jQuery.inArray(this.value, pants) !== -1){
                 enabled.D = 0;
                 selected.A = 3;
             }
-            else if(jQuery.inArray(this.value, headCoaches) !== -1){
+            else if(jQuery.inArray(this.value, patches) !== -1){
                 enabled.E = 0;
                 selected.A = 4;
             }
@@ -113,13 +111,13 @@ $(function() {
 
         // Hide B if B is empty and C is hidden
         if (testSelects.B == 1 && testSelects.C == 0){
-            $("#gameB").hide();
+            $("#uniformB").hide();
             testSelects.B = 0;
         }
 
         // Hide C if B is selected and C is empty
         if (testSelects.B == 2 && testSelects.C == 1){
-            $("#gameC").hide();
+            $("#uniformC").hide();
             testSelects.C = 0;
         }
     });
@@ -161,27 +159,27 @@ $(document).ready(function (){
             if(!testSelects.C && testSelects.A == 2){
                 $('#fbUniformB').selectpicker('toggle');
                 testSelects.C = 1;
-                $('#gameC').show();
+                $('#uniformC').show();
             }
 
             // Classify value by Option Group
-            if(jQuery.inArray(this.value, bowlGames) !== -1){
+            if(jQuery.inArray(this.value, alternates) !== -1){
                 enabled.A = 0;
                 selected.B = 0;
             }
-            else if(jQuery.inArray(this.value, regularSeason) !== -1){
+            else if(jQuery.inArray(this.value, helmets) !== -1){
                 enabled.B = 0;
                 selected.B = 1;
             }
-            else if(jQuery.inArray(this.value, months) !== -1){
+            else if(jQuery.inArray(this.value, jerseys) !== -1){
                 enabled.C = 0;
                 selected.B = 2;
             }
-            else if(jQuery.inArray(this.value, days) !== -1){
+            else if(jQuery.inArray(this.value, pants) !== -1){
                 enabled.D = 0;
                 selected.B = 3;
             }
-            else if(jQuery.inArray(this.value, headCoaches) !== -1){
+            else if(jQuery.inArray(this.value, patches) !== -1){
                 enabled.E = 0;
                 selected.B = 4;
             }
@@ -202,13 +200,13 @@ $(function() {
 
         // Hide B if A is empty
         if (testSelects.A == 1){
-            $("#gameB").hide();
+            $("#uniformB").hide();
             testSelects.B = 0;
         }
 
         // Hide C if C is empty
         if (testSelects.C == 1){
-            $("#gameC").hide();
+            $("#uniformC").hide();
             testSelects.C = 0;
         }
     });
@@ -246,23 +244,23 @@ $(document).ready(function (){
             testSelects.C = 2;
 
             // Classify value by Option Group
-            if(jQuery.inArray(this.value, bowlGames) !== -1){
+            if(jQuery.inArray(this.value, alternates) !== -1){
                 enabled.A = 0;
                 selected.C = 0;
             }
-            else if(jQuery.inArray(this.value, regularSeason) !== -1){
+            else if(jQuery.inArray(this.value, helmets) !== -1){
                 enabled.B = 0;
                 selected.C = 1;
             }
-            else if(jQuery.inArray(this.value, months) !== -1){
+            else if(jQuery.inArray(this.value, jerseys) !== -1){
                 enabled.C = 0;
                 selected.C = 2;
             }
-            else if(jQuery.inArray(this.value, days) !== -1){
+            else if(jQuery.inArray(this.value, pants) !== -1){
                 enabled.D = 0;
                 selected.C = 3;
             }
-            else if(jQuery.inArray(this.value, headCoaches) !== -1){
+            else if(jQuery.inArray(this.value, patches) !== -1){
                 enabled.E = 0;
                 selected.C = 4;
             }
@@ -283,7 +281,7 @@ $(function() {
 
         // Hide C if A or B are empty
         if (testSelects.A == 1 || testSelects.B == 1){
-            $("#gameC").hide();
+            $("#uniformC").hide();
             testSelects.C = 0;
         }
     });

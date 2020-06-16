@@ -1,286 +1,329 @@
 import * as tbl from '../fbBuildTable.js';
 import * as sit from '../situationFunctions.js';
 
-// 2: Visible and has a value
-// 1: Visible but has no value
-// 0: Not visible
-var testSelects = {A: 1, B: 0, C: 0};
+//-----------
+// Game A Select
+var fbgOptSelectedA = [];
 
-// 1: Enabled
-// 0: Disabled
-var enabled = {A: 1, B: 1, C: 1, D: 1, E: 1};
+$(document).ready(function(){
+  $("#fbGameA").on("change", function() {
 
-// 5: Group 5 Selected
-// 4: Group 4 Selected
-// 3: Group 3 Selected
-// 2: Group 2 Selected
-// 1: Group 1 Selected
-// 0: Group 0 Selected
-// -1: No Group Selected
-var selected = {A: -1, B: -1, C: -1};
+    // Obtain raw search term
+    var searchTerm = $(this).find(':selected').map(function() {
+      return $( this ).text();
+    })
+    .get()
+    .join( "|" );
+    
+    // Add month names to search term
+    if (this.value == 'August'){
+      searchTerm = searchTerm.concat('|-08-');
+    }
 
-var bowlGames = ["Bowl Games"];
-var regularSeason = ["Home", "Road", "Neutral"];
-var months = ["August","September","October","November","December","January"];
-var days = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
-var headCoaches = ["Ralph Sassee","Allyn McKeen","Paul Davis","Bob Tyler","Emory Bellard","Rockey Felker",
-                   "Jackie Sherill","Sylvester Croom","Dan Mullen","Greg Knox","Joe Moorhead","Mike Leach"];
+    else if (this.value == 'September'){
+      searchTerm = searchTerm.concat('|-09-');
+    }
 
-// Select A
-$(document).ready(function (){
-    $("#fbGameA").on("change", function() {
+    else if (this.value == 'October'){
+      searchTerm = searchTerm.concat('|-10-');
+    }
 
-        // If Select A has no value or just replaced a value
-        if(!this.value || testSelects.A == 2){
-            // Identify Option Group that was just cleared
-            if (selected.A == 0){
-                enabled.A = 1;
-            }
-            else if (selected.A == 1){
-                enabled.B = 1;
-            }
-            else if (selected.A == 2){
-                enabled.C = 1;
-            }
-            else if (selected.A == 3){
-                enabled.D = 1;
-            }
-            else if (selected.A == 4){
-                enabled.E = 1;
-            }
+    else if (this.value == 'November'){
+      searchTerm = searchTerm.concat('|-11-');
+    }
 
-            // Reset selected.A
-            selected.A = -1;
-        }
+    else if (this.value == 'December'){
+      searchTerm = searchTerm.concat('|-12-');
+    }
 
-        // If Select A has a value
-        if(this.value){
-            testSelects.A = 2;
-            
-            // If Select B isn't visible, make it visible
-            if(!testSelects.B){
-                $('#fbGameA').selectpicker('toggle');
-                testSelects.B = 1;
-                $('#gameB').show();
-            }
+    else if (this.value == 'January'){
+      searchTerm = searchTerm.concat('|-01-');
+    }
 
-            // If Select C isn't visible and Select B has a value, make Select C visible
-            else if(!testSelects.C && testSelects.B == 2){
-                $('#fbGameA').selectpicker('toggle');
-                testSelects.C = 1;
-                $('#gameC').show();
-            }
+    // Game Type
+    if(searchTerm.includes('Bowl Games')||
+        searchTerm.includes('Home')||
+        searchTerm.includes('Road')||
+        searchTerm.includes('Neutral')){
+      tbl.table.column(3).search(searchTerm, true, false).draw();
+      fbgOptSelectedA.push(0);
+    }
+    else{
+      sit.situationToggleElse(0,3,fbgOptSelectedA,tbl.table);
+    }
 
-            // Classify value by Option Group
-            if(jQuery.inArray(this.value, bowlGames) !== -1){
-                enabled.A = 0;
-                selected.A = 0;
-            }
-            else if(jQuery.inArray(this.value, regularSeason) !== -1){
-                enabled.B = 0;
-                selected.A = 1;
-            }
-            else if(jQuery.inArray(this.value, months) !== -1){
-                enabled.C = 0;
-                selected.A = 2;
-            }
-            else if(jQuery.inArray(this.value, days) !== -1){
-                enabled.D = 0;
-                selected.A = 3;
-            }
-            else if(jQuery.inArray(this.value, headCoaches) !== -1){
-                enabled.E = 0;
-                selected.A = 4;
-            }
-        }
+    // Months
+    if(searchTerm.includes('|-08-')||
+        searchTerm.includes('|-09-')||
+        searchTerm.includes('|-10-')||
+        searchTerm.includes('|-11-')||
+        searchTerm.includes('|-12-')||
+        searchTerm.includes('|-01-')){
+      tbl.table.column(1).search(searchTerm, true, false).draw();
+      fbgOptSelectedA.push(1);
+    }
+    else{
+      sit.situationToggleElse(1,1,fbgOptSelectedA,tbl.table);
+    }
 
-        // Enable and Disable appropriate Option Groups
-        sit.enableDisableGroups(enabled,selected,"fbGameA","fbGameB","fbGameC",0);
-    });
+    // Days
+    if(searchTerm.includes('Mond')||
+        searchTerm.includes('Tues')||
+        searchTerm.includes('Wedn')||
+        searchTerm.includes('Thur')||
+        searchTerm.includes('Frid')||
+        searchTerm.includes('Satu')||
+        searchTerm.includes('Sund')){
+      tbl.table.column(8).search(searchTerm, true, false).draw();
+      fbgOptSelectedA.push(2);
+    }
+    else{
+      sit.situationToggleElse(2,8,fbgOptSelectedA,tbl.table);
+    }
+
+    // Head Coaches
+    if(searchTerm.includes('Mike')||
+        searchTerm.includes('Joe')||
+        searchTerm.includes('Greg')||
+        searchTerm.includes('Dan')||
+        searchTerm.includes('Syl')||
+        searchTerm.includes('Jackie')||
+        searchTerm.includes('Rockey')||
+        searchTerm.includes('Emory')||
+        searchTerm.includes('Bob')||
+        searchTerm.includes('Paul')||
+        searchTerm.includes('Allyn')||
+        searchTerm.includes('Ralph')){
+      tbl.table.column(11).search(searchTerm, true, false).draw();
+      fbgOptSelectedA.push(3);
+    }
+    else{
+      sit.situationToggleElse(3,11,fbgOptSelectedA,tbl.table);
+    }
+  });
 });
-  
-// Select A Clear
+
 $(function() {
-    $('#fbGameAClear').click(function() {
+  $('#fbGameAClear').click(function() {
+    $("#fbGameA").val('').trigger('change');
+  });
+});
+//-----------
 
-        // Clear A
-        $("#fbGameA").val('').trigger('change');
-        testSelects.A = 1;
+//-----------
+// Game B Select
+var fbgOptSelectedB = [];
 
-        // Hide B if B is empty and C is hidden
-        if (testSelects.B == 1 && testSelects.C == 0){
-            $("#gameB").hide();
-            testSelects.B = 0;
-        }
+$(document).ready(function(){
+  $("#fbGameB").on("change", function() {
 
-        // Hide C if B is selected and C is empty
-        if (testSelects.B == 2 && testSelects.C == 1){
-            $("#gameC").hide();
-            testSelects.C = 0;
-        }
-    });
+    // Obtain raw search term
+    var searchTerm = $(this).find(':selected').map(function() {
+      return $( this ).text();
+    })
+    .get()
+    .join( "|" );
+    
+    // Add month names to search term
+    if (this.value == 'August'){
+      searchTerm = searchTerm.concat('|-08-');
+    }
+
+    else if (this.value == 'September'){
+      searchTerm = searchTerm.concat('|-09-');
+    }
+
+    else if (this.value == 'October'){
+      searchTerm = searchTerm.concat('|-10-');
+    }
+
+    else if (this.value == 'November'){
+      searchTerm = searchTerm.concat('|-11-');
+    }
+
+    else if (this.value == 'December'){
+      searchTerm = searchTerm.concat('|-12-');
+    }
+
+    else if (this.value == 'January'){
+      searchTerm = searchTerm.concat('|-01-');
+    }
+
+    // Game Type
+    if(searchTerm.includes('Bowl Games')||
+        searchTerm.includes('Home')||
+        searchTerm.includes('Road')||
+        searchTerm.includes('Neutral')){
+      tbl.table.column(3).search(searchTerm, true, false).draw();
+      fbgOptSelectedB.push(0);
+    }
+    else{
+      sit.situationToggleElse(0,3,fbgOptSelectedB,tbl.table);
+    }
+
+    // Months
+    if(searchTerm.includes('|-08-')||
+        searchTerm.includes('|-09-')||
+        searchTerm.includes('|-10-')||
+        searchTerm.includes('|-11-')||
+        searchTerm.includes('|-12-')||
+        searchTerm.includes('|-01-')){
+      tbl.table.column(1).search(searchTerm, true, false).draw();
+      fbgOptSelectedB.push(1);
+    }
+    else{
+      sit.situationToggleElse(1,1,fbgOptSelectedB,tbl.table);
+    }
+
+    // Days
+    if(searchTerm.includes('Mond')||
+        searchTerm.includes('Tues')||
+        searchTerm.includes('Wedn')||
+        searchTerm.includes('Thur')||
+        searchTerm.includes('Frid')||
+        searchTerm.includes('Satu')||
+        searchTerm.includes('Sund')){
+      tbl.table.column(8).search(searchTerm, true, false).draw();
+      fbgOptSelectedB.push(2);
+    }
+    else{
+      sit.situationToggleElse(2,8,fbgOptSelectedB,tbl.table);
+    }
+
+    // Head Coaches
+    if(searchTerm.includes('Mike')||
+        searchTerm.includes('Joe')||
+        searchTerm.includes('Greg')||
+        searchTerm.includes('Dan')||
+        searchTerm.includes('Syl')||
+        searchTerm.includes('Jackie')||
+        searchTerm.includes('Rockey')||
+        searchTerm.includes('Emory')||
+        searchTerm.includes('Bob')||
+        searchTerm.includes('Paul')||
+        searchTerm.includes('Allyn')||
+        searchTerm.includes('Ralph')){
+      tbl.table.column(11).search(searchTerm, true, false).draw();
+      fbgOptSelectedB.push(3);
+    }
+    else{
+      sit.situationToggleElse(3,11,fbgOptSelectedB,tbl.table);
+    }
+  });
 });
 
-// Select B
-$(document).ready(function (){
-    $("#fbGameB").on("change", function() {
-
-        // If Select B has no value or just replaced a value
-        if(!this.value || testSelects.B == 2){
-            // Identify Option Group that was just cleared
-            if (selected.B == 0){
-                enabled.A = 1;
-            }
-            else if (selected.B == 1){
-                enabled.B = 1;
-            }
-            else if (selected.B == 2){
-                enabled.C = 1;
-            }
-            else if (selected.B == 3){
-                enabled.D = 1;
-            }
-            else if (selected.B == 4){
-                enabled.E = 1;
-            }
-
-            // Reset selected.B
-            selected.B = -1;
-        }
-
-        // If Select B has a value
-        if(this.value){
-            testSelects.B = 2;
-            
-
-            // If Select C isn't visible and Select A has a value, make Select C visible
-            if(!testSelects.C && testSelects.A == 2){
-                $('#fbGameB').selectpicker('toggle');
-                testSelects.C = 1;
-                $('#gameC').show();
-            }
-
-            // Classify value by Option Group
-            if(jQuery.inArray(this.value, bowlGames) !== -1){
-                enabled.A = 0;
-                selected.B = 0;
-            }
-            else if(jQuery.inArray(this.value, regularSeason) !== -1){
-                enabled.B = 0;
-                selected.B = 1;
-            }
-            else if(jQuery.inArray(this.value, months) !== -1){
-                enabled.C = 0;
-                selected.B = 2;
-            }
-            else if(jQuery.inArray(this.value, days) !== -1){
-                enabled.D = 0;
-                selected.B = 3;
-            }
-            else if(jQuery.inArray(this.value, headCoaches) !== -1){
-                enabled.E = 0;
-                selected.B = 4;
-            }
-        }
-
-        // Enable and Disable appropriate Option Groups
-        sit.enableDisableGroups(enabled,selected,"fbGameA","fbGameB","fbGameC",1);
-    });
-});
-  
-// Select B Clear
 $(function() {
-    $('#fbGameBClear').click(function() {
+  $('#fbGameBClear').click(function() {
+    $("#fbGameB").val('').trigger('change');
+  });
+});
+//-----------
 
-        // Clear B
-        $("#fbGameB").val('').trigger('change');
-        testSelects.B = 1;
+//-----------
+// Game C Select
+var fbgOptSelectedC = [];
 
-        // Hide B if A is empty
-        if (testSelects.A == 1){
-            $("#gameB").hide();
-            testSelects.B = 0;
-        }
+$(document).ready(function(){
+  $("#fbGameC").on("change", function() {
 
-        // Hide C if C is empty
-        if (testSelects.C == 1){
-            $("#gameC").hide();
-            testSelects.C = 0;
-        }
-    });
+    // Obtain raw search term
+    var searchTerm = $(this).find(':selected').map(function() {
+      return $( this ).text();
+    })
+    .get()
+    .join( "|" );
+    
+    // Add month names to search term
+    if (this.value == 'August'){
+      searchTerm = searchTerm.concat('|-08-');
+    }
+
+    else if (this.value == 'September'){
+      searchTerm = searchTerm.concat('|-09-');
+    }
+
+    else if (this.value == 'October'){
+      searchTerm = searchTerm.concat('|-10-');
+    }
+
+    else if (this.value == 'November'){
+      searchTerm = searchTerm.concat('|-11-');
+    }
+
+    else if (this.value == 'December'){
+      searchTerm = searchTerm.concat('|-12-');
+    }
+
+    else if (this.value == 'January'){
+      searchTerm = searchTerm.concat('|-01-');
+    }
+
+    // Game Type
+    if(searchTerm.includes('Bowl Games')||
+        searchTerm.includes('Home')||
+        searchTerm.includes('Road')||
+        searchTerm.includes('Neutral')){
+      tbl.table.column(3).search(searchTerm, true, false).draw();
+      fbgOptSelectedC.push(0);
+    }
+    else{
+      sit.situationToggleElse(0,3,fbgOptSelectedC,tbl.table);
+    }
+
+    // Months
+    if(searchTerm.includes('|-08-')||
+        searchTerm.includes('|-09-')||
+        searchTerm.includes('|-10-')||
+        searchTerm.includes('|-11-')||
+        searchTerm.includes('|-12-')||
+        searchTerm.includes('|-01-')){
+      tbl.table.column(1).search(searchTerm, true, false).draw();
+      fbgOptSelectedC.push(1);
+    }
+    else{
+      sit.situationToggleElse(1,1,fbgOptSelectedC,tbl.table);
+    }
+
+    // Days
+    if(searchTerm.includes('Mond')||
+        searchTerm.includes('Tues')||
+        searchTerm.includes('Wedn')||
+        searchTerm.includes('Thur')||
+        searchTerm.includes('Frid')||
+        searchTerm.includes('Satu')||
+        searchTerm.includes('Sund')){
+      tbl.table.column(8).search(searchTerm, true, false).draw();
+      fbgOptSelectedC.push(2);
+    }
+    else{
+      sit.situationToggleElse(2,8,fbgOptSelectedC,tbl.table);
+    }
+
+    // Head Coaches
+    if(searchTerm.includes('Mike')||
+        searchTerm.includes('Joe')||
+        searchTerm.includes('Greg')||
+        searchTerm.includes('Dan')||
+        searchTerm.includes('Syl')||
+        searchTerm.includes('Jackie')||
+        searchTerm.includes('Rockey')||
+        searchTerm.includes('Emory')||
+        searchTerm.includes('Bob')||
+        searchTerm.includes('Paul')||
+        searchTerm.includes('Allyn')||
+        searchTerm.includes('Ralph')){
+      tbl.table.column(11).search(searchTerm, true, false).draw();
+      fbgOptSelectedC.push(3);
+    }
+    else{
+      sit.situationToggleElse(3,11,fbgOptSelectedC,tbl.table);
+    }
+  });
 });
 
-// Select C
-$(document).ready(function (){
-    $("#fbGameC").on("change", function() {
-
-        // If Select C has no value or just replaced a value
-        if(!this.value || testSelects.C == 2){
-            // Identify Option Group that was just cleared
-            if (selected.C == 0){
-                enabled.A = 1;
-            }
-            else if (selected.C == 1){
-                enabled.B = 1;
-            }
-            else if (selected.C == 2){
-                enabled.C = 1;
-            }
-            else if (selected.C == 3){
-                enabled.D = 1;
-            }
-            else if (selected.C == 4){
-                enabled.E = 1;
-            }
-
-            // Reset selected.C
-            selected.C = -1;
-        }
-
-        // If Select C has a value
-        if(this.value){
-            testSelects.C = 2;
-
-            // Classify value by Option Group
-            if(jQuery.inArray(this.value, bowlGames) !== -1){
-                enabled.A = 0;
-                selected.C = 0;
-            }
-            else if(jQuery.inArray(this.value, regularSeason) !== -1){
-                enabled.B = 0;
-                selected.C = 1;
-            }
-            else if(jQuery.inArray(this.value, months) !== -1){
-                enabled.C = 0;
-                selected.C = 2;
-            }
-            else if(jQuery.inArray(this.value, days) !== -1){
-                enabled.D = 0;
-                selected.C = 3;
-            }
-            else if(jQuery.inArray(this.value, headCoaches) !== -1){
-                enabled.E = 0;
-                selected.C = 4;
-            }
-        }
-
-        // Enable and Disable appropriate Option Groups
-        sit.enableDisableGroups(enabled,selected,"fbGameA","fbGameB","fbGameC",2);
-    });
-});
-  
-// Select C Clear
 $(function() {
-    $('#fbGameCClear').click(function() {
-
-        // Clear C
-        $("#fbGameC").val('').trigger('change');
-        testSelects.C = 1;
-
-        // Hide C if A or B are empty
-        if (testSelects.A == 1 || testSelects.B == 1){
-            $("#gameC").hide();
-            testSelects.C = 0;
-        }
-    });
+  $('#fbGameCClear').click(function() {
+    $("#fbGameC").val('').trigger('change');
+  });
 });
+//-----------

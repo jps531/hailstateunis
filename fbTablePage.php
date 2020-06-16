@@ -46,10 +46,10 @@
           <?php include "components/footballTable/filters/footballUniformA.php"; ?>
         </div>
         <div class="col-xs-3 text-center" id="uniformB">
-          <?php include "components/footballTable/filters/footballUniformA.php"; ?>
+          <?php include "components/footballTable/filters/footballUniformB.php"; ?>
         </div>
         <div class="col-xs-3 text-center" id="uniformC">
-          <?php include "components/footballTable/filters/footballUniformA.php"; ?>
+          <?php include "components/footballTable/filters/footballUniformC.php"; ?>
         </div>
       </div>
       <div class="row" id="filtersSubrowC">
@@ -81,8 +81,8 @@
   <!-- Javascript -->
   <script type="module" src="components/js/footballFilters/fbOpponentFilter.js"></script>
   <script type="module" src="components/js/footballFilters/fbSeasonFilter.js"></script>
-  <!--<script type="module" src="components/js/footballFilters/fbUniformFiltersApp.js"></script>-->
-  <!--<script type="module" src="components/js/footballFilters/fbUniformFilters.js"></script>-->
+  <script type="module" src="components/js/footballFilters/fbUniformFiltersApp.js"></script>
+  <script type="module" src="components/js/footballFilters/fbUniformFilters.js"></script>
   <script type="module" src="components/js/footballFilters/fbGameFiltersApp.js"></script>
   <script type="module" src="components/js/footballFilters/fbGameFilters.js"></script>
   <script type="module" src="components/js/fbBuildTable.js"></script>
