@@ -1,12 +1,5 @@
-<!-- Situation Select -->
-<select class="selectpicker show-tick" data-live-search="true" id="mbkSituationA" title="Situation A">
-  <optgroup label="Uniform Colors">
-    <option>White</option>
-    <option>Maroon</option>
-    <option>Black</option>
-    <option>Gray</option>
-    <option>Cream</option>
-  </optgroup>
+<!-- Game Select -->
+<select class="selectpicker show-tick" data-live-search="true" id="mbkGameA" title="Game A">
   <optgroup label="Months">
     <option>November</option>
     <option>December</option>
@@ -31,31 +24,27 @@
     <option>Jim Hatfield</option>
     <option>Babe McCarthy</option>
   </optgroup>
-  <optgroup label="Regular Season">
+  <optgroup label="Game Type">
     <option>Home</option>
     <option>Road</option>
     <option>Neutral</option>
-  </optgroup>
-  <optgroup label="Tournaments">
+    <option disabled="disabled">-</option>
     <option>NCAA Tournament</option>
     <option>NIT</option>
     <option>SEC Tournament</option>
-  </optgroup>
-  <optgroup label="NCAA Tournament">
+    <option disabled="disabled">-</option>
     <option>NCAA Round of 64</option>
     <option>NCAA Round of 32</option>
     <option>NCAA Sweet Sixteen</option>
     <option>NCAA Elite Eight</option>
     <option>NCAA Final Four</option>
     <option>Regional 3rd Place</option>
-  </optgroup>
-  <optgroup label="NIT">
+    <option disabled="disabled">-</option>
     <option>NIT First Round</option>
     <option>NIT Second Round</option>
     <option>NIT Quarterfinals</option>
     <option>NIT Semifinals</option>
-  </optgroup>
-  <optgroup label="SEC Tournament">
+    <option disabled="disabled">-</option>
     <option>SECT First Round</option>
     <option>SECT Second Round</option>
     <option>SECT Quarterfinals</option>
@@ -63,4 +52,4 @@
     <option>SECT Championship</option>
   </optgroup>
 </select>
-<button class="btn clear" id="mbkSitAClear"><i class="fas fa-times-circle"></i></button>
+<button class="btn clear" id="mbkGameAClear"><i class="fas fa-times-circle"></i></button>

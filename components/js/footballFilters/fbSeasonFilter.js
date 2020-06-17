@@ -1,13 +1,17 @@
 import * as tbl from '../fbBuildTable.js';
 
 //-----------
-// Load Season Filter
+// Load Season and Opponent Filters
 $(function(){ $("#selectYear").selectpicker('render'); })
+$(function(){ $("#selectOpponent").selectpicker('render'); })
 $.fn.selectpicker.Constructor.DEFAULTS.multipleSeparator = ' | ';
 
 window.onload = function(){
   if ($("#selectYear").val().length){
     $("#selectYear").val('').trigger('change');
+  }
+  if ($("#selectOpponent").val().length){
+    $("#selectOpponent").val('').trigger('change');
   }
 };
 //-----------

@@ -43,24 +43,18 @@
       </div>
       <div class="row" id="filtersSubrowB">
         <div class="col-xs-3 text-center" id="uniformA">
-          <?php include "components/wbkTable/filters/wbkSituationA.php"; ?>
-        </div>
-        <div class="col-xs-3 text-center" id="uniformB">
-          <?php include "components/wbkTable/filters/wbkSituationA.php"; ?>
-        </div>
-        <div class="col-xs-3 text-center" id="uniformC">
-          <?php include "components/wbkTable/filters/wbkSituationA.php"; ?>
+          <?php include "components/wbkTable/filters/wbkUniformA.php"; ?>
         </div>
       </div>
       <div class="row" id="filtersSubrowC">
         <div class="col-xs-3 text-center" id="gameA">
-          <?php include "components/wbkTable/filters/wbkSituationB.php"; ?>
+          <?php include "components/wbkTable/filters/wbkGameA.php"; ?>
         </div>
         <div class="col-xs-3 text-center" id="gameB">
-          <?php include "components/wbkTable/filters/wbkSituationB.php"; ?>
+          <?php include "components/wbkTable/filters/wbkGameB.php"; ?>
         </div>
         <div class="col-xs-3 text-center" id="gameC">
-          <?php include "components/wbkTable/filters/wbkSituationB.php"; ?>
+          <?php include "components/wbkTable/filters/wbkGameC.php"; ?>
         </div>
       </div>
       <div class="row" id="filtersRowTwo">
@@ -81,10 +75,9 @@
   <!-- Javascript -->
   <script type="module" src="components/js/wbkFilters/wbkOpponentFilter.js"></script>
   <script type="module" src="components/js/wbkFilters/wbkSeasonFilter.js"></script>
-  <!--<script type="module" src="components/js/wbkFilters/wbkUniformFiltersApp.js"></script>-->
-  <!--<script type="module" src="components/js/wbkFilters/wbkUniformFilters.js"></script>-->
-  <!--<script type="module" src="components/js/wbkFilters/wbkGameFiltersApp.js"></script>-->
-  <!--<script type="module" src="components/js/wbkFilters/wbkGameFilters.js"></script>-->
+  <script type="module" src="components/js/wbkFilters/wbkUniformFilter.js"></script>
+  <script type="module" src="components/js/wbkFilters/wbkGameFiltersApp.js"></script>
+  <script type="module" src="components/js/wbkFilters/wbkGameFilters.js"></script>
   <script type="module" src="components/js/wbkBuildTable.js"></script> 
   </body>
 </html>

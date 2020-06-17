@@ -1,14 +1,5 @@
-<!-- Situation Select -->
-<select class="selectpicker show-tick" data-live-search="true" id="wbkSituationA" title="Situation A">
-  <optgroup label="Uniform Colors">
-    <option>White</option>
-    <option>Maroon</option>
-    <option>Black</option>
-    <option>Pink</option>
-    <option>Gray</option>
-    <option>Cream</option>
-    <option>White STATE</option>
-  </optgroup>
+<!-- Game Select -->
+<select class="selectpicker show-tick" data-live-search="true" id="wbkGameB" title="Game B">
   <optgroup label="Months">
     <option>November</option>
     <option>December</option>
@@ -31,31 +22,27 @@
     <option>Vic Schaefer</option>
     <option>Sharon Fanning-Otis</option>
   </optgroup>
-  <optgroup label="Regular Season">
+  <optgroup label="Game Type">
     <option>Home</option>
     <option>Road</option>
     <option>Neutral</option>
-  </optgroup>
-  <optgroup label="Tournaments">
+    <option disabled="disabled">-</option>
     <option>NCAA Tournament</option>
     <option>WNIT</option>
     <option>SEC Tournament</option>
-  </optgroup>
-  <optgroup label="NCAA Tournament">
+    <option disabled="disabled">-</option>
     <option>NCAA Round of 64</option>
     <option>NCAA Round of 32</option>
     <option>NCAA Sweet Sixteen</option>
     <option>NCAA Elite Eight</option>
     <option>NCAA Final Four</option>
     <option>National Championship</option>
-  </optgroup>
-  <optgroup label="WNIT">
+    <option disabled="disabled">-</option>
     <option>WNIT Round of 64</option>
     <option>WNIT Round of 32</option>
     <option>WNIT Round of 16</option>
     <option>WNIT Quarterfinals</option>
-  </optgroup>
-  <optgroup label="SEC Tournament">
+    <option disabled="disabled">-</option>
     <option>SECT First Round</option>
     <option>SECT Second Round</option>
     <option>SECT Quarterfinals</option>
@@ -63,4 +50,4 @@
     <option>SECT Championship</option>
   </optgroup>
 </select>
-<button class="btn clear" id="wbkSitAClear"><i class="fas fa-times-circle"></i></button>
+<button class="btn clear" id="wbkGameBClear"><i class="fas fa-times-circle"></i></button>

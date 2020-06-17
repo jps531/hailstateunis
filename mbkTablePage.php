@@ -43,24 +43,18 @@
       </div>
       <div class="row" id="filtersSubrowB">
         <div class="col-xs-3 text-center" id="uniformA">
-          <?php include "components/mbkTable/filters/mbkSituationA.php"; ?>
-        </div>
-        <div class="col-xs-3 text-center" id="uniformB">
-          <?php include "components/mbkTable/filters/mbkSituationA.php"; ?>
-        </div>
-        <div class="col-xs-3 text-center" id="uniformC">
-          <?php include "components/mbkTable/filters/mbkSituationA.php"; ?>
+          <?php include "components/mbkTable/filters/mbkUniformA.php"; ?>
         </div>
       </div>
       <div class="row" id="filtersSubrowC">
         <div class="col-xs-3 text-center" id="gameA">
-          <?php include "components/mbkTable/filters/mbkSituationB.php"; ?>
+          <?php include "components/mbkTable/filters/mbkGameA.php"; ?>
         </div>
         <div class="col-xs-3 text-center" id="gameB">
-          <?php include "components/mbkTable/filters/mbkSituationB.php"; ?>
+          <?php include "components/mbkTable/filters/mbkGameB.php"; ?>
         </div>
         <div class="col-xs-3 text-center" id="gameC">
-          <?php include "components/mbkTable/filters/mbkSituationB.php"; ?>
+          <?php include "components/mbkTable/filters/mbkGameC.php"; ?>
         </div>
       </div>
       <div class="row" id="filtersRowTwo">
@@ -81,10 +75,9 @@
   <!-- Javascript -->
   <script type="module" src="components/js/mbkFilters/mbkOpponentFilter.js"></script>
   <script type="module" src="components/js/mbkFilters/mbkSeasonFilter.js"></script>
-  <!--<script type="module" src="components/js/mbkFilters/mbkUniformFiltersApp.js"></script>-->
-  <!--<script type="module" src="components/js/mbkFilters/mbkUniformFilters.js"></script>-->
-  <!--<script type="module" src="components/js/mbkFilters/mbkGameFiltersApp.js"></script>-->
-  <!--<script type="module" src="components/js/mbkFilters/mbkGameFilters.js"></script>-->
+  <script type="module" src="components/js/mbkFilters/mbkUniformFilter.js"></script>
+  <script type="module" src="components/js/mbkFilters/mbkGameFiltersApp.js"></script>
+  <script type="module" src="components/js/mbkFilters/mbkGameFilters.js"></script>
   <script type="module" src="components/js/mbkBuildTable.js"></script> 
   </body>
 </html>

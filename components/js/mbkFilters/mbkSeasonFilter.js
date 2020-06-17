@@ -1,14 +1,18 @@
 import * as tbl from '../mbkBuildTable.js';
 
 //-----------
-// Load Season Filter
+// Load Season and Opponent Filters
 $(function(){ $("#mbkSelectYear").selectpicker('render'); })
+$(function(){ $("#mbkOpponent").selectpicker('render'); })
 $.fn.selectpicker.Constructor.DEFAULTS.multipleSeparator = ' | ';
 
 window.onload = function(){
     if ($("#mbkSelectYear").val().length){
         $("#mbkSelectYear").val('').trigger('change');
     }
+    if ($("#mbkOpponent").val().length){
+      $("#mbkOpponent").val('').trigger('change');
+  }
 };
 //-----------
 

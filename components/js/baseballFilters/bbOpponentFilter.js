@@ -1,18 +1,6 @@
 import * as tbl from '../bbBuildTable.js';
 
 //-----------
-// Load Opponent Filter
-$(function(){ $("#bbSelectOpponent").selectpicker('render'); })
-$.fn.selectpicker.Constructor.DEFAULTS.multipleSeparator = ' | ';
-
-window.onload = function(){
-    if ($("#bbSelectOpponent").val().length){
-        $("#bbSelectOpponent").val('').trigger('change');
-    }
-};
-//-----------
-
-//-----------
 // Opponent Select
 var pageLengthOpp;
 var resetLengthOpp = true;

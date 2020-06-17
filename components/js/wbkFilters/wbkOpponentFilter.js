@@ -1,18 +1,6 @@
 import * as tbl from '../wbkBuildTable.js';
 
 //-----------
-// Load Opponent Filter
-$(function(){ $("#wbkOpponent").selectpicker('render'); })
-$.fn.selectpicker.Constructor.DEFAULTS.multipleSeparator = ' | ';
-
-window.onload = function(){
-    if ($("#wbkOpponent").val().length){
-        $("#wbkOpponent").val('').trigger('change');
-    }
-};
-//-----------
-
-//-----------
 // Opponent Select
 var pageLengthOpp;
 var resetLengthOpp = true;

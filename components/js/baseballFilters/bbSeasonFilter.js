@@ -1,14 +1,18 @@
 import * as tbl from '../bbBuildTable.js';
 
 //-----------
-// Load Season Filter
-$(function(){ $("#baseballSelectYear").selectpicker('render'); })
+// Load Season and Opponent Filters
+$(function(){ $("#bbSelectYear").selectpicker('render'); })
+$(function(){ $("#bbOpponent").selectpicker('render'); })
 $.fn.selectpicker.Constructor.DEFAULTS.multipleSeparator = ' | ';
 
 window.onload = function(){
     if ($("#bbSelectYear").val().length){
         $("#bbSelectYear").val('').trigger('change');
     }
+    if ($("#bbOpponent").val().length){
+      $("#bbOpponent").val('').trigger('change');
+  }
 };
 //-----------
 

@@ -1,18 +1,6 @@
 import * as tbl from '../fbBuildTable.js';
 
 //-----------
-// Load Opponent Filter
-$(function(){ $("#selectOpponent").selectpicker('render'); })
-$.fn.selectpicker.Constructor.DEFAULTS.multipleSeparator = ' | ';
-
-window.onload = function(){
-  if ($("#selectOpponent").val().length){
-    $("#selectOpponent").val('').trigger('change');
-  }
-};
-//-----------
-
-//-----------
 // Opponent Select
 var pageLengthOpp;
 var resetLengthOpp = true;
