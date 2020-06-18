@@ -1,4 +1,13 @@
-import * as sit from '../situationFunctions.js';
+import * as sit from '../uniformGameFunctions.js';
+
+// Define Groups
+export var months = ["November","December","January","February","March"];
+export var days = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+export var headCoaches = ["Ben Howland","Rick Ray","Rick Stansbury","Richard Williams","Jim Hatfield","Babe McCarthy"];
+export var gameType = ["Home","Road","Neutral","NCAA Tournament","NIT","SEC Tournament",
+                "NCAA Round of 64","NCAA Round of 32","NCAA Sweet Sixteen","NCAA Elite Eight","NCAA Final Four","Regional 3rd Place",
+                "NIT First Round","NIT Second Round","NIT Quarterfinals","NIT Semifinals",
+                "SECT First Round","SECT Second Round","SECT Quarterfinals","SECT Semifinals","SECT Championship"];
 
 // Load Game Type Filters
 $(function(){ $("#mbkGameA").selectpicker('render'); })
@@ -20,14 +29,6 @@ var enabled = {A: 1, B: 1, C: 1, D: 1};
 // 0: Group 0 Selected
 // -1: No Group Selected
 var selected = {A: -1, B: -1, C: -1};
-
-var months = ["November","December","January","February","March"];
-var days = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
-var headCoaches = ["Ben Howland","Rick Ray","Rick Stansbury","Richard Williams","Jim Hatfield","Babe McCarthy"];
-var gameType = ["Home","Road","Neutral","NCAA Tournament","NIT","SEC Tournament",
-                "NCAA Round of 64","NCAA Round of 32","NCAA Sweet Sixteen","NCAA Elite Eight","NCAA Final Four","Regional 3rd Place",
-                "NIT First Round","NIT Second Round","NIT Quarterfinals","NIT Semifinals",
-                "SECT First Round","SECT Second Round","SECT Quarterfinals","SECT Semifinals","SECT Championship"];
 
 // Select A
 $(document).ready(function (){

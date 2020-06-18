@@ -109,18 +109,15 @@ $(function() {
 //-----------
 // W/L Tally
 var wlTotal = '';
-var wins = 0;
-var losses = 0;
-var ties = 0;
 
 // Display String for Full Table
-wlTotal = wlt.createWL(wins, losses, ties, table);
+wlTotal = wlt.createWL(table, 8);
 document.getElementById('winLossTotal').innerHTML = wlTotal;
 
 // Alter String Each Time the Table is Filtered
 $(function() {
   table.on( 'search', function () {
-    wlTotal = wlt.createWL(wins, losses, ties, table);
+    wlTotal = wlt.createWL(table, 8);
     document.getElementById('winLossTotal').innerHTML = wlTotal;
   });
 });

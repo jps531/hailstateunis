@@ -1,5 +1,6 @@
 import * as tbl from '../fbBuildTable.js';
-import * as sit from '../situationFunctions.js';
+import * as sit from '../uniformGameFunctions.js';
+import * as grp from './fbUniformFiltersApp.js';
 
 //-----------
 // Uniform A Select
@@ -14,8 +15,27 @@ $(document).ready(function(){
     })
     .get()
     .join( "|" );
+
+    // Identify group
+    var group;
+
+    if(jQuery.inArray(this.value, grp.alternates) !== -1){
+        group = 0;
+    }
+    else if(jQuery.inArray(this.value, grp.helmets) !== -1){
+        group = 1;
+    }
+    else if(jQuery.inArray(this.value, grp.jerseys) !== -1){
+        group = 2;
+    }
+    else if(jQuery.inArray(this.value, grp.pants) !== -1){
+        group = 3;
+    }
+    else if(jQuery.inArray(this.value, grp.patches) !== -1){
+        group = 4;
+    }
     
-    // Add month names to search term
+    // Modify search term
     if (this.value == 'All Alternates'){
         searchTerm = searchTerm.concat('|alternates');
     }
@@ -89,55 +109,19 @@ $(document).ready(function(){
     }
 
     // Alternates
-    if(searchTerm.includes('Alternates')){
-        tbl.table.column(4).search(searchTerm, true, false).draw();
-        fbuOptSelectedA.push(0);
-      }
-    else{
-        sit.situationToggleElse(0,4,fbuOptSelectedA,tbl.table);
-    }
+    fbuOptSelectedA = sit.searchTable(group,tbl.table,searchTerm,fbuOptSelectedA,0,4);
   
     // Helmets
-    if(searchTerm.includes('Helmets')){
-        tbl.table.column(5).search(searchTerm, true, false).draw();
-        fbuOptSelectedA.push(1);
-    }
-    else{
-        sit.situationToggleElse(1,5,fbuOptSelectedA,tbl.table);
-    }
+    fbuOptSelectedA = sit.searchTable(group,tbl.table,searchTerm,fbuOptSelectedA,1,5);
   
     // Jerseys
-    if(searchTerm.includes('Jerseys')){
-        tbl.table.column(6).search(searchTerm, true, false).draw();
-        fbuOptSelectedA.push(2);
-    }
-    else{
-        sit.situationToggleElse(2,6,fbuOptSelectedA,tbl.table);
-    }
+    fbuOptSelectedA = sit.searchTable(group,tbl.table,searchTerm,fbuOptSelectedA,2,6);
   
     // Pants
-    if(searchTerm.includes('Pants')){
-        tbl.table.column(7).search(searchTerm, true, false).draw();
-        fbuOptSelectedA.push(3);
-    }
-    else{
-        sit.situationToggleElse(3,7,fbuOptSelectedA,tbl.table);
-    }
+    fbuOptSelectedA = sit.searchTable(group,tbl.table,searchTerm,fbuOptSelectedA,3,7);
   
     // Patches
-    if(searchTerm.includes('dws 100')||searchTerm.includes('Nick Bell')){
-        tbl.table.column(4).search(searchTerm, true, false).draw();
-        fbuOptSelectedA.push(4);
-    }
-    else{
-        sit.situationToggleElse(4,4,fbuOptSelectedA,tbl.table);
-    }
-  });
-});
-
-$(function() {
-  $('#fbUniformAClear').click(function() {
-    $("#fbUniformA").val('').trigger('change');
+    fbuOptSelectedA = sit.searchTable(group,tbl.table,searchTerm,fbuOptSelectedA,4,4);
   });
 });
 //-----------
@@ -155,8 +139,27 @@ $(document).ready(function(){
     })
     .get()
     .join( "|" );
+
+    // Identify group
+    var group;
+
+    if(jQuery.inArray(this.value, grp.alternates) !== -1){
+        group = 0;
+    }
+    else if(jQuery.inArray(this.value, grp.helmets) !== -1){
+        group = 1;
+    }
+    else if(jQuery.inArray(this.value, grp.jerseys) !== -1){
+        group = 2;
+    }
+    else if(jQuery.inArray(this.value, grp.pants) !== -1){
+        group = 3;
+    }
+    else if(jQuery.inArray(this.value, grp.patches) !== -1){
+        group = 4;
+    }
     
-    // Add month names to search term
+    // Modify search term
     if (this.value == 'All Alternates'){
         searchTerm = searchTerm.concat('|alternates');
     }
@@ -230,55 +233,19 @@ $(document).ready(function(){
     }
 
     // Alternates
-    if(searchTerm.includes('Alternates')){
-        tbl.table.column(4).search(searchTerm, true, false).draw();
-        fbuOptSelectedB.push(0);
-      }
-    else{
-        sit.situationToggleElse(0,4,fbuOptSelectedB,tbl.table);
-    }
+    fbuOptSelectedB = sit.searchTable(group,tbl.table,searchTerm,fbuOptSelectedB,0,4);
   
     // Helmets
-    if(searchTerm.includes('Helmets')){
-        tbl.table.column(5).search(searchTerm, true, false).draw();
-        fbuOptSelectedB.push(1);
-    }
-    else{
-        sit.situationToggleElse(1,5,fbuOptSelectedB,tbl.table);
-    }
+    fbuOptSelectedB = sit.searchTable(group,tbl.table,searchTerm,fbuOptSelectedB,1,5);
   
     // Jerseys
-    if(searchTerm.includes('Jerseys')){
-        tbl.table.column(6).search(searchTerm, true, false).draw();
-        fbuOptSelectedB.push(2);
-    }
-    else{
-        sit.situationToggleElse(2,6,fbuOptSelectedB,tbl.table);
-    }
+    fbuOptSelectedB = sit.searchTable(group,tbl.table,searchTerm,fbuOptSelectedB,2,6);
   
     // Pants
-    if(searchTerm.includes('Pants')){
-        tbl.table.column(7).search(searchTerm, true, false).draw();
-        fbuOptSelectedB.push(3);
-    }
-    else{
-        sit.situationToggleElse(3,7,fbuOptSelectedB,tbl.table);
-    }
+    fbuOptSelectedB = sit.searchTable(group,tbl.table,searchTerm,fbuOptSelectedB,3,7);
   
     // Patches
-    if(searchTerm.includes('dws 100')||searchTerm.includes('Nick Bell')){
-        tbl.table.column(4).search(searchTerm, true, false).draw();
-        fbuOptSelectedB.push(4);
-    }
-    else{
-        sit.situationToggleElse(4,4,fbuOptSelectedB,tbl.table);
-    }
-  });
-});
-
-$(function() {
-  $('#fbUniformBClear').click(function() {
-    $("#fbUniformB").val('').trigger('change');
+    fbuOptSelectedB = sit.searchTable(group,tbl.table,searchTerm,fbuOptSelectedB,4,4);
   });
 });
 //-----------
@@ -296,8 +263,27 @@ $(document).ready(function(){
     })
     .get()
     .join( "|" );
+
+    // Identify group
+    var group;
+
+    if(jQuery.inArray(this.value, grp.alternates) !== -1){
+        group = 0;
+    }
+    else if(jQuery.inArray(this.value, grp.helmets) !== -1){
+        group = 1;
+    }
+    else if(jQuery.inArray(this.value, grp.jerseys) !== -1){
+        group = 2;
+    }
+    else if(jQuery.inArray(this.value, grp.pants) !== -1){
+        group = 3;
+    }
+    else if(jQuery.inArray(this.value, grp.patches) !== -1){
+        group = 4;
+    }
     
-    // Add month names to search term
+    // Modify search term
     if (this.value == 'All Alternates'){
         searchTerm = searchTerm.concat('|alternates');
     }
@@ -371,55 +357,19 @@ $(document).ready(function(){
     }
 
     // Alternates
-    if(searchTerm.includes('Alternates')){
-        tbl.table.column(4).search(searchTerm, true, false).draw();
-        fbuOptSelectedC.push(0);
-      }
-    else{
-        sit.situationToggleElse(0,4,fbuOptSelectedC,tbl.table);
-    }
+    fbuOptSelectedC = sit.searchTable(group,tbl.table,searchTerm,fbuOptSelectedC,0,4);
   
     // Helmets
-    if(searchTerm.includes('Helmets')){
-        tbl.table.column(5).search(searchTerm, true, false).draw();
-        fbuOptSelectedC.push(1);
-    }
-    else{
-        sit.situationToggleElse(1,5,fbuOptSelectedC,tbl.table);
-    }
+    fbuOptSelectedC = sit.searchTable(group,tbl.table,searchTerm,fbuOptSelectedC,1,5);
   
     // Jerseys
-    if(searchTerm.includes('Jerseys')){
-        tbl.table.column(6).search(searchTerm, true, false).draw();
-        fbuOptSelectedC.push(2);
-    }
-    else{
-        sit.situationToggleElse(2,6,fbuOptSelectedC,tbl.table);
-    }
+    fbuOptSelectedC = sit.searchTable(group,tbl.table,searchTerm,fbuOptSelectedC,2,6);
   
     // Pants
-    if(searchTerm.includes('Pants')){
-        tbl.table.column(7).search(searchTerm, true, false).draw();
-        fbuOptSelectedC.push(3);
-    }
-    else{
-        sit.situationToggleElse(3,7,fbuOptSelectedC,tbl.table);
-    }
+    fbuOptSelectedC = sit.searchTable(group,tbl.table,searchTerm,fbuOptSelectedC,3,7);
   
     // Patches
-    if(searchTerm.includes('dws 100')||searchTerm.includes('Nick Bell')){
-        tbl.table.column(4).search(searchTerm, true, false).draw();
-        fbuOptSelectedC.push(4);
-    }
-    else{
-        sit.situationToggleElse(4,4,fbuOptSelectedC,tbl.table);
-    }
-  });
-});
-
-$(function() {
-  $('#fbUniformCClear').click(function() {
-    $("#fbUniformC").val('').trigger('change');
+    fbuOptSelectedC = sit.searchTable(group,tbl.table,searchTerm,fbuOptSelectedC,4,4);
   });
 });
 //-----------

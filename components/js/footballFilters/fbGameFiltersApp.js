@@ -1,4 +1,11 @@
-import * as sit from '../situationFunctions.js';
+import * as sit from '../uniformGameFunctions.js';
+
+// Define Groups
+export var gameType = ["Bowl Games", "Home", "Road", "Neutral"];
+export var months = ["August","September","October","November","December","January"];
+export var days = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+export var headCoaches = ["Ralph Sassee","Allyn McKeen","Paul Davis","Bob Tyler","Emory Bellard","Rockey Felker",
+                   "Jackie Sherill","Sylvester Croom","Dan Mullen","Greg Knox","Joe Moorhead","Mike Leach"];
 
 // Load Game Type Filters
 $(function(){ $("#fbGameA").selectpicker('render'); })
@@ -20,12 +27,6 @@ var enabled = {A: 1, B: 1, C: 1, D: 1};
 // 0: Group 0 Selected
 // -1: No Group Selected
 var selected = {A: -1, B: -1, C: -1};
-
-var gameType = ["Bowl Games", "Home", "Road", "Neutral"];
-var months = ["August","September","October","November","December","January"];
-var days = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
-var headCoaches = ["Ralph Sassee","Allyn McKeen","Paul Davis","Bob Tyler","Emory Bellard","Rockey Felker",
-                   "Jackie Sherill","Sylvester Croom","Dan Mullen","Greg Knox","Joe Moorhead","Mike Leach"];
 
 // Select A
 $(document).ready(function (){

@@ -1,17 +1,24 @@
-// Create String to Display
-export function createWL(wins, losses, ties, table){
+// Function: createWL
+// Purpose: Create html object to display the w/l record of the currently drawn table
+// Input(s): table: DataTable; table object of the currently drawn table
+//           column: integer; the index of the column that displays win/loss information
+// Output(s): optSelect: array
+export function createWL(table, column){
   var wlTotal = '<span class="badge badge-';
   var percentage;
+  var wins = 0;
+  var losses = 0;
+  var ties = 0;
 
   for (var z=0; z < table.rows().count(); z++){
     if (table.row(z, {search:'applied'})[0].length > 0){
-      if (table.cell(z,8).data().toString().includes('Win')){
+      if (table.cell(z,column).data().toString().includes('Win')){
         wins += 1;
       }
-      if (table.cell(z,8).data().toString().includes('Loss')){
+      if (table.cell(z,column).data().toString().includes('Loss')){
         losses += 1;
       }
-      if (table.cell(z,8).data().toString().includes('TIE')){
+      if (table.cell(z,column).data().toString().includes('TIE')){
         ties += 1;
       }
     }

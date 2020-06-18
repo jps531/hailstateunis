@@ -1,4 +1,13 @@
-import * as sit from '../situationFunctions.js';
+import * as sit from '../uniformGameFunctions.js';
+
+// Define Groups
+export var months = ["November","December","January","February","March","April"];
+export var days = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+export var headCoaches = ["Nikki McCray-Penson","Vic Schaefer","Sharon Fanning-Otis"];
+export var gameType = ["Home","Road","Neutral","NCAA Tournament","WNIT","SEC Tournament",
+                "NCAA Round of 64","NCAA Round of 32","NCAA Sweet Sixteen","NCAA Elite Eight","NCAA Final Four","National Championship",
+                "WNIT Round of 64","WNIT Round of 32","WNIT Round of 16","WNIT Quarterfinals",
+                "SECT First Round","SECT Second Round","SECT Quarterfinals","SECT Semifinals","SECT Championship"];
 
 // Load Game Type Filters
 $(function(){ $("#wbkGameA").selectpicker('render'); })
@@ -20,14 +29,6 @@ var enabled = {A: 1, B: 1, C: 1, D: 1};
 // 0: Group 0 Selected
 // -1: No Group Selected
 var selected = {A: -1, B: -1, C: -1};
-
-var months = ["November","December","January","February","March","April"];
-var days = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
-var headCoaches = ["Nikki McCray-Penson","Vic Schaefer","Sharon Fanning-Otis"];
-var gameType = ["Home","Road","Neutral","NCAA Tournament","WNIT","SEC Tournament",
-                "NCAA Round of 64","NCAA Round of 32","NCAA Sweet Sixteen","NCAA Elite Eight","NCAA Final Four","National Championship",
-                "WNIT Round of 64","WNIT Round of 32","WNIT Round of 16","WNIT Quarterfinals",
-                "SECT First Round","SECT Second Round","SECT Quarterfinals","SECT Semifinals","SECT Championship"];
 
 // Select A
 $(document).ready(function (){

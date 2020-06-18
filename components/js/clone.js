@@ -1,4 +1,4 @@
-import * as lib from './situationFunctions.js';
+import * as lib from './uniformGameFunctions.js';
 
 // 2: Visible and has a value
 // 1: Visible but has no value

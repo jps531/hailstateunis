@@ -43,24 +43,24 @@
       </div>
       <div class="row" id="filtersSubrowB">
         <div class="col-xs-3 text-center" id="uniformA">
-          <?php include "components/baseballTable/filters/baseballSituationA.php"; ?>
+          <?php include "components/baseballTable/filters/baseballUniformA.php"; ?>
         </div>
         <div class="col-xs-3 text-center" id="uniformB">
-          <?php include "components/baseballTable/filters/baseballSituationA.php"; ?>
+          <?php include "components/baseballTable/filters/baseballUniformB.php"; ?>
         </div>
         <div class="col-xs-3 text-center" id="uniformC">
-          <?php include "components/baseballTable/filters/baseballSituationA.php"; ?>
+          <?php include "components/baseballTable/filters/baseballUniformC.php"; ?>
         </div>
       </div>
       <div class="row" id="filtersSubrowC">
         <div class="col-xs-3 text-center" id="gameA">
-          <?php include "components/baseballTable/filters/baseballSituationB.php"; ?>
+          <?php include "components/baseballTable/filters/baseballGameA.php"; ?>
         </div>
         <div class="col-xs-3 text-center" id="gameB">
-          <?php include "components/baseballTable/filters/baseballSituationB.php"; ?>
+          <?php include "components/baseballTable/filters/baseballGameB.php"; ?>
         </div>
         <div class="col-xs-3 text-center" id="gameC">
-          <?php include "components/baseballTable/filters/baseballSituationB.php"; ?>
+          <?php include "components/baseballTable/filters/baseballGameC.php"; ?>
         </div>
       </div>
       <div class="row" id="filtersRowTwo">
@@ -81,10 +81,10 @@
   <!-- Javascript -->
   <script type="module" src="components/js/baseballFilters/bbOpponentFilter.js"></script>
   <script type="module" src="components/js/baseballFilters/bbSeasonFilter.js"></script>
-  <!--<script type="module" src="components/js/baseballFilters/bbUniformFiltersApp.js"></script>-->
-  <!--<script type="module" src="components/js/baseballFilters/bbUniformFilters.js"></script>-->
-  <!--<script type="module" src="components/js/baseballFilters/bbGameFiltersApp.js"></script>-->
-  <!--<script type="module" src="components/js/baseballFilters/bbGameFilters.js"></script>-->
-  <script type="text/javascript" src="components/js/bbBuildTable.js"></script> 
+  <script type="module" src="components/js/baseballFilters/bbUniformFiltersApp.js"></script>
+  <script type="module" src="components/js/baseballFilters/bbUniformFilters.js"></script>
+  <script type="module" src="components/js/baseballFilters/bbGameFiltersApp.js"></script>
+  <script type="module" src="components/js/baseballFilters/bbGameFilters.js"></script>
+  <script type="module" src="components/js/bbBuildTable.js"></script> 
   </body>
 </html>

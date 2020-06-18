@@ -1,5 +1,5 @@
 import * as tbl from '../mbkBuildTable.js';
-import * as sit from '../situationFunctions.js';
+import * as sit from '../uniformGameFunctions.js';
 
 //-----------
 // Load Uniform Filter
@@ -19,17 +19,7 @@ $(document).ready(function(){
     .join( "|" );
     
     // Uniform Colors
-    if (searchTerm.includes('White')||
-        searchTerm.includes('Maroon')||
-        searchTerm.includes('Black')||
-        searchTerm.includes('Gray')||
-        searchTerm.includes('Cream')){
-      tbl.mbkTable.column(4).search(searchTerm, true, false).draw();
-      mbkuOptSelected.push(0);
-    }
-    else{
-      sit.situationToggleElse(0,4,mbkuOptSelected,tbl.mbkTable);
-    }
+    mbkuOptSelected = sit.searchTable(0,tbl.mbkTable,searchTerm,mbkuOptSelected,0,4);
   });
 });
 

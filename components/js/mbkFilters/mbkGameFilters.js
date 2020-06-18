@@ -1,5 +1,6 @@
 import * as tbl from '../mbkBuildTable.js';
-import * as sit from '../situationFunctions.js';
+import * as sit from '../uniformGameFunctions.js';
+import * as grp from './mbkGameFiltersApp.js';
 
 //-----------
 // Game A Select
@@ -13,99 +14,56 @@ $(document).ready(function(){
     .get()
     .join( "|" );
 
+    // Identify group
+    var group;
+
+    if(jQuery.inArray(this.value, grp.months) !== -1){
+        group = 0;
+    }
+    else if(jQuery.inArray(this.value, grp.days) !== -1){
+        group = 1;
+    }
+    else if(jQuery.inArray(this.value, grp.headCoaches) !== -1){
+        group = 2;
+    }
+    else if(jQuery.inArray(this.value, grp.gameType) !== -1){
+        group = 3;
+    }
+
+    // Modify search term
     if (searchTerm.includes('November')){
       searchTerm = searchTerm.concat("|-11-");
     }
-
-    if (searchTerm.includes('December')){
+    else if (searchTerm.includes('December')){
       searchTerm = searchTerm.concat("|-12-");
     }
-
-    if (searchTerm.includes('January')){
+    else if (searchTerm.includes('January')){
       searchTerm = searchTerm.concat("|-01-");
     }
-
-    if (searchTerm.includes('February')){
+    else if (searchTerm.includes('February')){
       searchTerm = searchTerm.concat("|-02-");
     }
-
-    if (searchTerm.includes('March')){
+    else if (searchTerm.includes('March')){
       searchTerm = searchTerm.concat("|-03-");
     }
-
-    if (this.value == "SEC Tournament"){
+    else if (this.value == "SEC Tournament"){
       searchTerm = searchTerm.concat("|secT");
     }
-
-    if (this.value == "NCAA Tournament"){
+    else if (this.value == "NCAA Tournament"){
       searchTerm = searchTerm.concat("|ncaa");
     }
     
     // Months
-    if(searchTerm.includes('|-11-')||
-        searchTerm.includes('|-12-')||
-        searchTerm.includes('|-01-')||
-        searchTerm.includes('|-02-')||
-        searchTerm.includes('|-03-')){
-      tbl.mbkTable.column(1).search(searchTerm, true, false).draw();
-      mbkgOptSelectedA.push(0);
-    }
-    else{
-      sit.situationToggleElse(0,1,mbkgOptSelectedA,tbl.mbkTable);
-    }
+    mbkgOptSelectedA = sit.searchTable(group,tbl.mbkTable,searchTerm,mbkgOptSelectedA,0,1);
 
     // Days
-    if(searchTerm.includes('Mond')||
-        searchTerm.includes('Tues')||
-        searchTerm.includes('Wedn')||
-        searchTerm.includes('Thur')||
-        searchTerm.includes('Frid')||
-        searchTerm.includes('Satu')||
-        searchTerm.includes('Sund')){
-      tbl.mbkTable.column(2).search(searchTerm, true, false).draw();
-      mbkgOptSelectedA.push(1);
-    }
-    else{
-      sit.situationToggleElse(1,2,mbkgOptSelectedA,tbl.mbkTable);
-    }
+    mbkgOptSelectedA = sit.searchTable(group,tbl.mbkTable,searchTerm,mbkgOptSelectedA,1,2);
 
     // Head Coaches
-    if(searchTerm.includes('Ben')||
-        searchTerm.includes('Rick')||
-        searchTerm.includes('Rich')||
-        searchTerm.includes('Jim')||
-        searchTerm.includes('Babe')){
-      tbl.mbkTable.column(5).search(searchTerm, true, false).draw();
-      mbkgOptSelectedA.push(2);
-    }
-    else{
-      sit.situationToggleElse(2,5,mbkgOptSelectedA,tbl.mbkTable);
-    }
-    // Regular Season and Tournaments
-    if(searchTerm.includes('Home')||
-        searchTerm.includes('Road')||
-        searchTerm.includes('Neutral')||
-        searchTerm.includes('SEC')||
-        searchTerm.includes('NCAA')||
-        searchTerm.includes('NIT')||
-        searchTerm.includes('Round')||
-        searchTerm.includes('Sweet')||
-        searchTerm.includes('Elite')||
-        searchTerm.includes('Final')||
-        searchTerm.includes('Reg')){
-    console.log(searchTerm);
-      tbl.mbkTable.column(3).search(searchTerm).draw();
-      mbkgOptSelectedA.push(3);
-    }
-    else{
-      sit.situationToggleElse(3,3,mbkgOptSelectedA,tbl.mbkTable);
-    }
-  });
-});
+    mbkgOptSelectedA = sit.searchTable(group,tbl.mbkTable,searchTerm,mbkgOptSelectedA,2,5);
 
-$(function() {
-  $('#mbkGameAClear').click(function() {
-    $("#mbkGameA").val('').trigger('change');
+    // Regular Season and Tournaments
+    mbkgOptSelectedA = sit.searchTableB(group,tbl.mbkTable,searchTerm,mbkgOptSelectedA,3,3);
   });
 });
 //-----------
@@ -122,98 +80,56 @@ $(document).ready(function(){
     .get()
     .join( "|" );
 
+    // Identify group
+    var group;
+
+    if(jQuery.inArray(this.value, grp.months) !== -1){
+        group = 0;
+    }
+    else if(jQuery.inArray(this.value, grp.days) !== -1){
+        group = 1;
+    }
+    else if(jQuery.inArray(this.value, grp.headCoaches) !== -1){
+        group = 2;
+    }
+    else if(jQuery.inArray(this.value, grp.gameType) !== -1){
+        group = 3;
+    }
+
+    // Modify search term
     if (searchTerm.includes('November')){
       searchTerm = searchTerm.concat("|-11-");
     }
-
-    if (searchTerm.includes('December')){
+    else if (searchTerm.includes('December')){
       searchTerm = searchTerm.concat("|-12-");
     }
-
-    if (searchTerm.includes('January')){
+    else if (searchTerm.includes('January')){
       searchTerm = searchTerm.concat("|-01-");
     }
-
-    if (searchTerm.includes('February')){
+    else if (searchTerm.includes('February')){
       searchTerm = searchTerm.concat("|-02-");
     }
-
-    if (searchTerm.includes('March')){
+    else if (searchTerm.includes('March')){
       searchTerm = searchTerm.concat("|-03-");
     }
-
-    if (this.value == "SEC Tournament"){
+    else if (this.value == "SEC Tournament"){
       searchTerm = searchTerm.concat("|secT");
     }
-
-    if (this.value == "NCAA Tournament"){
+    else if (this.value == "NCAA Tournament"){
       searchTerm = searchTerm.concat("|ncaa");
     }
     
     // Months
-    if(searchTerm.includes('|-11-')||
-        searchTerm.includes('|-12-')||
-        searchTerm.includes('|-01-')||
-        searchTerm.includes('|-02-')||
-        searchTerm.includes('|-03-')){
-      tbl.mbkTable.column(1).search(searchTerm, true, false).draw();
-      mbkgOptSelectedB.push(0);
-    }
-    else{
-      sit.situationToggleElse(0,1,mbkgOptSelectedB,tbl.mbkTable);
-    }
+    mbkgOptSelectedB = sit.searchTable(group,tbl.mbkTable,searchTerm,mbkgOptSelectedB,0,1);
 
     // Days
-    if(searchTerm.includes('Mond')||
-        searchTerm.includes('Tues')||
-        searchTerm.includes('Wedn')||
-        searchTerm.includes('Thur')||
-        searchTerm.includes('Frid')||
-        searchTerm.includes('Satu')||
-        searchTerm.includes('Sund')){
-      tbl.mbkTable.column(2).search(searchTerm, true, false).draw();
-      mbkgOptSelectedB.push(1);
-    }
-    else{
-      sit.situationToggleElse(1,2,mbkgOptSelectedB,tbl.mbkTable);
-    }
+    mbkgOptSelectedB = sit.searchTable(group,tbl.mbkTable,searchTerm,mbkgOptSelectedB,1,2);
 
     // Head Coaches
-    if(searchTerm.includes('Ben')||
-        searchTerm.includes('Rick')||
-        searchTerm.includes('Rich')||
-        searchTerm.includes('Jim')||
-        searchTerm.includes('Babe')){
-      tbl.mbkTable.column(5).search(searchTerm, true, false).draw();
-      mbkgOptSelectedB.push(2);
-    }
-    else{
-      sit.situationToggleElse(2,5,mbkgOptSelectedB,tbl.mbkTable);
-    }
-    // Regular Season and Tournaments
-    if(searchTerm.includes('Home')||
-        searchTerm.includes('Road')||
-        searchTerm.includes('Neutral')||
-        searchTerm.includes('SEC')||
-        searchTerm.includes('NCAA')||
-        searchTerm.includes('NIT')||
-        searchTerm.includes('Round')||
-        searchTerm.includes('Sweet')||
-        searchTerm.includes('Elite')||
-        searchTerm.includes('Final')||
-        searchTerm.includes('Reg')){
-      tbl.mbkTable.column(3).search(searchTerm, true, false).draw();
-      mbkgOptSelectedB.push(3);
-    }
-    else{
-      sit.situationToggleElse(3,3,mbkgOptSelectedB,tbl.mbkTable);
-    }
-  });
-});
+    mbkgOptSelectedB = sit.searchTable(group,tbl.mbkTable,searchTerm,mbkgOptSelectedB,2,5);
 
-$(function() {
-  $('#mbkGameBClear').click(function() {
-    $("#mbkGameB").val('').trigger('change');
+    // Regular Season and Tournaments
+    mbkgOptSelectedB = sit.searchTableB(group,tbl.mbkTable,searchTerm,mbkgOptSelectedB,3,3);
   });
 });
 //-----------
@@ -230,98 +146,56 @@ $(document).ready(function(){
     .get()
     .join( "|" );
 
+    // Identify group
+    var group;
+
+    if(jQuery.inArray(this.value, grp.months) !== -1){
+        group = 0;
+    }
+    else if(jQuery.inArray(this.value, grp.days) !== -1){
+        group = 1;
+    }
+    else if(jQuery.inArray(this.value, grp.headCoaches) !== -1){
+        group = 2;
+    }
+    else if(jQuery.inArray(this.value, grp.gameType) !== -1){
+        group = 3;
+    }
+
+    // Modify search term
     if (searchTerm.includes('November')){
       searchTerm = searchTerm.concat("|-11-");
     }
-
-    if (searchTerm.includes('December')){
+    else if (searchTerm.includes('December')){
       searchTerm = searchTerm.concat("|-12-");
     }
-
-    if (searchTerm.includes('January')){
+    else if (searchTerm.includes('January')){
       searchTerm = searchTerm.concat("|-01-");
     }
-
-    if (searchTerm.includes('February')){
+    else if (searchTerm.includes('February')){
       searchTerm = searchTerm.concat("|-02-");
     }
-
-    if (searchTerm.includes('March')){
+    else if (searchTerm.includes('March')){
       searchTerm = searchTerm.concat("|-03-");
     }
-
-    if (this.value == "SEC Tournament"){
+    else if (this.value == "SEC Tournament"){
       searchTerm = searchTerm.concat("|secT");
     }
-
-    if (this.value == "NCAA Tournament"){
+    else if (this.value == "NCAA Tournament"){
       searchTerm = searchTerm.concat("|ncaa");
     }
     
     // Months
-    if(searchTerm.includes('|-11-')||
-        searchTerm.includes('|-12-')||
-        searchTerm.includes('|-01-')||
-        searchTerm.includes('|-02-')||
-        searchTerm.includes('|-03-')){
-      tbl.mbkTable.column(1).search(searchTerm, true, false).draw();
-      mbkgOptSelectedC.push(0);
-    }
-    else{
-      sit.situationToggleElse(0,1,mbkgOptSelectedC,tbl.mbkTable);
-    }
+    mbkgOptSelectedC = sit.searchTable(group,tbl.mbkTable,searchTerm,mbkgOptSelectedC,0,1);
 
     // Days
-    if(searchTerm.includes('Mond')||
-        searchTerm.includes('Tues')||
-        searchTerm.includes('Wedn')||
-        searchTerm.includes('Thur')||
-        searchTerm.includes('Frid')||
-        searchTerm.includes('Satu')||
-        searchTerm.includes('Sund')){
-      tbl.mbkTable.column(2).search(searchTerm, true, false).draw();
-      mbkgOptSelectedC.push(1);
-    }
-    else{
-      sit.situationToggleElse(1,2,mbkgOptSelectedC,tbl.mbkTable);
-    }
+    mbkgOptSelectedC = sit.searchTable(group,tbl.mbkTable,searchTerm,mbkgOptSelectedC,1,2);
 
     // Head Coaches
-    if(searchTerm.includes('Ben')||
-        searchTerm.includes('Rick')||
-        searchTerm.includes('Rich')||
-        searchTerm.includes('Jim')||
-        searchTerm.includes('Babe')){
-      tbl.mbkTable.column(5).search(searchTerm, true, false).draw();
-      mbkgOptSelectedC.push(2);
-    }
-    else{
-      sit.situationToggleElse(2,5,mbkgOptSelectedC,tbl.mbkTable);
-    }
-    // Regular Season and Tournaments
-    if(searchTerm.includes('Home')||
-        searchTerm.includes('Road')||
-        searchTerm.includes('Neutral')||
-        searchTerm.includes('SEC')||
-        searchTerm.includes('NCAA')||
-        searchTerm.includes('NIT')||
-        searchTerm.includes('Round')||
-        searchTerm.includes('Sweet')||
-        searchTerm.includes('Elite')||
-        searchTerm.includes('Final')||
-        searchTerm.includes('Reg')){
-      tbl.mbkTable.column(3).search(searchTerm, true, false).draw();
-      mbkgOptSelectedC.push(3);
-    }
-    else{
-      sit.situationToggleElse(3,3,mbkgOptSelectedC,tbl.mbkTable);
-    }
-  });
-});
+    mbkgOptSelectedC = sit.searchTable(group,tbl.mbkTable,searchTerm,mbkgOptSelectedC,2,5);
 
-$(function() {
-  $('#mbkGameCClear').click(function() {
-    $("#mbkGameC").val('').trigger('change');
+    // Regular Season and Tournaments
+    mbkgOptSelectedC = sit.searchTableB(group,tbl.mbkTable,searchTerm,mbkgOptSelectedC,3,3);
   });
 });
 //-----------

@@ -1,4 +1,11 @@
-import * as sit from '../situationFunctions.js';
+import * as sit from '../uniformGameFunctions.js';
+
+// Define Groups
+export var alternates = ["All Alternates","Egg Bowl Alternates"];
+export var helmets = ["Maroon Helmets","Shiny Maroon Helmets","Matte Maroon Helmets","White Helmets","Silver Helmets","Gold Helmets","Bulldog Helmets"];
+export var jerseys = ["Maroon Jerseys","White Jerseys","Black Jerseys","Gray Jerseys"];
+export var pants = ["White Pants","Maroon Pants","Black Pants","Gray Pants","Silver Pants"];
+export var patches = ["DWS 100","Nick Bell"];
 
 // Load Uniform Filters
 $(function(){ $("#fbUniformA").selectpicker('render'); })
@@ -21,12 +28,6 @@ var enabled = {A: 1, B: 1, C: 1, D: 1, E: 1};
 // 0: Group 0 Selected
 // -1: No Group Selected
 var selected = {A: -1, B: -1, C: -1};
-
-var alternates = ["All Alternates","Egg Bowl Alternates"];
-var helmets = ["Maroon Helmets","Shiny Maroon Helmets","Matte Maroon Helmets","White Helmets","Silver Helmets","Gold Helmets","Bulldog Helmets"];
-var jerseys = ["Maroon Jerseys","White Helmets","Black Jerseys","Gray Jerseys"];
-var pants = ["White Pants","Maroon Pants","Black Pants","Gray Pants","Silver Pants"];
-var patches = ["DWS 100","Nick Bell"];
 
 // Select A
 $(document).ready(function (){

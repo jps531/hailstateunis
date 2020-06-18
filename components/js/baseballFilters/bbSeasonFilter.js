@@ -3,15 +3,15 @@ import * as tbl from '../bbBuildTable.js';
 //-----------
 // Load Season and Opponent Filters
 $(function(){ $("#bbSelectYear").selectpicker('render'); })
-$(function(){ $("#bbOpponent").selectpicker('render'); })
+$(function(){ $("#bbSelectOpponent").selectpicker('render'); })
 $.fn.selectpicker.Constructor.DEFAULTS.multipleSeparator = ' | ';
 
 window.onload = function(){
     if ($("#bbSelectYear").val().length){
         $("#bbSelectYear").val('').trigger('change');
     }
-    if ($("#bbOpponent").val().length){
-      $("#bbOpponent").val('').trigger('change');
+    if ($("#bbSelectOpponent").val().length){
+      $("#bbSelectOpponent").val('').trigger('change');
   }
 };
 //-----------

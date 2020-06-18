@@ -1,3 +1,5 @@
+import * as wlt from './tableFunctions.js';
+
 //-----------
 // Initialize Table
 export var mbkTable = $('#mbkTable').DataTable( {
@@ -94,89 +96,15 @@ $(function() {
 //-----------
 // W/L Tally
 var wlTotal = '';
-var wins = 0;
-var losses = 0;
-var ties = 0;
-
-// Calculate Wins + Losses
-function getRecord(){
-  wins = 0;
-  losses = 0;
-  ties = 0;
-  for (var z=0; z < mbkTable.rows().count(); z++){
-    if (mbkTable.row(z, {search:'applied'})[0].length > 0){
-      if (mbkTable.cell(z,5).data().toString().includes('Win')){
-        wins += 1;
-      }
-      if (mbkTable.cell(z,5).data().toString().includes('Loss')){
-        losses += 1;
-      }
-      if (mbkTable.cell(z,5).data().toString().includes('TIE')){
-        ties += 1;
-      }
-    }
-    else{
-    }
-  }
-}
-
-// Create String to Display
-function makeString(wins, losses, ties){
-  wlTotal = '<span class="badge badge-';
-  var percentage;
-
-  if (wins + losses > 0){
-    percentage = ((wins + (.5 * ties)) / (wins + losses + ties)).toFixed(3);
-  }
-  else{
-    percentage = 'no';
-  }
-
-  if (percentage > .5){
-    wlTotal += 'success">';
-  }
-
-  else if (percentage < .5){
-    wlTotal += 'danger">';
-  }
-
-  else if (percentage == .5 || percentage == 'no'){
-    wlTotal += 'warning">';
-  }
-
-  if (wins != 1 && losses != 1){
-    wlTotal += wins + ' Wins, ' + losses + ' Losses';
-  }
-  else if (wins == 1 && losses != 1){
-    wlTotal += wins + ' Win, ' + losses + ' Losses';
-  }
-  else if (wins != 1 && losses == 1){
-    wlTotal += wins + ' Wins, ' + losses + ' Loss';
-  }
-  else if (wins == 1 && losses == 1){
-    wlTotal += wins + ' Win, ' + losses + ' Loss';
-  }
-
-  if (ties == 1){
-    wlTotal += ', ' + ties + ' Tie';
-  }
-  else if (ties >= 1){
-    wlTotal += ', ' + ties + ' Ties';
-  }
-
-  wlTotal += ' (' + percentage + ' Record)</span>';
-}
 
 // Display String for Full Table
-getRecord();
-makeString(wins, losses, ties);
+wlTotal = wlt.createWL(mbkTable, 5);
 document.getElementById('winLossTotal').innerHTML = wlTotal;
 
 // Alter String Each Time the Table is Filtered
 $(function() {
   mbkTable.on( 'search', function () {
-    getRecord();
-    makeString(wins, losses, ties);
+    wlTotal = wlt.createWL(mbkTable, 5);
     document.getElementById('winLossTotal').innerHTML = wlTotal;
   });
 });
