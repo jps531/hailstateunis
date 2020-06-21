@@ -79,8 +79,7 @@
   </div>
 
   <!-- Javascript -->
-  <script type="module" src="components/js/baseballFilters/bbOpponentFilter.js"></script>
-  <script type="module" src="components/js/baseballFilters/bbSeasonFilter.js"></script>
+  <script type="module" src="components/js/baseballFilters/bbSznOppFilters.js"></script>
   <script type="module" src="components/js/baseballFilters/bbUniformFiltersApp.js"></script>
   <script type="module" src="components/js/baseballFilters/bbUniformFilters.js"></script>
   <script type="module" src="components/js/baseballFilters/bbGameFiltersApp.js"></script>

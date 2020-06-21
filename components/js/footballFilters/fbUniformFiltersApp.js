@@ -1,4 +1,5 @@
 import * as sit from '../uniformGameFunctions.js';
+import * as wlt from '../tableFunctions.js';
 
 // Define Groups
 export var alternates = ["All Alternates","Egg Bowl Alternates"];
@@ -62,14 +63,12 @@ $(document).ready(function (){
             
             // If Select B isn't visible, make it visible
             if(!testSelects.B){
-                $('#fbUniformA').selectpicker('toggle');
                 testSelects.B = 1;
                 $('#uniformB').show();
             }
 
             // If Select C isn't visible and Select B has a value, make Select C visible
             else if(!testSelects.C && testSelects.B == 2){
-                $('#fbUniformA').selectpicker('toggle');
                 testSelects.C = 1;
                 $('#uniformC').show();
             }
@@ -158,7 +157,6 @@ $(document).ready(function (){
 
             // If Select C isn't visible and Select A has a value, make Select C visible
             if(!testSelects.C && testSelects.A == 2){
-                $('#fbUniformB').selectpicker('toggle');
                 testSelects.C = 1;
                 $('#uniformC').show();
             }
@@ -287,3 +285,12 @@ $(function() {
         }
     });
 });
+
+//-----------
+// Auto Load URL Parameters
+$(document).ready(function(){
+    wlt.urlTrigger('uniformA','#fbUniformA');
+    wlt.urlTrigger('uniformB','#fbUniformB');
+    wlt.urlTrigger('uniformC','#fbUniformC');
+  });
+  //-----------

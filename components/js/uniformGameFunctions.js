@@ -1,31 +1,59 @@
 //-----------
 // Uniform / Game Filter Functions
 
-// Function: disableOptGroup
-// Purpose: Disables Option Group
-// Input(s): selectID: string; name of select which is being partially disabled
-//           optGroupIndex: integer; index of option group which is being disabled
-// Output(s): none
-export function disableOptGroup(selectID, optGroupIndex){
-    var selectobject;
-    selectobject = document.getElementById(selectID).getElementsByTagName("optgroup");
-    selectobject[optGroupIndex].disabled = true;
-    selectID = "#" + selectID;
-    $(selectID).selectpicker('refresh');
-}
-  
-// Function: enableOptGroup
-// Purpose: Re-enables Option Group
-// Input(s): selectID: string; name of select which is being partially re-enabled
-//           optGroupIndex: integer; index of option group which is being re-enabled
-// Output(s): none
-export function enableOptGroup(selectID, optGroupIndex){
-    var selectobject;
-    selectobject = document.getElementById(selectID).getElementsByTagName("optgroup");
-    selectobject[optGroupIndex].disabled = false;
-    selectID = "#" + selectID;
-    $(selectID).selectpicker('refresh');
-}
+// Function: searchTable
+// Purpose: Searches the Table
+// Input(s): optGroupIndex: integer; index of option group which is selected
+//           table: DataTable; table object that is being searched
+//           searchTerm: string; term being searched
+//           optSelect: array; list of option groups that are currently being searched
+//           groupNumber: integer; index of option group that is being checked
+//           columnNumber: integer; index of column being searched
+// Output(s): optSelect: array
+export function searchTable(optGroupIndex,table,searchTerm,optSelect,groupNumber,columnNumber){
+    if(optGroupIndex == groupNumber){
+        table.column(columnNumber).search(searchTerm, true, false).draw();
+        optSelect.push(groupNumber);
+    }
+    else{
+        if (optSelect.includes(groupNumber)){
+            table.columns(columnNumber).search('').draw();
+            for (var z=0;z<optSelect.length;z++){
+                if(optSelect[z] == groupNumber){
+                    optSelect.splice(z,1);
+                }
+            }
+        }
+    }
+    return optSelect;
+};
+
+// Function: searchTableB
+// Purpose: Searches the Table *** without specific regular expression ***
+// Input(s): optGroupIndex: integer; index of option group which is selected
+//           table: DataTable; table object that is being searched
+//           searchTerm: string; term being searched
+//           optSelect: array; list of option groups that are currently being searched
+//           groupNumber: integer; index of option group that is being checked
+//           columnNumber: integer; index of column being searched
+// Output(s): optSelect: array
+export function searchTableB(optGroupIndex,table,searchTerm,optSelect,groupNumber,columnNumber){
+    if(optGroupIndex == groupNumber){
+        table.column(columnNumber).search(searchTerm).draw();
+        optSelect.push(groupNumber);
+    }
+    else{
+        if (optSelect.includes(groupNumber)){
+            table.columns(columnNumber).search('').draw();
+            for (var z=0;z<optSelect.length;z++){
+                if(optSelect[z] == columnNumber){
+                    optSelect.splice(z,1);
+                }
+            }
+        }
+    }
+    return optSelect;
+};
 
 // Function: enableDisableGroups
 // Purpose: Enables/Disables All Appropirate Groups
@@ -85,57 +113,30 @@ export function enableDisableGroups(enabled, selected, selectIDa, selectIDb, sel
     }
 }
 
-// Function: searchTable
-// Purpose: Searches the Table
-// Input(s): optGroupIndex: integer; index of option group which is selected
-//           table: DataTable; table object that is being searched
-//           searchTerm: string; term being searched
-//           optSelect: array; list of option groups that are currently being searched
-//           groupNumber: integer; index of option group that is being checked
-//           columnNumber: integer; index of column being searched
-// Output(s): optSelect: array
-export function searchTable(optGroupIndex,table,searchTerm,optSelect,groupNumber,columnNumber){
-    if(optGroupIndex == groupNumber){
-        table.column(columnNumber).search(searchTerm, true, false).draw();
-        optSelect.push(groupNumber);
-    }
-    else{
-        if (optSelect.includes(groupNumber)){
-            table.columns(columnNumber).search('').draw();
-            for (var z=0;z<optSelect.length;z++){
-                if(optSelect[z] == groupNumber){
-                    optSelect.splice(z,1);
-                }
-            }
-        }
-    }
-    return optSelect;
-};
+// Function: disableOptGroup
+// Purpose: Disables Option Group
+// Input(s): selectID: string; name of select which is being partially disabled
+//           optGroupIndex: integer; index of option group which is being disabled
+// Output(s): none
+function disableOptGroup(selectID, optGroupIndex){
+    var selectobject;
+    selectobject = document.getElementById(selectID).getElementsByTagName("optgroup");
+    selectobject[optGroupIndex].disabled = true;
+    selectID = "#" + selectID;
+    $(selectID).selectpicker('refresh');
+}
+  
+// Function: enableOptGroup
+// Purpose: Re-enables Option Group
+// Input(s): selectID: string; name of select which is being partially re-enabled
+//           optGroupIndex: integer; index of option group which is being re-enabled
+// Output(s): none
+function enableOptGroup(selectID, optGroupIndex){
+    var selectobject;
+    selectobject = document.getElementById(selectID).getElementsByTagName("optgroup");
+    selectobject[optGroupIndex].disabled = false;
+    selectID = "#" + selectID;
+    $(selectID).selectpicker('refresh');
+}
 
-// Function: searchTableB
-// Purpose: Searches the Table *** without specific regular expression ***
-// Input(s): optGroupIndex: integer; index of option group which is selected
-//           table: DataTable; table object that is being searched
-//           searchTerm: string; term being searched
-//           optSelect: array; list of option groups that are currently being searched
-//           groupNumber: integer; index of option group that is being checked
-//           columnNumber: integer; index of column being searched
-// Output(s): optSelect: array
-export function searchTableB(optGroupIndex,table,searchTerm,optSelect,groupNumber,columnNumber){
-    if(optGroupIndex == groupNumber){
-        table.column(columnNumber).search(searchTerm).draw();
-        optSelect.push(groupNumber);
-    }
-    else{
-        if (optSelect.includes(groupNumber)){
-            table.columns(columnNumber).search('').draw();
-            for (var z=0;z<optSelect.length;z++){
-                if(optSelect[z] == columnNumber){
-                    optSelect.splice(z,1);
-                }
-            }
-        }
-    }
-    return optSelect;
-};
 //-----------

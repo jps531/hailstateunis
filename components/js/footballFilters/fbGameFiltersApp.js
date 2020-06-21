@@ -1,4 +1,5 @@
 import * as sit from '../uniformGameFunctions.js';
+import * as wlt from '../tableFunctions.js';
 
 // Define Groups
 export var gameType = ["Bowl Games", "Home", "Road", "Neutral"];
@@ -58,14 +59,12 @@ $(document).ready(function (){
             
             // If Select B isn't visible, make it visible
             if(!testSelects.B){
-                $('#fbGameA').selectpicker('toggle');
                 testSelects.B = 1;
                 $('#gameB').show();
             }
 
             // If Select C isn't visible and Select B has a value, make Select C visible
             else if(!testSelects.C && testSelects.B == 2){
-                $('#fbGameA').selectpicker('toggle');
                 testSelects.C = 1;
                 $('#gameC').show();
             }
@@ -143,11 +142,9 @@ $(document).ready(function (){
         // If Select B has a value
         if(this.value){
             testSelects.B = 2;
-            
 
             // If Select C isn't visible and Select A has a value, make Select C visible
             if(!testSelects.C && testSelects.A == 2){
-                $('#fbGameB').selectpicker('toggle');
                 testSelects.C = 1;
                 $('#gameC').show();
             }
@@ -265,3 +262,12 @@ $(function() {
         }
     });
 });
+
+//-----------
+// Auto Load URL Parameters
+$(document).ready(function(){
+    wlt.urlTrigger('gameA','#fbGameA');
+    wlt.urlTrigger('gameB','#fbGameB');
+    wlt.urlTrigger('gameC','#fbGameC');
+});
+//-----------

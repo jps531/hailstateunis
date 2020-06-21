@@ -1,6 +1,7 @@
 import * as tbl from '../bbBuildTable.js';
 import * as sit from '../uniformGameFunctions.js';
 import * as grp from './bbGameFiltersApp.js';
+import * as wlt from '../tableFunctions.js';
 
 //-----------
 // Game A Select
@@ -293,5 +294,14 @@ $(document).ready(function(){
     // Game Type
     bbgOptSelectedC = sit.searchTable(group,tbl.baseballTable,searchTerm,bbgOptSelectedC,6,3);
   });
+});
+//-----------
+
+//-----------
+// Auto Load URL Parameters
+$(document).ready(function(){
+    wlt.urlTrigger('gameA','#bbGameA');
+    wlt.urlTrigger('gameB','#bbGameB');
+    wlt.urlTrigger('gameC','#bbGameC');
 });
 //-----------

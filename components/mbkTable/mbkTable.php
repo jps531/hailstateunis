@@ -113,7 +113,7 @@
               <td class='pa' data-sort='" . $row["points_against"] . "'>
                 <span class='badge badge-" . $opponentBadge . "'>" . $row["points_against"] . "</span>
               </td>
-              <td class='opponent' data-search='" . $row["opponentName"] . "'>
+              <td class='opponent'" . 'data-search="' . $row["opponentName"] . '">' . "
                 <span class='badge' style='background-color: " . $row["colorA"] . "; color: "  . $row["colorB"] .  ";'>" . $row["opponentName"] . "</span>
               </td>
             </tr>";

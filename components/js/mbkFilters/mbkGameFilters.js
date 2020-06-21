@@ -1,6 +1,7 @@
 import * as tbl from '../mbkBuildTable.js';
 import * as sit from '../uniformGameFunctions.js';
 import * as grp from './mbkGameFiltersApp.js';
+import * as wlt from '../tableFunctions.js';
 
 //-----------
 // Game A Select
@@ -197,5 +198,14 @@ $(document).ready(function(){
     // Regular Season and Tournaments
     mbkgOptSelectedC = sit.searchTableB(group,tbl.mbkTable,searchTerm,mbkgOptSelectedC,3,3);
   });
+});
+//-----------
+
+//-----------
+// Auto Load URL Parameters
+$(document).ready(function(){
+  wlt.urlTrigger('gameA','#mbkGameA');
+  wlt.urlTrigger('gameB','#mbkGameB');
+  wlt.urlTrigger('gameC','#mbkGameC');
 });
 //-----------

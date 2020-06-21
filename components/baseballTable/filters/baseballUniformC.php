@@ -40,14 +40,14 @@
   <optgroup label="Jersey Designs">
     <option>White 85</option>
     <option>White MS</option>
-    <option>White STATE</option>
+    <option>White State</option>
     <option>White Hail State</option>
     <option>White St. Pat's</option>
     <option>White Mother's Day</option>
     <option disabled="disabled">-</option>
     <option>Maroon 85</option>
     <option>Maroon MS</option>
-    <option>Maroon STATE</option>
+    <option>Maroon State</option>
     <option>Maroon Bulldogs</option>
     <option disabled="disabled">-</option>
     <option>Gray 'State' Script</option>

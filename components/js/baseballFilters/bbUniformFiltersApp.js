@@ -1,4 +1,5 @@
 import * as sit from '../uniformGameFunctions.js';
+import * as wlt from '../tableFunctions.js';
 
 // Define Groups
 export var jerseyColor = ["White Jerseys","Maroon Jerseys","Gray Jerseys","Black Jerseys","Cream Jerseys","Camo Jerseys","Wool Jerseys","Teal Jerseys"];
@@ -6,8 +7,8 @@ export var jerseyType = ["Button-Up","Pullover","Two-Button","Vest"];
 export var jerseyAttribute = ["Solid","Pinstripe"];
 export var hats = ["Maroon Hats","Black Hats","Green Hats","Cream Hats","White Hats","Maroon + White Panel Hats","Black + White Panel Hats","Green + White Panel Hats"];
 export var pants = ["Solid White Pants","Solid Gray Pants","White Pinstripe Pants","Gray Pinstripe Pants","Black Pants"];
-export var jerseyDesigns = ["White 85","White MS","White STATE","White Hail State","White St. Pat's","White Mother's Day",
-                     "Maroon 85","Maroon MS","Maroon STATE","Maroon Bulldogs","Gray 'State' Script","Gray 'Mississippi State' Script","Gray MS","Gray Hail State"];
+export var jerseyDesigns = ["White 85","White MS","White State","White Hail State","White St. Pat's","White Mother's Day",
+                     "Maroon 85","Maroon MS","Maroon State","Maroon Bulldogs","Gray 'State' Script","Gray 'Mississippi State' Script","Gray MS","Gray Hail State"];
 
 // Load Uniform Filters
 $(function(){ $("#bbUniformA").selectpicker('render'); })
@@ -68,14 +69,12 @@ $(document).ready(function (){
             
             // If Select B isn't visible, make it visible
             if(!testSelects.B){
-                $('#bbUniformA').selectpicker('toggle');
                 testSelects.B = 1;
                 $('#uniformB').show();
             }
 
             // If Select C isn't visible and Select B has a value, make Select C visible
             else if(!testSelects.C && testSelects.B == 2){
-                $('#bbUniformA').selectpicker('toggle');
                 testSelects.C = 1;
                 $('#uniformC').show();
             }
@@ -171,7 +170,6 @@ $(document).ready(function (){
 
             // If Select C isn't visible and Select A has a value, make Select C visible
             if(!testSelects.C && testSelects.A == 2){
-                $('#bbUniformB').selectpicker('toggle');
                 testSelects.C = 1;
                 $('#uniformC').show();
             }
@@ -311,3 +309,12 @@ $(function() {
         }
     });
 });
+
+//-----------
+// Auto Load URL Parameters
+$(document).ready(function(){
+    wlt.urlTrigger('uniformA','#bbUniformA');
+    wlt.urlTrigger('uniformB','#bbUniformB');
+    wlt.urlTrigger('uniformC','#bbUniformC');
+  });
+  //-----------

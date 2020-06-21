@@ -1,5 +1,6 @@
 import * as tbl from '../wbkBuildTable.js';
 import * as sit from '../uniformGameFunctions.js';
+import * as wlt from '../tableFunctions.js';
 
 //-----------
 // Load Uniform Filter
@@ -27,5 +28,12 @@ $(function() {
   $('#wbkUniformAClear').click(function() {
     $("#wbkUniformA").val('').trigger('change');
   });
+});
+//-----------
+
+//-----------
+// Auto Load URL Parameters
+$(document).ready(function(){
+  wlt.urlTrigger('uniform','#wbkUniformA');
 });
 //-----------

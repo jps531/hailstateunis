@@ -73,8 +73,7 @@
   </div>
 
   <!-- Javascript -->
-  <script type="module" src="components/js/mbkFilters/mbkOpponentFilter.js"></script>
-  <script type="module" src="components/js/mbkFilters/mbkSeasonFilter.js"></script>
+  <script type="module" src="components/js/mbkFilters/mbkSznOppFilters.js"></script>
   <script type="module" src="components/js/mbkFilters/mbkUniformFilter.js"></script>
   <script type="module" src="components/js/mbkFilters/mbkGameFiltersApp.js"></script>
   <script type="module" src="components/js/mbkFilters/mbkGameFilters.js"></script>

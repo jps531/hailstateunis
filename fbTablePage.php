@@ -79,8 +79,7 @@
   </div>
 
   <!-- Javascript -->
-  <script type="module" src="components/js/footballFilters/fbOpponentFilter.js"></script>
-  <script type="module" src="components/js/footballFilters/fbSeasonFilter.js"></script>
+  <script type="module" src="components/js/footballFilters/fbSznOppFilters.js"></script>
   <script type="module" src="components/js/footballFilters/fbUniformFiltersApp.js"></script>
   <script type="module" src="components/js/footballFilters/fbUniformFilters.js"></script>
   <script type="module" src="components/js/footballFilters/fbGameFiltersApp.js"></script>

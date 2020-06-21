@@ -1,6 +1,7 @@
 import * as tbl from '../fbBuildTable.js';
 import * as sit from '../uniformGameFunctions.js';
 import * as grp from './fbUniformFiltersApp.js';
+import * as wlt from '../tableFunctions.js';
 
 //-----------
 // Uniform A Select
@@ -373,3 +374,12 @@ $(document).ready(function(){
   });
 });
 //-----------
+
+//-----------
+// Auto Load URL Parameters
+$(document).ready(function(){
+    wlt.urlTrigger('uniformA','#fbUniformA');
+    wlt.urlTrigger('uniformB','#fbUniformB');
+    wlt.urlTrigger('uniformC','#fbUniformC');
+  });
+  //-----------

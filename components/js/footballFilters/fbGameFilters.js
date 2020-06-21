@@ -1,6 +1,7 @@
 import * as tbl from '../fbBuildTable.js';
 import * as sit from '../uniformGameFunctions.js';
 import * as grp from './fbGameFiltersApp.js';
+import * as wlt from '../tableFunctions.js';
 
 //-----------
 // Game A Select
@@ -194,5 +195,14 @@ $(document).ready(function(){
     // Head Coaches
     fbgOptSelectedC = sit.searchTable(group,tbl.table,searchTerm,fbgOptSelectedC,3,11);
   });
+});
+//-----------
+
+//-----------
+// Auto Load URL Parameters
+$(document).ready(function(){
+  wlt.urlTrigger('gameA','#fbGameA');
+  wlt.urlTrigger('gameB','#fbGameB');
+  wlt.urlTrigger('gameC','#fbGameC');
 });
 //-----------

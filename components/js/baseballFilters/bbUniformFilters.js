@@ -1,6 +1,7 @@
 import * as tbl from '../bbBuildTable.js';
 import * as sit from '../uniformGameFunctions.js';
 import * as grp from './bbUniformFiltersApp.js';
+import * as wlt from '../tableFunctions.js';
 
 //-----------
 // Uniform A Select
@@ -402,4 +403,13 @@ $(document).ready(function(){
       bbuOptSelectedC = sit.searchTableB(group,tbl.baseballTable,searchTerm,bbuOptSelectedC,5,12);
     });
   });
+//-----------
+
+//-----------
+// Auto Load URL Parameters
+$(document).ready(function(){
+  wlt.urlTrigger('uniformA','#bbUniformA');
+  wlt.urlTrigger('uniformB','#bbUniformB');
+  wlt.urlTrigger('uniformC','#bbUniformC');
+});
 //-----------

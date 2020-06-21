@@ -1,6 +1,7 @@
 import * as tbl from '../wbkBuildTable.js';
 import * as sit from '../uniformGameFunctions.js';
 import * as grp from './wbkGameFiltersApp.js';
+import * as wlt from '../tableFunctions.js';
 
 //-----------
 // Game A Select
@@ -206,5 +207,14 @@ $(document).ready(function(){
     // Regular Season and Tournaments
     wbkgOptSelectedC = sit.searchTableB(group,tbl.wbkTable,searchTerm,wbkgOptSelectedC,3,3);
   });
+});
+//-----------
+
+//-----------
+// Auto Load URL Parameters
+$(document).ready(function(){
+  wlt.urlTrigger('gameA','#wbkGameA');
+  wlt.urlTrigger('gameB','#wbkGameB');
+  wlt.urlTrigger('gameC','#wbkGameC');
 });
 //-----------

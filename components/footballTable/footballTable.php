@@ -140,7 +140,7 @@
               <td class='article' title=\"" . $row["article_title"] . "\" data-search='" . $headcoach . "'>
               " . $row["article_link"] . "
               </td>
-              <td class='opponent' data-search='" . $row["opponentName"] . "'>
+              <td class='opponent'" . 'data-search="' . $row["opponentName"] . '">' . "
                 <span class='badge' style='background-color: " . $row["colorA"] . "; color: "  . $row["colorB"] .  ";'>" . $row["opponentName"] . "</span>
               </td>
             </tr>";
