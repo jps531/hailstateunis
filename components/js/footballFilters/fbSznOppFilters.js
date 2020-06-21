@@ -22,6 +22,10 @@ $(document).ready(function(){
     .join( "|" );
     tbl.table.column(0).search(searchTerm, true, false).draw();
 
+    // Add to URL
+    wlt.setURL(searchTerm,'season');
+
+    // Toggle Page Size
     [filterTriggeredSzn,pageLengthSzn] = wlt.togglePageSize(filterTriggeredSzn,filterTriggeredOpp,pageLengthSzn,pageLengthOpp,tbl.table,this.value);
   });
 });
@@ -52,6 +56,10 @@ $(document).ready(function(){
       tbl.table.column(12).search(searchTerm, true, false).draw();
     }
 
+    // Add to URL
+    wlt.setURL(searchTerm,'opponent');
+
+    // Toggle Page Size
     [filterTriggeredOpp,pageLengthOpp] = wlt.togglePageSize(filterTriggeredOpp,filterTriggeredSzn,pageLengthOpp,pageLengthSzn,tbl.table,this.value);
   });
 });
@@ -66,16 +74,6 @@ $(function() {
 //-----------
 // Auto Load URL Parameters
 $(document).ready(function(){
-
-  // Clear filters if currently loaded
-  if ($("#selectYear").val().length){
-    $("#selectYear").val('').trigger('change');
-  }
-  if ($("#selectOpponent").val().length){
-    $("#selectOpponent").val('').trigger('change');
-  }
-
-  // Load URL parameters into filters
   wlt.urlTrigger('season','#selectYear');
   wlt.urlTrigger('opponent','#selectOpponent');
 });

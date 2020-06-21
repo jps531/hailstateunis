@@ -106,6 +106,54 @@ export function togglePageSize(filterTriggeredThis,filterTriggeredOther,pageLeng
   return [filterTriggeredThis,pageLengthThis];
 };
 
+// Function: setURL
+// Purpose: Set new url when a filter is selected or changed
+// Input(s): searchTerm: string; the value of the filter which has been triggered
+//           searchSubject: string; specifies which filter has been triggered
+// Output(s): none
+export function setURL(searchTerm,searchSubject){
+
+  // Sanatize search term
+  if (searchTerm){
+    searchTerm = searchTerm.replace(/\^/g,"");
+    searchTerm = searchTerm.replace(/\$/g,"");
+    searchTerm = searchTerm.replace(/ /g,"_");
+  }
+
+  // Get current URL substring
+  var subString = window.location.search.substring(1);
+  var subStringContents = subString.split('&&');
+
+  // Get current URL pathname
+  var pathName = window.location.pathname;
+
+  // Initalize new poststring
+  var postString = '?';
+
+  // Add existing, non-affected substring contents to new poststring
+  for (var x = 0; x < subStringContents.length; x++){
+    if(subStringContents[x].includes(searchSubject)){
+      subStringContents.splice(x,1);
+    }
+  }
+  for (var x = 0; x < subStringContents.length; x++){
+    if(subStringContents.length && subStringContents[0] != ''){
+      postString += subStringContents[x] + "&&";
+    }
+  }
+
+  // Add searchTerm to new poststring if neccessary
+  if (searchTerm){
+    postString += searchSubject + '=' + searchTerm;
+  }
+  else{
+    postString = postString.slice(0, -2);
+  }
+
+  // Push new URL
+  history.pushState(null, '', pathName + postString);
+};
+
 // Function: urlTrigger
 // Purpose: Automatically load url parameter into filter
 // Input(s): pararm: string; specifies which parameter you want the terms for

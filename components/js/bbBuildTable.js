@@ -84,7 +84,7 @@ export var baseballTable = $('#baseballTable').DataTable( {
 // Search Bar
 $(document).ready(function(){
     $("#bbSearch").on("keyup", function() {
-      baseballTable.search( this.value ).draw();
+      baseballTable.search(this.value).draw();
     });
   });
 
@@ -108,6 +108,23 @@ $(function() {
   baseballTable.on( 'search', function () {
     wlTotal = wlt.createWL(baseballTable, 5);
     document.getElementById('winLossTotal').innerHTML = wlTotal;
+  });
+});
+//-----------
+
+//-----------
+// Clear All Filters
+$(document).ready(function(){
+  $('#bbClearFilters').click(function() {
+    $('#bbSearchClear').click();
+    $('#bbOpponentClear').click();
+    $('#bbSeasonClear').click();
+    $('#bbGameCClear').click();
+    $('#bbGameBClear').click();
+    $('#bbGameAClear').click();
+    $('#bbUniformCClear').click();
+    $('#bbUniformBClear').click();
+    $('#bbUniformAClear').click();
   });
 });
 //-----------

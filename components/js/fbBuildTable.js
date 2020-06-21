@@ -95,7 +95,7 @@ export var table = $('#footballTable').DataTable( {
 // Search Bar
 $(document).ready(function(){
     $("#fbSearch").on("keyup", function() {
-      table.search( this.value ).draw();
+      table.search(this.value).draw();
     });
   });
 
@@ -119,6 +119,23 @@ $(function() {
   table.on( 'search', function () {
     wlTotal = wlt.createWL(table, 8);
     document.getElementById('winLossTotal').innerHTML = wlTotal;
+  });
+});
+//-----------
+
+//-----------
+// Clear All Filters
+$(document).ready(function(){
+  $('#fbClearFilters').click(function() {
+    $('#searchClear').click();
+    $('#opponentClear').click();
+    $('#seasonClear').click();
+    $('#fbGameCClear').click();
+    $('#fbGameBClear').click();
+    $('#fbGameAClear').click();
+    $('#fbUniformCClear').click();
+    $('#fbUniformBClear').click();
+    $('#fbUniformAClear').click();
   });
 });
 //-----------

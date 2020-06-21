@@ -15,6 +15,9 @@ $(document).ready(function(){
     .get()
     .join( "|" );
 
+    // Add to URL
+    wlt.setURL(searchTerm,'gameA');
+
     // Identify group
     var group;
 
@@ -84,6 +87,9 @@ $(document).ready(function(){
     .get()
     .join( "|" );
 
+    // Add to URL
+    wlt.setURL(searchTerm,'gameB');
+
     // Identify group
     var group;
 
@@ -152,6 +158,9 @@ $(document).ready(function(){
     })
     .get()
     .join( "|" );
+
+    // Add to URL
+    wlt.setURL(searchTerm,'gameC');
 
     // Identify group
     var group;

@@ -22,6 +22,9 @@ $(document).ready(function(){
     .join( "|" );
     tbl.baseballTable.column(0).search(searchTerm, true, false).draw();
 
+    // Add to URL
+    wlt.setURL(searchTerm,'season');
+
     [filterTriggeredSzn,pageLengthSzn] = wlt.togglePageSize(filterTriggeredSzn,filterTriggeredOpp,pageLengthSzn,pageLengthOpp,tbl.baseballTable,this.value);
   });
 });
@@ -52,6 +55,9 @@ $(document).ready(function(){
       tbl.baseballTable.column(17).search(searchTerm, true, false).draw();
     }
 
+    // Add to URL
+    wlt.setURL(searchTerm,'opponent');
+
     [filterTriggeredOpp,pageLengthOpp] = wlt.togglePageSize(filterTriggeredOpp,filterTriggeredSzn,pageLengthOpp,pageLengthSzn,tbl.baseballTable,this.value);
   });
 });
@@ -66,16 +72,6 @@ $(function() {
 //-----------
 // Auto Load URL Parameters
 $(document).ready(function(){
-
-  // Clear filters if currently loaded
-  if ($("#bbSelectYear").val().length){
-    $("#bbSelectYear").val('').trigger('change');
-  }
-  if ($("#bbSelectOpponent").val().length){
-    $("#bbSelectOpponent").val('').trigger('change');
-  }
-
-  // Load URL parameters into filters
   wlt.urlTrigger('season','#bbSelectYear');
   wlt.urlTrigger('opponent','#bbSelectOpponent');
 });

@@ -18,6 +18,9 @@ $(document).ready(function(){
     })
     .get()
     .join( "|" );
+
+    // Add to URL
+    wlt.setURL(searchTerm,'uniform');
     
     // Uniform Colors
     mbkuOptSelected = sit.searchTable(0,tbl.mbkTable,searchTerm,mbkuOptSelected,0,4);

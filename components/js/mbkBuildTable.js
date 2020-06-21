@@ -82,7 +82,7 @@ export var mbkTable = $('#mbkTable').DataTable( {
 // Search Bar
 $(document).ready(function(){
     $("#mbkSearch").on("keyup", function() {
-      mbkTable.search( this.value ).draw();
+      mbkTable.search(this.value).draw();
     });
   });
 
@@ -106,6 +106,23 @@ $(function() {
   mbkTable.on( 'search', function () {
     wlTotal = wlt.createWL(mbkTable, 5);
     document.getElementById('winLossTotal').innerHTML = wlTotal;
+  });
+});
+//-----------
+
+//-----------
+// Clear All Filters
+$(document).ready(function(){
+  $('#mbkClearFilters').click(function() {
+    $('#mbkSearchClear').click();
+    $('#mbkOpponentClear').click();
+    $('#mbkSeasonClear').click();
+    $('#mbkGameCClear').click();
+    $('#mbkGameBClear').click();
+    $('#mbkGameAClear').click();
+    $('#mbkUniformCClear').click();
+    $('#mbkUniformBClear').click();
+    $('#mbkUniformAClear').click();
   });
 });
 //-----------

@@ -17,6 +17,9 @@ $(document).ready(function(){
     .get()
     .join( "|" );
 
+    // Add to URL
+    wlt.setURL(searchTerm,'uniformA');
+
     // Identify group
     var group;
 
@@ -150,6 +153,9 @@ $(document).ready(function(){
       })
       .get()
       .join( "|" );
+
+      // Add to URL
+      wlt.setURL(searchTerm,'uniformB');
   
       // Identify group
       var group;
@@ -284,6 +290,9 @@ $(document).ready(function(){
       })
       .get()
       .join( "|" );
+
+      // Add to URL
+      wlt.setURL(searchTerm,'uniformC');
   
       // Identify group
       var group;

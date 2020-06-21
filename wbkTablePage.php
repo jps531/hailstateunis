@@ -64,6 +64,13 @@
       </div>
     </div>
 
+    <!-- Clear Filters Button -->
+    <div class="row" id="filtersClear">
+      <div class="col-sm-9" id="filterClearBtn">
+        <a href="" id="wbkClearFilters" class="badge badge-light">Clear All Filters</a>
+      </div>
+    </div>
+
     <!-- Table -->
     <div class="row" id="table">
       <div class="col-xs-12">

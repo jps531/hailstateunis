@@ -48,9 +48,14 @@
     margin-bottom: 15px;
 }
 
-#filterCollapse{
+#filterCollapse, #filtersClear{
     justify-content: center;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
+}
+
+#filterClearBtn{
+    justify-content: center;
+    display: flex;
 }
 
 .form-control{

@@ -166,7 +166,7 @@ $(document).ready(function (){
         // If Select B has a value
         if(this.value){
             testSelects.B = 2;
-            
+            $('#uniformB').show();
 
             // If Select C isn't visible and Select A has a value, make Select C visible
             if(!testSelects.C && testSelects.A == 2){
@@ -261,6 +261,7 @@ $(document).ready(function (){
         // If Select C has a value
         if(this.value){
             testSelects.C = 2;
+            $('#uniformC').show();
 
             // Classify value by Option Group
             if(jQuery.inArray(this.value, jerseyColor) !== -1){
