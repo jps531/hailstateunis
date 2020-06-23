@@ -4,6 +4,15 @@
     color: #3b0811;
 }
 
+#message, .dropdown.issue{
+    width: 100% !important;
+}
+
+.label{
+    justify-content: left;
+    display: flex;
+}
+
 /*** filters ***/
 #seasons, #opponents, #search,
 #uniformA, #uniformB, #uniformC,

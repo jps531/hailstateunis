@@ -20,6 +20,9 @@
         </div>
         </div>
 
+        <!-- Report Issue Button -->
+        <a type="button" class="btn btn-outline-secondary btn-sm" href="reportIssue.php">Report an Issue</a>
+
         <div class="row" id="filtersSubrow" style="justify-content: center;">
           <div class="col-xs-3 text-center" id="situationA" style="margin-bottom: 20px;">
             <select class="selectpicker" data-live-search="true" id="cloneTestA" title="SEC A"> 

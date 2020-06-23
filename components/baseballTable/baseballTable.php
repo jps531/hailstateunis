@@ -86,16 +86,6 @@
         $headcoach = $row["head_coach"];
       }
 
-      if ($row["location"] == 'bowl games'){
-        $rowID = 'bowlGames';
-      }
-      else if ($row["location"] == 'sec championships'){
-        $rowID = 'secChampionship';
-      }
-      else{
-        $rowID = $row["location"];
-      }
-
       $typeBadge = " badge-info'>";
 
       if (strpos($row["type"], "SEC Game") !== false){
@@ -171,7 +161,7 @@
       $year = $row["gameday"][0] . $row["gameday"][1] . $row["gameday"][2] . $row["gameday"][3];
       $gameday = $month . "-" . $day;
 
-      echo "<tr id='" . $rowID . "'>
+      echo "<tr id='" . $row["location"] . "'>
               <td class='season' data-sort='" . $row["gameday"] . "'>
                 <span class='badge' style='background-color: #3b0811; color: white;'>" . $row["yr"] . "</span>
               </td>
