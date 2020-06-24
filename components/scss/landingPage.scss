@@ -3,3 +3,32 @@
     padding: 20px;
     color: #3b0811;
 }
+
+/*** report issue ***/
+#message, .dropdown.issue{
+    width: 100% !important;
+}
+
+.label{
+    justify-content: left;
+    display: flex;
+}
+
+label{
+    color: #3b0811;
+}
+
+/*** login ***/
+#titleLogin{
+    justify-content: center;
+    display: flex;
+}
+
+#submitBtn{
+    color: white;
+    background-color: #3b0811;
+}
+
+.alert-danger{
+    line-height: 5px;
+}

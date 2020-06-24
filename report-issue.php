@@ -80,7 +80,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
   // If no errors, send email and redirect URL
   if ($errorTotal == 0) {
     mail("hailstateunis@gmail.com", $topic, $message);
-    header('location: ' . $redirect);
+    ob_start();
+    header('Location: ' . $redirect);
+    ob_end_flush();
+    die();
    }
 }
 ?>
@@ -92,7 +95,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
   <head>
     <title>Baseball Uniform History</title>
     <?php include "components/headings/head.php"; ?>
-    <link rel="stylesheet" href="components/scss/tablePages.scss">
+    <link rel="stylesheet" href="components/scss/landingPage.scss">
     <?php include "components/headings/navbar.php"; ?>
   </head>
 
@@ -163,7 +166,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
               <textarea name="message" id="message" class="form-control" placeholder="Issue"><?php echo isset($_POST['message']) 
               ? htmlspecialchars($_POST['message'], ENT_QUOTES) : ''; ?></textarea>
             </div>
-            <button type="submit" class="btn" style="background-color: #3b0811; color: white;">Submit</button>
+            <button type="submit" class="btn" id="submitBtn">Submit</button>
           </form>
         </div>
       </div>
