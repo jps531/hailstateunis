@@ -1,0 +1,87 @@
+/*** page title ***/
+#title {
+    padding-top: 20px;
+    color: #3b0811;
+}
+
+/*** report issue ***/
+#message, .dropdown.issue{
+    width: 100% !important;
+}
+
+.label{
+    justify-content: left;
+    display: flex;
+}
+
+label{
+    color: #3b0811;
+}
+
+/*** login ***/
+#titleLogin{
+    justify-content: center;
+    display: flex;
+    padding: 10px;
+}
+
+#submitBtn, .standardBtn{
+    color: white;
+    background-color: #3b0811;
+}
+
+.alert-danger{
+    line-height: 5px;
+}
+
+/*** admin pages ***/
+#pageLinks{
+    justify-content: center;
+    display: flex;
+}
+
+#smBtn{
+    margin: 10px;
+}
+
+.list-group{
+    padding: inherit;
+}
+
+.btn.active{
+    background-color: #582730 !important;
+}
+
+.btn.focus{
+    box-shadow: none;
+}
+
+#submitBtn:hover, .standardBtn:hover{
+    background-color: #44121b;
+    color: white;
+}
+
+#action{
+    width: 100%;
+    padding: 20px;
+}
+
+#dbTable, #go{
+    justify-content: center;
+    display: flex;
+    padding: 20px;
+    padding-top: 0px;
+}
+
+#dbTableRows{
+    padding: 0px;
+}
+
+#titleLogout{
+    justify-content: center;
+    display: flex;
+}
+
+.btn-group > .btn{
+    border-radius: 0;
+}

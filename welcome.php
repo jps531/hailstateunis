@@ -5,7 +5,7 @@
   <head>
     <title>HailStateUnis Tables</title>
     <?php include "components/headings/head.php"; ?>
-    <link rel="stylesheet" href="components/scss/landingPage.scss">
+    <link rel="stylesheet" href="components/scss/nonTablePages.scss">
     <?php include "components/headings/navbar.php"; ?>
   </head>
 
@@ -21,12 +21,10 @@
       </div>
 
       <!-- Buttons -->
-      <div class="row" id="title">
-        <div class="col-md-6 text-right">
-          <a type="button" class="btn btn-outline-secondary btn-sm" href="report-issue.php">Report an Issue</a>
-        </div>
-        <div class="col-md-6 text-left">
-          <a type="button" class="btn btn-outline-secondary btn-sm" href="admin-login.php">Admin Login</a>
+      <div class="row">
+        <div class="col-md" id="titleLogout">
+          <a type="button" class="btn btn-outline-secondary btn-sm" href="report-issue.php" id="smBtn">Report an Issue</a>
+          <a type="button" class="btn btn-outline-secondary btn-sm" href="admin-login.php" id="smBtn">Admin Login</a>
         </div>
       </div>
     </div>

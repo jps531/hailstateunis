@@ -7,7 +7,7 @@
   <head>
     <title>Women's Basketball Admin Page</title>
     <?php include "components/headings/head.php"; ?>
-    <link rel="stylesheet" href="components/scss/tablePages.scss">
+    <link rel="stylesheet" href="components/scss/nonTablePages.scss">
     <?php include "components/headings/navbar.php"; ?>
   </head>
 
@@ -17,9 +17,17 @@
 
         <!-- Title -->
         <div class="row" id="title">
-            <div class="col-md text-center">
-                <h1>Women's Basketball Admin Page</h1>
-            </div>
+          <div class="col-md text-center">
+            <h1>Women's Basketball Admin Page</h1>
+          </div>
+        </div>
+
+        <!-- Log Out -->
+        <div class="row" id="logout">
+          <div class="col-md" id="titleLogout">
+            <a type="button" class="btn btn-outline-secondary btn-sm" href="admin-portal.php" id="smBtn">Back to Portal</a>
+            <a type="button" class="btn btn-outline-secondary btn-sm" href="components/admin/logout.php" id="smBtn">Log Out</a>
+          </div>
         </div>
     </div>
 </body>

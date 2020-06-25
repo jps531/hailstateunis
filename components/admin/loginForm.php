@@ -3,7 +3,7 @@
 <!-- Login Form -->
 <div id="login-column" class="col-md-6 rounded">
     <form id="login-form" class="form" action="admin-login.php" method="post">
-        <h3 class="text-center">Login</h3>
+        <h2 class="text-center">Login</h2>
         <hr/>
         <div class="form-group">
             <label for="username">Username:</label><br>

@@ -9,7 +9,7 @@ session_start();
   <head>
     <title>Admin Login</title>
     <?php include "components/headings/head.php"; ?>
-    <link rel="stylesheet" href="components/scss/landingPage.scss">
+    <link rel="stylesheet" href="components/scss/nonTablePages.scss">
     <?php include "components/headings/navbar.php"; ?>
   </head>
 
