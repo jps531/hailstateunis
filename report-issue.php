@@ -125,8 +125,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                   echo "<label for='page' class='label'>On which page is the issue occuring?</label>";
                 }
               ?>
-              <select class="selectpicker issue" name="page" id="page" title="Select Page"
-                      value="<?php echo isset($_POST['page']) ? htmlspecialchars($_POST['name'], ENT_QUOTES) : ''; ?>">
+              <select class="selectpicker issue" name="page" id="page" title="Select Page">
                 <option value="Welcome" <?php echo (isset($_POST['page']) && $_POST['page'] === 'Welcome') ? 'selected' : ''; ?>>Welcome</option>
                 <option value="Football" <?php echo (isset($_POST['page']) && $_POST['page'] === 'Football') ? 'selected' : ''; ?>>Football</option>
                 <option value="Baseball" <?php echo (isset($_POST['page']) && $_POST['page'] === 'Baseball') ? 'selected' : ''; ?>>Baseball</option>
@@ -145,8 +144,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                   echo "<label for='category' class='label'>What type of issue are you reporting?</label>";
                 }
               ?>
-              <select class="selectpicker issue" name="category" id="category" title="Select Category"
-                      value="<?php echo isset($_POST['category']) ? htmlspecialchars($_POST['name'], ENT_QUOTES) : ''; ?>">
+              <select class="selectpicker issue" name="category" id="category" title="Select Category">
                 <option value="Website Issue/Bug" <?php echo (isset($_POST['category']) && $_POST['category'] === 'Website Issue/Bug') ? 'selected' : ''; ?>>Website Issue/Bug</option>
                 <option value="Incorrect/Missing Table Data" <?php echo (isset($_POST['category']) && $_POST['category'] === 'Incorrect/Missing Table Data') ? 'selected' : ''; ?>>Incorrect/Missing Table Data</option>
                 <option value="Other" <?php echo (isset($_POST['category']) && $_POST['category'] === 'Other') ? 'selected' : ''; ?>>Other</option>
@@ -169,7 +167,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <!-- Submit Button -->
             <div class="text-center">
-              <button type="submit" class="btn" id="submitBtn">Submit</button>
+              <button type="submit" class="btn submitBtn">Submit</button>
             </div>
           </form>
         </div>

@@ -63,6 +63,11 @@
     width: 220px;
 }
 
+.form-control:focus {
+    border-color: #9e5361;
+    box-shadow: 0 0 0 0.2rem #df9ba8;
+}
+
 .clear{
     margin-left: -10px;
     margin-right: 5px;

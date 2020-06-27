@@ -18,70 +18,106 @@ label{
     color: #3b0811;
 }
 
-/*** login ***/
-#titleLogin{
+/*** login + admin pages ***/
+.just-center{
+    justify-content: center;
+    display: flex;
+}
+
+.just-center-10-pad{
     justify-content: center;
     display: flex;
     padding: 10px;
 }
 
-#submitBtn, .standardBtn{
+.submitBtn, .standardBtn{
     color: white;
     background-color: #3b0811;
 }
 
-.alert-danger{
+.submitBtn:focus, .standardBtn:focus{
+    border-color: #9e5361;
+    box-shadow: 0 0 0 0.2rem #df9ba8;
+}
+
+.submitBtn:hover, .standardBtn:hover{
+    background-color: #582730;
+    color: white;
+}
+
+.btn-sm{
+    margin: 10px;
+}
+
+.form-control:focus {
+    border-color: #9e5361;
+    box-shadow: 0 0 0 0.2rem #df9ba8;
+}
+
+.item{
+    width: 220px;
+}
+
+.errorAlert{
     line-height: 5px;
 }
 
-/*** admin pages ***/
-#pageLinks{
+.pageLinks{
     justify-content: center;
     display: flex;
-}
-
-#smBtn{
-    margin: 10px;
 }
 
 .list-group{
     padding: inherit;
 }
 
-.btn.active{
-    background-color: #582730 !important;
-}
-
-.btn.focus{
-    box-shadow: none;
-}
-
-#submitBtn:hover, .standardBtn:hover{
-    background-color: #44121b;
-    color: white;
-}
-
-#action{
-    width: 100%;
-    padding: 20px;
-}
-
-#dbTable, #go{
+#action, #dbTable{
     justify-content: center;
     display: flex;
     padding: 20px;
     padding-top: 0px;
 }
 
-#dbTableRows{
-    padding: 0px;
+#go{
+    justify-content: center;
+    display: flex;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-#titleLogout{
+#itemForm{
+    border-radius: 10px;
+    background-color: #eeeeee;
+    padding: 20px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.inputRow{
     justify-content: center;
     display: flex;
 }
 
-.btn-group > .btn{
-    border-radius: 0;
+.adminDB{
+    max-width: 250px;
+    text-align: center;
+}
+
+.datepicker table tr td.active{
+    background-color: #3b0811 !important;
+    background-image: none !important;
+    text-shadow: none !important;
+}
+
+.datepicker table tr td.today{
+    background-color: white;
+    background-image: none !important;
+    text-shadow: none !important;
+}
+
+.datepicker table tr td.today:hover{
+    background-color: #eee !important;
 }

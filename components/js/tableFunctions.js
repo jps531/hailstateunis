@@ -192,6 +192,9 @@ function getURLParameter(param){
         if (paramContent[0] == "opponent"){
             paramTerms[j] = teamCaseCorrections(paramTerms[j]);
         }
+        else if (paramTerms[j] == "Dws 100"){
+          paramTerms[j] = "DWS 100";
+        }
       }
 
       // Return array of terms if matching param

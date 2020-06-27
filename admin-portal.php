@@ -23,26 +23,26 @@
         </div>
 
         <!-- Admin Page Links -->
-        <div class="row" id="pageLinks">
-          <div class="col-md-3" id="titleLogin">
+        <div class="row pageLinks">
+          <div class="col-md-3 just-center-10-pad">
             <a type="button" id="footballBtn" class="btn btn-lg btn-block standardBtn" href="admin-football.php">Football</a>
           </div>
-          <div class="col-md-3" id="titleLogin">
+          <div class="col-md-3 just-center-10-pad">
             <a type="button" id="baseballBtn" class="btn btn-lg btn-block standardBtn" href="admin-baseball.php">Baseball</a>
           </div>
         </div>
-        <div class="row" id="pageLinks">
-          <div class="col-md-3" id="titleLogin">
+        <div class="row pageLinks">
+          <div class="col-md-3 just-center-10-pad">
             <a type="button" id="mbkBtn" class="btn btn-lg btn-block standardBtn" href="admin-mbasketball.php">Men's Basketball</a>
           </div>
-          <div class="col-md-3" id="titleLogin">
+          <div class="col-md-3 just-center-10-pad">
             <a type="button" id="wbkBtn" class="btn btn-lg btn-block standardBtn" href="admin-wbasketball.php">Women's Basketball</a>
           </div>
         </div>
 
         <!-- Log Out -->
         <div class="row" id="logout">
-          <div class="col-md" id="titleLogin">
+          <div class="col-md just-center-10-pad">
             <a type="button" class="btn btn-outline-secondary btn-sm" href="components/admin/logout.php">Log Out</a>
           </div>
         </div>

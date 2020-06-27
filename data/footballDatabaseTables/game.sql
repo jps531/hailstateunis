@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 05, 2020 at 08:34 PM
+-- Generation Time: Jun 26, 2020 at 03:49 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -543,6 +543,16 @@ ALTER TABLE `game`
   ADD KEY `yr` (`yr`),
   ADD KEY `opponentName` (`opponentName`),
   ADD KEY `comboID` (`comboID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `game`
+--
+ALTER TABLE `game`
+  MODIFY `gameID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=480;
 
 --
 -- Constraints for dumped tables

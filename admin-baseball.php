@@ -24,9 +24,9 @@
 
         <!-- Log Out -->
         <div class="row" id="logout">
-          <div class="col-md" id="titleLogout">
-            <a type="button" class="btn btn-outline-secondary btn-sm" href="admin-portal.php" id="smBtn">Back to Portal</a>
-            <a type="button" class="btn btn-outline-secondary btn-sm" href="components/admin/logout.php" id="smBtn">Log Out</a>
+          <div class="col-md just-center">
+            <a type="button" class="btn btn-outline-secondary btn-sm" href="admin-portal.php">Back to Portal</a>
+            <a type="button" class="btn btn-outline-secondary btn-sm" href="components/admin/logout.php">Log Out</a>
           </div>
         </div>
     </div>

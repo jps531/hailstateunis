@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col-12 text-center">
                 <div class="form-group" id="loginButton">
-                    <input type="submit" name="submit" id="submitBtn" class="btn btn-md" value="Log In">
+                    <input type="submit" name="submit" class="btn btn-md submitBtn" value="Log In">
                 </div>
             </div>
         </div>

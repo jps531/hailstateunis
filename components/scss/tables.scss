@@ -221,6 +221,7 @@ span.badge.badge-success, span.badge.badge-danger{
   display: flex;
   justify-content: center;
   text-transform: uppercase;
+  padding-top: 10px;
 }
 
 #footerRow{
@@ -242,20 +243,17 @@ span.badge.badge-success, span.badge.badge-danger{
   color: #462329;
 }
 
-#footballTable_info, #mbkTable_info, #wbkTable_info, #baseballTable_info{
-  white-space: normal;
+.dataTables_info{
+  white-space: normal !important;
 }
 
-#footballTable_length, #footballTable_info, #footballTable_paginate,
-#mbkTable_length, #mbkTable_info, #mbkTable_paginate,
-#wbkTable_length, #wbkTable_info, #wbkTable_paginate,
-#baseballTable_length, #baseballTable_info, #baseballTable_paginate {
+.dataTables_length, .dataTables_info, .dataTables_paginate{
   justify-content: center;
   display: flex;
   padding-bottom: 10px;
-  top: 38px;
-  left: 8px;
-  padding-top: 0px;
+  top: 38px !important;
+  left: 8px !important;
+  padding-top: 0px !important;
 }
 
 /*** table expanded child elements ***/

@@ -19,7 +19,7 @@ session_start();
 
       <!-- Login Form -->
       <div class="row" id="title">
-          <div class="col-md" id="titleLogin">
+          <div class="col-md just-center-10-pad">
             <?php include "components/admin/loginForm.php"; ?>
           </div>
       </div>

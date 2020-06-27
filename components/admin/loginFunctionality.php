@@ -12,13 +12,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 	// Get data from forms
 	if(empty($_POST['username']))
-		$usernameErr = "<div class='alert alert-danger'>Please enter a username.</div>";
+		$usernameErr = "<div class='alert alert-danger errorAlert'>Please enter a username.</div>";
 				
 	else{
 		$username = $_POST['username'];
 	}
 	if(empty($_POST['password']))
-		$passwordErr = "<div class='alert alert-danger'>Please enter a password.</div>";
+		$passwordErr = "<div class='alert alert-danger errorAlert'>Please enter a password.</div>";
 				
 	else{
 		$password = $_POST['password'];
@@ -56,11 +56,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 				header("Location: admin-portal.php");
 			}
 			else{
-				$passwordErr = "<div class='alert alert-danger'>Invalid password.</div>";
+				$passwordErr = "<div class='alert alert-danger errorAlert'>Invalid password.</div>";
 			}
 		}
 		else{
-			$usernameErr = "<div class='alert alert-danger'>No account with that username currently exists.</div>";
+			$usernameErr = "<div class='alert alert-danger errorAlert'>No account with that username currently exists.</div>";
 		}
 	}
 }
