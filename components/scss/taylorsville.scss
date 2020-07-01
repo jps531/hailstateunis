@@ -1,0 +1,88 @@
+/*** page title ***/
+#title {
+    padding: 20px;
+    color: #068b48;
+}
+
+/*** filters ***/
+#seasons, #opponents, #search,
+#uniformA, #uniformB, #uniformC,
+#gameA, #gameB, #gameC{
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+
+#uniformB, #uniformC, #gameB, #gameC{
+    display: none;
+}
+
+#filtersRowTwo, #filtersSubrowB, #filtersSubrowC{
+    justify-content: center;
+    padding-top: 20px;
+}
+
+#filtersSubrowA{
+    justify-content: center;
+}
+
+#filtersSubrowB{
+    background-color: #dbdbdb;
+}
+
+#filtersSubrowC{
+    background-color: #cbcbcb;
+}
+
+#filtersRowTwo{
+    background-color: #bbbbbb;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#filters{
+    background: #ebebeb;
+    max-width: 826px;
+    border-radius: 10px;
+    padding: 15px;
+    padding-bottom: 0px;
+    margin-bottom: 15px;
+}
+
+#filterCollapse, #filtersClear{
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+#filterClearBtn{
+    justify-content: center;
+    display: flex;
+}
+
+.form-control{
+    display: inline-block;
+    width: 220px;
+}
+
+.form-control:focus{
+    border-color: #23b96e;
+    box-shadow: 0 0 0 0.2rem #5db187;
+}
+
+.page-link:focus{
+    border-color: #23b96e;
+    box-shadow: 0 0 0 0.15rem #5db187;
+}
+
+.clear{
+    margin-left: -10px;
+    margin-right: 5px;
+}
+
+.bootstrap-select .dropdown-menu li.disabled a {
+    font-size: .85rem;
+}
+
+/*** table container ***/
+#table{
+    justify-content: center;
+}

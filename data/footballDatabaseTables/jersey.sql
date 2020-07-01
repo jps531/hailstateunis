@@ -117,6 +117,12 @@ INSERT INTO `jersey` (`jerseyID`, `jColor`, `jName`, `jImage`) VALUES
 --
 ALTER TABLE `jersey`
   ADD PRIMARY KEY (`jerseyID`);
+
+--
+-- AUTO_INCREMENT for table `jersey`
+--
+ALTER TABLE `jersey`
+  MODIFY `jerseyID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

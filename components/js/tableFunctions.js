@@ -354,6 +354,9 @@ function teamCaseCorrections(tName){
   else if (tName == "Mount St. Mary%27s"){
     return "Mount St. Mary's";
   }
+  else if (tName == "Mra"){
+    return "MRA";
+  }
   else{
     return tName;
   }

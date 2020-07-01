@@ -85,6 +85,12 @@ INSERT INTO `helmet` (`helmetID`, `hColor`, `hName`, `hImage`) VALUES
 --
 ALTER TABLE `helmet`
   ADD PRIMARY KEY (`helmetID`);
+
+--
+-- AUTO_INCREMENT for table `helmet`
+--
+ALTER TABLE `helmet`
+  MODIFY `helmetID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

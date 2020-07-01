@@ -228,6 +228,12 @@ ALTER TABLE `combination`
 --
 
 --
+-- AUTO_INCREMENT for table `combination`
+--
+ALTER TABLE `combination`
+  MODIFY `comboID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=167;
+
+--
 -- Constraints for table `combination`
 --
 ALTER TABLE `combination`
