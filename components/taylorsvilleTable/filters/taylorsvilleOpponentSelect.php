@@ -16,6 +16,7 @@
       $twoAnorth = array("2A North");
       $otherAs = array("1A", "3A", "4A", "5A", "6A");
       $mais = array("MAIS");
+      $defunct = array("Defunct");
       $rows = array();
       while($row = $result->fetch_assoc()) {
         array_push($rows, $row);
@@ -24,6 +25,7 @@
       conferenceLoop($twoAnorth, $rows);
       conferenceLoop($otherAs, $rows);
       conferenceLoop($mais, $rows);
+      conferenceLoop($defunct, $rows);
     } 
     else {
       echo "0 results";

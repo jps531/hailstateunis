@@ -15,15 +15,14 @@
       </div>
       <div class="modal-body">
         <div class = "text-left">
-            <p>This table contains a record of the uniforms worn in every Mississippi State football game since 1980 
-                and in every bowl game in program history, four of which were prior to 1980.</p>
-            <p>Every game from 2012 to Present expands with a link to the corresponding HailStateUnis.com blog post. 
-                Blog posts from 2016 to Present contain full articles with commentary on that game's uniform choice.</p>
-            <p>I feel very confident in the accuracy of the combinations listed in this table, with the exception of 1986-1988. 
-                In those years, particularly in 1987 and 1988, I've been told that State wore both silver and white pants. 
-                It's very difficult, just looking at old photographs, to tell the difference between those two pants colors. 
-                So I did the best I could, taking input from some people who were alive to see some of those games. 
-                I imagine there are a couple games off, but it's as accurate as I could get it for now.</p>
+            <p>This table contains a record of the uniforms worn in every Taylorsville High School football game since 2011 
+                and in every 2A State Championship Game apperance in program history (but not the two Class BB Championship
+                appearances in 1981 and 1982).</p>
+            <p>I feel very confident in the accuracy of the combinations listed in this table, with the following exceptions. In the 1991 State Championship Game,
+               multiple helmet designs (including some with an "hTs" decal and/or a green shell) may have been worn; the gold helmet
+               with a "T" is the one that was used for the team photo on the school wall, so that is the one that I displayed here.
+               Similarly, in the 1993 Championship Game, gray facemasks may have been worn by some players. The hemlet designs for Bruce in 1991,
+               Okolona in 1993, Calhoun City in 1994 and 1995, and Eupora on 2002 are approximations and may not be completely accurate.</p>
         </div>
         <div class="container">
             <img src="https://i.imgur.com/5Kqz72q.png" width="45" alt="" class="d-inline-block align-middle mr-2">

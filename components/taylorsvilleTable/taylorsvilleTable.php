@@ -1,5 +1,5 @@
 <!-- Styling -->
-<link rel="stylesheet" href="components/scss/tables.scss">
+<link rel="stylesheet" href="components/scss/taylorsvilleTable.scss">
 
 <!-- Football Table -->
 <table class="table table-sm nowrap" id="taylorsvilleTable" style="width:95%">
@@ -67,6 +67,9 @@
         $opponentBadge = 'secondary';
       }
 
+      $headcoach = $row["head_coach"];
+      $postseason = $row["location"];
+
       $month = $row["gameday"][5] . $row["gameday"][6];
       $day = $row["gameday"][8] . $row["gameday"][9];
       $year = $row["gameday"][0] . $row["gameday"][1] . $row["gameday"][2] . $row["gameday"][3];
@@ -74,7 +77,7 @@
 
       echo "<tr id='" . $row["location"] . "'>
               <td class='season' data-sort='" . $row["gameday"] . "'>
-                <span class='badge' style='background-color: #3b0811; color: white;'>" . $row["yr"] . "</span>
+                <span class='badge' style='background-color: #068b48; color: white;'>" . $row["yr"] . "</span>
               </td>
               <td class='date' data-search='" . $row["gameday"] . "'>
                 <div class='calendarDate' id=date-" . $row["gameID"] . "' title='" . $row["gameday"] . "'>

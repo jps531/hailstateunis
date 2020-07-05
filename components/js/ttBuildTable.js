@@ -60,7 +60,7 @@ export var taylorsvilleTable = $('#taylorsvilleTable').DataTable( {
                         if (columns[9].hidden){
                           data += '<div class="container" id="innerTable"><table><thead></thead><tbody>';
                           data += '<tr><td id="innerTitle" colspan="2">Final Score</td></tr>';
-                          data += '<tr><td><span class="badge" style="background-color: #3b0811; color: white;">Mississippi State</span></td><td>' + 
+                          data += '<tr><td><span class="badge" style="background-color: #068b48; color: #ffa800;">Taylorsville</span></td><td>' + 
                                   api.cell(rowIdx, 12).data() +'</td></tr>';
                           data += '<tr><td>' + api.cell(rowIdx, 9).data() + '</td><td>' + api.cell(rowIdx, 10).data() +'</td></tr>';
                           data += '</tbody></table></div>';
@@ -117,7 +117,7 @@ document.getElementById('winLossTotal').innerHTML = wlTotal;
 // Alter String Each Time the Table is Filtered
 $(function() {
   taylorsvilleTable.on( 'search', function () {
-    wlTotal = wlt.createWL(table, 8);
+    wlTotal = wlt.createWL(taylorsvilleTable, 8);
     document.getElementById('winLossTotal').innerHTML = wlTotal;
   });
 });
