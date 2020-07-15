@@ -5,6 +5,7 @@ import * as wlt from '../tableFunctions.js';
 export var gameType = ["Home", "Road", "Neutral","All Playoffs","First Round","Second Round","Third Round","South State","State Championship"];
 export var months = ["August","September","October","November","December"];
 export var days = ["Thursday","Friday","Saturday"];
+export var homecoming = ["Homecoming"];
 export var headCoaches = ["Doug Merchant","Marcus Boyles","Shannon White","Bud Blackledge","Matt Caldwell","Chuck Robertson","Mitch Evans"];
 
 // Load Game Type Filters
@@ -19,7 +20,7 @@ var testSelects = {A: 1, B: 0, C: 0};
 
 // 1: Enabled
 // 0: Disabled
-var enabled = {A: 1, B: 1, C: 1, D: 1};
+var enabled = {A: 1, B: 1, C: 1, D: 1, E: 1};
 
 // 3: Group 3 Selected
 // 2: Group 2 Selected
@@ -46,6 +47,9 @@ $(document).ready(function (){
             }
             else if (selected.A == 3){
                 enabled.D = 1;
+            }
+            else if (selected.A == 4){
+                enabled.E = 1;
             }
 
             // Reset selected.A
@@ -81,9 +85,13 @@ $(document).ready(function (){
                 enabled.C = 0;
                 selected.A = 2;
             }
-            else if(jQuery.inArray(this.value, headCoaches) !== -1){
+            else if(jQuery.inArray(this.value, homecoming) !== -1){
                 enabled.D = 0;
                 selected.A = 3;
+            }
+            else if(jQuery.inArray(this.value, headCoaches) !== -1){
+                enabled.E = 0;
+                selected.A = 4;
             }
         }
 
@@ -133,6 +141,9 @@ $(document).ready(function (){
             else if (selected.B == 3){
                 enabled.D = 1;
             }
+            else if (selected.B == 4){
+                enabled.E = 1;
+            }
 
             // Reset selected.B
             selected.B = -1;
@@ -162,9 +173,13 @@ $(document).ready(function (){
                 enabled.C = 0;
                 selected.B = 2;
             }
-            else if(jQuery.inArray(this.value, headCoaches) !== -1){
+            else if(jQuery.inArray(this.value, homecoming) !== -1){
                 enabled.D = 0;
                 selected.B = 3;
+            }
+            else if(jQuery.inArray(this.value, headCoaches) !== -1){
+                enabled.E = 0;
+                selected.B = 4;
             }
         }
 
@@ -214,6 +229,9 @@ $(document).ready(function (){
             else if (selected.C == 3){
                 enabled.D = 1;
             }
+            else if (selected.C == 4){
+                enabled.E = 1;
+            }
 
             // Reset selected.C
             selected.C = -1;
@@ -237,9 +255,13 @@ $(document).ready(function (){
                 enabled.C = 0;
                 selected.C = 2;
             }
-            else if(jQuery.inArray(this.value, headCoaches) !== -1){
+            else if(jQuery.inArray(this.value, homecoming) !== -1){
                 enabled.D = 0;
                 selected.C = 3;
+            }
+            else if(jQuery.inArray(this.value, headCoaches) !== -1){
+                enabled.E = 0;
+                selected.C = 4;
             }
         }
 
@@ -271,4 +293,13 @@ $(document).ready(function(){
     wlt.urlTrigger('gameB','#ttGameB');
     wlt.urlTrigger('gameC','#ttGameC');
 });
+//-----------
+
+//-----------
+// Set Filters for Mobile
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+    $('#ttGameA').selectpicker('mobile');
+    $('#ttGameB').selectpicker('mobile');
+    $('#ttGameC').selectpicker('mobile');
+  }
 //-----------

@@ -90,36 +90,36 @@
       $year = $row["gameday"][0] . $row["gameday"][1] . $row["gameday"][2] . $row["gameday"][3];
       $gameday = $month . "-" . $day;
 
-      echo "<tr id='" . $row["location"] . "'>
-              <td class='season' data-sort='" . $row["gameday"] . "'>
+      echo "<tr role='row' id='" . $row["location"] . "'>
+              <td class='season' role='cell' data-sort='" . $row["gameday"] . "'>
                 <span class='badge' style='background-color: #3b0811; color: white;'>" . $row["yr"] . "</span>
               </td>
-              <td class='date' data-sort='" . $row["gameday"] . "'>
+              <td class='date' role='cell' data-sort='" . $row["gameday"] . "'>
                 <div class='calendarDate' id=date-" . $row["gameID"] . "' title='" . $row["gameday"] . "'>
                 <span class='badge badge-secondary'>" . $gameday . "</span>
                 </div>
               </td>
-              <td class='day' data-search='" . date("l", mktime(0,0,0,$month,$day,$year)) . "'>
+              <td class='day' role='cell' data-search='" . date("l", mktime(0,0,0,$month,$day,$year)) . "'>
                 <span id='DoW' class='badge badge-dark'>" . date("l", mktime(0,0,0,$month,$day,$year)) . "</span>
               </td>
-              <td class='type' data-search='" . $row["type"] . $row["location"] . "'>
+              <td class='type' role='cell' data-search='" . $row["type"] . $row["location"] . "'>
                 <span class='badge" . $typeBadge . $row["type"] . "</span>
               </td>
-              <td class='uniform' data-search='" . $row["uName"] . "'>
+              <td class='uniform' role='cell' data-search='" . $row["uName"] . "'>
                 <a href='" . $row["uImage"] . "' data-fancybox>
                   <img src='" . $row["uImage"] . "' height='80' alt='' class='d-inline-block align-middle mr-2'
                 </a>
               </td>
-              <td class='result' data-search ='" . $row["head_coach"] . $row["result"] . "'>
+              <td class='result' role='cell' data-search ='" . $row["head_coach"] . $row["result"] . "'>
                 <span class='badge badge-" . $resultColor . "'>" . $row["result"] . "</span>
               </td>
-              <td class='pf' data-sort='" . $row["points_for"] . "'>
+              <td class='pf' role='cell' data-sort='" . $row["points_for"] . "'>
                 <span class='badge badge-" . $stateBadge . "'>" . $row["points_for"] . "</span>
               </td>
-              <td class='pa' data-sort='" . $row["points_against"] . "'>
+              <td class='pa' role='cell' data-sort='" . $row["points_against"] . "'>
                 <span class='badge badge-" . $opponentBadge . "'>" . $row["points_against"] . "</span>
               </td>
-              <td class='opponent'" . 'data-search="' . $row["opponentName"] . '">' . "
+              <td class='opponent' role='cell'" . 'data-search="' . $row["opponentName"] . '">' . "
                 <span class='badge' style='background-color: " . $row["colorA"] . "; color: "  . $row["colorB"] .  ";'>" . $row["opponentName"] . "</span>
               </td>
             </tr>";

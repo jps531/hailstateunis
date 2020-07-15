@@ -1,5 +1,5 @@
 /*** navbar background ***/
-.navbar {
+.navbar{
     background-color: #222322;
 }
 
@@ -7,6 +7,40 @@
 .navbar-brand{
     color: white;
     font-weight: 700;
+}
+
+/*** dropdown ***/
+#navDropdownMenu{
+    background-color: #222322;
+    border: none;
+}
+
+.nav-item.dropdown #navbarDropdown{
+    color: #919191;
+}
+
+.nav-item.dropdown.show #navbarDropdown{
+    color: #c7c7c7;
+}
+
+.nav-item.dropdown.active #navbarDropdown{
+    color: white !important;
+}
+
+#navDropdownItem{
+    text-align: center;
+    padding: 0px;
+    color: #919191;
+}
+
+#navDropdownItem:hover{
+    background-color: #222322;
+    color: #c7c7c7;
+}
+
+#navDropdownItem:active, #navDropdownItem.dropdown-item.active{
+    background-color: #222322 !important;
+    color: white;
 }
 
 /*** mobile collapse button ***/

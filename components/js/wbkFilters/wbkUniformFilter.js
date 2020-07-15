@@ -40,3 +40,10 @@ $(document).ready(function(){
   wlt.urlTrigger('uniform','#wbkUniformA');
 });
 //-----------
+
+//-----------
+// Set Filters for Mobile
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+  $('#wbkUniformA').selectpicker('mobile');
+}
+//-----------

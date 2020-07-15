@@ -1,7 +1,19 @@
 /*** page title ***/
-#title {
+.titleTop {
     padding: 20px;
+    padding-bottom: 10px;
     color: #3b0811;
+}
+
+.titleBottom {
+    padding: 20px;
+    padding-top: 0px;
+    color: #3b0811;
+}
+
+.titleImage{
+    max-width: 100%;
+    height: auto;
 }
 
 /*** filters ***/
@@ -80,6 +92,11 @@
 
 .bootstrap-select .dropdown-menu li.disabled a {
     font-size: .85rem;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    background-color: #3b0811 !important;
+    color: white !important;
 }
 
 /*** table container ***/

@@ -14,9 +14,13 @@
     <div class="container">
 
     <!-- Title -->
-    <div class="row" id="title">
+    <div class="row titleTop">
       <div class="col-md text-center">
-        <h1>Taylorsville Football Uniform History</h1>
+        <img src="https://i.imgur.com/d507Qrp.png" alt="Taylorsville Football Uniform History" class="titleImage" width="750">
+      </div>
+    </div>
+    <div class="row titleBottom">
+      <div class="col-md text-center">
         <?php include "components/taylorsvilleTable/taylorsvilleAboutModal.php"; ?>
       </div>
     </div>

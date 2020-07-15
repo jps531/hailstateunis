@@ -24,16 +24,19 @@ $(document).ready(function(){
     var group;
 
     if(jQuery.inArray(this.value, grp.gameType) !== -1){
-        group = 0;
+      group = 0;
     }
     else if(jQuery.inArray(this.value, grp.months) !== -1){
-        group = 1;
+      group = 1;
     }
     else if(jQuery.inArray(this.value, grp.days) !== -1){
-        group = 2;
+      group = 2;
+    }
+    else if(jQuery.inArray(this.value, grp.homecoming) !== -1){
+      group = 3;
     }
     else if(jQuery.inArray(this.value, grp.headCoaches) !== -1){
-        group = 3;
+      group = 4;
     }
     
     // Add month names to search term
@@ -80,8 +83,11 @@ $(document).ready(function(){
     // Days
     ttgOptSelectedA = sit.searchTable(group,tbl.taylorsvilleTable,searchTerm,ttgOptSelectedA,2,8);
 
+    // Homecoming
+    ttgOptSelectedA = sit.searchTable(group,tbl.taylorsvilleTable,searchTerm,ttgOptSelectedA,3,8);
+
     // Head Coaches
-    ttgOptSelectedA = sit.searchTable(group,tbl.taylorsvilleTable,searchTerm,ttgOptSelectedA,3,11);
+    ttgOptSelectedA = sit.searchTable(group,tbl.taylorsvilleTable,searchTerm,ttgOptSelectedA,4,11);
   });
 });
 //-----------
@@ -107,16 +113,19 @@ $(document).ready(function(){
     var group;
 
     if(jQuery.inArray(this.value, grp.gameType) !== -1){
-        group = 0;
+      group = 0;
     }
     else if(jQuery.inArray(this.value, grp.months) !== -1){
-        group = 1;
+      group = 1;
     }
     else if(jQuery.inArray(this.value, grp.days) !== -1){
-        group = 2;
+      group = 2;
+    }
+    else if(jQuery.inArray(this.value, grp.homecoming) !== -1){
+      group = 3;
     }
     else if(jQuery.inArray(this.value, grp.headCoaches) !== -1){
-        group = 3;
+      group = 4;
     }
     
     // Add month names to search term
@@ -163,8 +172,11 @@ $(document).ready(function(){
     // Days
     ttgOptSelectedB = sit.searchTable(group,tbl.taylorsvilleTable,searchTerm,ttgOptSelectedB,2,8);
 
+    // Homecoming
+    ttgOptSelectedB = sit.searchTable(group,tbl.taylorsvilleTable,searchTerm,ttgOptSelectedB,3,8);
+
     // Head Coaches
-    ttgOptSelectedB = sit.searchTable(group,tbl.taylorsvilleTable,searchTerm,ttgOptSelectedB,3,11);
+    ttgOptSelectedB = sit.searchTable(group,tbl.taylorsvilleTable,searchTerm,ttgOptSelectedB,4,11);
   });
 });
 //-----------
@@ -190,16 +202,19 @@ $(document).ready(function(){
     var group;
 
     if(jQuery.inArray(this.value, grp.gameType) !== -1){
-        group = 0;
+      group = 0;
     }
     else if(jQuery.inArray(this.value, grp.months) !== -1){
-        group = 1;
+      group = 1;
     }
     else if(jQuery.inArray(this.value, grp.days) !== -1){
-        group = 2;
+      group = 2;
+    }
+    else if(jQuery.inArray(this.value, grp.homecoming) !== -1){
+      group = 3;
     }
     else if(jQuery.inArray(this.value, grp.headCoaches) !== -1){
-        group = 3;
+      group = 4;
     }
     
     // Add month names to search term
@@ -246,8 +261,11 @@ $(document).ready(function(){
     // Days
     ttgOptSelectedC = sit.searchTable(group,tbl.taylorsvilleTable,searchTerm,ttgOptSelectedC,2,8);
 
+    // Homecoming
+    ttgOptSelectedC = sit.searchTable(group,tbl.taylorsvilleTable,searchTerm,ttgOptSelectedC,3,8);
+
     // Head Coaches
-    ttgOptSelectedC = sit.searchTable(group,tbl.taylorsvilleTable,searchTerm,ttgOptSelectedC,3,11);
+    ttgOptSelectedC = sit.searchTable(group,tbl.taylorsvilleTable,searchTerm,ttgOptSelectedC,4,11);
   });
 });
 //-----------

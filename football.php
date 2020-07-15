@@ -14,9 +14,13 @@
     <div class="container">
 
     <!-- Title -->
-    <div class="row" id="title">
+    <div class="row titleTop">
       <div class="col-md text-center">
-        <h1>Mississippi State Football Uniform History</h1>
+        <img src="https://i.imgur.com/CJnrJ9L.png" alt="Mississippi State Football Uniform History" class="titleImage" width="550">
+      </div>
+    </div>
+    <div class="row titleBottom">
+      <div class="col-md text-center">
         <?php include "components/footballTable/footballAboutModal.php"; ?>
       </div>
     </div>

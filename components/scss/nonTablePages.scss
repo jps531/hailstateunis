@@ -121,3 +121,8 @@ label{
 .datepicker table tr td.today:hover{
     background-color: #eee !important;
 }
+
+.dropdown-item.active, .dropdown-item:active {
+    background-color: #3b0811 !important;
+    color: white !important;
+}

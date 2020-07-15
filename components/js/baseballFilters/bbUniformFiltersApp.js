@@ -318,4 +318,13 @@ $(document).ready(function(){
     wlt.urlTrigger('uniformB','#bbUniformB');
     wlt.urlTrigger('uniformC','#bbUniformC');
   });
-  //-----------
+//-----------
+
+//-----------
+// Set Filters for Mobile
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+    $('#bbUniformA').selectpicker('mobile');
+    $('#bbUniformB').selectpicker('mobile');
+    $('#bbUniformC').selectpicker('mobile');
+  }
+//-----------

@@ -40,7 +40,7 @@ CREATE TABLE `helmet` (
 --
 
 INSERT INTO `helmet` (`helmetID`, `hColor`, `hName`, `hImage`) VALUES
-(1, 'black', '2020 black helmet', 'https://i.imgur.com/sGHKkpS.png'),
+(1, 'black', '2020 black helmet', 'https://i.imgur.com/iMjtcgs.png'),
 (2, 'gold', '2012 gold helmet', 'https://i.imgur.com/er1CDpz.png'),
 (3, 'gold', '2008 gold helmet', 'https://i.imgur.com/Y1L9rK2.png'),
 (4, 'gold', '2003 gold helmet', 'https://i.imgur.com/Sta8dm8.png'),

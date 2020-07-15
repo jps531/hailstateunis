@@ -51,8 +51,8 @@ INSERT INTO `jersey` (`jerseyID`, `jColor`, `jName`, `jImage`) VALUES
 (9, 'green', '2007 green jerseys', 'https://i.imgur.com/8URDBvV.png'),
 (10, 'gold', '2002 gold jerseys', 'https://i.imgur.com/Vbk04pz.png'),
 (11, 'white', '1998 white jerseys', 'https://i.imgur.com/bNwcg0m.png'),
-(12, 'green', '1993 green jerseys', 'https://i.imgur.com/CysWUgE.png'),
-(13, 'white', '1994 white jerseys', 'https://i.imgur.com/wDsST2p.png');
+(12, 'green', '1993 green jerseys', 'https://i.imgur.com/fthrZlw.png'),
+(13, 'white', '1994 white jerseys', 'https://i.imgur.com/yMenBg1.png');
 
 --
 -- Indexes for dumped tables

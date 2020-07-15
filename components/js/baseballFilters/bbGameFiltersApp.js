@@ -349,3 +349,12 @@ $(document).ready(function(){
     wlt.urlTrigger('gameC','#bbGameC');
 });
 //-----------
+
+//-----------
+// Set Filters for Mobile
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+    $('#bbGameA').selectpicker('mobile');
+    $('#bbGameB').selectpicker('mobile');
+    $('#bbGameC').selectpicker('mobile');
+  }
+//-----------

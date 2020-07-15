@@ -34,4 +34,4 @@
 </div>
 
 <!-- Report Issue Button -->
-<a type="button" class="btn btn-outline-secondary btn-sm" href="report-issue.php">Report an Issue</a>
+<a role="button" class="btn btn-outline-secondary btn-sm" href="report-issue.php">Report an Issue</a>

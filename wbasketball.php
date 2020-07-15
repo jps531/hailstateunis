@@ -14,16 +14,20 @@
     <div class="container">
 
     <!-- Title -->
-    <div class="row" id="title">
+    <div class="row titleTop">
       <div class="col-md text-center">
-        <h1>Mississippi State Women's Basketball Uniform History</h1>
+        <img src="https://i.imgur.com/cMFrd1e.png" alt="Mississippi State Women's Basketball Uniform History" class="titleImage" width="600">
+      </div>
+    </div>
+    <div class="row titleBottom">
+      <div class="col-md text-center">
         <?php include "components/wbkTable/wbkAboutModal.php"; ?>
       </div>
     </div>
 
     <!-- Filter Collapse Button -->
     <div class="row" id="filterCollapse">
-      <div class="col-sm-9">
+      <div class="col-sm-8">
         <button class="btn btn-block" type="button" data-toggle="collapse" data-target="#filters" aria-expanded="false" aria-controls="collapseExample" 
                 style="background-color: #3b0811; color: white;">
           Filter

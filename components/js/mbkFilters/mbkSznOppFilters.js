@@ -76,3 +76,11 @@ $(document).ready(function(){
   wlt.urlTrigger('opponent','#mbkOpponent');
 });
 //-----------
+
+//-----------
+// Set Filters for Mobile
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+  $('#mbkSelectYear').selectpicker('mobile');
+  $('#mbkOpponent').selectpicker('mobile');
+}
+//-----------

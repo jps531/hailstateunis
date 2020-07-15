@@ -23,7 +23,7 @@
       <!-- Buttons -->
       <div class="row">
         <div class="col-md just-center">
-          <a type="button" class="btn btn-outline-secondary btn-sm" href="report-issue.php">Report an Issue</a>
+          <a role="button" class="btn btn-outline-secondary btn-sm" href="report-issue.php">Report an Issue</a>
         </div>
       </div>
     </div>

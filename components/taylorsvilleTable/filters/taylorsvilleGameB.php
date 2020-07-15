@@ -25,6 +25,9 @@
     <option>Friday</option>
     <option>Saturday</option>
   </optgroup>
+  <optgroup label="Homecoming">
+    <option>Homecoming</option>
+  </optgroup>
   <optgroup label="Head Coaches">
     <option>Mitch Evans</option>
     <option>Chuck Robertson</option>

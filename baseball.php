@@ -14,9 +14,13 @@
     <div class="container">
 
     <!-- Title -->
-    <div class="row" id="title">
+    <div class="row titleTop">
       <div class="col-md text-center">
-        <h1>Mississippi State Baseball Uniform History</h1>
+        <img src="https://i.imgur.com/Lud0LnV.png" alt="Mississippi State Baseball Uniform History" class="titleImage" width="500">
+      </div>
+    </div>
+    <div class="row titleBottom">
+      <div class="col-md text-center">
         <?php include "components/baseballTable/baseballAboutModal.php"; ?>
       </div>
     </div>

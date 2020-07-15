@@ -274,4 +274,13 @@ $(document).ready(function(){
     wlt.urlTrigger('gameB','#wbkGameB');
     wlt.urlTrigger('gameC','#wbkGameC');
   });
-  //-----------
+//-----------
+
+//-----------
+// Set Filters for Mobile
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+    $('#wbkGameA').selectpicker('mobile');
+    $('#wbkGameB').selectpicker('mobile');
+    $('#wbkGameC').selectpicker('mobile');
+  }
+//-----------
