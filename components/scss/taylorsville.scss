@@ -85,6 +85,21 @@
     box-shadow: 0 0 0 0.15rem #5db187;
 }
 
+.submitBtn, .standardBtn{
+    color: white;
+    background-color: #068b48;
+}
+
+.submitBtn:focus, .standardBtn:focus{
+    border-color: #23b96e;
+    box-shadow: 0 0 0 0.2rem #5db187;
+}
+
+.submitBtn:hover, .standardBtn:hover{
+    background-color: #23b96e;
+    color: white;
+}
+
 .clear{
     margin-left: -10px;
     margin-right: 5px;

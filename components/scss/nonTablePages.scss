@@ -1,7 +1,58 @@
 /*** page title ***/
-#title {
+#title{
     padding-top: 20px;
     color: #3b0811;
+}
+
+.titleTop{
+    padding: 20px;
+    padding-bottom: 10px;
+    color: #3b0811;
+}
+
+.titleBottom{
+    padding: 20px;
+    padding-top: 0px;
+    color: #3b0811;
+}
+
+.titleImage{
+    max-width: 100%;
+    height: auto;
+}
+
+/** welcome page **/
+.fa-envelope, .fa-twitter{
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    border-radius: 25px;
+    color: white;
+}
+
+.fa-twitter{
+    background-color: #1DA1F2;
+}
+
+.fa-envelope{
+    background-color: #15bb76;
+}
+
+.modal-header, .modal-body{
+    color: #3b0811;
+}
+
+.bio{
+    padding-left: 0px;
+}
+
+.bio-pic{
+    justify-content: center !important;
+    display: flex;
+    margin-bottom: 1rem;
+    padding: 0px;
 }
 
 /*** report issue ***/

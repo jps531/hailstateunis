@@ -5,13 +5,10 @@
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">About the Baseball Uniform History Table</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
       </div>
       <div class="modal-body">
         <div class = "text-left">
@@ -24,7 +21,7 @@
               <p>Every game from 2014 to Present expands with a link to the corresponding HailStateUnis.com blog post. 
                 Blog posts from 2017 to Present contain full articles with commentary on that game's uniform choice.</p>
               <p>I feel very confident in the accuracy of the combinations listed in this table; I was able to find photo/video evidence
-                  for all but a handful of games. Notes on those games are below; please let me know if you have any information about any 
+                  for all but a handful of games. Notes on those games are below; please let me know (via the Report Issue button) if you have any information about any 
                   of them so that I can update the combination and/or remove the game from the list: </p>
               <p>- The only game for which I have no evidence whatsoever is 2011 at UAB. The game started on March 9 but was suspeneded due to rain, 
                    and finished on April 13. I couldn't find anything from either half; I went with Maroon MS / Gray for both halves since that was worn in 
@@ -35,7 +32,8 @@
                 in which State was the designated "away" team and white pants were worn for games in which they were the designated "home" team.</p>
           </div>
         <div class="container">
-            <img src="https://i.imgur.com/5Kqz72q.png" width="45" alt="" class="d-inline-block align-middle mr-2">
+          <img src="https://i.imgur.com/URO6CiG.png" width="45" alt="" class="d-inline-block align-middle mr-3">
+          <button type="button" class="btn btn-md standardBtn" data-dismiss="modal" aria-label="Close">Close</button>
         </div>
       </div>
     </div>

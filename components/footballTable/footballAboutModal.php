@@ -5,13 +5,10 @@
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">About the Football Uniform History Table</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
       </div>
       <div class="modal-body">
         <div class = "text-left">
@@ -26,7 +23,8 @@
                 I imagine there are a couple games off, but it's as accurate as I could get it for now.</p>
         </div>
         <div class="container">
-            <img src="https://i.imgur.com/5Kqz72q.png" width="45" alt="" class="d-inline-block align-middle mr-2">
+          <img src="https://i.imgur.com/URO6CiG.png" width="45" alt="" class="d-inline-block align-middle mr-3">
+          <button type="button" class="btn btn-md standardBtn" data-dismiss="modal" aria-label="Close">Close</button>
         </div>
       </div>
     </div>

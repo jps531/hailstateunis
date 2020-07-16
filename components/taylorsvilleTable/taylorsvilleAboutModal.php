@@ -5,13 +5,10 @@
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">About the Taylorsville Football Uniform History Table</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
       </div>
       <div class="modal-body">
         <div class = "text-left">
@@ -25,7 +22,8 @@
                Okolona in 1993, Calhoun City in 1994 and 1995, and Eupora on 2002 are approximations and may not be completely accurate.</p>
         </div>
         <div class="container">
-            <img src="https://i.imgur.com/5Kqz72q.png" width="45" alt="" class="d-inline-block align-middle mr-2">
+          <img src="https://mir-cdn.behance.net/v1/rendition/project_modules/max_1200/01927e14453021.5f07d60872562.png" width="45" alt="" class="d-inline-block align-middle mr-3">
+          <button type="button" class="btn btn-md standardBtn" data-dismiss="modal" aria-label="Close">Close</button>
         </div>
       </div>
     </div>

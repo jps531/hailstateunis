@@ -6,7 +6,7 @@
 
   <!-- Brand -->
   <a class="navbar-brand" href="../welcome.php">
-    <img src="https://i.imgur.com/5Kqz72q.png" width="45" alt="" class="d-inline-block align-middle mr-2">
+    <img src="https://i.imgur.com/URO6CiG.png" width="45" alt="" class="d-inline-block align-middle mr-2">
   </a>
 
   <!-- Mobile Collapse Button -->
