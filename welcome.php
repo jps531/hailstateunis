@@ -3,7 +3,7 @@
 
   <!-- Head/Navbar/Styles -->
   <head>
-    <title>HailStateUnis Tables</title>
+    <title>HailStateUnis Database</title>
     <?php include "components/headings/head.php"; ?>
     <link rel="stylesheet" href="components/scss/nonTablePages.scss">
     <?php include "components/headings/navbar.php"; ?>
@@ -23,36 +23,36 @@
       <!-- Page Links -->
       <div class="row pageLinks">
         <div class="col-md-3 just-center-10-pad">
-          <a type="button" id="footballBtn" class="btn btn-lg btn-block standardBtn" href="football.php">Football</a>
+          <a role="button" id="footballBtn" class="btn btn-lg btn-block standardBtn" href="football.php">Football</a>
         </div>
         <div class="col-md-3 just-center-10-pad">
-          <a type="button" id="baseballBtn" class="btn btn-lg btn-block standardBtn" href="baseball.php">Baseball</a>
+          <a role="button" id="baseballBtn" class="btn btn-lg btn-block standardBtn" href="baseball.php">Baseball</a>
         </div>
       </div>
       <div class="row pageLinks">
         <div class="col-md-3 just-center-10-pad">
-          <a type="button" id="mbkBtn" class="btn btn-lg btn-block standardBtn" href="mbasketball.php">Men's Basketball</a>
+          <a role="button" id="mbkBtn" class="btn btn-lg btn-block standardBtn" href="mbasketball.php">Men's Basketball</a>
         </div>
         <div class="col-md-3 just-center-10-pad">
-          <a type="button" id="wbkBtn" class="btn btn-lg btn-block standardBtn" href="wbasketball.php">Women's Basketball</a>
+          <a role="button" id="wbkBtn" class="btn btn-lg btn-block standardBtn" href="wbasketball.php">Women's Basketball</a>
         </div>
       </div>
 
       <!-- Buttons -->
       <div class="row pageLinks">
         <div class="col-md-3 just-center">
-          <button type="button" class="btn btn-outline-secondary btn-sm btn-block" data-toggle="modal" data-target="#aboutModalCenter">About</button>
+          <button role="button" class="btn btn-outline-secondary btn-sm btn-block" data-toggle="modal" data-target="#aboutModalCenter">About</button>
         </div>
         <div class="col-md-3 just-center">
-          <a type="button" class="btn btn-outline-secondary btn-sm btn-block" href="report-issue.php">Report an Issue</a>
+          <a role="button" class="btn btn-outline-secondary btn-sm btn-block" href="report-issue.php">Report an Issue</a>
         </div>
       </div>
       <div class="row pageLinks">
         <div class="col-md-3 just-center">
-          <a type="button" class="btn btn-outline-secondary btn-sm btn-block" href="https://www.paypal.com/donate/?token=o77NriU8OSPwUkYraPib8ept8PkNYLbewQ_yiv08CejDEPzh3ncY9ZBJ5_4c2kFumFuh4W&country.x=US&locale.x=">Donate</a>
+          <a role="button" class="btn btn-outline-secondary btn-sm btn-block" href="https://www.paypal.com/donate/?token=o77NriU8OSPwUkYraPib8ept8PkNYLbewQ_yiv08CejDEPzh3ncY9ZBJ5_4c2kFumFuh4W&country.x=US&locale.x=">Donate</a>
         </div>
         <div class="col-md-3 just-center">
-          <a type="button" class="btn btn-outline-secondary btn-sm btn-block" href="https://www.hailstateunis.com">Back to HailStateUnis.com</a>
+          <a role="button" class="btn btn-outline-secondary btn-sm btn-block" href="https://www.hailstateunis.com">Back to HailStateUnis.com</a>
         </div>
       </div>
 
@@ -88,14 +88,14 @@
               </div>
               <hr>
               <div class = "text-left">
-                <h6>About me!</h6>
+                <h6>About me:</h6>
                 <div class="container row align-items-center">
                   <div class="col-md-10 bio">
                     <p>My name is Paul Sullivan, I'm a undergraduate student at Mississippi State, majoring in Software Engineering and scheduled to graduate
                       in November of 2020!</p>
                   </div>
                   <div class="col-md-2 bio-pic">
-                    <img src="https://i.imgur.com/eKkQFO5.jpg" alt="Paul Sullivan Egg" class="titleImage" width="100">
+                    <img src="https://i.imgur.com/eKkQFO5.jpg" alt="Paul Sullivan Egg" width="100" height="100">
                   </div>
                 </div>
                 <p>Raised by my dad to be a lifelong Mississippi State Fan, I started the MSU Football and Baseball Uniform Trackers in high school, and created the

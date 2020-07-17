@@ -1,14 +1,14 @@
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="modal" data-target="#exampleModalCenter">
+<button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="modal" data-target="#taylorsvilleModalCenter">
   About
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="taylorsvilleModalCenter" tabindex="-1" role="dialog" aria-labelledby="taylorsvilleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">About the Taylorsville Football Uniform History Table</h5>
+        <h5 class="modal-title" id="taylorsvilleModalLongTitle">About the Taylorsville Football Uniform History Table</h5>
       </div>
       <div class="modal-body">
         <div class = "text-left">
@@ -19,7 +19,7 @@
                multiple helmet designs (including some with an "hTs" decal and/or a green shell) may have been worn; the gold helmet
                with a "T" is the one that was used for the team photo on the school wall, so that is the one that I displayed here.
                Similarly, in the 1993 Championship Game, gray facemasks may have been worn by some players. The hemlet designs for Bruce in 1991,
-               Okolona in 1993, Calhoun City in 1994 and 1995, and Eupora on 2002 are approximations and may not be completely accurate.</p>
+               Okolona in 1993, Calhoun City in 1994 and 1995, and Eupora in 2002 are approximations and may not be completely accurate.</p>
         </div>
         <div class="container">
           <img src="https://mir-cdn.behance.net/v1/rendition/project_modules/max_1200/01927e14453021.5f07d60872562.png" width="45" alt="" class="d-inline-block align-middle mr-3">

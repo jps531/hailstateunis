@@ -1,17 +1,17 @@
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="modal" data-target="#exampleModalCenter">
+<button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="modal" data-target="#baseballModalCenter">
   About
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="baseballModalCenter" tabindex="-1" role="dialog" aria-labelledby="baseballModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">About the Baseball Uniform History Table</h5>
+        <h5 class="modal-title" id="baseballModalLongTitle">About the Baseball Uniform History Table</h5>
       </div>
       <div class="modal-body">
-        <div class = "text-left">
+        <div class="text-left">
               <p>This table contains a record of the uniforms worn in select Mississippi State Baseball games, including:</p>
               <p>- Every College World Series game in program history</p>
               <p>- Every Super Regional game in program history</p>

@@ -282,5 +282,5 @@ $(document).ready(function(){
     wlt.urlTrigger('uniformA','#ttUniformA');
     wlt.urlTrigger('uniformB','#ttUniformB');
     wlt.urlTrigger('uniformC','#ttUniformC');
-  });
-  //-----------
+});
+//-----------
