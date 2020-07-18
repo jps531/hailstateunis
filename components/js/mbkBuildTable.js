@@ -74,7 +74,8 @@ export var mbkTable = $('#mbkTable').DataTable( {
                 // Table Options
                 "order": [[ 1, 'asc' ]],
                 searching: true,
-                dom: 'tpilr'
+                dom: 'tpilr',
+                destroy: true
               });
 //-----------
 
