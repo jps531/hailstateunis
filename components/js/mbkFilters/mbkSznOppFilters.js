@@ -83,4 +83,16 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
   $('#mbkSelectYear').selectpicker('mobile');
   $('#mbkOpponent').selectpicker('mobile');
 }
+else {
+  $('#mbkSelectYear').selectpicker({});
+  $('#mbkOpponent').selectpicker({});
+}
+
+if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent))) {
+  var elements = document.querySelectorAll('.mobile-device'); 
+  for(var i = 0; i < elements.length; i++)
+  {
+      elements[i].classList.remove('mobile-device');
+  }
+} 
 //-----------

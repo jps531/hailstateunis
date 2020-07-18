@@ -40,18 +40,18 @@
 
       <!-- Buttons -->
       <div class="row pageLinks">
-        <div class="col-md-2 just-center">
+        <div class="col-md-3 just-center">
           <button role="button" class="btn btn-outline-secondary btn-sm btn-block" data-toggle="modal" data-target="#aboutModalCenter">About</button>
         </div>
-        <div class="col-md-2 just-center">
+        <div class="col-md-3 just-center">
           <a role="button" class="btn btn-outline-secondary btn-sm btn-block" href="report-issue.php">Report an Issue</a>
         </div>
-        <div class="col-md-2 just-center">
-          <a role="button" class="btn btn-outline-secondary btn-sm btn-block" href="https://www.paypal.com/donate/?token=o77NriU8OSPwUkYraPib8ept8PkNYLbewQ_yiv08CejDEPzh3ncY9ZBJ5_4c2kFumFuh4W&country.x=US&locale.x=">Donate</a>
+        <div class="col-md-3 just-center">
+          <a role="button" class="btn btn-outline-secondary btn-sm btn-block" href="https://www.paypal.me/hailstateunis">Donate</a>
         </div>
       </div>
       <div class="row pageLinks">
-        <div class="col-md-6 just-center">
+        <div class="col-md-9 just-center">
           <a role="button" class="btn btn-outline-secondary btn-sm btn-block" href="https://www.hailstateunis.com">Back to HailStateUnis.com</a>
         </div>
       </div>
