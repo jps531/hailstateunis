@@ -11,3 +11,8 @@ body {
 .badge {
     font-weight: 500;
 }
+
+/*** no blue outine on divs ***/
+div:focus { 
+    outline: none;
+}
