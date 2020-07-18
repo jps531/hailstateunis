@@ -77,7 +77,7 @@ export var baseballTable = $('#baseballTable').DataTable( {
                 "order": [[ 1, 'asc' ], [15, 'asc']],
                 searching: true,
                 dom: 'tpilr',
-                destroy: true
+                retrieve: true
               });
 //-----------
 

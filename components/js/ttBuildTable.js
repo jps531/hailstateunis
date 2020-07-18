@@ -88,7 +88,7 @@ export var taylorsvilleTable = $('#taylorsvilleTable').DataTable( {
                 "order": [[ 1, 'asc' ]],
                 searching: true,
                 dom: 'tpilr',
-                destroy: true
+                retrieve: true
               });
 //-----------
 

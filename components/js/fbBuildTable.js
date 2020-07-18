@@ -88,7 +88,7 @@ export var table = $('#footballTable').DataTable( {
                 "order": [[ 1, 'asc' ]],
                 searching: true,
                 dom: 'tpilr',
-                destroy: true
+                retrieve: true
               });
 //-----------
 
