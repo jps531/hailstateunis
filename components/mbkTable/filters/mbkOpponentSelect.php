@@ -1,5 +1,5 @@
 <!-- Opponent Select -->
-<select class="selectpicker mobile-device" data-live-search="true" id="mbkOpponent" title="Opponent(s)" multiple> 
+<select class="selectpicker" data-live-search="true" id="mbkOpponent" title="Opponent(s)" multiple> 
   <optgroup label="SEC">
     <option>Alabama</option>
     <option>Arkansas</option>

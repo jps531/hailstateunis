@@ -1,0 +1,19 @@
+#Redirect to Welcome
+DirectoryIndex /welcome.php
+
+#Standard Redirections
+Redirect /welcome /welcome.php
+Redirect /football /football.php
+Redirect /baseball /baseball.php
+Redirect /mbasketball /mbasketball.php
+Redirect /wbasketball /wbasketball.php
+Redirect /taylorsville /taylorsville.php
+
+#Common Redirections
+Redirect /fb /football.php
+Redirect /bb /baseball.php
+Redirect /bsb /baseball.php
+Redirect /mbk /mbasketball.php
+Redirect /wbk /wbasketball.php
+Redirect /tartars /taylorsville.php
+Redirect /ths /taylorsville.php

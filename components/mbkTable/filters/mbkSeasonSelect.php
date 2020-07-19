@@ -1,5 +1,5 @@
 <!-- Season Select -->
-<select class="selectpicker mobile-device" data-live-search="true" title="Season(s)" id="mbkSelectYear" multiple>
+<select class="selectpicker" data-live-search="true" title="Season(s)" id="mbkSelectYear" multiple>
 
 <!-- Connect to Database -->
 <?php 
