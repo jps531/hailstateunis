@@ -350,10 +350,14 @@ $(document).ready(function(){
 });
 //-----------
 
+console.log($('#bbGameA').val);
+if(!$('#bbGameA').val()){
+    document.getElementById('#bbGameA').setAttribute('title', 'Game A');
+}
+
 //-----------
 // Set Filters for Mobile
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
-    console.log($('#bbGameA').val);
     $('#bbGameA').selectpicker('mobile');
     $('#bbGameB').selectpicker('mobile');
     $('#bbGameC').selectpicker('mobile');
@@ -362,7 +366,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
     $('#bbGameC').selectpicker('render');
 
     if(!$('#bbGameA').val()){
-        $('#bbGameA').selectpicker('render');
+        document.getElementById('#bbGameA').setAttribute('title', 'Game A');
     }
   }
 //-----------
