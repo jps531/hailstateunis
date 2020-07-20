@@ -17,3 +17,15 @@ Redirect /mbk /mbasketball.php
 Redirect /wbk /wbasketball.php
 Redirect /tartars /taylorsville.php
 Redirect /ths /taylorsville.php
+
+#Specific Redirections
+Redirect /bowls /football.php?gameA=Bowl_Games
+Redirect /football/bowls /football.php?gameA=Bowl_Games
+Redirect /leach /football.php?gameA=Mike_Leach
+Redirect /football/leach /football.php?gameA=Mike_Leach
+Redirect /moorhead /football.php?gameA=Joe_Moorhead
+Redirect /football/moorhead /football.php?gameA=Joe_Moorhead
+Redirect /mullen /football.php?gameA=Dan_Mullen
+Redirect /football/mullen /football.php?gameA=Dan_Mullen
+Redirect /croom /football.php?gameA=Sylvester_Croom
+Redirect /football/croom /football.php?gameA=Sylvester_Croom

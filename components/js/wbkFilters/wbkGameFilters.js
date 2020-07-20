@@ -54,10 +54,10 @@ $(document).ready(function(){
         searchTerm = searchTerm.concat("|-04-");
     }
     else if (this.value == "SEC Tournament"){
-      searchTerm = searchTerm.concat("|secT");
+      searchTerm = "secT";
     }
     else if (this.value == "NCAA Tournament"){
-      searchTerm = searchTerm.concat("|ncaa");
+      searchTerm = "ncaa";
     }
     
     // Months
@@ -126,10 +126,10 @@ $(document).ready(function(){
         searchTerm = searchTerm.concat("|-04-");
     }
     else if (this.value == "SEC Tournament"){
-      searchTerm = searchTerm.concat("|secT");
+      searchTerm = "secT";
     }
     else if (this.value == "NCAA Tournament"){
-      searchTerm = searchTerm.concat("|ncaa");
+      searchTerm = "ncaa";
     }
     
     // Months
@@ -198,10 +198,10 @@ $(document).ready(function(){
         searchTerm = searchTerm.concat("|-04-");
     }
     else if (this.value == "SEC Tournament"){
-      searchTerm = searchTerm.concat("|secT");
+      searchTerm = "secT";
     }
     else if (this.value == "NCAA Tournament"){
-      searchTerm = searchTerm.concat("|ncaa");
+      searchTerm = "ncaa";
     }
     
     // Months

@@ -4,7 +4,7 @@ import * as wlt from './tableFunctions.js';
 // Initialize Table
 export var baseballTable = $('#baseballTable').DataTable( {
                 "lengthMenu": [ [5, 10, 15, 20, 25, 40, 50, -1], [5, 10, 15, 20, 25, 40, 50, "All"] ],
-                "iDisplayLength":  10,
+                "iDisplayLength":  25,
                 language: {
                   paginate: {
                     next: '<i class="fa fa-chevron-right" ></i>',
