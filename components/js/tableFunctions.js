@@ -161,6 +161,7 @@ export function setURL(searchTerm,searchSubject){
 // Output(s): none
 export function urlTrigger(param,selectID){
   var value = getURLParameter(param);
+  console.log('val', value);
   if (value.length){
     $(selectID).val(value).trigger('change');
   }
