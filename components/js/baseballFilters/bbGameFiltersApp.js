@@ -20,7 +20,6 @@ export var gameType = ["Midweek","Non-Conference Game 1","Non-Conference Game 2"
 
 // Load game Filters
 $(function(){ $("#bbGameA").selectpicker('render'); })
-console.log('top', $('#bbGameA').val());
 $(function(){ $("#bbGameB").selectpicker('render'); })
 $(function(){ $("#bbGameC").selectpicker('render'); })
 
@@ -346,17 +345,10 @@ $(function() {
 // Auto Load URL Parameters
 $(document).ready(function(){
     wlt.urlTrigger('gameA','#bbGameA');
-    console.log('middle', $('#bbGameA').val());
     wlt.urlTrigger('gameB','#bbGameB');
     wlt.urlTrigger('gameC','#bbGameC');
 });
 //-----------
-
-console.log('bottom', $('#bbGameA').val());
-if(!$('#bbGameA').val()){
-    console.log('here');
-    document.getElementById('#bbGameA').setAttribute('title', 'Game A');
-}
 
 //-----------
 // Set Filters for Mobile
@@ -364,12 +356,5 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
     $('#bbGameA').selectpicker('mobile');
     $('#bbGameB').selectpicker('mobile');
     $('#bbGameC').selectpicker('mobile');
-    $('#bbGameA').selectpicker('render');
-    $('#bbGameB').selectpicker('render');
-    $('#bbGameC').selectpicker('render');
-
-    if(!$('#bbGameA').val()){
-        document.getElementById('#bbGameA').setAttribute('title', 'Game A');
-    }
   }
 //-----------
