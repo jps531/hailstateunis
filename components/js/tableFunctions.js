@@ -124,6 +124,21 @@ export function setURL(searchTerm,searchSubject){
   var subString = window.location.search.substring(1);
   var subStringContents = subString.split('&&');
 
+  // Exit if both subString and searchTerm are empty
+  if ((!subString || subString == '') && (!searchTerm || searchTerm == '')){
+    return;
+  }
+
+  // Exit if searchTerm is already in subString and is the only element in its particular search subject
+  if(searchTerm && subString.includes(searchTerm) && !subString.includes('|')){
+    return;
+  }
+
+  // Exit if searchTerm is empty and subString doesn't include searchSubject
+  if((!searchTerm || searchTerm == '') && !subString.includes(searchSubject)){
+    return;
+  }
+
   // Get current URL pathname
   var pathName = window.location.pathname;
 
