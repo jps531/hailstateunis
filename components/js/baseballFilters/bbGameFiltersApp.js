@@ -350,8 +350,9 @@ $(document).ready(function(){
 });
 //-----------
 
-console.log($('#bbGameA').val);
+console.log($('#bbGameA').val());
 if(!$('#bbGameA').val()){
+    console.log('here');
     document.getElementById('#bbGameA').setAttribute('title', 'Game A');
 }
 
