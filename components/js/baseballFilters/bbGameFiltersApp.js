@@ -353,8 +353,16 @@ $(document).ready(function(){
 //-----------
 // Set Filters for Mobile
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+    console.log($('#bbGameA').val);
     $('#bbGameA').selectpicker('mobile');
     $('#bbGameB').selectpicker('mobile');
     $('#bbGameC').selectpicker('mobile');
+    $('#bbGameA').selectpicker('render');
+    $('#bbGameB').selectpicker('render');
+    $('#bbGameC').selectpicker('render');
+
+    if(!$('#bbGameA').val()){
+        $('#bbGameA').selectpicker('render');
+    }
   }
 //-----------
