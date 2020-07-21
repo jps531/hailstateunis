@@ -12,7 +12,7 @@ body {
     font-weight: 500;
 }
 
-/*** no blue outine on divs ***/
-div:focus { 
+/*** no blue outines on focus ***/
+div:focus, a:focus { 
     outline: none;
 }
