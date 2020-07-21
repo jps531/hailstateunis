@@ -77,14 +77,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $errorTotal += 1;
   }
 
-  // If no errors, send email and redirect URL
+  /* If no errors, send email and redirect URL
   if ($errorTotal == 0) {
     mail("hailstateunis@gmail.com", $topic, $message);
     ob_start();
     header('Location: ' . $redirect);
     ob_end_flush();
     die();
-   }
+   }*/
 }
 ?>
 
@@ -113,7 +113,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- Form -->
     <div class="row">
         <div class="col-12">
-          <form method="post">
+          <form method="post" action="https://formspree.io/mpzykwyb">
 
             <!-- Page Select -->
             <div class="form-group">
