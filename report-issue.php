@@ -81,6 +81,7 @@ else{
     <div class="row" id="title">
       <div class="col-md text-center">
         <h1>Report an Issue</h1>
+        <hr>
       </div>
     </div>
 

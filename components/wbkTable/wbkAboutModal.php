@@ -7,7 +7,7 @@
 <div class="modal fade" id="wbkModalCenter" tabindex="-1" role="dialog" aria-labelledby="wbkModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header justify-content-center">
         <h5 class="modal-title" id="wbkModalLongTitle">About the Women's Basketball Uniform History Table</h5>
       </div>
       <div class="modal-body">

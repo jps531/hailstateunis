@@ -7,7 +7,7 @@
 <div class="modal fade" id="taylorsvilleModalCenter" tabindex="-1" role="dialog" aria-labelledby="taylorsvilleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header justify-content-center">
         <h5 class="modal-title" id="taylorsvilleModalLongTitle">About the Taylorsville Football Uniform History Table</h5>
       </div>
       <div class="modal-body">

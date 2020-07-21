@@ -94,32 +94,32 @@
               </td>
               <td class='aHelmet' role='cell' data-search='" . $row["conference"] . "'>
                 <a href='" . $row["away_helmet"] . "' data-fancybox>
-                  <img src='" . $row["away_helmet"] . "' height='80' alt='' class='d-inline-block align-middle mr-2'
+                  <img src='" . $row["away_helmet"] . "' height='80' alt='' loading='lazy' class='d-inline-block align-middle mr-2'
                 </a>
               </td>
               <td class='hHelmet' role='cell' data-search='" . $row["location"] . "'>
                 <a href='" . $row["home_helmet"] . "' data-fancybox>
-                  <img src='" . $row["home_helmet"] . "' height='80' alt='' class='d-inline-block align-middle mr-2'
+                  <img src='" . $row["home_helmet"] . "' height='80' alt='' loading='lazy' class='d-inline-block align-middle mr-2'
                 </a>
               </td>
               <td class='combination' role='cell' data-search='" . $row["cName"] . "'>
                 <a href='" . $row["cImage"] . "' data-fancybox>
-                  <img src='" . $row["cImage"] . "' height='80' alt='' class='d-inline-block align-middle mr-2'
+                  <img src='" . $row["cImage"] . "' height='80' alt='' loading='eager' class='d-inline-block align-middle mr-2'
                 </a>
               </td>
               <td class='helmet' role='cell' data-search='" . $row["hName"] . "'>
                 <a href='" . $row["hImage"] . "' data-fancybox>
-                  <img src='" . $row["hImage"] . "' height='80' alt='' class='d-inline-block align-middle mr-2'
+                  <img src='" . $row["hImage"] . "' height='80' alt='' loading='lazy' class='d-inline-block align-middle mr-2'
                 </a>
               </td>
               <td class='jersey' role='cell' data-search='" . $row["jName"] . "'>
                 <a href='" . $row["jImage"] . "' data-fancybox>
-                  <img src='" . $row["jImage"] . "' height='80' alt='' class='d-inline-block align-middle mr-2'
+                  <img src='" . $row["jImage"] . "' height='80' alt='' loading='lazy' class='d-inline-block align-middle mr-2'
                 </a>
               </td>
               <td class='pants' role='cell' data-search='" . $row["pName"] . "'>
                 <a href='" . $row["pImage"] . "' data-fancybox>
-                  <img src='" . $row["pImage"] . "' height='80' alt='' class='d-inline-block align-middle mr-2'
+                  <img src='" . $row["pImage"] . "' height='80' alt='' loading='lazy' class='d-inline-block align-middle mr-2'
                 </a>
               </td>
               <td class='result' role='cell' data-search='" . $row["result"] . " " . date("l", mktime(0,0,0,$month,$day,$year)) . $homecoming . "'>

@@ -67,7 +67,7 @@
       <div class="modal fade" id="aboutModalCenter" tabindex="-1" role="dialog" aria-labelledby="aboutModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
           <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header justify-content-center">
               <h5 class="modal-title" id="aboutModalLongTitle">About the HailStateUnis Database</h5>
             </div>
             <div class="modal-body">
