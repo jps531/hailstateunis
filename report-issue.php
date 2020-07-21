@@ -3,6 +3,7 @@
 // Get previous URL
 if(isset($_SERVER['HTTP_REFERER'])) {
   $prevURL = $_SERVER['HTTP_REFERER']; 
+  echo $prevURL;
 }
 
 // If no previous URL, redirect to welcome
