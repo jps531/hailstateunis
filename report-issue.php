@@ -93,7 +93,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
   <!-- Head/Navbar/Styles -->
   <head>
-    <title>Baseball Uniform History</title>
+    <title>Report an Issue</title>
     <?php include "components/headings/head.php"; ?>
     <link rel="stylesheet" href="components/scss/nonTablePages.scss">
     <?php include "components/headings/navbar.php"; ?>
