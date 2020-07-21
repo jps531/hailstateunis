@@ -3,7 +3,14 @@
 // Get previous URL
 if(isset($_SERVER['HTTP_REFERER'])) {
   $prevURL = $_SERVER['HTTP_REFERER']; 
-  echo $prevURL;
+
+  // If from formspree, redirect to welcome
+  if(strpos($prevURL, 'formspree.io') !== false){
+    ob_start();
+    header('Location: welcome.php');
+    ob_end_flush();
+    die();
+  }
 }
 
 // If no previous URL, redirect to welcome
