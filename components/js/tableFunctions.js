@@ -201,15 +201,15 @@ function getURLParameter(param){
       // Split into param and individual terms
       var paramContent = urlVariables[i].split('=');
       var paramTerms = paramContent[1].split('|');
+      var captialArray = ["Ncaa Tournament", "Wnit", "Sec Tournament", "Ncaa Round of 64", "Ncaa Round of 32", "Ncaa Sweet Sixteen",
+                          "Ncaa Elite Eight", "Ncaa Final Four", "Wnit Round of 64", "Wnit Round of 32", "Wnit Round of 16", "Wnit Quarterfinals",
+                          "Sect First Round", "Sect Second Round", "Sect Quarterfinals", "Sect Semifinals", "Sect Championship", "NIT",
+                          "Nit First Round", "Nit Second Round", "Nit Quarterfinals", "Nit Semifinals", "Sec", "Sec Game 1", "Sec Game 2", "Sec Game 3",
+                          "Cws Opening Game", "Cws Elimination Game", "Cws Winners Bracket Game", "Cws Bracket Championship Game", "Cws Bracket Championship Game 7",
+                          "Sect Play-In Game", "Sect Bracket Game 1", "Sect Elimination Game", "Sect Winners Bracket Game", "Sect Semifinal Game", "Sect Championship Game"];
       for (var j = 0; j < paramTerms.length; j++){
         paramTerms[j] = paramTerms[j].toLowerCase();
         paramTerms[j] = toTitleCase(paramTerms[j]);
-        captialArray = ["Ncaa Tournament", "Wnit", "Sec Tournament", "Ncaa Round of 64", "Ncaa Round of 32", "Ncaa Sweet Sixteen",
-                        "Ncaa Elite Eight", "Ncaa Final Four", "Wnit Round of 64", "Wnit Round of 32", "Wnit Round of 16", "Wnit Quarterfinals",
-                        "Sect First Round", "Sect Second Round", "Sect Quarterfinals", "Sect Semifinals", "Sect Championship", "NIT",
-                        "Nit First Round", "Nit Second Round", "Nit Quarterfinals", "Nit Semifinals", "Sec", "Sec Game 1", "Sec Game 2", "Sec Game 3",
-                        "Cws Opening Game", "Cws Elimination Game", "Cws Winners Bracket Game", "Cws Bracket Championship Game", "Cws Bracket Championship Game 7",
-                        "Sect Play-In Game", "Sect Bracket Game 1", "Sect Elimination Game", "Sect Winners Bracket Game", "Sect Semifinal Game", "Sect Championship Game"];
         if (paramContent[0] == "opponent" || captialArray.includes(paramTerms[j])){
             paramTerms[j] = teamCaseCorrections(paramTerms[j]);
         }
