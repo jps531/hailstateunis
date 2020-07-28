@@ -204,7 +204,13 @@ function getURLParameter(param){
       for (var j = 0; j < paramTerms.length; j++){
         paramTerms[j] = paramTerms[j].toLowerCase();
         paramTerms[j] = toTitleCase(paramTerms[j]);
-        if (paramContent[0] == "opponent"){
+        captialArray = ["Ncaa Tournament", "Wnit", "Sec Tournament", "Ncaa Round of 64", "Ncaa Round of 32", "Ncaa Sweet Sixteen",
+                        "Ncaa Elite Eight", "Ncaa Final Four", "Wnit Round of 64", "Wnit Round of 32", "Wnit Round of 16", "Wnit Quarterfinals",
+                        "Sect First Round", "Sect Second Round", "Sect Quarterfinals", "Sect Semifinals", "Sect Championship", "NIT",
+                        "Nit First Round", "Nit Second Round", "Nit Quarterfinals", "Nit Semifinals", "Sec", "Sec Game 1", "Sec Game 2", "Sec Game 3",
+                        "Cws Opening Game", "Cws Elimination Game", "Cws Winners Bracket Game", "Cws Bracket Championship Game", "Cws Bracket Championship Game 7",
+                        "Sect Play-In Game", "Sect Bracket Game 1", "Sect Elimination Game", "Sect Winners Bracket Game", "Sect Semifinal Game", "Sect Championship Game"];
+        if (paramContent[0] == "opponent" || captialArray.includes(paramTerms[j])){
             paramTerms[j] = teamCaseCorrections(paramTerms[j]);
         }
         else if (paramTerms[j] == "Dws 100"){
@@ -371,6 +377,117 @@ function teamCaseCorrections(tName){
   }
   else if (tName == "Mra"){
     return "MRA";
+  }
+  else if (tName == "Ncaa Tournament"){
+    return "NCAA Tournament";
+  }
+  else if (tName == "Wnit"){
+    return "WNIT";
+  }
+  else if (tName == "Sec Tournament"){
+    return "SEC Tournament";
+  }
+  else if (tName == "Ncaa Round of 64"){
+    return "NCAA Round of 64";
+  }
+  else if (tName == "Ncaa Round of 32"){
+    return "NCAA Round of 32";
+  }
+  else if (tName == "Ncaa Sweet Sixteen"){
+    return "NCAA Sweet Sixteen";
+  }
+  else if (tName == "Ncaa Elite Eight"){
+    return "NCAA Elite Eight";
+  }
+  else if (tName == "Ncaa Final Four"){
+    return "NCAA Final Four";
+  }
+  else if (tName == "Wnit Round of 64"){
+    return "WNIT Round of 64";
+  }
+  else if (tName == "Wnit Round of 32"){
+    return "WNIT Round of 32";
+  }
+  else if (tName == "Wnit Round of 16"){
+    return "WNIT Round of 16";
+  }
+  else if (tName == "Wnit Quarterfinals"){
+    return "WNIT Quarterfinals";
+  }
+  else if (tName == "Sect First Round"){
+    return "SECT First Round";
+  }
+  else if (tName == "Sect Second Round"){
+    return "SECT Second Round";
+  }
+  else if (tName == "Sect Quarterfinals"){
+    return "SECT Quarterfinals";
+  }
+  else if (tName == "Sect Semifinals"){
+    return "SECT Semifinals";
+  }
+  else if (tName == "Sect Championship"){
+    return "SECT Championship";
+  }
+  else if (tName == "Nit"){
+    return "NIT";
+  }
+  else if (tName == "Nit First Round"){
+    return "NIT First Round";
+  }
+  else if (tName == "Nit Second Round"){
+    return "NIT Second Round";
+  }
+  else if (tName == "Nit Quarterfinals"){
+    return "NIT Quarterfinals";
+  }
+  else if (tName == "Nit Semifinals"){
+    return "NIT Semifinals";
+  }
+  else if (tName == "Sec"){
+    return "SEC";
+  }
+  else if (tName == "Sec Game 1"){
+    return "SEC Game 1";
+  }
+  else if (tName == "Sec Game 2"){
+    return "SEC Game 2";
+  }
+  else if (tName == "Sec Game 3"){
+    return "SEC Game 3";
+  }
+  else if (tName == "Cws Opening Game"){
+    return "CWS Opening Game";
+  }
+  else if (tName == "Cws Elimination Game"){
+    return "CWS Elimination Game";
+  }
+  else if (tName == "Cws Winners Bracket Game"){
+    return "CWS Winners Bracket Game";
+  }
+  else if (tName == "Cws Bracket Championship Game"){
+    return "CWS Bracket Championship Game";
+  }
+  else if (tName == "Cws Bracket Championship Game 7"){
+    return "CWS Bracket Championship Game 7";
+  }
+  else if (tName == "Sect Play-In Game"){
+    return "SECT Play-In Game";
+  }
+  else if (tName == "Sect Bracket Game 1"){
+    return "SECT Bracket Game 1";
+  }
+  else if (tName == "Sect Elimination Game"){
+    return "SECT Elimination Game";
+  }
+  else if (tName == "Sect Winners Bracket Game"){
+    return "SECT Winners Bracket Game";
+  }
+  else if (tName == "Sect Semifinal Game"){
+    return "SECT Semifinal Game";
+  }
+  else if (tName == "Sect Championship Game"){
+    return "SECT Championship Game";
   }
   else{
     return tName;
