@@ -96,7 +96,7 @@ $(document).ready(function(){
     bbgOptSelectedA = sit.searchTable(group,tbl.baseballTable,searchTerm,bbgOptSelectedA,4,16);
 
     // Game Location
-    bbgOptSelectedA = sit.searchTable(group,tbl.baseballTable,searchTerm,bbgOptSelectedA,5,3);
+    bbgOptSelectedA = sit.searchTable(group,tbl.baseballTable,searchTerm,bbgOptSelectedA,5,4);
 
     // Game Type
     bbgOptSelectedA = sit.searchTable(group,tbl.baseballTable,searchTerm,bbgOptSelectedA,6,3);
@@ -197,7 +197,7 @@ $(document).ready(function(){
     bbgOptSelectedB = sit.searchTable(group,tbl.baseballTable,searchTerm,bbgOptSelectedB,4,16);
 
     // Game Location
-    bbgOptSelectedB = sit.searchTable(group,tbl.baseballTable,searchTerm,bbgOptSelectedB,5,3);
+    bbgOptSelectedB = sit.searchTable(group,tbl.baseballTable,searchTerm,bbgOptSelectedB,5,4);
 
     // Game Type
     bbgOptSelectedB = sit.searchTable(group,tbl.baseballTable,searchTerm,bbgOptSelectedB,6,3);
@@ -298,7 +298,7 @@ $(document).ready(function(){
     bbgOptSelectedC = sit.searchTable(group,tbl.baseballTable,searchTerm,bbgOptSelectedC,4,16);
 
     // Game Location
-    bbgOptSelectedC = sit.searchTable(group,tbl.baseballTable,searchTerm,bbgOptSelectedC,5,3);
+    bbgOptSelectedC = sit.searchTable(group,tbl.baseballTable,searchTerm,bbgOptSelectedC,5,4);
 
     // Game Type
     bbgOptSelectedC = sit.searchTable(group,tbl.baseballTable,searchTerm,bbgOptSelectedC,6,3);

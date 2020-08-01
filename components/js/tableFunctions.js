@@ -201,8 +201,8 @@ function getURLParameter(param){
       // Split into param and individual terms
       var paramContent = urlVariables[i].split('=');
       var paramTerms = paramContent[1].split('|');
-      var captialArray = ["Ncaa Tournament", "Wnit", "Sec Tournament", "Ncaa Round of 64", "Ncaa Round of 32", "Ncaa Sweet Sixteen",
-                          "Ncaa Elite Eight", "Ncaa Final Four", "Wnit Round of 64", "Wnit Round of 32", "Wnit Round of 16", "Wnit Quarterfinals",
+      var captialArray = ["Ncaa Tournament", "Wnit", "Sec Tournament", "Ncaa Round Of 64", "Ncaa Round Of 32", "Ncaa Sweet Sixteen",
+                          "Ncaa Elite Eight", "Ncaa Final Four", "Wnit Round Of 64", "Wnit Round Of 32", "Wnit Round Of 16", "Wnit Quarterfinals",
                           "Sect First Round", "Sect Second Round", "Sect Quarterfinals", "Sect Semifinals", "Sect Championship", "NIT",
                           "Nit First Round", "Nit Second Round", "Nit Quarterfinals", "Nit Semifinals", "Sec", "Sec Game 1", "Sec Game 2", "Sec Game 3",
                           "Cws Opening Game", "Cws Elimination Game", "Cws Winners Bracket Game", "Cws Bracket Championship Game", "Cws Bracket Championship Game 7",
@@ -387,10 +387,10 @@ function teamCaseCorrections(tName){
   else if (tName == "Sec Tournament"){
     return "SEC Tournament";
   }
-  else if (tName == "Ncaa Round of 64"){
+  else if (tName == "Ncaa Round Of 64"){
     return "NCAA Round of 64";
   }
-  else if (tName == "Ncaa Round of 32"){
+  else if (tName == "Ncaa Round Of 32"){
     return "NCAA Round of 32";
   }
   else if (tName == "Ncaa Sweet Sixteen"){
@@ -402,13 +402,13 @@ function teamCaseCorrections(tName){
   else if (tName == "Ncaa Final Four"){
     return "NCAA Final Four";
   }
-  else if (tName == "Wnit Round of 64"){
+  else if (tName == "Wnit Round Of 64"){
     return "WNIT Round of 64";
   }
-  else if (tName == "Wnit Round of 32"){
+  else if (tName == "Wnit Round Of 32"){
     return "WNIT Round of 32";
   }
-  else if (tName == "Wnit Round of 16"){
+  else if (tName == "Wnit Round Of 16"){
     return "WNIT Round of 16";
   }
   else if (tName == "Wnit Quarterfinals"){

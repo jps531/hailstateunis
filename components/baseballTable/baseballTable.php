@@ -173,10 +173,10 @@
               <td class='day' role='cell' data-search='" . date("l", mktime(0,0,0,$month,$day,$year)) . "'>
                 <span id='DoW' class='badge badge-dark'>" . date("l", mktime(0,0,0,$month,$day,$year)) . "</span>
               </td>
-              <td class='type' role='cell' data-search='" . $row["type"] . $row["location"] . "'>
+              <td class='type' role='cell' data-search='" . $row["type"] . "'>
                 <span class='badge" . $typeBadge . $row["type"] . "</span>
               </td>
-              <td class='uniform' role='cell' data-search='" . $row["uName"] . "'>
+              <td class='uniform' role='cell' data-search='" . $row["uName"] . $row["location"] . "'>
                 <a href='" . $row["uImage"] . "' data-fancybox>
                   <img src='" . $row["uImage"] . "' height='80' alt='' class='d-inline-block align-middle mr-2'
                 </a>

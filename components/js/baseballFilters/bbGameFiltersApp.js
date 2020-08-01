@@ -67,7 +67,7 @@ $(document).ready(function (){
             else if (selected.A == 5){
                 enabled.F = 1;
             }
-            else if (selected.A == 5){
+            else if (selected.A == 6){
                 enabled.G = 1;
             }
 
@@ -174,7 +174,7 @@ $(document).ready(function (){
             else if (selected.B == 5){
                 enabled.F = 1;
             }
-            else if (selected.B == 5){
+            else if (selected.B == 6){
                 enabled.G = 1;
             }
 
@@ -276,7 +276,7 @@ $(document).ready(function (){
             else if (selected.C == 5){
                 enabled.F = 1;
             }
-            else if (selected.C == 5){
+            else if (selected.C == 6){
                 enabled.G = 1;
             }
 
