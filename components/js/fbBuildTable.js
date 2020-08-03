@@ -110,6 +110,12 @@ $(function() {
 //-----------
 // W/L Tally
 var wlTotal = '';
+console.log(table.page.len);
+table.page.len(-1).draw();
+console.log(table.page.len);
+$('.lateLoad').deferImageLoading();
+table.page.len(25).draw();
+console.log(table.page.len);
 
 // Display String for Full Table
 wlTotal = wlt.createWL(table, 8);
