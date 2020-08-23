@@ -40,7 +40,6 @@ CREATE TABLE `helmet` (
 --
 
 INSERT INTO `helmet` (`helmetID`, `hColor`, `hName`, `hImage`) VALUES
-(0, 'white', '2015 white helmets', 'https://i.imgur.com/QtfoPxR.png'),
 (1, 'maroon', '2019 egg bowl shiny maroon helmets', 'https://i.imgur.com/ZTaHA2V.png'),
 (2, 'matte maroon', '2019 matte maroon helmets', 'https://i.imgur.com/MArQmOA.png'),
 (3, 'matte maroon', '2018 matte maroon helmets', 'https://i.imgur.com/JJ66T9w.png'),
@@ -71,10 +70,11 @@ INSERT INTO `helmet` (`helmetID`, `hColor`, `hName`, `hImage`) VALUES
 (28, 'maroon', '1989 shiny maroon helmets', 'https://i.imgur.com/Hd53MjS.png'),
 (29, 'maroon', '1986 shiny maroon helmets', 'https://i.imgur.com/HgwIKOF.png'),
 (30, 'maroon', '1979 shiny maroon helmets', 'https://i.imgur.com/PpPrBUl.png'),
-(31, 'maroon', '1973 shiny maroon helmets', 'https://i.imgur.com/k1T02uF.png'),
+(31, 'maroon', '1973 shiny maroon helmets', 'https://i.imgur.com/Hh7Fs3x.png'),
 (32, 'maroon', '1963 bulldog shiny maroon helmets', 'https://i.imgur.com/hO0t6Mh.png'),
 (33, 'maroon', '1941 maroon helmets', 'https://i.imgur.com/ULaO6w4.png'),
-(34, 'unknown', '1937 helmets', 'https://i.imgur.com/rVtHnPX.png');
+(34, 'unknown', '1937 helmets', 'https://i.imgur.com/rVtHnPX.png'),
+(35, 'white', '2015 white helmets', 'https://i.imgur.com/QtfoPxR.png');
 
 --
 -- Indexes for dumped tables

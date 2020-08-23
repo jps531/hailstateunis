@@ -110,7 +110,7 @@
               </td>
               <td class='combination' role='cell' data-search='" . $row["cName"] . "'>
                 <a href='" . $row["cImage"] . "' data-fancybox>
-                  <img src='" . $row["cImage"] . "' height='80' alt='' class='d-inline-block align-middle mr-2'
+                  <img src='" . $row["cThumb"] . "' data-src='" . $row["cImage"] . "' height='80' alt='' class='d-inline-block align-middle mr-2 earlyLoad'
                 </a>
               </td>
               <td class='helmet' role='cell' data-search='" . $row["hName"] . "'>
