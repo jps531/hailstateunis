@@ -530,7 +530,7 @@ INSERT INTO `game` (`gameID`, `yr`, `gameday`, `opponentName`, `result`, `points
 (478, 1940, '1941-01-01', 'Georgetown', 'Win', 14, 7, 'orangeBowl', 165, 'https://i.imgur.com/kgJ8NTo.png', 'https://i.imgur.com/36usISD.png', 'Bowl Game Uniform History', 'https://www.hailstateunis.com/bowl-game-uniform-history.html'),
 (479, 1936, '1937-01-01', 'Duquesne', 'Loss', 12, 13, 'orangeBowl', 166, 'https://i.imgur.com/IgRHcPz.png', 'https://i.imgur.com/8xwAt9m.png', 'Bowl Game Uniform History', 'https://www.hailstateunis.com/bowl-game-uniform-history.html'),
 (480, 2019, '2019-12-30', 'Louisville', 'Loss', 28, 38, 'musicCityBowl', 167, 'https://i.imgur.com/vfNgKFa.png', 'https://i.imgur.com/EIvD24X.png', 'Bulldogs Lose Music City Bowl in All-White', 'https://www.hailstateunis.com/2019-football-season/bulldogs-lose-music-city-bowl-in-all-white');
-'
+
 --
 -- Indexes for dumped tables
 --
