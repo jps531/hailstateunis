@@ -116,7 +116,6 @@ console.log(table.page.len);
 $('.earlyLoad').deferImageLoading();
 $('.lateLoad').deferImageLoading();
 table.page.len(25).draw();
-console.log(table.page.len);
 
 // Display String for Full Table
 wlTotal = wlt.createWL(table, 8);

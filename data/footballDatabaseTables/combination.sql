@@ -146,26 +146,26 @@ INSERT INTO `combination` (`comboID`, `helmetID`, `jerseyID`, `pantsID`, `cName`
 (101, 24, 34, 27, '2007 white/maroon/white', 'https://i.imgur.com/W8bGDNA.png', 'https://i.imgur.com/7vs2boN.png'),
 (102, 24, 33, 27, '2004 all-white white/white/white', 'https://i.imgur.com/fg6Qx6c.png', 'https://i.imgur.com/0H1ln4M.png'),
 (103, 24, 34, 27, '2004 white/maroon/white', 'https://i.imgur.com/kQG5EaQ.png', 'https://i.imgur.com/G4N7fcF.png'),
-(104, 25, 39, 29, '2003 number white/maroon/white', 'https://i.imgur.com/9bjX8Nk.png', NULL),
-(105, 27, 39, 29, '2002 maroon/maroon/white', 'https://i.imgur.com/gdPV9KK.png', NULL),
-(106, 27, 39, 28, '2002 monochrome maroon maroon/maroon/maroon', 'https://i.imgur.com/KJsaxyd.png', NULL),
-(107, 27, 38, 28, '2002 maroon/white/maroon', 'https://i.imgur.com/k3aKHxy.png', NULL),
-(108, 27, 38, 29, '2003 maroon/white/white', 'https://i.imgur.com/NwfBEAQ.png', NULL),
-(109, 26, 38, 29, '2002 all-white white/white/white', 'https://i.imgur.com/H3z84cQ.png', NULL),
-(110, 26, 39, 29, '2001 white/maroon/white', 'https://i.imgur.com/07fyToU.png', NULL),
-(111, 26, 38, 29, '2001 all-white white/white/white', 'https://i.imgur.com/ZE2NXCU.png', NULL),
-(112, 27, 38, 28, '1998 maroon/white/maroon', 'https://i.imgur.com/VPKGhEQ.png', NULL),
-(113, 27, 39, 29, '1998 maroon/maroon/white', 'https://i.imgur.com/PV5bf2z.png', NULL),
-(114, 27, 38, 29, '1998 maroon/white/white', 'https://i.imgur.com/rQwqMZD.png', NULL),
-(115, 27, 37, 29, '1999 cotton bowl maroon/white/white', 'https://i.imgur.com/PW9ojNz.png', NULL),
-(116, 27, 36, 29, '1999 peach bowl maroon/maroon/white', 'https://i.imgur.com/g3TOXNN.png', NULL),
-(117, 26, 35, 29, '2000 snow bowl independence bowl white/white/white', 'https://i.imgur.com/InrZJAW.png', NULL),
-(118, 27, 39, 29, '1997 maroon/maroon/white', 'https://i.imgur.com/ciPdDSK.png', NULL),
-(119, 27, 38, 29, '1997 maroon/white/white', 'https://i.imgur.com/9MzsGJ3.png', NULL),
-(120, 27, 38, 28, '1997 maroon/white/maroon', 'https://i.imgur.com/iTFlNaw.png', NULL),
-(121, 27, 38, 30, '1996 maroon/white/maroon', 'https://i.imgur.com/Rsjjels.png', NULL),
-(122, 27, 38, 31, '1996 maroon/white/white', 'https://i.imgur.com/7CkVTpd.png', NULL),
-(123, 27, 39, 31, '1996 maroon/maroon/white', 'https://i.imgur.com/e6QN8U1.png', NULL),
+(104, 25, 39, 29, '2003 number white/maroon/white', 'https://i.imgur.com/T412erf.png', 'https://i.imgur.com/sk9Cz6K.png'),
+(105, 27, 39, 29, '2002 maroon/maroon/white', 'https://i.imgur.com/tsdfl5H.png', 'https://i.imgur.com/wAiUbNr.png'),
+(106, 27, 39, 28, '2002 monochrome maroon maroon/maroon/maroon', 'https://i.imgur.com/mcrIG96.png', 'https://i.imgur.com/2E82dHz.png'),
+(107, 27, 38, 28, '2002 maroon/white/maroon', 'https://i.imgur.com/fPasK3B.png', 'https://i.imgur.com/pjcPHrr.png'),
+(108, 27, 38, 29, '2003 maroon/white/white', 'https://i.imgur.com/PFC7UCe.png', 'https://i.imgur.com/rTnNmpe.png'),
+(109, 26, 38, 29, '2002 all-white white/white/white', 'https://i.imgur.com/PbrOOjT.png', 'https://i.imgur.com/sa1kgPI.png'),
+(110, 26, 39, 29, '2001 white/maroon/white', 'https://i.imgur.com/MoiigQw.png', 'https://i.imgur.com/h5vPm7S.png'),
+(111, 26, 38, 29, '2001 all-white white/white/white', 'https://i.imgur.com/bZZCTQ5.png', 'https://i.imgur.com/Aq482iq.png'),
+(112, 27, 38, 28, '1998 maroon/white/maroon', 'https://i.imgur.com/AkRRIJf.png', 'https://i.imgur.com/7IuzDu5.png'),
+(113, 27, 39, 29, '1998 maroon/maroon/white', 'https://i.imgur.com/cymaNKV.png', 'https://i.imgur.com/8no2EcF.png'),
+(114, 27, 38, 29, '1998 maroon/white/white', 'https://i.imgur.com/g3SEQMO.png', 'https://i.imgur.com/eQhankw.png'),
+(115, 27, 37, 29, '1999 cotton bowl maroon/white/white', 'https://i.imgur.com/jEvKG5H.png', 'https://i.imgur.com/o9Z4Gjo.png'),
+(116, 27, 36, 29, '1999 peach bowl maroon/maroon/white', 'https://i.imgur.com/dBX9gD4.png', 'https://i.imgur.com/0Oz9AD4.png'),
+(117, 26, 35, 29, '2000 snow bowl independence bowl white/white/white', 'https://i.imgur.com/svnHvpN.png', 'https://i.imgur.com/2L207mx.png'),
+(118, 27, 39, 29, '1997 maroon/maroon/white', 'https://i.imgur.com/qAmgZsD.png', 'https://i.imgur.com/CxxaeID.png'),
+(119, 27, 38, 29, '1997 maroon/white/white', 'https://i.imgur.com/Y0fnORi.png', 'https://i.imgur.com/2fWWI9e.png'),
+(120, 27, 38, 28, '1997 maroon/white/maroon', 'https://i.imgur.com/mORvf2Y.png', 'https://i.imgur.com/Akff9sW.png'),
+(121, 27, 38, 30, '1996 maroon/white/maroon', 'https://i.imgur.com/4TsHDQh.png', 'https://i.imgur.com/13iR4Ki.png'),
+(122, 27, 38, 31, '1996 maroon/white/white', 'https://i.imgur.com/fz8V7lR.png', 'https://i.imgur.com/NYU8YPq.png'),
+(123, 27, 39, 31, '1996 maroon/maroon/white', 'https://i.imgur.com/F1N88mt.png', 'https://i.imgur.com/iBtf0PA.png'),
 (124, 28, 40, 30, '1995 maroon/white/maroon', 'https://i.imgur.com/SR4dK9u.png', NULL),
 (125, 28, 40, 31, '1995 maroon/white/white', 'https://i.imgur.com/VfmRRgK.png', NULL),
 (126, 28, 41, 30, '1995 monochrome maroon maroon/maroon/maroon', 'https://i.imgur.com/S0zjFKz.png', NULL),
@@ -209,7 +209,10 @@ INSERT INTO `combination` (`comboID`, `helmetID`, `jerseyID`, `pantsID`, `cName`
 (164, 32, 64, 34, '1963 liberty bowl maroon/maroon/white', 'https://i.imgur.com/qeYbLDs.png', NULL),
 (165, 33, 65, 35, '1941 orange bowl monochrome maroon maroon/maroon/maroon', 'https://i.imgur.com/uiNDsJ7.png', NULL),
 (166, 34, 66, 17, '1937 orange bowl monochrome maroon unknown/maroon/maroon', 'https://i.imgur.com/axxUvW2.png', NULL),
-(167, 35, 0, 0, '2019 music city bowl all-white white/white/white', 'https://i.imgur.com/hNZcmhz.png', 'https://i.imgur.com/l4R2Mwh.png');
+(167, 35, 0, 0, '2019 music city bowl all-white white/white/white', 'https://i.imgur.com/hNZcmhz.png', 'https://i.imgur.com/l4R2Mwh.png'),
+(168, 27, 38, 28, '2001 maroon/white/maroon', 'https://i.imgur.com/wny91Qi.png', 'https://i.imgur.com/d6DlRdn.png'),
+(169, 27, 39, 29, '2001 maroon/maroon/white', 'https://i.imgur.com/qccu1Ku.png', 'https://i.imgur.com/sLKho9F.png'),
+(170, 15, 17, 15, '2014 dws 100 usm maroon/maroon/white', 'https://i.imgur.com/mtNMEeW.png', 'https://i.imgur.com/FYI3n76.png');
 
 --
 -- Indexes for dumped tables
@@ -232,7 +235,7 @@ ALTER TABLE `combination`
 -- AUTO_INCREMENT for table `combination`
 --
 ALTER TABLE `combination`
-  MODIFY `comboID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=168;
+  MODIFY `comboID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=171;
 
 --
 -- Constraints for dumped tables
