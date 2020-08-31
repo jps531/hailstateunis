@@ -111,6 +111,7 @@ $(function() {
 // W/L Tally
 var wlTotal = '';
 table.page.len(-1).draw();
+$('.earlyLoad').deferImageLoading();
 $('.lateLoad').deferImageLoading();
 table.page.len(25).draw();
 

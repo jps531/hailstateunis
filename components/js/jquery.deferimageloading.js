@@ -15,9 +15,6 @@
      var group = this;
      var count = this.length;
 
-     console.log(group);
-     console.log(count);
-
      return this.each(function() {
        var $img = $(this);
        $(document).ready(function() {
