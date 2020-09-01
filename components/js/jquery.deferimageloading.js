@@ -18,7 +18,7 @@
      return this.each(function() {
        var $img = $(this);
        $(document).ready(function() {
-         $img.attr('src', $img.data('src')).on('load', function() {
+         $img.attr('src', $img.data('src')).on('DOMContentLoaded', function() {
            count--;
            if (!count && $.isFunction(callback)) {
              callback.call(group);
