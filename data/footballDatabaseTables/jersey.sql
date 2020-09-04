@@ -40,7 +40,6 @@ CREATE TABLE `jersey` (
 --
 
 INSERT INTO `jersey` (`jerseyID`, `jColor`, `jName`, `jImage`) VALUES
-(0, 'white', '2016 white jerseys (2019 music city bowl)', 'https://i.imgur.com/ES8nEBZ.png'),
 (1, 'maroon', '2019 egg bowl maroon jerseys', 'https://i.imgur.com/koCSDsu.png'),
 (2, 'black', '2019 black jerseys', 'https://i.imgur.com/cr4poRg.png'),
 (3, 'white', '2016 white jerseys', 'https://i.imgur.com/krxdYFC.png'),
@@ -106,7 +105,8 @@ INSERT INTO `jersey` (`jerseyID`, `jColor`, `jName`, `jImage`) VALUES
 (63, 'maroon', '1974 maroon jerseys', 'https://i.imgur.com/V3AfsTW.png'),
 (64, 'maroon', '1963 maroon jerseys', 'https://i.imgur.com/bXnEoFF.png'),
 (65, 'maroon', '1941 maroon jerseys', 'https://i.imgur.com/Fhs7Duh.png'),
-(66, 'maroon', '1937 maroon jerseys', 'https://i.imgur.com/wvPxkca.png');
+(66, 'maroon', '1937 maroon jerseys', 'https://i.imgur.com/wvPxkca.png'),
+(67, 'white', '2016 white jerseys (2019 music city bowl)', 'https://i.imgur.com/ES8nEBZ.png');
 
 --
 -- Indexes for dumped tables
@@ -122,7 +122,7 @@ ALTER TABLE `jersey`
 -- AUTO_INCREMENT for table `jersey`
 --
 ALTER TABLE `jersey`
-  MODIFY `jerseyID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
+  MODIFY `jerseyID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
