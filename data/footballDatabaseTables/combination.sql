@@ -206,7 +206,7 @@ INSERT INTO `combination` (`comboID`, `helmetID`, `jerseyID`, `pantsID`, `cName`
 (161, 30, 61, 34, '1980 maroon/white/white', 'https://i.imgur.com/CQKAjkU.png', 'https://i.imgur.com/xhdwxp2.png'),
 (162, 30, 62, 34, '1980 maroon/maroon/white', 'https://i.imgur.com/qRmRiOU.png', 'https://i.imgur.com/bFKOq9o.png'),
 (163, 31, 63, 34, '1974 sun bowl maroon/maroon/white', 'https://i.imgur.com/Z8wx42n.png', 'https://i.imgur.com/nQGgWto.png'),
-(164, 32, 64, 34, '1963 liberty bowl maroon/maroon/white', 'https://i.imgur.com/qeYbLDs.png', NULL),
+(164, 32, 64, 34, '1963 liberty bowl maroon/maroon/white', 'https://i.imgur.com/nhPb8Zv.png', 'https://i.imgur.com/UIDaOIO.png'),
 (165, 33, 65, 35, '1941 orange bowl monochrome maroon maroon/maroon/maroon', 'https://i.imgur.com/IekjVXV.png', 'https://i.imgur.com/6wniszb.png'),
 (166, 34, 66, 17, '1937 orange bowl monochrome maroon unknown/maroon/maroon', 'https://i.imgur.com/pSiAjFg.png', 'https://i.imgur.com/ZhbKh0x.png'),
 (167, 35, 67, 0, '2019 music city bowl all-white white/white/white', 'https://i.imgur.com/hNZcmhz.png', 'https://i.imgur.com/l4R2Mwh.png'),
