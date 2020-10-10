@@ -6,7 +6,7 @@
   </optgroup>
   <optgroup label="Helmets">
     <option>Maroon Helmets</option>
-    <option>Shiny Maroon Helmets</option>
+    <option>Gloss Maroon Helmets</option>
     <option>Matte Maroon Helmets</option>
     <option>White Helmets</option>
     <option>Silver Helmets</option>

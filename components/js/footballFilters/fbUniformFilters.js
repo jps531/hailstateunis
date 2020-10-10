@@ -48,8 +48,8 @@ $(document).ready(function(){
         searchTerm = searchTerm.concat('|maroon');
     }
   
-    else if (this.value == 'Shiny Maroon Helmets'){
-        searchTerm = searchTerm.concat('|shiny');
+    else if (this.value == 'Gloss Maroon Helmets'){
+        searchTerm = searchTerm.concat('|glossy');
     }
 
     else if (this.value == 'Matte Maroon Helmets'){
@@ -175,8 +175,8 @@ $(document).ready(function(){
         searchTerm = searchTerm.concat('|maroon');
     }
   
-    else if (this.value == 'Shiny Maroon Helmets'){
-        searchTerm = searchTerm.concat('|shiny');
+    else if (this.value == 'Gloss Maroon Helmets'){
+        searchTerm = searchTerm.concat('|glossy');
     }
 
     else if (this.value == 'Matte Maroon Helmets'){
@@ -302,8 +302,8 @@ $(document).ready(function(){
         searchTerm = searchTerm.concat('|maroon');
     }
   
-    else if (this.value == 'Shiny Maroon Helmets'){
-        searchTerm = searchTerm.concat('|shiny');
+    else if (this.value == 'Gloss Maroon Helmets'){
+        searchTerm = searchTerm.concat('|glossy');
     }
 
     else if (this.value == 'Matte Maroon Helmets'){
