@@ -1,0 +1,206 @@
+/*** whole table ***/
+.table > tbody > tr > td, .table > tbody > tr > th, .table > thead > tr > th {
+  vertical-align: middle;
+  text-align: center;
+  border: none;
+}
+
+.table {
+  border-spacing: 0 0.3rem !important;
+  margin:0 auto;
+}
+
+.table td {
+  background: #f8f8f8;
+}
+
+/*** table head ***/
+.table thead tr,
+.table thead th {
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: transparent;
+  font-weight: 500;
+}
+
+table.dataTable thead .sorting:before, table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_desc_disabled:before  {
+  font-style: normal;
+  -webkit-font-variant-ligatures: normal;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal;
+  font-variant-east-asian: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-size: 90%;
+  line-height: 1.45em;
+  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+}
+
+table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:after {
+  font-style: normal;
+  -webkit-font-variant-ligatures: normal;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal;
+  font-variant-east-asian: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-size: 90%;
+  line-height: 1.45em;
+  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+}
+
+/*** table columns ***/
+.mr-2{
+  margin-right: 0px !important;
+}
+
+td.aHelmet{
+  padding-right: 1px;
+}
+
+td.hHelmet{
+  padding-left: 1px;
+}
+
+.table td:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.table td:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/*** table content ***/
+span.badge.badge-success, span.badge.badge-danger{
+  text-transform: uppercase;
+}
+
+#neutral td {
+  background: #f0f0f0;
+}
+
+#road td {
+  background: #e8e8e8;
+}
+
+#armedForcesBowl td, #cusaChampionship td{
+  background: #ffacb9;
+}
+
+#independenceBowl td{
+  background: #a2b8f9;
+}
+
+#newOrleansBowl td{
+  background: #c9abfb;
+}
+
+#heartOfDallasBowl td{
+  background: #a1dcff;
+}
+
+#hawaiiBowl td{
+  background: #ddbb8e;
+}
+
+#beefOBradysBowl td{
+  background: #ffd085;
+}
+
+#papaJohnsBowl td{
+  background: #8bdbbb;
+}
+
+#gmacBowl td{
+  background: #d4d8e2;
+}
+
+#libertyBowl td{
+  background: #a5ccff;
+}
+
+/*** table footer ***/
+#winLossTotal{
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  padding-top: 10px;
+}
+
+#footerRow{
+  border-top: none;
+  background-color: transparent;
+}
+
+/*** table pagination/info/length ***/
+.page-item.active .page-link{
+  background-color: black;
+  border-color: #5c5c5c;
+  color: #ffc209;
+}
+
+.page-link{
+  color: #d8a927;
+}
+
+.page-link:hover{
+  color: #ebbf46;
+}
+
+.dataTables_info{
+  white-space: normal !important;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.dataTables_length, .dataTables_info, .dataTables_paginate{
+  justify-content: center;
+  display: flex;
+  padding-bottom: 10px;
+  top: 38px !important;
+  left: 8px !important;
+  padding-top: 0px !important;
+}
+
+/*** table expanded child elements ***/
+#innerTable{
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  padding: 10px;
+}
+
+#innerArticle{
+  padding: 10px;
+}
+
+#innerTitle{
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child::before{
+  content: '+';
+  background-color: white;
+  color: black;
+  border-radius: 14px;
+  box-shadow: none;
+  top: 38px;
+  left: 8px;
+  font-weight: bold;
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child::before {
+  content: '-';
+  background-color: white;
+  color: black;
+  border-radius: 14px;
+  box-shadow: none;
+  font-weight: bold;
+}

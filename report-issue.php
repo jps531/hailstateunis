@@ -39,6 +39,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   else if ($prevURL == "women's basketball"){
     $prevURL = 'wbasketball.php';
   }
+  else if ($prevURL == "southernmiss"){
+    $prevURL = 'southernmiss.php';
+  }
+  else if ($prevURL == "taylorsville"){
+    $prevURL = 'taylorsville.php';
+  }
 }
 
 // Set category default and redirect URL
@@ -56,6 +62,12 @@ else if (strpos($prevURL, 'wbasketball') !== false) {
 }
 else if (strpos($prevURL, 'welcome') !== false) {
   $categoryDefault = "Welcome";
+}
+else if (strpos($prevURL, 'southernmiss') !== false) {
+  $categoryDefault = "Southern Miss";
+}
+else if (strpos($prevURL, 'taylorsville') !== false) {
+  $categoryDefault = "Taylorsville";
 }
 else{
   $categoryDefault = "";
@@ -99,6 +111,8 @@ else{
                 <option value="Baseball" <?php echo (isset($_POST['page']) && $_POST['page'] === 'Baseball') ? 'selected' : ''; ?>>Baseball</option>
                 <option value="Men's Basketball" <?php echo (isset($_POST['page']) && $_POST['page'] === "Men's Basetball") ? 'selected' : ''; ?>>Men's Basketball</option>
                 <option value="Women's Basketball" <?php echo (isset($_POST['page']) && $_POST['page'] === "Women's Basetball") ? 'selected' : ''; ?>>Women's Basketball</option>
+                <option value="Southern Miss" <?php echo (isset($_POST['page']) && $_POST['page'] === "Southern Miss") ? 'selected' : ''; ?>>Southern Miss</option>
+                <option value="Taylorsville" <?php echo (isset($_POST['page']) && $_POST['page'] === "Taylorsville") ? 'selected' : ''; ?>>Taylorsville</option>
               </select>
             </div>
 
@@ -135,7 +149,7 @@ else{
 
   // Auto load page select
   var categoryDefault = "<?php echo $categoryDefault; ?>";
-  var categories = ["Welcome","Football","Baseball","Men's Basketball","Women's Basketball"];
+  var categories = ["Welcome","Football","Baseball","Men's Basketball","Women's Basketball","Southern Miss","Taylorsville"];
   if(jQuery.inArray(categoryDefault, categories) !== -1){
     $('#page').selectpicker('val', categoryDefault);
   }

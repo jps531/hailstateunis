@@ -29,3 +29,6 @@
     </div>
   </div>
 </div>
+
+<!-- Report Issue Button -->
+<a role="button" class="btn btn-outline-secondary btn-sm" href="report-issue.php">Report an Issue</a>

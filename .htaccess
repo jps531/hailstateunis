@@ -13,6 +13,7 @@ Redirect /baseball /baseball.php
 Redirect /mbasketball /mbasketball.php
 Redirect /wbasketball /wbasketball.php
 Redirect /taylorsville /taylorsville.php
+Redirect /southernmiss /southernmiss.php
 
 #Common Redirections
 Redirect /fb /football.php
@@ -22,6 +23,9 @@ Redirect /mbk /mbasketball.php
 Redirect /wbk /wbasketball.php
 Redirect /tartars /taylorsville.php
 Redirect /ths /taylorsville.php
+Redirect /eagles /southernmiss.php
+Redirect /goldeneagles /southernmiss.php
+Redirect /usm /southernmiss.php
 
 #Specific Redirections
 Redirect /bowls /football.php?gameA=Bowl_Games

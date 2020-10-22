@@ -96,6 +96,36 @@ label{
     color: white;
 }
 
+.usmBtn{
+    color: black;
+    background-color: #ffc209;
+}
+
+.usmBtn:focus{
+    border-color: #d8a927;
+    box-shadow: 0 0 0 0.2rem #ebbf46;
+}
+
+.usmBtn:hover{
+    background-color: #d8a927;
+    color: black;
+}
+
+.tayBtn{
+    color: white;
+    background-color: #068b48;
+}
+
+.tayBtn:focus{
+    border-color: #23b96e;
+    box-shadow: 0 0 0 0.2rem #5db187;
+}
+
+.tayBtn:hover{
+    background-color: #23b96e;
+    color: white;
+}
+
 .btn-sm{
     margin: 10px;
 }

@@ -205,7 +205,7 @@ function getURLParameter(param){
                           "Ncaa Elite Eight", "Ncaa Final Four", "Wnit Round Of 64", "Wnit Round Of 32", "Wnit Round Of 16", "Wnit Quarterfinals",
                           "Sect First Round", "Sect Second Round", "Sect Quarterfinals", "Sect Semifinals", "Sect Championship", "NIT",
                           "Nit First Round", "Nit Second Round", "Nit Quarterfinals", "Nit Semifinals", "Sec", "Sec Game 1", "Sec Game 2", "Sec Game 3",
-                          "Cws Opening Game", "Cws Elimination Game", "Cws Winners Bracket Game", "Cws Bracket Championship Game", "Cws Bracket Championship Game 7",
+                          "Cws Opening Game", "Cws Elimination Game", "Cws Winners Bracket Game", "Cws Bracket Championship Game", "Cws Bracket Championship Game 7", "C-usa Championship",
                           "Sect Play-In Game", "Sect Bracket Game 1", "Sect Elimination Game", "Sect Winners Bracket Game", "Sect Semifinal Game", "Sect Championship Game"];
       for (var j = 0; j < paramTerms.length; j++){
         paramTerms[j] = paramTerms[j].toLowerCase();
@@ -248,6 +248,9 @@ function teamCaseCorrections(tName){
   }
   else if (tName == "Texas A&m"){
     return "Texas A&M";
+  }
+  else if (tName == 'C-usa Championship'){
+    return "C-USA Championship";
   }
   else if (tName == "Miami Fl"){
     return "Miami FL";

@@ -29,18 +29,25 @@
 
 #navDropdownItem{
     text-align: center;
-    padding: 0px;
+    padding: .5rem 0rem;
     color: #919191;
 }
 
 #navDropdownItem:hover{
     background-color: #222322;
     color: #c7c7c7;
+    border-radius: 5px;
 }
 
 #navDropdownItem:active, #navDropdownItem.dropdown-item.active{
     background-color: #222322 !important;
-    color: white;
+    color: white !important;
+    border-radius: 5px;
+}
+
+#navDropdownMenu.dropdown-menu.show{
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 /*** mobile collapse button ***/

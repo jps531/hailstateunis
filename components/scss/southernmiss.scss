@@ -1,0 +1,120 @@
+/*** page title ***/
+.titleTop {
+    padding: 20px;
+    padding-bottom: 10px;
+    color: black;
+}
+
+.titleBottom {
+    padding: 20px;
+    padding-top: 0px;
+    color: black;
+}
+
+.titleImage{
+    max-width: 100%;
+    height: auto;
+}
+
+/*** filters ***/
+#seasons, #opponents, #search,
+#uniformA, #uniformB, #uniformC,
+#gameA, #gameB, #gameC{
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+
+#uniformB, #uniformC, #gameB, #gameC{
+    display: none;
+}
+
+#filtersRowTwo, #filtersSubrowB, #filtersSubrowC{
+    justify-content: center;
+    padding-top: 20px;
+}
+
+#filtersSubrowA{
+    justify-content: center;
+}
+
+#filtersSubrowB{
+    background-color: #dbdbdb;
+}
+
+#filtersSubrowC{
+    background-color: #cbcbcb;
+}
+
+#filtersRowTwo{
+    background-color: #bbbbbb;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#filters{
+    background: #ebebeb;
+    max-width: 826px;
+    border-radius: 10px;
+    padding: 15px;
+    padding-bottom: 0px;
+    margin-bottom: 15px;
+}
+
+#filterCollapse, #filtersClear{
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+#filterClearBtn{
+    justify-content: center;
+    display: flex;
+}
+
+.form-control{
+    display: inline-block;
+    width: 220px;
+}
+
+.form-control:focus{
+    border-color: #d8a927;
+    box-shadow: 0 0 0 0.2rem #ebbf46;
+}
+
+.page-link:focus{
+    border-color: #d8a927;
+    box-shadow: 0 0 0 0 #ebbf46;
+}
+
+.submitBtn, .standardBtn{
+    color: black;
+    background-color: #ffc209;
+}
+
+.submitBtn:focus, .standardBtn:focus{
+    border-color: #d8a927;
+    box-shadow: 0 0 0 0 #ebbf46;
+}
+
+.submitBtn:hover, .standardBtn:hover{
+    background-color: #d8a927;
+    color: black;
+}
+
+.clear{
+    margin-left: -10px;
+    margin-right: 5px;
+}
+
+.bootstrap-select .dropdown-menu li.disabled a {
+    font-size: .85rem;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    background-color: #ffc209 !important;
+    color: black;
+}
+
+/*** table container ***/
+#table{
+    justify-content: center;
+}

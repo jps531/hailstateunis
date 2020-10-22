@@ -37,6 +37,14 @@
           <a role="button" id="wbkBtn" class="btn btn-lg btn-block standardBtn" href="wbasketball.php">Women's Basketball</a>
         </div>
       </div>
+      <div class="row pageLinks">
+        <div class="col-md-3 just-center-10-pad">
+          <a role="button" id="usmBtn" class="btn btn-md btn-block usmBtn" href="southernmiss.php">Southern Miss</a>
+        </div>
+        <div class="col-md-3 just-center-10-pad">
+          <a role="button" id="tayBtn" class="btn btn-md btn-block tayBtn" href="taylorsville.php">Taylorsville</a>
+        </div>
+      </div>
 
       <!-- Buttons -->
       <div class="row pageLinks">
