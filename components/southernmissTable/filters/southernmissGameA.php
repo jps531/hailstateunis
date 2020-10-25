@@ -26,6 +26,7 @@
   </optgroup>
   <optgroup label="Head Coaches">
     <option>Scotty Walden</option>
+    <option>Tim Billings</option>
     <option>Jay Hopson</option>
     <option>Todd Monken</option>
     <option>Ellis Johnson</option>

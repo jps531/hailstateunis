@@ -70,6 +70,9 @@
       if ($row["gameID"] == "1"){
         $headcoach = 'Jay Hopson';
       }
+      else if ($row["gameID"] == "222"){
+        $headcoach = 'Tim Billings';
+      }
       else{
         $headcoach = $row["head_coach"];
       }
