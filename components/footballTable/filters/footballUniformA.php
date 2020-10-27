@@ -10,6 +10,7 @@
     <option>Matte Maroon Helmets</option>
     <option>White Helmets</option>
     <option>Silver Helmets</option>
+    <option>Black Helmets</option>
     <option>Gold Helmets</option>
     <option>Bulldog Helmets</option>
   </optgroup>

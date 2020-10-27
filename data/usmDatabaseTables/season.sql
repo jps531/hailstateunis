@@ -59,7 +59,7 @@ INSERT INTO `season` (`yr`, `head_coach`, `wins`, `losses`, `cusa_wins`, `cusa_l
 (2017, 'Jay Hopson', 8, 5, 6, 2),
 (2018, 'Jay Hopson', 6, 5, 5, 3),
 (2019, 'Jay Hopson', 7, 6, 5, 3),
-(2020, 'Scotty Walden', 1, 3, 1, 1);
+(2020, 'Tim Billings', 1, 3, 1, 1);
 
 --
 -- Indexes for dumped tables

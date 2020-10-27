@@ -63,6 +63,10 @@ $(document).ready(function(){
     else if (this.value == 'Silver Helmets'){
         searchTerm = searchTerm.concat('|silver');
     }
+
+    else if (this.value == 'Black Helmets'){
+        searchTerm = searchTerm.concat('|black');
+    }
   
     else if (this.value == 'Gold Helmets'){
         searchTerm = searchTerm.concat('|gold');
