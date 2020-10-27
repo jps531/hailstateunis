@@ -49,4 +49,4 @@ Redirect /football/sherill /football.php?gameA=Jackie_Sherill
 Redirect /jackie /football.php?gameA=Jackie_Sherill
 Redirect /football/jackie /football.php?gameA=Jackie_Sherill
 
-Redirect /super /baseball.php?gameA=Super_Regional
+Redirect /supers /baseball.php?gameA=Super_Regional
