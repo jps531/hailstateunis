@@ -75,6 +75,10 @@ $(document).ready(function(){
     else if (this.value == 'Bulldog Helmets'){
         searchTerm = searchTerm.concat('|bulldog');
     }
+
+    else if (this.value == 'Flying M Helmets'){
+        searchTerm = searchTerm.concat('|flying m');
+    }
   
     else if (this.value == 'Maroon Jerseys'){
         searchTerm = searchTerm.concat('|maroon');
@@ -202,7 +206,11 @@ $(document).ready(function(){
     else if (this.value == 'Bulldog Helmets'){
         searchTerm = searchTerm.concat('|bulldog');
     }
-  
+
+    else if (this.value == 'Flying M Helmets'){
+        searchTerm = searchTerm.concat('|flying m');
+    }
+
     else if (this.value == 'Maroon Jerseys'){
         searchTerm = searchTerm.concat('|maroon');
     }
@@ -329,7 +337,11 @@ $(document).ready(function(){
     else if (this.value == 'Bulldog Helmets'){
         searchTerm = searchTerm.concat('|bulldog');
     }
-  
+
+    else if (this.value == 'Flying M Helmets'){
+        searchTerm = searchTerm.concat('|flying m');
+    }
+      
     else if (this.value == 'Maroon Jerseys'){
         searchTerm = searchTerm.concat('|maroon');
     }

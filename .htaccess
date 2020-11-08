@@ -50,3 +50,5 @@ Redirect /jackie /football.php?gameA=Jackie_Sherill
 Redirect /football/jackie /football.php?gameA=Jackie_Sherill
 
 Redirect /supers /baseball.php?gameA=Super_Regional
+Redirect /flyingm /football.php?uniformA=Flying_M_Helmets
+Redirect /football/flyingm /football.php?uniformA=Flying_M_Helmets
