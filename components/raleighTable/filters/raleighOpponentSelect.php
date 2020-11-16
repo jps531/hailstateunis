@@ -12,17 +12,17 @@
     // output data of each row
     if ($result->num_rows > 0) {
       $currentConference = "";
-      $twoAsouth = array("5-2A", "6-2A", "7-2A", "8-2A");
-      $twoAnorth = array("2A North");
-      $otherAs = array("1A", "3A", "4A", "5A", "6A");
+      $threeAsouth = array("5-3A", "6-3A", "7-3A", "8-3A");
+      $threeAnorth = array("3A North");
+      $otherAs = array("1A", "2A", "4A", "5A", "6A");
       $mais = array("MAIS");
       $defunct = array("Defunct");
       $rows = array();
       while($row = $result->fetch_assoc()) {
         array_push($rows, $row);
       }
-      conferenceLoop($twoAsouth, $rows);
-      conferenceLoop($twoAnorth, $rows);
+      conferenceLoop($threeAsouth, $rows);
+      conferenceLoop($threeAnorth, $rows);
       conferenceLoop($otherAs, $rows);
       conferenceLoop($mais, $rows);
       conferenceLoop($defunct, $rows);
