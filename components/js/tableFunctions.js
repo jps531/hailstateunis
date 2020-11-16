@@ -381,6 +381,15 @@ function teamCaseCorrections(tName){
   else if (tName == "Mra"){
     return "MRA";
   }
+  else if (tName == "Se Lauderdale"){
+    return "SE Lauderdale";
+  }
+  else if (tName == "St. Andrew%27s"){
+    return "St. Andrew's";
+  }
+  else if (tName == "Madison La"){
+    return "Madison LA";
+  }
   else if (tName == "Ncaa Tournament"){
     return "NCAA Tournament";
   }

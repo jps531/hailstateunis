@@ -34,52 +34,48 @@ $(document).ready(function(){
     }
     
     // Modify search term
-    if (this.value == 'Gold Helmets'){
-        searchTerm = searchTerm.concat('|gold');
+    if (this.value == 'RHS Helmets'){
+        searchTerm = searchTerm.concat('|rhs');
     }
   
-    else if (this.value == 'Black Helmets'){
-        searchTerm = searchTerm.concat('|black');
+    else if (this.value == 'Lion Helmets'){
+        searchTerm = searchTerm.concat('|lion');
     }
 
-    else if (this.value == 'Green Jerseys'){
-        searchTerm = searchTerm.concat('|green');
+    else if (this.value == 'Number Helmets'){
+        searchTerm = searchTerm.concat('|number');
+    }
+
+    else if (this.value == 'Maroon Jerseys'){
+        searchTerm = searchTerm.concat('|maroon');
     }
   
     else if (this.value == 'White Jerseys'){
         searchTerm = searchTerm.concat('|white');
     }
   
-    else if (this.value == 'Gold Jerseys'){
-        searchTerm = searchTerm.concat('|gold');
-    }
-  
-    else if (this.value == 'Gray Jerseys'){
-        searchTerm = searchTerm.concat('|gray');
+    else if (this.value == 'Dark Gray Jerseys'){
+        searchTerm = searchTerm.concat('|dark gray');
     }
 
     else if (this.value == 'Black Jerseys'){
         searchTerm = searchTerm.concat('|black');
     }
 
-    else if (this.value == 'Gold Pants'){
-        searchTerm = searchTerm.concat('|gold');
+    else if (this.value == 'Maroon Pants'){
+        searchTerm = searchTerm.concat('|maroon');
     }
   
     else if (this.value == 'White Pants'){
         searchTerm = searchTerm.concat('|white');
     }
   
-    else if (this.value == 'Green Pants'){
-        searchTerm = searchTerm.concat('|green');
+    else if (this.value == 'Dark Gray Pants'){
+        searchTerm = searchTerm.concat('|dark gray');
     }
 
-    else if (this.value == 'Gray Pants'){
-        searchTerm = searchTerm.concat('|gray');
-    }
-
-    else if (this.value == 'Black Pants'){
-        searchTerm = searchTerm.concat('|black');
+    else if (this.value == 'Light Gray Pants'){
+        searchTerm = searchTerm.concat('|light gray');
     }
 
     // Helmets
@@ -125,52 +121,48 @@ $(document).ready(function(){
     }
     
     // Modify search term
-    if (this.value == 'Gold Helmets'){
-        searchTerm = searchTerm.concat('|gold');
+    if (this.value == 'RHS Helmets'){
+        searchTerm = searchTerm.concat('|rhs');
     }
   
-    else if (this.value == 'Black Helmets'){
-        searchTerm = searchTerm.concat('|black');
+    else if (this.value == 'Lion Helmets'){
+        searchTerm = searchTerm.concat('|lion');
     }
 
-    else if (this.value == 'Green Jerseys'){
-        searchTerm = searchTerm.concat('|green');
+    else if (this.value == 'Number Helmets'){
+        searchTerm = searchTerm.concat('|number');
+    }
+
+    else if (this.value == 'Maroon Jerseys'){
+        searchTerm = searchTerm.concat('|maroon');
     }
   
     else if (this.value == 'White Jerseys'){
         searchTerm = searchTerm.concat('|white');
     }
   
-    else if (this.value == 'Gold Jerseys'){
-        searchTerm = searchTerm.concat('|gold');
-    }
-  
-    else if (this.value == 'Gray Jerseys'){
-        searchTerm = searchTerm.concat('|gray');
+    else if (this.value == 'Dark Gray Jerseys'){
+        searchTerm = searchTerm.concat('|dark gray');
     }
 
     else if (this.value == 'Black Jerseys'){
         searchTerm = searchTerm.concat('|black');
     }
 
-    else if (this.value == 'Gold Pants'){
-        searchTerm = searchTerm.concat('|gold');
+    else if (this.value == 'Maroon Pants'){
+        searchTerm = searchTerm.concat('|maroon');
     }
   
     else if (this.value == 'White Pants'){
         searchTerm = searchTerm.concat('|white');
     }
   
-    else if (this.value == 'Green Pants'){
-        searchTerm = searchTerm.concat('|green');
+    else if (this.value == 'Dark Gray Pants'){
+        searchTerm = searchTerm.concat('|dark gray');
     }
 
-    else if (this.value == 'Gray Pants'){
-        searchTerm = searchTerm.concat('|gray');
-    }
-
-    else if (this.value == 'Black Pants'){
-        searchTerm = searchTerm.concat('|black');
+    else if (this.value == 'Light Gray Pants'){
+        searchTerm = searchTerm.concat('|light gray');
     }
 
     // Helmets
@@ -216,52 +208,48 @@ $(document).ready(function(){
     }
     
     // Modify search term
-    if (this.value == 'Gold Helmets'){
-        searchTerm = searchTerm.concat('|gold');
+    if (this.value == 'RHS Helmets'){
+        searchTerm = searchTerm.concat('|rhs');
     }
   
-    else if (this.value == 'Black Helmets'){
-        searchTerm = searchTerm.concat('|black');
+    else if (this.value == 'Lion Helmets'){
+        searchTerm = searchTerm.concat('|lion');
     }
 
-    else if (this.value == 'Green Jerseys'){
-        searchTerm = searchTerm.concat('|green');
+    else if (this.value == 'Number Helmets'){
+        searchTerm = searchTerm.concat('|number');
+    }
+
+    else if (this.value == 'Maroon Jerseys'){
+        searchTerm = searchTerm.concat('|maroon');
     }
   
     else if (this.value == 'White Jerseys'){
         searchTerm = searchTerm.concat('|white');
     }
   
-    else if (this.value == 'Gold Jerseys'){
-        searchTerm = searchTerm.concat('|gold');
-    }
-  
-    else if (this.value == 'Gray Jerseys'){
-        searchTerm = searchTerm.concat('|gray');
+    else if (this.value == 'Dark Gray Jerseys'){
+        searchTerm = searchTerm.concat('|dark gray');
     }
 
     else if (this.value == 'Black Jerseys'){
         searchTerm = searchTerm.concat('|black');
     }
 
-    else if (this.value == 'Gold Pants'){
-        searchTerm = searchTerm.concat('|gold');
+    else if (this.value == 'Maroon Pants'){
+        searchTerm = searchTerm.concat('|maroon');
     }
   
     else if (this.value == 'White Pants'){
         searchTerm = searchTerm.concat('|white');
     }
   
-    else if (this.value == 'Green Pants'){
-        searchTerm = searchTerm.concat('|green');
+    else if (this.value == 'Dark Gray Pants'){
+        searchTerm = searchTerm.concat('|dark gray');
     }
 
-    else if (this.value == 'Gray Pants'){
-        searchTerm = searchTerm.concat('|gray');
-    }
-
-    else if (this.value == 'Black Pants'){
-        searchTerm = searchTerm.concat('|black');
+    else if (this.value == 'Light Gray Pants'){
+        searchTerm = searchTerm.concat('|light gray');
     }
 
     // Helmets
