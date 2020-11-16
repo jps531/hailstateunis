@@ -216,6 +216,18 @@ span.badge.badge-success, span.badge.badge-danger{
   background: #a5e1c9;
 }
 
+#playoffsStateChampionship td{
+  background: #dbb979;
+}
+
+#playoffsSouthState td{
+  background: #ffd085;
+}
+
+#playoffsFirstRound td, #playoffsSecondRound td, #playoffsThirdRound td{
+  background: #d4d8e2;
+}
+
 /*** table footer ***/
 #winLossTotal{
   display: flex;
