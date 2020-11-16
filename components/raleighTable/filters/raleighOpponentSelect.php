@@ -16,6 +16,7 @@
       $threeAnorth = array("3A North");
       $otherAs = array("1A", "2A", "4A", "5A", "6A");
       $mais = array("MAIS");
+      $outOfState = array("Out of State");
       $defunct = array("Defunct");
       $rows = array();
       while($row = $result->fetch_assoc()) {
@@ -25,6 +26,7 @@
       conferenceLoop($threeAnorth, $rows);
       conferenceLoop($otherAs, $rows);
       conferenceLoop($mais, $rows);
+      conferenceLoop($outOfState, $rows);
       conferenceLoop($defunct, $rows);
     } 
     else {
