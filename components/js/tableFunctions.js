@@ -387,6 +387,9 @@ function teamCaseCorrections(tName){
   else if (tName == "St. Andrew%27s"){
     return "St. Andrew's";
   }
+  else if (tName == "Mclaurin"){
+    return "McLaurin";
+  }
   else if (tName == "Madison La"){
     return "Madison LA";
   }

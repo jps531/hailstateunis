@@ -12,7 +12,7 @@
     // output data of each row
     if ($result->num_rows > 0) {
       $currentConference = "";
-      $threeAsouth = array("5-3A", "6-3A", "7-3A", "8-3A");
+      $threeAsouth = array("6-3A", "5-3A", "7-3A", "8-3A");
       $threeAnorth = array("3A North");
       $otherAs = array("1A", "2A", "4A", "5A", "6A");
       $mais = array("MAIS");
