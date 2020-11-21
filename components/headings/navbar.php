@@ -47,6 +47,7 @@
         <div class="dropdown-menu" id="navDropdownMenu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" id="navDropdownItem" href="southernmiss.php">Southern Miss</a>
           <a class="dropdown-item" id="navDropdownItem" href="taylorsville.php">Taylorsville</a>
+          <a class="dropdown-item" id="navDropdownItem" href="raleigh.php">Raleigh</a>
         </div>
       </li>
       <li class="nav-item">
