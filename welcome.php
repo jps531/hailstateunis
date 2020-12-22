@@ -111,7 +111,7 @@
                 <p>Raised by my dad to be a lifelong Mississippi State Fan, I started the MSU Football and Baseball Uniform Trackers in high school, and created the
                   "HailStateUnis" Twitter account my senior year of high school. The summer before my freshman year at State, I launched the "HailStateUnis.com" website.
                   It's been a really enjoyable hobby that combines by love of sports, technology, and the need to classify/organize things.</p>
-                <p>HailStateUnis is strictly a hobby for me; I do not profit from it in any way whatsoeverand it is not affiliated with Mississippi State University in any fashion.
+                <p>HailStateUnis is strictly a hobby for me; I do not profit from it in any way whatsoever, and it is not affiliated with Mississippi State University in any fashion.
                   I refuse to include any ads on the website as I feel that would be an unnecessary detriment to the user experience. That being said, there are some monthly costs 
                   associated with keeping the website and database online, so if anyone feels so inclined as to donate (via the button on the welcome page) to help keep them up and 
                   running, it would be greatly appreciated.</p>
