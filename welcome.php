@@ -102,8 +102,7 @@
                 <h6>About me:</h6>
                 <div class="container row align-items-center">
                   <div class="col-md-10 bio">
-                    <p>My name is Paul Sullivan, I'm a undergraduate student at Mississippi State, majoring in Software Engineering and scheduled to graduate
-                      in November of 2020!</p>
+                    <p>My name is Paul Sullivan, I'm a 2020 Mississippi State graduate with a bachelor's degree in Software Engineering!</p>
                   </div>
                   <div class="col-md-2 bio-pic">
                     <img src="https://i.imgur.com/eKkQFO5.jpg" alt="Paul Sullivan Egg" width="100" height="100">
@@ -112,9 +111,10 @@
                 <p>Raised by my dad to be a lifelong Mississippi State Fan, I started the MSU Football and Baseball Uniform Trackers in high school, and created the
                   "HailStateUnis" Twitter account my senior year of high school. The summer before my freshman year at State, I launched the "HailStateUnis.com" website.
                   It's been a really enjoyable hobby that combines by love of sports, technology, and the need to classify/organize things.</p>
-                <p>HailStateUnis is strictly a hobby for me; I do not profit from it in any way whatsoever. I refuse to include any ads on the website as I feel that would 
-                  be an unnecessary detriment to the user experience. That being said, there are some monthly costs associated with keeping the website and database online, 
-                  so if anyone feels so inclined as to donate (via the button on the welcome page) to help keep them up and running, it would be greatly appreciated.</p>
+                <p>HailStateUnis is strictly a hobby for me; I do not profit from it in any way whatsoeverand it is not affiliated with Mississippi State University in any fashion.
+                  I refuse to include any ads on the website as I feel that would be an unnecessary detriment to the user experience. That being said, there are some monthly costs 
+                  associated with keeping the website and database online, so if anyone feels so inclined as to donate (via the button on the welcome page) to help keep them up and 
+                  running, it would be greatly appreciated.</p>
                 <p>This website is an aggreate of all that I've learned over the years about coding, web development, and user experience, as well as Mississippi State's 
                   sports and uniform history. The COVID-19 pandemic allowed me the time and resources to complete this project, and I'm really proud of how it turned out.</p>
               </div>
