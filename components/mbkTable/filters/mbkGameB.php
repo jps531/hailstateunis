@@ -45,6 +45,7 @@
     <option>NIT Second Round</option>
     <option>NIT Quarterfinals</option>
     <option>NIT Semifinals</option>
+    <option>NIT Championship</option>
     <option disabled="disabled">SEC Tournament</option>
     <option>SECT First Round</option>
     <option>SECT Second Round</option>

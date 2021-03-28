@@ -459,6 +459,9 @@ function teamCaseCorrections(tName){
   else if (tName == "Nit Semifinals"){
     return "NIT Semifinals";
   }
+  else if (tName == "Nit Championship"){
+    return "NIT Championship";
+  }
   else if (tName == "Sec"){
     return "SEC";
   }
