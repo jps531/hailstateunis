@@ -29,6 +29,7 @@
     <option>Homecoming</option>
   </optgroup>
   <optgroup label="Head Coaches">
+    <option>Jay Blackledge</option>
     <option>Mitch Evans</option>
     <option>Chuck Robertson</option>
     <option>Matt Caldwell</option>
