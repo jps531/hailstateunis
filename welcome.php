@@ -63,7 +63,7 @@
       </div>
       <div class="row pageLinks">
         <div class="col-md-9 just-center">
-          <a role="button" class="btn btn-outline-secondary btn-sm btn-block" href="https://www.hailstateunis.com">Back to HailStateUnis.com</a>
+          <a role="button" class="btn btn-outline-secondary btn-sm btn-block" href="https://www.hailstateunis.com">HailStateUnis.com</a>
         </div>
       </div>
 

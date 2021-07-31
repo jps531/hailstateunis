@@ -6,13 +6,17 @@
     include "data/rhsDatabaseConnection.php"; 
 
     // Perform Query
-    $sql = "SELECT * FROM `opponent` ORDER BY `opponent`.`conference` ASC, `opponent`.`opponentName` ASC";
+    $sql = "SELECT DISTINCT game.opponentName, opponent.conference FROM `game`
+            INNER JOIN `opponent` ON game.opponentName = opponent.opponentName
+            ORDER BY `opponent`.`conference` ASC, `opponent`.`opponentName` ASC";
     $result = $conn->query($sql);
 
     // output data of each row
     if ($result->num_rows > 0) {
       $currentConference = "";
-      $threeAsouth = array("6-3A", "5-3A", "7-3A", "8-3A");
+      $threeAdistrictSix = array("6-3A");
+      $threeAsouth = array("5-3A", "7-3A", "8-3A");
+      $threeAindependent = array("3A Independent");
       $threeAnorth = array("3A North");
       $otherAs = array("1A", "2A", "4A", "5A", "6A");
       $mais = array("MAIS");
@@ -22,7 +26,9 @@
       while($row = $result->fetch_assoc()) {
         array_push($rows, $row);
       }
+      conferenceLoop($threeAdistrictSix, $rows);
       conferenceLoop($threeAsouth, $rows);
+      conferenceLoop($threeAindependent, $rows);
       conferenceLoop($threeAnorth, $rows);
       conferenceLoop($otherAs, $rows);
       conferenceLoop($mais, $rows);

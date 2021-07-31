@@ -6,7 +6,9 @@
     include "data/usmDatabaseConnection.php"; 
 
     // Perform Query
-    $sql = "SELECT * FROM `opponent` ORDER BY `opponent`.`conference` ASC, `opponent`.`opponentName` ASC";
+    $sql = "SELECT DISTINCT game.opponentName, opponent.conference FROM `game`
+            INNER JOIN `opponent` ON game.opponentName = opponent.opponentName
+            ORDER BY `opponent`.`conference` ASC, `opponent`.`opponentName` ASC";
     $result = $conn->query($sql);
 
     // output data of each row

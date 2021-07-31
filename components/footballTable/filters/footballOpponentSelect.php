@@ -1,34 +1,21 @@
 <!-- Opponent Select -->
 <select class="selectpicker" data-live-search="true" id="selectOpponent" title="Opponent(s)" multiple> 
-  <optgroup label="SEC West">
-    <option>Alabama</option>
-    <option>Arkansas</option>
-    <option>Auburn</option>
-    <option>LSU</option>
-    <option>Ole Miss</option>
-    <option>Texas A&M</option>
-  </optgroup>
-  <optgroup label="SEC East">
-    <option>Florida</option>
-    <option>Georgia</option>
-    <option>Kentucky</option>
-    <option>Missouri</option>
-    <option>South Carolina</option>
-    <option>Tennessee</option>
-    <option>Vanderbilt</option>
-  </optgroup>
 
   <!-- Connect to Database -->
   <?php 
     include "data/fbDatabaseConnection.php"; 
 
     // Perform Query
-    $sql = "SELECT * FROM `opponent` ORDER BY `opponent`.`conference` ASC, `opponent`.`opponentName` ASC";
+    $sql = "SELECT DISTINCT game.opponentName, opponent.conference FROM `game`
+            INNER JOIN `opponent` ON game.opponentName = opponent.opponentName
+            ORDER BY `opponent`.`conference` ASC, `opponent`.`opponentName` ASC";
     $result = $conn->query($sql);
 
     // output data of each row
     if ($result->num_rows > 0) {
-      $currentConference = "SEC";
+      $currentConference = "";
+      $secWest = array("SEC West");
+      $secEast = array("SEC East");
       $power5 = array("ACC", "Big 12", "Big Ten", "Pac 12");
       $independent = array("Independent");
       $group5 = array("American", "Conference USA", "MAC", "Mountian West", "Sun Belt");
@@ -37,6 +24,8 @@
       while($row = $result->fetch_assoc()) {
         array_push($rows, $row);
       }
+      conferenceLoop($secWest, $rows);
+      conferenceLoop($secEast, $rows);
       conferenceLoop($power5, $rows);
       conferenceLoop($independent, $rows);
       conferenceLoop($group5, $rows);

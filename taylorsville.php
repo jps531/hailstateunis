@@ -47,24 +47,42 @@
       </div>
       <div class="row" id="filtersSubrowB">
         <div class="col-xs-3 text-center" id="uniformA">
-          <?php include "components/taylorsvilleTable/filters/taylorsvilleUniformA.php"; ?>
+          <select class="selectpicker" data-live-search="true" id="ttUniformA" title="Uniform A">
+            <?php include "components/taylorsvilleTable/filters/taylorsvilleUniform.html"; ?>
+          </select>
+          <button class="btn clear" id="ttUniformAClear"><i class="fas fa-times-circle"></i></button>
         </div>
         <div class="col-xs-3 text-center" id="uniformB">
-          <?php include "components/taylorsvilleTable/filters/taylorsvilleUniformB.php"; ?>
+          <select class="selectpicker" data-live-search="true" id="ttUniformB" title="Uniform B">
+            <?php include "components/taylorsvilleTable/filters/taylorsvilleUniform.html"; ?>
+          </select>
+          <button class="btn clear" id="ttUniformBClear"><i class="fas fa-times-circle"></i></button>
         </div>
         <div class="col-xs-3 text-center" id="uniformC">
-          <?php include "components/taylorsvilleTable/filters/taylorsvilleUniformC.php"; ?>
+          <select class="selectpicker" data-live-search="true" id="ttUniformC" title="Uniform C">
+            <?php include "components/taylorsvilleTable/filters/taylorsvilleUniform.html"; ?>
+          </select>
+          <button class="btn clear" id="ttUniformCClear"><i class="fas fa-times-circle"></i></button>
         </div>
       </div>
       <div class="row" id="filtersSubrowC">
         <div class="col-xs-3 text-center" id="gameA">
-          <?php include "components/taylorsvilleTable/filters/taylorsvilleGameA.php"; ?>
+          <select class="selectpicker" data-live-search="true" id="ttGameA" title="Game A">
+            <?php include "components/taylorsvilleTable/filters/taylorsvilleGame.html"; ?>
+          </select>
+          <button class="btn clear" id="ttGameAClear"><i class="fas fa-times-circle"></i></button>
         </div>
         <div class="col-xs-3 text-center" id="gameB">
-          <?php include "components/taylorsvilleTable/filters/taylorsvilleGameB.php"; ?>
+          <select class="selectpicker" data-live-search="true" id="ttGameB" title="Game B">
+            <?php include "components/taylorsvilleTable/filters/taylorsvilleGame.html"; ?>
+          </select>
+          <button class="btn clear" id="ttGameBClear"><i class="fas fa-times-circle"></i></button>
         </div>
         <div class="col-xs-3 text-center" id="gameC">
-          <?php include "components/taylorsvilleTable/filters/taylorsvilleGameC.php"; ?>
+          <select class="selectpicker" data-live-search="true" id="ttGameC" title="Game C">
+            <?php include "components/taylorsvilleTable/filters/taylorsvilleGame.html"; ?>
+          </select>
+          <button class="btn clear" id="ttGameCClear"><i class="fas fa-times-circle"></i></button>
         </div>
       </div>
       <div class="row" id="filtersRowTwo">
