@@ -60,7 +60,7 @@ export var table = $('#footballTable').DataTable( {
                         if (columns[9].hidden){
                           data += '<div class="container" id="innerTable"><table><thead></thead><tbody>';
                           data += '<tr><td id="innerTitle" colspan="2">Final Score</td></tr>';
-                          data += '<tr><td><span class="badge" style="background-color: #3b0811; color: white;">Mississippi State</span></td><td>' + 
+                          data += '<tr><td><span class="badge" style="background-color: #431724; color: white;">Mississippi State</span></td><td>' + 
                                   api.cell(rowIdx, 12).data() +'</td></tr>';
                           data += '<tr><td>' + api.cell(rowIdx, 9).data() + '</td><td>' + api.cell(rowIdx, 10).data() +'</td></tr>';
                           data += '</tbody></table></div>';

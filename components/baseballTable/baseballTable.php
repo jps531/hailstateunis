@@ -98,7 +98,7 @@
         $typeBadge = " badge-info'>";
       }
       else if (strpos($row["location"], "Starkville") !== false){
-        $typeBadge = "' style='background-color: #3b0811; color: white;'>";
+        $typeBadge = "' style='background-color: #431724; color: white;'>";
       }
       else if (strpos($row["location"], "Nashville") !== false){
         $typeBadge = "' style='background-color: #b8a160; color: black;'>";
@@ -163,7 +163,7 @@
 
       echo "<tr role='row' id='" . $row["location"] . "'>
               <td class='season' role='cell' data-sort='" . $row["gameday"] . "'>
-                <span class='badge' style='background-color: #3b0811; color: white;'>" . $row["yr"] . "</span>
+                <span class='badge' style='background-color: #431724; color: white;'>" . $row["yr"] . "</span>
               </td>
               <td class='date' role='cell' data-search='" . $row["gameday"] . "'>
                 <div class='calendarDate' id=date-" . $row["gameID"] . "' title='" . $row["gameday"] . "'>

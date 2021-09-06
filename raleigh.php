@@ -29,7 +29,7 @@
     <div class="row" id="filterCollapse">
       <div class="col-sm-9">
         <button class="btn btn-block" type="button" data-toggle="collapse" data-target="#filters" aria-expanded="false" aria-controls="collapseExample" 
-                style="background-color: #3b0811; color: white;">
+                style="background-color: #431724; color: white;">
           Filter
         </button>
       </div>

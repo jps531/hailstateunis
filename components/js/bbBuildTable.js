@@ -48,7 +48,7 @@ export var baseballTable = $('#baseballTable').DataTable( {
                           // Final Score
                           if (columns[6].hidden){
                             data += '<tr><td id="innerTitle" colspan="2">Final Score</td></tr>';
-                            data += '<tr><td><span class="badge" style="background-color: #3b0811; color: white;">Mississippi State</span></td><td>' + 
+                            data += '<tr><td><span class="badge" style="background-color: #431724; color: white;">Mississippi State</span></td><td>' + 
                                     api.cell(rowIdx, 17).data() +'</td></tr>';
                             data += '<tr><td>' + api.cell(rowIdx, 6).data() + '</td><td>' + api.cell(rowIdx, 7).data() +'</td></tr>';
                             data += '</tbody></table></div>';

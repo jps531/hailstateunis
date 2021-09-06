@@ -247,12 +247,12 @@ span.badge.badge-success, span.badge.badge-danger{
 
 /*** table pagination/info/length ***/
 .page-item.active .page-link{
-  background-color: #3b0811;
-  border-color: #3b0811;
+  background-color: var(--maroon);
+  border-color: var(--maroon);
 }
 
 .page-link{
-  color: #3b0811;
+  color: var(--maroon);
 }
 
 .page-link:hover{
@@ -295,7 +295,7 @@ span.badge.badge-success, span.badge.badge-danger{
 table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child::before{
   content: '+';
   background-color: white;
-  color: #3b0811;
+  color: var(--maroon);
   border-radius: 14px;
   box-shadow: none;
   top: 38px;
@@ -306,7 +306,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child::
 table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child::before {
   content: '-';
   background-color: white;
-  color: #3b0811;
+  color: var(--maroon);
   border-radius: 14px;
   box-shadow: none;
   font-weight: bold;

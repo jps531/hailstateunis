@@ -2,13 +2,13 @@
 .titleTop {
     padding: 20px;
     padding-bottom: 10px;
-    color: #3b0811;
+    color: var(--maroon);
 }
 
 .titleBottom {
     padding: 20px;
     padding-top: 0px;
-    color: #3b0811;
+    color: var(--maroon);
 }
 
 .titleImage{
@@ -87,7 +87,7 @@
 
 .submitBtn, .standardBtn{
     color: white;
-    background-color: #3b0811;
+    background-color: var(--maroon);
 }
 
 .submitBtn:focus, .standardBtn:focus{
@@ -110,7 +110,7 @@
 }
 
 .dropdown-item.active, .dropdown-item:active {
-    background-color: #3b0811 !important;
+    background-color: var(--maroon) !important;
     color: white !important;
 }
 

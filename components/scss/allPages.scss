@@ -1,5 +1,6 @@
-/*** import font ***/
+/*** import fonts ***/
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
 
 /*** page body ***/
 body {
@@ -16,3 +17,8 @@ body {
 div:focus, a:focus { 
     outline: none;
 }
+
+/*** variables for re-use throughout styles ***/
+:root {
+    --maroon: #431724;
+  }

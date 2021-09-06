@@ -15,6 +15,11 @@
     border: none;
 }
 
+.nav-link, .dropdown-item {
+    text-transform: uppercase;
+    font-family: 'Ropa Sans', sans-serif !important;
+}
+
 .nav-item.dropdown #navbarDropdown{
     color: #919191;
 }

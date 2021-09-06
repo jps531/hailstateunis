@@ -16,7 +16,7 @@
     <!-- Title -->
     <div class="row titleTop">
       <div class="col-md text-center">
-        <img src="https://i.imgur.com/CJnrJ9L.png" alt="Mississippi State Football Uniform History" class="titleImage" width="550">
+        <img src="https://i.imgur.com/S2GmKX1.png" alt="Mississippi State Football Uniform History" class="titleImage" width="550">
       </div>
     </div>
     <div class="row titleBottom">
@@ -29,7 +29,7 @@
     <div class="row" id="filterCollapse">
       <div class="col-sm-9">
         <button class="btn btn-block" type="button" data-toggle="collapse" data-target="#filters" aria-expanded="false" aria-controls="collapseExample" 
-                style="background-color: #3b0811; color: white;">
+                style="background-color: #431724; color: white;">
           Filter
         </button>
       </div>

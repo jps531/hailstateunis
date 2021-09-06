@@ -2,6 +2,7 @@
 <select class="selectpicker" data-live-search="true" id="usmUniformA" title="Uniform A">
   <optgroup label="Helmets">
     <option>Black Helmets</option>
+    <option>White Helmets</option>
     <option>Gold Helmets</option>
     <option>Gloss Black Helmets</option>
     <option>Matte Black Helmets</option>

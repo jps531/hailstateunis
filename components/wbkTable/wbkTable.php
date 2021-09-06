@@ -92,7 +92,7 @@
 
       echo "<tr role='row' id='" . $row["location"] . "'>
               <td class='season' role='cell' data-sort='" . $row["gameday"] . "'>
-                <span class='badge' style='background-color: #3b0811; color: white;'>" . $row["yr"] . "</span>
+                <span class='badge' style='background-color: #431724; color: white;'>" . $row["yr"] . "</span>
               </td>
               <td class='date' role='cell' data-sort='" . $row["gameday"] . "'>
                 <div class='calendarDate' id=date-" . $row["gameID"] . "' title='" . $row["gameday"] . "'>

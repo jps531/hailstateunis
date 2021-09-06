@@ -600,7 +600,7 @@ VALUES
 	('McNeese St.','FCS','#07569e','#fcd209'),
 	('Memphis','American','#144bbf','white'),
 	('Middle Tennessee','Conference USA','#a8a8a8','#1666d3'),
-	('Mississippi State','SEC','#3b0811','white'),
+	('Mississippi State','SEC','#431724','white'),
 	('Navy','American','#021743','#a28b39'),
 	('NC State','ACC','#b51231','white'),
 	('Nebraska','Big Ten','#e41c38','white'),

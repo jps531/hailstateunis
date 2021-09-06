@@ -2,7 +2,7 @@ import * as sit from '../uniformGameFunctions.js';
 import * as wlt from '../tableFunctions.js';
 
 // Define Groups
-export var helmets = ["Black Helmets","Gold Helmets","Gloss Black Helmets","Matte Black Helmets","2015 Helmet Design","2003 Helmet Design","1980 Helmet Design","American Flag Helmets"];
+export var helmets = ["Black Helmets","White Helmets","Gold Helmets","Gloss Black Helmets","Matte Black Helmets","2015 Helmet Design","2003 Helmet Design","1980 Helmet Design","American Flag Helmets"];
 export var jerseys = ["Black Jerseys","White Jerseys","Gold Jerseys","Heather Gray Jerseys"];
 export var pants = ["Black Pants","White Pants","Gold Pants","Heather Gray Pants"];
 

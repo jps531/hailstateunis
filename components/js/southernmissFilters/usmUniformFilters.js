@@ -38,6 +38,10 @@ $(document).ready(function(){
         searchTerm = searchTerm.concat('|black');
     }
 
+    else if (this.value == 'White Helmets'){
+        searchTerm = searchTerm.concat('|white');
+    }
+
     else if (this.value == 'Gold Helmets'){
         searchTerm = searchTerm.concat('|gold');
     }
@@ -145,6 +149,10 @@ $(document).ready(function(){
         searchTerm = searchTerm.concat('|black');
     }
 
+    else if (this.value == 'White Helmets'){
+        searchTerm = searchTerm.concat('|white');
+    }
+
     else if (this.value == 'Gold Helmets'){
         searchTerm = searchTerm.concat('|gold');
     }
@@ -250,6 +258,10 @@ $(document).ready(function(){
     // Modify search term
     if (this.value == 'Black Helmets'){
         searchTerm = searchTerm.concat('|black');
+    }
+
+    else if (this.value == 'White Helmets'){
+        searchTerm = searchTerm.concat('|white');
     }
 
     else if (this.value == 'Gold Helmets'){

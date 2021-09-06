@@ -16,7 +16,7 @@
       <!-- Title -->
       <div class="row titleTop">
         <div class="col-md text-center">
-          <img src="https://i.imgur.com/YLQdNI3.png" alt="Welcome to the HailStateUnis Database" class="titleImage" width="500">
+          <img src="https://i.imgur.com/tg1LCcE.png" alt="Welcome to the HailStateUnis Database" class="titleImage" width="500">
         </div>
       </div>
 
@@ -102,10 +102,11 @@
                 <h6>About me:</h6>
                 <div class="container row align-items-center">
                   <div class="col-md-10 bio">
-                    <p>My name is Paul Sullivan, I'm a 2020 Mississippi State graduate with a bachelor's degree in Software Engineering!</p>
+                    <p>My name is Paul Sullivan- I'm a 2020 Mississippi State graduate with a bachelor's degree in Software Engineering! 
+                      I'm originally from Taylorsville, Mississippi and currently reside in Starkville, where I work in the research park as a Software Engineer.</p>
                   </div>
                   <div class="col-md-2 bio-pic">
-                    <img src="https://i.imgur.com/eKkQFO5.jpg" alt="Paul Sullivan Egg" width="100" height="100">
+                    <img src="https://i.imgur.com/M3HOudx.png" alt="Paul Sullivan Natty" width="100" height="100">
                   </div>
                 </div>
                 <p>Raised by my dad to be a lifelong Mississippi State Fan, I started the MSU Football and Baseball Uniform Trackers in high school, and created the
