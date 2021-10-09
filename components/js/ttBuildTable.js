@@ -24,7 +24,7 @@ export var taylorsvilleTable = $('#taylorsvilleTable').DataTable( {
                     {name: 'md', width: 992},
                     {name: 'sm', width: 768},
                     {name: 'xs', width: 550},
-                    {name: 'xxs', width: 375}
+                    {name: 'xxs', width: 415}
                   ],
 
                   // Customize Expanded Row
