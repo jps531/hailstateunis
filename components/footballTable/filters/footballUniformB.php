@@ -14,6 +14,7 @@
     <option>Gold Helmets</option>
     <option>Bulldog Helmets</option>
     <option>Flying M Helmets</option>
+    <option>M over S Helmets</option>
   </optgroup>
   <optgroup label="Jerseys">
     <option>Maroon Jerseys</option>

@@ -53,7 +53,7 @@ $(document).ready(function(){
     }
 
     else if (this.value == 'Matte Maroon Helmets'){
-        searchTerm = searchTerm.concat('|matte');
+        searchTerm = searchTerm.concat('|mattemaroon');
     }
   
     else if (this.value == 'White Helmets'){
@@ -78,6 +78,10 @@ $(document).ready(function(){
 
     else if (this.value == 'Flying M Helmets'){
         searchTerm = searchTerm.concat('|flying m');
+    }
+
+    else if (this.value == 'M over S Helmets'){
+        searchTerm = searchTerm.concat('|m over s');
     }
   
     else if (this.value == 'Maroon Jerseys'){
@@ -188,7 +192,7 @@ $(document).ready(function(){
     }
 
     else if (this.value == 'Matte Maroon Helmets'){
-        searchTerm = searchTerm.concat('|matte');
+        searchTerm = searchTerm.concat('|mattemaroon');
     }
   
     else if (this.value == 'White Helmets'){
@@ -209,6 +213,10 @@ $(document).ready(function(){
 
     else if (this.value == 'Flying M Helmets'){
         searchTerm = searchTerm.concat('|flying m');
+    }
+
+    else if (this.value == 'M over S Helmets'){
+        searchTerm = searchTerm.concat('|m over s');
     }
 
     else if (this.value == 'Maroon Jerseys'){
@@ -319,7 +327,7 @@ $(document).ready(function(){
     }
 
     else if (this.value == 'Matte Maroon Helmets'){
-        searchTerm = searchTerm.concat('|matte');
+        searchTerm = searchTerm.concat('|mattemaroon');
     }
   
     else if (this.value == 'White Helmets'){
@@ -340,6 +348,10 @@ $(document).ready(function(){
 
     else if (this.value == 'Flying M Helmets'){
         searchTerm = searchTerm.concat('|flying m');
+    }
+
+    else if (this.value == 'M over S Helmets'){
+        searchTerm = searchTerm.concat('|m over s');
     }
       
     else if (this.value == 'Maroon Jerseys'){

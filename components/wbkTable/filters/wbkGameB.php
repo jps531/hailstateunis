@@ -18,6 +18,7 @@
     <option>Sunday</option>
   </optgroup>
   <optgroup label="Head Coaches">
+    <option>Doug Novak</option>
     <option>Nikki McCray-Penson</option>
     <option>Vic Schaefer</option>
     <option>Sharon Fanning-Otis</option>
