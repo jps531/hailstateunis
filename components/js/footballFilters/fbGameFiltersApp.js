@@ -5,6 +5,7 @@ import * as wlt from '../tableFunctions.js';
 export var gameType = ["Bowl Games", "Home", "Road", "Neutral"];
 export var months = ["August","September","October","November","December","January"];
 export var days = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+export var homecoming = ["Homecoming"];
 export var headCoaches = ["Ralph Sassee","Allyn McKeen","Paul Davis","Bob Tyler","Emory Bellard","Rockey Felker",
                    "Jackie Sherill","Sylvester Croom","Dan Mullen","Greg Knox","Joe Moorhead","Mike Leach"];
 
@@ -20,7 +21,7 @@ var testSelects = {A: 1, B: 0, C: 0};
 
 // 1: Enabled
 // 0: Disabled
-var enabled = {A: 1, B: 1, C: 1, D: 1};
+var enabled = {A: 1, B: 1, C: 1, D: 1, E: 1};
 
 // 3: Group 3 Selected
 // 2: Group 2 Selected
@@ -47,6 +48,9 @@ $(document).ready(function (){
             }
             else if (selected.A == 3){
                 enabled.D = 1;
+            }
+            else if (selected.A == 4){
+                enabled.E = 1;
             }
 
             // Reset selected.A
@@ -82,9 +86,13 @@ $(document).ready(function (){
                 enabled.C = 0;
                 selected.A = 2;
             }
-            else if(jQuery.inArray(this.value, headCoaches) !== -1){
+            else if(jQuery.inArray(this.value, homecoming) !== -1){
                 enabled.D = 0;
                 selected.A = 3;
+            }
+            else if(jQuery.inArray(this.value, headCoaches) !== -1){
+                enabled.E = 0;
+                selected.A = 4;
             }
         }
 
@@ -134,6 +142,9 @@ $(document).ready(function (){
             else if (selected.B == 3){
                 enabled.D = 1;
             }
+            else if (selected.B == 4){
+                enabled.E = 1;
+            }
 
             // Reset selected.B
             selected.B = -1;
@@ -163,9 +174,13 @@ $(document).ready(function (){
                 enabled.C = 0;
                 selected.B = 2;
             }
-            else if(jQuery.inArray(this.value, headCoaches) !== -1){
+            else if(jQuery.inArray(this.value, homecoming) !== -1){
                 enabled.D = 0;
                 selected.B = 3;
+            }
+            else if(jQuery.inArray(this.value, headCoaches) !== -1){
+                enabled.E = 0;
+                selected.B = 4;
             }
         }
 
@@ -215,6 +230,9 @@ $(document).ready(function (){
             else if (selected.C == 3){
                 enabled.D = 1;
             }
+            else if (selected.C == 4){
+                enabled.E = 1;
+            }
 
             // Reset selected.C
             selected.C = -1;
@@ -238,9 +256,13 @@ $(document).ready(function (){
                 enabled.C = 0;
                 selected.C = 2;
             }
-            else if(jQuery.inArray(this.value, headCoaches) !== -1){
+            else if(jQuery.inArray(this.value, homecoming) !== -1){
                 enabled.D = 0;
                 selected.C = 3;
+            }
+            else if(jQuery.inArray(this.value, headCoaches) !== -1){
+                enabled.E = 0;
+                selected.C = 4;
             }
         }
 

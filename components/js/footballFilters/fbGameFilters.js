@@ -32,8 +32,11 @@ $(document).ready(function(){
     else if(jQuery.inArray(this.value, grp.days) !== -1){
         group = 2;
     }
-    else if(jQuery.inArray(this.value, grp.headCoaches) !== -1){
+    else if(jQuery.inArray(this.value, grp.homecoming) !== -1){
         group = 3;
+    }
+    else if(jQuery.inArray(this.value, grp.headCoaches) !== -1){
+        group = 4;
     }
     
     // Add month names to search term
@@ -65,8 +68,11 @@ $(document).ready(function(){
     // Days
     fbgOptSelectedA = sit.searchTable(group,tbl.table,searchTerm,fbgOptSelectedA,2,8);
 
+    // Homecoming
+    fbgOptSelectedA = sit.searchTable(group,tbl.table,searchTerm,fbgOptSelectedA,3,8);
+
     // Head Coaches
-    fbgOptSelectedA = sit.searchTable(group,tbl.table,searchTerm,fbgOptSelectedA,3,11);
+    fbgOptSelectedA = sit.searchTable(group,tbl.table,searchTerm,fbgOptSelectedA,4,11);
   });
 });
 //-----------
@@ -100,8 +106,11 @@ $(document).ready(function(){
     else if(jQuery.inArray(this.value, grp.days) !== -1){
         group = 2;
     }
-    else if(jQuery.inArray(this.value, grp.headCoaches) !== -1){
+    else if(jQuery.inArray(this.value, grp.homecoming) !== -1){
         group = 3;
+    }
+    else if(jQuery.inArray(this.value, grp.headCoaches) !== -1){
+        group = 4;
     }
     
     // Add month names to search term
@@ -133,8 +142,11 @@ $(document).ready(function(){
     // Days
     fbgOptSelectedB = sit.searchTable(group,tbl.table,searchTerm,fbgOptSelectedB,2,8);
 
+    // Homecoming
+    fbgOptSelectedB = sit.searchTable(group,tbl.table,searchTerm,fbgOptSelectedB,3,8);
+
     // Head Coaches
-    fbgOptSelectedB = sit.searchTable(group,tbl.table,searchTerm,fbgOptSelectedB,3,11);
+    fbgOptSelectedB = sit.searchTable(group,tbl.table,searchTerm,fbgOptSelectedB,4,11);
   });
 });
 //-----------
@@ -168,8 +180,11 @@ $(document).ready(function(){
     else if(jQuery.inArray(this.value, grp.days) !== -1){
         group = 2;
     }
-    else if(jQuery.inArray(this.value, grp.headCoaches) !== -1){
+    else if(jQuery.inArray(this.value, grp.homecoming) !== -1){
         group = 3;
+    }
+    else if(jQuery.inArray(this.value, grp.headCoaches) !== -1){
+        group = 4;
     }
     
     // Add month names to search term
@@ -201,8 +216,11 @@ $(document).ready(function(){
     // Days
     fbgOptSelectedC = sit.searchTable(group,tbl.table,searchTerm,fbgOptSelectedC,2,8);
 
+    // Homecoming
+    fbgOptSelectedC = sit.searchTable(group,tbl.table,searchTerm,fbgOptSelectedC,3,8);
+
     // Head Coaches
-    fbgOptSelectedC = sit.searchTable(group,tbl.table,searchTerm,fbgOptSelectedC,3,11);
+    fbgOptSelectedC = sit.searchTable(group,tbl.table,searchTerm,fbgOptSelectedC,4,11);
   });
 });
 //-----------

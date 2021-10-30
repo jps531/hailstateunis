@@ -23,6 +23,9 @@
     <option>Saturday</option>
     <option>Sunday</option>
   </optgroup>
+  <optgroup label="Homecoming">
+    <option>Homecoming</option>
+  </optgroup>
   <optgroup label="Head Coaches">
     <option>Mike Leach</option>
     <option>Joe Moorhead</option>

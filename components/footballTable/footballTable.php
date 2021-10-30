@@ -84,6 +84,18 @@
         $postseason = $row["location"];
       }
 
+      $homecomingArray = array("2", "17", "32", "44", "58", "69", "85", "97", "108", "122", "136",
+                               "146", "161", "172", "183", "195", "207", "219", "231", "241", "253",
+                               "267", "277", "288", "298", "311", "322", "334", "346", "357", "369",
+                               "378", "392", "400", "412", "424", "435", "444", "458", "470", "486",
+                               "499");
+      if (in_array($row["gameID"], $homecomingArray)){
+        $homecoming = " homecoming";
+      }
+      else{
+        $homecoming = "";
+      }
+
       $month = $row["gameday"][5] . $row["gameday"][6];
       $day = $row["gameday"][8] . $row["gameday"][9];
       $year = $row["gameday"][0] . $row["gameday"][1] . $row["gameday"][2] . $row["gameday"][3];
@@ -128,7 +140,7 @@
                   <img src='" . $row["pImage"] . "' loading='lazy' height='80' alt='' class='d-inline-block align-middle mr-2 lateLoad'
                 </a>
               </td>
-              <td class='result' role='cell' data-search='" . $row["result"] . " " . date("l", mktime(0,0,0,$month,$day,$year)) . "'>
+              <td class='result' role='cell' data-search='" . $row["result"] . " " . date("l", mktime(0,0,0,$month,$day,$year)) . $homecoming . "'>
                 <span class='badge badge-" . $resultColor . "'>" . $row["result"] . "</span>
               </td>
               <td class='pf' role='cell' data-sort='" . $row["points_for"] . "'>
