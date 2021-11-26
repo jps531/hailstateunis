@@ -119,11 +119,14 @@ export function enableDisableGroups(enabled, selected, selectIDa, selectIDb, sel
 //           optGroupIndex: integer; index of option group which is being disabled
 // Output(s): none
 function disableOptGroup(selectID, optGroupIndex){
-    var selectobject;
-    selectobject = document.getElementById(selectID).getElementsByTagName("optgroup");
-    selectobject[optGroupIndex].disabled = true;
-    selectID = "#" + selectID;
-    $(selectID).selectpicker('refresh');
+    if (document.getElementById(selectID) != null)
+    {
+        var selectobject;
+        selectobject = document.getElementById(selectID).getElementsByTagName("optgroup");
+        selectobject[optGroupIndex].disabled = true;
+        selectID = "#" + selectID;
+        $(selectID).selectpicker('refresh');
+    }
 }
   
 // Function: enableOptGroup
@@ -132,11 +135,14 @@ function disableOptGroup(selectID, optGroupIndex){
 //           optGroupIndex: integer; index of option group which is being re-enabled
 // Output(s): none
 function enableOptGroup(selectID, optGroupIndex){
-    var selectobject;
-    selectobject = document.getElementById(selectID).getElementsByTagName("optgroup");
-    selectobject[optGroupIndex].disabled = false;
-    selectID = "#" + selectID;
-    $(selectID).selectpicker('refresh');
+    if (document.getElementById(selectID) != null)
+    {
+        var selectobject;
+        selectobject = document.getElementById(selectID).getElementsByTagName("optgroup");
+        selectobject[optGroupIndex].disabled = false;
+        selectID = "#" + selectID;
+        $(selectID).selectpicker('refresh');
+    }
 }
 
 //-----------

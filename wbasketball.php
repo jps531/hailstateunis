@@ -47,18 +47,36 @@
       </div>
       <div class="row" id="filtersSubrowB">
         <div class="col-xs-3 text-center" id="uniformA">
-          <?php include "components/wbkTable/filters/wbkUniformA.php"; ?>
+          <select class="selectpicker" data-live-search="true" id="wbkUniformA" title="Uniform A">
+            <?php include "components/wbkTable/filters/wbkUniform.html"; ?>
+          </select>
+          <button class="btn clear" id="wbkUniformAClear"><i class="fas fa-times-circle"></i></button>
+        </div>
+        <div class="col-xs-3 text-center" id="uniformB">
+          <select class="selectpicker" data-live-search="true" id="wbkUniformB" title="Uniform B">
+            <?php include "components/wbkTable/filters/wbkUniform.html"; ?>
+          </select>
+          <button class="btn clear" id="wbkUniformAClear"><i class="fas fa-times-circle"></i></button>
         </div>
       </div>
       <div class="row" id="filtersSubrowC">
         <div class="col-xs-3 text-center" id="gameA">
-          <?php include "components/wbkTable/filters/wbkGameA.php"; ?>
+          <select class="selectpicker" data-live-search="true" id="wbkGameA" title="Game A">
+            <?php include "components/wbkTable/filters/wbkGame.html"; ?>
+          </select>
+          <button class="btn clear" id="wbkGameAClear"><i class="fas fa-times-circle"></i></button>
         </div>
         <div class="col-xs-3 text-center" id="gameB">
-          <?php include "components/wbkTable/filters/wbkGameB.php"; ?>
+          <select class="selectpicker" data-live-search="true" id="wbkGameB" title="Game B">
+            <?php include "components/wbkTable/filters/wbkGame.html"; ?>
+          </select>
+          <button class="btn clear" id="wbkGameBClear"><i class="fas fa-times-circle"></i></button>
         </div>
         <div class="col-xs-3 text-center" id="gameC">
-          <?php include "components/wbkTable/filters/wbkGameC.php"; ?>
+          <select class="selectpicker" data-live-search="true" id="wbkGameC" title="Game C">
+            <?php include "components/wbkTable/filters/wbkGame.html"; ?>
+          </select>
+          <button class="btn clear" id="wbkGameCClear"><i class="fas fa-times-circle"></i></button>
         </div>
       </div>
       <div class="row" id="filtersRowTwo">
@@ -85,7 +103,8 @@
 
   <!-- Javascript -->
   <script type="module" src="components/js/wbkFilters/wbkSznOppFilters.js"></script>
-  <script type="module" src="components/js/wbkFilters/wbkUniformFilter.js"></script>
+  <script type="module" src="components/js/wbkFilters/wbkUniformFiltersApp.js"></script>
+  <script type="module" src="components/js/wbkFilters/wbkUniformFilters.js"></script>
   <script type="module" src="components/js/wbkFilters/wbkGameFiltersApp.js"></script>
   <script type="module" src="components/js/wbkFilters/wbkGameFilters.js"></script>
   <script type="module" src="components/js/wbkBuildTable.js"></script> 

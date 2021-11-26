@@ -47,18 +47,36 @@
       </div>
       <div class="row" id="filtersSubrowB">
         <div class="col-xs-3 text-center" id="uniformA">
-          <?php include "components/mbkTable/filters/mbkUniformA.php"; ?>
+          <select class="selectpicker" data-live-search="true" id="mbkUniformA" title="Uniform A">
+            <?php include "components/mbkTable/filters/mbkUniform.html"; ?>
+          </select>
+          <button class="btn clear" id="mbkUniformAClear"><i class="fas fa-times-circle"></i></button>
+        </div>
+        <div class="col-xs-3 text-center" id="uniformB">
+          <select class="selectpicker" data-live-search="true" id="mbkUniformB" title="Uniform B">
+            <?php include "components/mbkTable/filters/mbkUniform.html"; ?>
+          </select>
+          <button class="btn clear" id="mbkUniformAClear"><i class="fas fa-times-circle"></i></button>
         </div>
       </div>
       <div class="row" id="filtersSubrowC">
         <div class="col-xs-3 text-center" id="gameA">
-          <?php include "components/mbkTable/filters/mbkGameA.php"; ?>
+          <select class="selectpicker" data-live-search="true" id="mbkGameA" title="Game A">
+            <?php include "components/mbkTable/filters/mbkGame.html"; ?>
+          </select>
+          <button class="btn clear" id="mbkGameAClear"><i class="fas fa-times-circle"></i></button>
         </div>
         <div class="col-xs-3 text-center" id="gameB">
-          <?php include "components/mbkTable/filters/mbkGameB.php"; ?>
+          <select class="selectpicker" data-live-search="true" id="mbkGameB" title="Game B">
+            <?php include "components/mbkTable/filters/mbkGame.html"; ?>
+          </select>
+          <button class="btn clear" id="mbkGameBClear"><i class="fas fa-times-circle"></i></button>
         </div>
         <div class="col-xs-3 text-center" id="gameC">
-          <?php include "components/mbkTable/filters/mbkGameC.php"; ?>
+          <select class="selectpicker" data-live-search="true" id="mbkGameC" title="Game C">
+            <?php include "components/mbkTable/filters/mbkGame.html"; ?>
+          </select>
+          <button class="btn clear" id="mbkGameCClear"><i class="fas fa-times-circle"></i></button>
         </div>
       </div>
       <div class="row" id="filtersRowTwo">
@@ -85,7 +103,8 @@
 
   <!-- Javascript -->
   <script type="module" src="components/js/mbkFilters/mbkSznOppFilters.js"></script>
-  <script type="module" src="components/js/mbkFilters/mbkUniformFilter.js"></script>
+  <script type="module" src="components/js/mbkFilters/mbkUniformFiltersApp.js"></script>
+  <script type="module" src="components/js/mbkFilters/mbkUniformFilters.js"></script>
   <script type="module" src="components/js/mbkFilters/mbkGameFiltersApp.js"></script>
   <script type="module" src="components/js/mbkFilters/mbkGameFilters.js"></script>
   <script type="module" src="components/js/mbkBuildTable.js"></script> 
