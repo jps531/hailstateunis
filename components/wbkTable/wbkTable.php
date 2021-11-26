@@ -122,6 +122,7 @@
               <td class='opponent' role='cell'" . 'data-search="' . $row["opponentName"] . '">' . "
                 <span class='badge' style='background-color: " . $row["colorA"] . "; color: "  . $row["colorB"] .  ";'>" . $row["opponentName"] . "</span>
               </td>
+              <td class='uniformName'>" . $row["uName"] . "</td>
             </tr>";
     }
   }

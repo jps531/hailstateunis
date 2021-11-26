@@ -68,7 +68,8 @@ export var wbkTable = $('#wbkTable').DataTable( {
                   {"className": "min-md", 'targets': [3]},
                   {"className": "min-sm", 'targets': [6,7]},
                   {"className": "min-xs", 'targets': [1]},
-                  {"className": "min-xxs", 'targets': [5]}
+                  {"className": "min-xxs", 'targets': [5]},
+                  {"className": "none", 'targets': [9]}
                 ],
 
                 // Table Options
