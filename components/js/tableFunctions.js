@@ -393,9 +393,6 @@ function teamCaseCorrections(tName){
   else if (tName == "Madison La"){
     return "Madison LA";
   }
-  else if (tName == "State"){
-    return "STATE";
-  }
   else if (tName == "Ncaa Tournament"){
     return "NCAA Tournament";
   }
