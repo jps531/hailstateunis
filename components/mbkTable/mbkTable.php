@@ -114,10 +114,10 @@
               <td class='pa' role='cell' data-sort='" . $row["points_against"] . "'>
                 <span class='badge badge-" . $opponentBadge . "'>" . $row["points_against"] . "</span>
               </td>
+              <td class='uniformName'>" . $row["uName"] . "</td>
               <td class='opponent' role='cell'" . 'data-search="' . $row["opponentName"] . '">' . "
                 <span class='badge' style='background-color: " . $row["colorA"] . "; color: "  . $row["colorB"] .  ";'>" . $row["opponentName"] . "</span>
               </td>
-              <td class='uniformName'>" . $row["uName"] . "</td>
             </tr>";
     }
   }

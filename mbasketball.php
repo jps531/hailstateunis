@@ -56,7 +56,7 @@
           <select class="selectpicker" data-live-search="true" id="mbkUniformB" title="Uniform B">
             <?php include "components/mbkTable/filters/mbkUniform.html"; ?>
           </select>
-          <button class="btn clear" id="mbkUniformAClear"><i class="fas fa-times-circle"></i></button>
+          <button class="btn clear" id="mbkUniformBClear"><i class="fas fa-times-circle"></i></button>
         </div>
       </div>
       <div class="row" id="filtersSubrowC">

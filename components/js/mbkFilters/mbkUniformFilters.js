@@ -38,7 +38,7 @@ $(document).ready(function(){
     mbkuOptSelectedA = sit.searchTable(group,tbl.mbkTable,searchTerm,mbkuOptSelectedA,0,4);
   
     // Uniform Designs
-    mbkuOptSelectedA = sit.searchTable(group,tbl.mbkTable,searchTerm,mbkuOptSelectedA,1,9);
+    mbkuOptSelectedA = sit.searchTable(group,tbl.mbkTable,searchTerm,mbkuOptSelectedA,1,8);
   });
 });
 //-----------
@@ -72,7 +72,7 @@ $(document).ready(function(){
     mbkuOptSelectedB = sit.searchTable(group,tbl.mbkTable,searchTerm,mbkuOptSelectedB,0,4);
   
     // Uniform Designs
-    mbkuOptSelectedB = sit.searchTable(group,tbl.mbkTable,searchTerm,mbkuOptSelectedB,1,9);
+    mbkuOptSelectedB = sit.searchTable(group,tbl.mbkTable,searchTerm,mbkuOptSelectedB,1,8);
   });
 });
 //-----------

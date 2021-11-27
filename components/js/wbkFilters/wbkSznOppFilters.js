@@ -52,7 +52,7 @@ $(document).ready(function(){
       })
       .get()
       .join( "|" );
-      tbl.wbkTable.column(8).search(searchTerm, true, false).draw();
+      tbl.wbkTable.column(9).search(searchTerm, true, false).draw();
     }
 
     // Add to URL

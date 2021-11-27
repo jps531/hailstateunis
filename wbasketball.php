@@ -56,7 +56,7 @@
           <select class="selectpicker" data-live-search="true" id="wbkUniformB" title="Uniform B">
             <?php include "components/wbkTable/filters/wbkUniform.html"; ?>
           </select>
-          <button class="btn clear" id="wbkUniformAClear"><i class="fas fa-times-circle"></i></button>
+          <button class="btn clear" id="wbkUniformBClear"><i class="fas fa-times-circle"></i></button>
         </div>
       </div>
       <div class="row" id="filtersSubrowC">
