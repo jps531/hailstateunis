@@ -16,6 +16,7 @@
       <th scope="col" data-type="number">PF</th>
       <th scope="col" data-type="number">PA</th>
       <th scope="col">Opponent</th>
+      <th scope="col">Uniform Name</th>
     </tr>
   </thead>
 
