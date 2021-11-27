@@ -201,7 +201,7 @@ function getURLParameter(param){
       // Split into param and individual terms
       var paramContent = urlVariables[i].split('=');
       var paramTerms = paramContent[1].split('|');
-      var captialArray = ["Ncaa Tournament", "Wnit", "Sec Tournament", "Ncaa Round Of 64", "Ncaa Round Of 32", "Ncaa Sweet Sixteen",
+      var captialArray = ["State", "Ncaa Tournament", "Wnit", "Sec Tournament", "Ncaa Round Of 64", "Ncaa Round Of 32", "Ncaa Sweet Sixteen",
                           "Ncaa Elite Eight", "Ncaa Final Four", "Wnit Round Of 64", "Wnit Round Of 32", "Wnit Round Of 16", "Wnit Quarterfinals",
                           "Sect First Round", "Sect Second Round", "Sect Quarterfinals", "Sect Semifinals", "Sect Championship", "NIT",
                           "Nit First Round", "Nit Second Round", "Nit Quarterfinals", "Nit Semifinals", "Sec", "Sec Game 1", "Sec Game 2", "Sec Game 3",
@@ -248,6 +248,8 @@ function teamCaseCorrections(tName){
   }
   else if (tName == "Texas A&m"){
     return "Texas A&M";
+  } else if (tName == "State"){
+    return "STATE";
   }
   else if (tName == 'C-usa Championship'){
     return "C-USA Championship";
