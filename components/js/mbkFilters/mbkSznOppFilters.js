@@ -44,7 +44,7 @@ var filterTriggeredOpp = false;
 $(document).ready(function(){
   $("#mbkOpponent").on("change", function() {
     if (this.value == ""){
-      tbl.mbkTable.columns(8).search(this.value).draw();
+      tbl.mbkTable.columns(9).search(this.value).draw();
     }
     else{
       var searchTerm = $(this).find(':selected').map(function() {
