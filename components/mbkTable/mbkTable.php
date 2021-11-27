@@ -132,7 +132,7 @@
   </tbody>
   <tfoot>
     <tr>
-      <td colspan="9" id="footerRow">
+      <td colspan="10" id="footerRow">
         <div class="container" id="winLossTotal"></div>
       </td>
     </tr>
