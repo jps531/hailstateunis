@@ -43,7 +43,7 @@ export var mbkTable = $('#mbkTable').DataTable( {
                           if (columns[6].hidden){
                             data += '<tr><td id="innerTitle" colspan="2">Final Score</td></tr>';
                             data += '<tr><td><span class="badge" style="background-color: #431724; color: white;">Mississippi State</span></td><td>' + 
-                                    api.cell(rowIdx, 8).data() +'</td></tr>';
+                                    api.cell(rowIdx, 9).data() +'</td></tr>';
                             data += '<tr><td>' + api.cell(rowIdx, 6).data() + '</td><td>' + api.cell(rowIdx, 7).data() +'</td></tr>';
                             data += '</tbody></table></div>';
                           }
