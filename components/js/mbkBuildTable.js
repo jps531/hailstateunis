@@ -123,7 +123,6 @@ $(document).ready(function(){
     $('#mbkGameCClear').click();
     $('#mbkGameBClear').click();
     $('#mbkGameAClear').click();
-    $('#mbkUniformCClear').click();
     $('#mbkUniformBClear').click();
     $('#mbkUniformAClear').click();
   });
