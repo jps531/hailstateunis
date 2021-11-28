@@ -15,7 +15,7 @@
       <th scope="col">W/L</th>
       <th scope="col" data-type="number">PF</th>
       <th scope="col" data-type="number">PA</th>
-      <th scope="col">Uniform Name</th>
+      <th scope="col">Uniform Design</th>
       <th scope="col">Opponent</th>
     </tr>
   </thead>
@@ -120,7 +120,7 @@
               <td class='pa' role='cell' data-sort='" . $row["points_against"] . "'>
                 <span class='badge badge-" . $opponentBadge . "'>" . $row["points_against"] . "</span>
               </td>
-              <td class='uniformName'>" . $row["uName"] . "</td>
+              <td class='uniformDesign'>" . $row["uDesign"] . "</td>
               <td class='opponent' role='cell'" . 'data-search="' . $row["opponentName"] . '">' . "
                 <span class='badge' style='background-color: " . $row["colorA"] . "; color: "  . $row["colorB"] .  ";'>" . $row["opponentName"] . "</span>
               </td>
