@@ -12,7 +12,7 @@
 // Output(s): optSelect: array
 export function searchTable(optGroupIndex,table,searchTerm,optSelect,groupNumber,columnNumber){
     if(optGroupIndex == groupNumber){
-        table.column(columnNumber).search(searchTerm, true, false).draw();
+        table.column(columnNumber).search(searchTerm.toLowerCase(), true, false).draw();
         optSelect.push(groupNumber);
     }
     else{
