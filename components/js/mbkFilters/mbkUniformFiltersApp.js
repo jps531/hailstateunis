@@ -3,7 +3,7 @@ import * as wlt from '../tableFunctions.js';
 
 // Define Groups
 export var colors = ["White","Maroon","Black","Gray","Cream"];
-export var designs = ["STATE"];
+export var designs = ["STATE","Banner","Stacked","Split"];
 
 // Load Uniform Filters
 $(function(){ $("#mbkUniformA").selectpicker('render'); })
