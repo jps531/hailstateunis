@@ -35,10 +35,10 @@ $(document).ready(function(){
         }
     
     // Uniform Colors
-    wbkuOptSelectedA = sit.searchTable(group,tbl.wbkTable,searchTerm,wbkuOptSelectedA,0,4);
+    wbkuOptSelectedA = sit.searchTable(group,tbl.wbkTable,searchTerm.toLowerCase(),wbkuOptSelectedA,0,4);
   
     // Uniform Designs
-    wbkuOptSelectedA = sit.searchTable(group,tbl.wbkTable,searchTerm,wbkuOptSelectedA,1,8);
+    wbkuOptSelectedA = sit.searchTable(group,tbl.wbkTable,searchTerm.toLowerCase(),wbkuOptSelectedA,1,8);
   });
 });
 //-----------
