@@ -14,8 +14,8 @@
         <div class="text-left">
             <p>This table contains a record of the uniforms worn in every Mississippi State football game since 1980 
                 and in every bowl game in program history, four of which were prior to 1980.</p>
-            <p>Every game from 2012 to Present expands with a link to the corresponding HailStateUnis.com blog post. 
-                Blog posts from 2016 to Present contain full articles with commentary on that game's uniform choice.</p>
+            <p>Every game from 2012 to 2020 expands with a link to the corresponding HailStateUnis.com blog post. 
+                Blog posts from 2016 to 2020 contain full articles with commentary on that game's uniform choice.</p>
             <p>I feel very confident in the accuracy of the combinations listed in this table, with the exception of 1986-1988. 
                 In those years, particularly in 1987 and 1988, I've been told that State wore both silver and white pants. 
                 It's very difficult, just looking at old photographs, to tell the difference between those two pants colors. 
