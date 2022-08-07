@@ -14,15 +14,15 @@
     // output data of each row
     if ($result->num_rows > 0) {
       $currentConference = "";
-      $cusa = array("Conference USA");
-      $conferences = array("ACC", "American", "Big 12", "Big Ten", "Independent", "MAC", "Mountian West", "Pac 12", "SEC", "Sun Belt");
+      $sunBelt = array("Sun Belt");
+      $conferences = array("ACC", "American", "Big 12", "Big Ten", "Conference USA", "Independent", "MAC", "Mountian West", "Pac 12", "SEC");
       $fcs = array("FCS");
       $dII = array("D-II");
       $rows = array();
       while($row = $result->fetch_assoc()) {
         array_push($rows, $row);
       }
-      conferenceLoop($cusa, $rows);
+      conferenceLoop($sunBelt, $rows);
       conferenceLoop($conferences, $rows);
       conferenceLoop($fcs, $rows);
       conferenceLoop($dII, $rows);
