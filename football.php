@@ -48,19 +48,19 @@
       <div class="row" id="filtersSubrowB">
         <div class="col-xs-3 text-center" id="uniformA">
           <select class="selectpicker" data-live-search="true" id="fbUniformA" title="Uniform A">
-            <?php include "footballTable/filters/footballUniform.html"; ?>
+            <?php include "components/footballTable/filters/footballUniform.html"; ?>
           </select>
           <button class="btn clear" id="fbUniformAClear"><i class="fas fa-times-circle"></i></button>
         </div>
         <div class="col-xs-3 text-center" id="uniformB">
           <select class="selectpicker" data-live-search="true" id="fbUniformB" title="Uniform B">
-            <?php include "footballTable/filters/footballUniform.html"; ?>
+            <?php include "components/footballTable/filters/footballUniform.html"; ?>
           </select>
           <button class="btn clear" id="fbUniformBClear"><i class="fas fa-times-circle"></i></button>
         </div>
         <div class="col-xs-3 text-center" id="uniformC">
           <select class="selectpicker" data-live-search="true" id="fbUniformC" title="Uniform C">
-            <?php include "footballTable/filters/footballUniform.html"; ?>
+            <?php include "components/footballTable/filters/footballUniform.html"; ?>
           </select>
           <button class="btn clear" id="fbUniformCClear"><i class="fas fa-times-circle"></i></button>
         </div>
@@ -68,19 +68,19 @@
       <div class="row" id="filtersSubrowC">
         <div class="col-xs-3 text-center" id="gameA">
           <select class="selectpicker" data-live-search="true" id="fbGameA" title="Game A">
-            <?php include "footballTable/filters/footballGame.html"; ?>
+            <?php include "components/footballTable/filters/footballGame.html"; ?>
           </select>
           <button class="btn clear" id="fbGameAClear"><i class="fas fa-times-circle"></i></button>
         </div>
         <div class="col-xs-3 text-center" id="gameB">
           <select class="selectpicker" data-live-search="true" id="fbGameB" title="Game B">
-            <?php include "footballTable/filters/footballGame.html"; ?>
+            <?php include "components/footballTable/filters/footballGame.html"; ?>
           </select>
           <button class="btn clear" id="fbGameBClear"><i class="fas fa-times-circle"></i></button>
         </div>
         <div class="col-xs-3 text-center" id="gameC">
           <select class="selectpicker" data-live-search="true" id="fbGameC" title="Game C">
-            <?php include "footballTable/filters/footballGame.html"; ?>
+            <?php include "components/footballTable/filters/footballGame.html"; ?>
           </select>
           <button class="btn clear" id="fbGameCClear"><i class="fas fa-times-circle"></i></button>
         </div>
