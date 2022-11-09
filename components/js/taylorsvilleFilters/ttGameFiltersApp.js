@@ -6,7 +6,7 @@ export var gameType = ["Home", "Road", "Neutral","All Playoffs","First Round","S
 export var months = ["August","September","October","November","December"];
 export var days = ["Thursday","Friday","Saturday"];
 export var homecoming = ["Homecoming"];
-export var headCoaches = ["Doug Merchant","Marcus Boyles","Shannon White","Bud Blackledge","Matt Caldwell","Chuck Robertson","Mitch Evans", "Jay Blackledge"];
+export var headCoaches = ["Doug Merchant","Marcus Boyles","Shannon White","Bud Blackledge","Matt Caldwell","Chuck Robertson","Mitch Evans","Jay Blackledge","Seth McDonald"];
 
 // Load Game Type Filters
 $(function(){ $("#ttGameA").selectpicker('render'); })

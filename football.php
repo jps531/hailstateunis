@@ -47,24 +47,42 @@
       </div>
       <div class="row" id="filtersSubrowB">
         <div class="col-xs-3 text-center" id="uniformA">
-          <?php include "components/footballTable/filters/footballUniformA.php"; ?>
+          <select class="selectpicker" data-live-search="true" id="fbUniformA" title="Uniform A">
+            <?php include "footballTable/filters/footballUniform.html"; ?>
+          </select>
+          <button class="btn clear" id="fbUniformAClear"><i class="fas fa-times-circle"></i></button>
         </div>
         <div class="col-xs-3 text-center" id="uniformB">
-          <?php include "components/footballTable/filters/footballUniformB.php"; ?>
+          <select class="selectpicker" data-live-search="true" id="fbUniformB" title="Uniform B">
+            <?php include "footballTable/filters/footballUniform.html"; ?>
+          </select>
+          <button class="btn clear" id="fbUniformBClear"><i class="fas fa-times-circle"></i></button>
         </div>
         <div class="col-xs-3 text-center" id="uniformC">
-          <?php include "components/footballTable/filters/footballUniformC.php"; ?>
+          <select class="selectpicker" data-live-search="true" id="fbUniformC" title="Uniform C">
+            <?php include "footballTable/filters/footballUniform.html"; ?>
+          </select>
+          <button class="btn clear" id="fbUniformCClear"><i class="fas fa-times-circle"></i></button>
         </div>
       </div>
       <div class="row" id="filtersSubrowC">
         <div class="col-xs-3 text-center" id="gameA">
-          <?php include "components/footballTable/filters/footballGameA.php"; ?>
+          <select class="selectpicker" data-live-search="true" id="fbGameA" title="Game A">
+            <?php include "footballTable/filters/footballGame.html"; ?>
+          </select>
+          <button class="btn clear" id="fbGameAClear"><i class="fas fa-times-circle"></i></button>
         </div>
         <div class="col-xs-3 text-center" id="gameB">
-          <?php include "components/footballTable/filters/footballGameB.php"; ?>
+          <select class="selectpicker" data-live-search="true" id="fbGameB" title="Game B">
+            <?php include "footballTable/filters/footballGame.html"; ?>
+          </select>
+          <button class="btn clear" id="fbGameBClear"><i class="fas fa-times-circle"></i></button>
         </div>
         <div class="col-xs-3 text-center" id="gameC">
-          <?php include "components/footballTable/filters/footballGameC.php"; ?>
+          <select class="selectpicker" data-live-search="true" id="fbGameC" title="Game C">
+            <?php include "footballTable/filters/footballGame.html"; ?>
+          </select>
+          <button class="btn clear" id="fbGameCClear"><i class="fas fa-times-circle"></i></button>
         </div>
       </div>
       <div class="row" id="filtersRowTwo">

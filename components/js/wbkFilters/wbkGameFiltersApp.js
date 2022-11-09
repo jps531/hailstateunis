@@ -4,7 +4,7 @@ import * as wlt from '../tableFunctions.js';
 // Define Groups
 export var months = ["November","December","January","February","March","April"];
 export var days = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
-export var headCoaches = ["Doug Novak","Nikki McCray-Penson","Vic Schaefer","Sharon Fanning-Otis"];
+export var headCoaches = ["Sam Purcell","Doug Novak","Nikki McCray-Penson","Vic Schaefer","Sharon Fanning-Otis"];
 export var gameType = ["Home","Road","Neutral","NCAA Tournament","WNIT","SEC Tournament",
                 "NCAA Round of 64","NCAA Round of 32","NCAA Sweet Sixteen","NCAA Elite Eight","NCAA Final Four","National Championship",
                 "WNIT Round of 64","WNIT Round of 32","WNIT Round of 16","WNIT Quarterfinals",

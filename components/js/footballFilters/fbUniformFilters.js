@@ -83,6 +83,10 @@ $(document).ready(function(){
     else if (this.value == 'M over S Helmets'){
         searchTerm = searchTerm.concat('|m over s');
     }
+
+    else if (this.value == 'Script State Helmets'){
+        searchTerm = searchTerm.concat('|state script');
+    }
   
     else if (this.value == 'Maroon Jerseys'){
         searchTerm = searchTerm.concat('|maroon');
@@ -219,6 +223,10 @@ $(document).ready(function(){
         searchTerm = searchTerm.concat('|m over s');
     }
 
+    else if (this.value == 'Script State Helmets'){
+        searchTerm = searchTerm.concat('|state script');
+    }
+
     else if (this.value == 'Maroon Jerseys'){
         searchTerm = searchTerm.concat('|maroon');
     }
@@ -352,6 +360,10 @@ $(document).ready(function(){
 
     else if (this.value == 'M over S Helmets'){
         searchTerm = searchTerm.concat('|m over s');
+    }
+
+    else if (this.value == 'Script State Helmets'){
+        searchTerm = searchTerm.concat('|state script');
     }
       
     else if (this.value == 'Maroon Jerseys'){
