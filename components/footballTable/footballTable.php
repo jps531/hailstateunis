@@ -70,6 +70,9 @@
       if ($row["gameID"] == "26"){
         $headcoach = 'Greg Knox';
       }
+      else if ($row["gameID"] == "517"){
+        $headcoach = 'Zach Arnett';
+      }
       else{
         $headcoach = $row["head_coach"];
       }
