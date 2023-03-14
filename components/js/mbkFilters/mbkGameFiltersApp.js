@@ -6,7 +6,7 @@ export var months = ["November","December","January","February","March"];
 export var days = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
 export var headCoaches = ["Chris Jans","Ben Howland","Rick Ray","Rick Stansbury","Richard Williams","Jim Hatfield","Babe McCarthy"];
 export var gameType = ["Home","Road","Neutral","NCAA Tournament","NIT","SEC Tournament",
-                "NCAA Round of 64","NCAA Round of 32","NCAA Sweet Sixteen","NCAA Elite Eight","NCAA Final Four","Regional 3rd Place",
+                "NCAA First Four", "NCAA Round of 64","NCAA Round of 32","NCAA Sweet Sixteen","NCAA Elite Eight","NCAA Final Four","Regional 3rd Place",
                 "NIT First Round","NIT Second Round","NIT Quarterfinals","NIT Semifinals", "NIT Championship",
                 "SECT First Round","SECT Second Round","SECT Quarterfinals","SECT Semifinals","SECT Championship"];
 
