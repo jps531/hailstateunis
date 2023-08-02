@@ -16,9 +16,7 @@
       $currentConference = "";
       $twoAdistrictSix = array("6-2A");
       $twoAsouth = array("5-2A", "7-2A", "8-2A");
-      $threeAnorth = array("3A South");
-      $threeAnorth = array("3A North");
-      $otherAs = array("1A", "2A", "4A", "5A", "6A", "7A");
+      $otherAs = array("1A", "3A", "4A", "5A", "6A", "7A");
       $mais = array("MAIS");
       $outOfState = array("Out of State");
       $defunct = array("Defunct");
@@ -29,8 +27,6 @@
       conferenceLoop($twoAdistrictSix, $rows);
       conferenceLoop($twoAsouth, $rows);
       conferenceLoop($twoAnorth, $rows);
-      conferenceLoop($twoAsouth, $rows);
-      conferenceLoop($threeAnorth, $rows);
       conferenceLoop($otherAs, $rows);
       conferenceLoop($mais, $rows);
       conferenceLoop($outOfState, $rows);
