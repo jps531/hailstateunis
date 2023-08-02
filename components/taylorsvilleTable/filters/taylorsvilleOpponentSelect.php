@@ -14,19 +14,19 @@
     // output data of each row
     if ($result->num_rows > 0) {
       $currentConference = "";
-      $oneAdistrictFour = array("4-1A");
-      $oneAsouth = array("3-1A");
+      $oneAdistrictSeven = array("7-1A");
+      $oneAsouth = array("5-1A", "6-1A", "8-1A");
       $oneAnorth = array("1A North");
       $twoAsouth = array("2A South");
       $twoAnorth = array("2A North");
-      $otherAs = array("3A", "4A", "5A", "6A");
+      $otherAs = array("3A", "4A", "5A", "6A", "7A");
       $mais = array("MAIS");
       $defunct = array("Defunct");
       $rows = array();
       while($row = $result->fetch_assoc()) {
         array_push($rows, $row);
       }
-      conferenceLoop($oneAdistrictFour, $rows);
+      conferenceLoop($oneAdistrictSeven, $rows);
       conferenceLoop($oneAsouth, $rows);
       conferenceLoop($oneAnorth, $rows);
       conferenceLoop($twoAsouth, $rows);
