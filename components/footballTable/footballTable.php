@@ -67,7 +67,7 @@
         $opponentBadge = 'secondary';
       }
 
-      if ($row["gameID"] == "26"){
+      if ($row["gameID"] == "26" || $row["gameID"] == "528" || $row["gameID"] == "529" || $row["gameID"] == "530"){
         $headcoach = 'Greg Knox';
       }
       else if ($row["gameID"] == "517"){
@@ -91,7 +91,7 @@
                                "146", "161", "172", "183", "195", "207", "219", "231", "241", "253",
                                "267", "277", "288", "298", "311", "322", "334", "346", "357", "369",
                                "378", "392", "400", "412", "424", "435", "444", "458", "470", "486",
-                               "499", "510");
+                               "499", "510", "526");
       if (in_array($row["gameID"], $homecomingArray)){
         $homecoming = " homecoming";
       }
