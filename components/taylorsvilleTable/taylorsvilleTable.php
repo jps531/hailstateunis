@@ -70,7 +70,7 @@
       $headcoach = $row["head_coach"];
       $postseason = $row["location"];
 
-      $homecomingArray = array("657","639","629","617","599","589","572","559","546","531","518","501","487");
+      $homecomingArray = array("666", "657","639","629","617","599","589","572","559","546","531","518","501","487");
       if (in_array($row["gameID"], $homecomingArray)){
         $homecoming = " homecoming";
       }

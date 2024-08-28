@@ -7,7 +7,7 @@ export var months = ["August","September","October","November","December","Janua
 export var days = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
 export var homecoming = ["Homecoming"];
 export var headCoaches = ["Ralph Sassee","Allyn McKeen","Paul Davis","Bob Tyler","Emory Bellard","Rockey Felker",
-                   "Jackie Sherill","Sylvester Croom","Dan Mullen","Greg Knox","Joe Moorhead","Mike Leach","Zach Arnett"];
+                   "Jackie Sherill","Sylvester Croom","Dan Mullen","Greg Knox","Joe Moorhead","Mike Leach","Zach Arnett","Jeff Lebby"];
 
 // Load Game Type Filters
 $(function(){ $("#fbGameA").selectpicker('render'); })
