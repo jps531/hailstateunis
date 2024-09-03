@@ -14,8 +14,7 @@
     // output data of each row
     if ($result->num_rows > 0) {
       $currentConference = "";
-      $secWest = array("SEC West");
-      $secEast = array("SEC East");
+      $sec = array("SEC");
       $power5 = array("ACC", "Big 12", "Big Ten", "Pac 12");
       $independent = array("Independent");
       $group5 = array("American", "Conference USA", "MAC", "Mountian West", "Sun Belt");
@@ -24,8 +23,7 @@
       while($row = $result->fetch_assoc()) {
         array_push($rows, $row);
       }
-      conferenceLoop($secWest, $rows);
-      conferenceLoop($secEast, $rows);
+      conferenceLoop($sec, $rows);
       conferenceLoop($power5, $rows);
       conferenceLoop($independent, $rows);
       conferenceLoop($group5, $rows);

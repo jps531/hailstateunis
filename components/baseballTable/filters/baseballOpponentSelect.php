@@ -1,20 +1,20 @@
 <!-- Opponent Select -->
 <select class="selectpicker" data-live-search="true" id="bbSelectOpponent" title="Opponent(s)" multiple> 
-  <optgroup label="SEC West">
+  <optgroup label="SEC">
     <option>Alabama</option>
     <option>Arkansas</option>
     <option>Auburn</option>
-    <option>LSU</option>
-    <option>Ole Miss</option>
-    <option>Texas A&M</option>
-  </optgroup>
-  <optgroup label="SEC East">
     <option>Florida</option>
     <option>Georgia</option>
     <option>Kentucky</option>
+    <option>LSU</option>
     <option>Missouri</option>
+    <option>Oklahoma</option>
+    <option>Ole Miss</option>
     <option>South Carolina</option>
     <option>Tennessee</option>
+    <option>Texas</option>
+    <option>Texas A&M</option>
     <option>Vanderbilt</option>
   </optgroup>
 
