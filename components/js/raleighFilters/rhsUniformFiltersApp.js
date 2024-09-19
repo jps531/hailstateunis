@@ -2,9 +2,9 @@ import * as sit from '../uniformGameFunctions.js';
 import * as wlt from '../tableFunctions.js';
 
 // Define Groups
-export var helmets = ["RHS Helmets","Lion Helmets","Number Helmets"];
+export var helmets = ["RHS Helmets","Lion Helmets","Number Helmets","Maroon Helmets","White Helmets"];
 export var jerseys = ["Maroon Jerseys","White Jerseys","Dark Gray Jerseys","Black Jerseys"];
-export var pants = ["Maroon Pants","White Pants","Dark Gray Pants","Light Gray Pants"];
+export var pants = ["Maroon Pants","White Pants","Dark Gray Pants","Light Gray Pants","Black Pants"];
 
 // Load Uniform Filters
 $(function(){ $("#rhsUniformA").selectpicker('render'); })

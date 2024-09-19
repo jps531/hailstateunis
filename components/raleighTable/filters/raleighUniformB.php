@@ -4,6 +4,8 @@
     <option>RHS Helmets</option>
     <option>Lion Helmets</option>
     <option>Number Helmets</option>
+    <option>Maroon Helmets</option>
+    <option>White Helmets</option>
   </optgroup>
   <optgroup label="Jerseys">
     <option>Maroon Jerseys</option>
@@ -16,6 +18,7 @@
     <option>White Pants</option>
     <option>Dark Gray Pants</option>
     <option>Light Gray Pants</option>
+    <option>Black Pants</option>
   </optgroup>
 </select>
 <button class="btn clear" id="rhsUniformBClear"><i class="fas fa-times-circle"></i></button>

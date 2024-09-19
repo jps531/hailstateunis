@@ -46,6 +46,14 @@ $(document).ready(function(){
         searchTerm = searchTerm.concat('|number');
     }
 
+    else if (this.value == 'Maroon Helmets'){
+        searchTerm = searchTerm.concat('|maroon');
+    }
+  
+    else if (this.value == 'White Helmets'){
+        searchTerm = searchTerm.concat('|white');
+    }
+
     else if (this.value == 'Maroon Jerseys'){
         searchTerm = searchTerm.concat('|maroon');
     }
@@ -76,6 +84,10 @@ $(document).ready(function(){
 
     else if (this.value == 'Light Gray Pants'){
         searchTerm = searchTerm.concat('|light gray');
+    }
+
+    else if (this.value == 'Black Pants'){
+        searchTerm = searchTerm.concat('|black');
     }
 
     // Helmets
@@ -133,6 +145,14 @@ $(document).ready(function(){
         searchTerm = searchTerm.concat('|number');
     }
 
+    else if (this.value == 'Maroon Helmets'){
+        searchTerm = searchTerm.concat('|maroon');
+    }
+  
+    else if (this.value == 'White Helmets'){
+        searchTerm = searchTerm.concat('|white');
+    }
+
     else if (this.value == 'Maroon Jerseys'){
         searchTerm = searchTerm.concat('|maroon');
     }
@@ -163,6 +183,10 @@ $(document).ready(function(){
 
     else if (this.value == 'Light Gray Pants'){
         searchTerm = searchTerm.concat('|light gray');
+    }
+
+    else if (this.value == 'Black Pants'){
+        searchTerm = searchTerm.concat('|black');
     }
 
     // Helmets
@@ -220,6 +244,14 @@ $(document).ready(function(){
         searchTerm = searchTerm.concat('|number');
     }
 
+    else if (this.value == 'Maroon Helmets'){
+        searchTerm = searchTerm.concat('|maroon');
+    }
+  
+    else if (this.value == 'White Helmets'){
+        searchTerm = searchTerm.concat('|white');
+    }
+
     else if (this.value == 'Maroon Jerseys'){
         searchTerm = searchTerm.concat('|maroon');
     }
@@ -250,6 +282,10 @@ $(document).ready(function(){
 
     else if (this.value == 'Light Gray Pants'){
         searchTerm = searchTerm.concat('|light gray');
+    }
+
+    else if (this.value == 'Black Pants'){
+        searchTerm = searchTerm.concat('|black');
     }
 
     // Helmets
