@@ -25,6 +25,7 @@
     <option>Sunday</option>
   </optgroup>
   <optgroup label="Head Coaches">
+    <option>Reed Stringer</option>
     <option>Will Hall</option>
     <option>Tim Billings</option>
     <option>Scotty Walden</option>
