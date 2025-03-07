@@ -5,7 +5,7 @@ import * as wlt from '../tableFunctions.js';
 export var gameType = ["Bowl Games", "C-USA Championship", "Home", "Road", "Neutral"];
 export var months = ["August","September","October","November","December","January"];
 export var days = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
-export var headCoaches = ["Jeff Bower","Larry Fedora","Ellis Johnson","Todd Monken","Jay Hopson","Scotty Walden","Tim Billings","Will Hall","Reed Stringer"];
+export var headCoaches = ["Jeff Bower","Larry Fedora","Ellis Johnson","Todd Monken","Jay Hopson","Scotty Walden","Tim Billings","Will Hall","Reed Stringer","Charles Huff"];
 
 // Load Game Type Filters
 $(function(){ $("#usmGameA").selectpicker('render'); })

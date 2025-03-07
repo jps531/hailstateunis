@@ -9,9 +9,11 @@
     <option>Kentucky</option>
     <option>LSU</option>
     <option>Missouri</option>
+    <option>Oklahoma</option>
     <option>Ole Miss</option>
     <option>South Carolina</option>
     <option>Tennessee</option>
+    <option>Texas</option>
     <option>Texas A&M</option>
     <option>Vanderbilt</option>
   </optgroup>
