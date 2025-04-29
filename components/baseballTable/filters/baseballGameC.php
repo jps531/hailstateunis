@@ -17,6 +17,7 @@
     <option>Sunday</option>
   </optgroup>
   <optgroup label="Head Coaches">
+    <option>Justin Parker</option>
     <option>Chris Lemonis</option>
     <option>Gary Henderson</option>
     <option>Andy Cannizaro</option>

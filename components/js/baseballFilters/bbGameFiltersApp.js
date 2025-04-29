@@ -4,7 +4,7 @@ import * as wlt from '../tableFunctions.js';
 // Define Groups
 export var months = ["February","March","April","May","June"];
 export var days = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
-export var headCoaches = ["Paul Gregory","Pat McMahon","Ron Polk","John Cohen","Andy Cannizaro","Gary Henderson","Chris Lemonis"];
+export var headCoaches = ["Paul Gregory","Pat McMahon","Ron Polk","John Cohen","Andy Cannizaro","Gary Henderson","Chris Lemonis","Justin Parker"];
 export var dh = ["Doubleheader"];
 export var sbw = ["Super Bulldog Weekend"];
 export var gameLocation = ["Home","Road","Neutral","Starkville","Omaha","Atlanta","Baton Rouge","Charlottesville","Clemson",
