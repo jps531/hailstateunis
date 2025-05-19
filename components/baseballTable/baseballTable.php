@@ -82,8 +82,8 @@
       if ($row["gameID"] == "156" || $row["gameID"] == "157" || $row["gameID"] == "158"){
         $headcoach = 'Andy Cannizaro';
       } 
-      else if ($row["gameID"] >= "2451" && $row["yr"] == "2025"){
-        $headcoach = 'Justin Parker';
+      else if ($row["gameID"] < "2451" && $row["yr"] == "2025"){
+        $headcoach = 'Chris Lemonis';
       }
       else{
         $headcoach = $row["head_coach"];
