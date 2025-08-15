@@ -16,7 +16,7 @@
     <!-- Title -->
     <div class="row titleTop">
       <div class="col-md text-center">
-        <img src="https://i.imgur.com/7y7zuN9.png" alt="Mississippi State Women's Basketball Uniform History" class="titleImage" width="600">
+        <img src="https://i.imgur.com/qUZfWfd.png" alt="Mississippi State Women's Basketball Uniform History" class="titleImage" width="600">
       </div>
     </div>
     <div class="row titleBottom">

@@ -80,6 +80,10 @@ $(document).ready(function(){
         searchTerm = searchTerm.concat('|flying m');
     }
 
+    else if (this.value == 'Interlocking MSU Helmets'){
+        searchTerm = searchTerm.concat('|interlocking');
+    }
+
     else if (this.value == 'M over S Helmets'){
         searchTerm = searchTerm.concat('|m over s');
     }
@@ -219,6 +223,10 @@ $(document).ready(function(){
         searchTerm = searchTerm.concat('|flying m');
     }
 
+    else if (this.value == 'Interlocking MSU Helmets'){
+        searchTerm = searchTerm.concat('|interlocking');
+    }
+
     else if (this.value == 'M over S Helmets'){
         searchTerm = searchTerm.concat('|m over s');
     }
@@ -356,6 +364,10 @@ $(document).ready(function(){
 
     else if (this.value == 'Flying M Helmets'){
         searchTerm = searchTerm.concat('|flying m');
+    }
+
+    else if (this.value == 'Interlocking MSU Helmets'){
+        searchTerm = searchTerm.concat('|interlocking');
     }
 
     else if (this.value == 'M over S Helmets'){

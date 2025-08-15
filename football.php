@@ -16,7 +16,7 @@
     <!-- Title -->
     <div class="row titleTop">
       <div class="col-md text-center">
-        <img src="https://i.imgur.com/S2GmKX1.png" alt="Mississippi State Football Uniform History" class="titleImage" width="550">
+        <img src="https://i.imgur.com/MsZh9ko.png" alt="Mississippi State Football Uniform History" class="titleImage" width="550">
       </div>
     </div>
     <div class="row titleBottom">
