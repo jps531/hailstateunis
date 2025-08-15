@@ -3,7 +3,7 @@ import * as wlt from '../tableFunctions.js';
 
 // Define Groups
 export var alternates = ["All Alternates","Egg Bowl Alternates"];
-export var helmets = ["Maroon Helmets","Gloss Maroon Helmets","Matte Maroon Helmets","White Helmets","Silver Helmets","Black Helmets","Gold Helmets","Bulldog Helmets","Flying M Helmets","M over S Helmets","Script State Helmets"];
+export var helmets = ["Maroon Helmets","Gloss Maroon Helmets","Matte Maroon Helmets","White Helmets","Silver Helmets","Black Helmets","Gold Helmets","Bulldog Helmets","Flying M Helmets","M over S Helmets","Interlocking MSU Helmets","Script State Helmets"];
 export var jerseys = ["Maroon Jerseys","White Jerseys","Black Jerseys","Gray Jerseys"];
 export var pants = ["White Pants","Maroon Pants","Black Pants","Gray Pants","Silver Pants"];
 export var patches = ["DWS 100","Nick Bell"];
