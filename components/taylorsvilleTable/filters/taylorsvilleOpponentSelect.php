@@ -14,8 +14,8 @@
     // output data of each row
     if ($result->num_rows > 0) {
       $currentConference = "";
-      $oneAdistrictSeven = array("7-1A");
-      $oneAsouth = array("5-1A", "6-1A", "8-1A");
+      $oneAdistrictEight = array("8-1A");
+      $oneAsouth = array("5-1A", "6-1A", "7-1A");
       $oneAnorth = array("1A North");
       $twoAsouth = array("2A South");
       $twoAnorth = array("2A North");
@@ -26,7 +26,7 @@
       while($row = $result->fetch_assoc()) {
         array_push($rows, $row);
       }
-      conferenceLoop($oneAdistrictSeven, $rows);
+      conferenceLoop($oneAdistrictEight, $rows);
       conferenceLoop($oneAsouth, $rows);
       conferenceLoop($oneAnorth, $rows);
       conferenceLoop($twoAsouth, $rows);

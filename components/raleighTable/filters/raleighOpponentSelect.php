@@ -14,9 +14,12 @@
     // output data of each row
     if ($result->num_rows > 0) {
       $currentConference = "";
-      $twoAdistrictSix = array("6-2A");
-      $twoAsouth = array("5-2A", "7-2A", "8-2A");
-      $otherAs = array("1A", "3A", "4A", "5A", "6A", "7A");
+      $threeAdistrictSix = array("6-3A");
+      $threeAsouth = array("5-3A", "7-3A", "8-3A");
+      $threeAnorth = array("3A North");
+      $twoAsouth = array("2A South");
+      $twoAnorth = array("2A North");
+      $otherAs = array("1A", "4A", "5A", "6A", "7A");
       $mais = array("MAIS");
       $outOfState = array("Out of State");
       $defunct = array("Defunct");
@@ -24,7 +27,9 @@
       while($row = $result->fetch_assoc()) {
         array_push($rows, $row);
       }
-      conferenceLoop($twoAdistrictSix, $rows);
+      conferenceLoop($threeAdistrictSix, $rows);
+      conferenceLoop($threeAsouth, $rows);
+      conferenceLoop($threeAnorth, $rows);
       conferenceLoop($twoAsouth, $rows);
       conferenceLoop($twoAnorth, $rows);
       conferenceLoop($otherAs, $rows);
