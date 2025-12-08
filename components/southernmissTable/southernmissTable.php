@@ -76,6 +76,9 @@
       else if ($row["gameID"] == "272" || $row["gameID"] == "273" || $row["gameID"] == "274" || $row["gameID"] == "275" || $row["gameID"] == "276" || $row["gameID"] == "277"){
         $headcoach = 'Reed Stringer';
       }
+      else if ($row["gameID"] == "289"){
+        $headcoach = 'Blake Anderson';
+      }
       else{
         $headcoach = $row["head_coach"];
       }
