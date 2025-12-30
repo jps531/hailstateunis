@@ -1,14 +1,14 @@
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="modal" data-target="#taylorsvilleModalCenter">
+<button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="modal" data-target="#southernMissModalCenter">
   About
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="taylorsvilleModalCenter" tabindex="-1" role="dialog" aria-labelledby="taylorsvilleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="southernMissModalCenter" tabindex="-1" role="dialog" aria-labelledby="southernMissModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
     <div class="modal-content">
       <div class="modal-header justify-content-center">
-        <h5 class="modal-title" id="taylorsvilleModalLongTitle">About the Taylorsville Football Uniform History Table</h5>
+        <h5 class="modal-title" id="southernMissModalLongTitle">About the Southern Miss Football Uniform History Table</h5>
       </div>
       <div class="modal-body">
         <div class = "text-left">
