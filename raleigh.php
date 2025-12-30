@@ -21,7 +21,7 @@
     </div>
     <div class="row titleBottom">
       <div class="col-md text-center">
-        <?php include "components/raleighTable/RaleighAboutModal.php"; ?>
+        <?php include "components/raleighTable/raleighAboutModal.php"; ?>
       </div>
     </div>
 

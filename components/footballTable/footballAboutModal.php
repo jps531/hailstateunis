@@ -16,11 +16,7 @@
                 and in every bowl game in program history, four of which were prior to 1980.</p>
             <p>Every game from 2012 to 2020 expands with a link to the corresponding HailStateUnis.com blog post. 
                 Blog posts from 2016 to 2020 contain full articles with commentary on that game's uniform choice.</p>
-            <p>I feel very confident in the accuracy of the combinations listed in this table, with the exception of 1986-1988. 
-                In those years, particularly in 1987 and 1988, I've been told that State wore both silver and white pants. 
-                It's very difficult, just looking at old photographs, to tell the difference between those two pants colors. 
-                So I did the best I could, taking input from some people who were alive to see some of those games. 
-                I imagine there are a couple games off, but it's as accurate as I could get it for now.</p>
+            <p>I feel very confident in the accuracy of the combinations listed in this table. However, please let me know via the "Report an Issue" button if you see anything off.</p>
         </div>
         <div class="container">
           <img src="https://i.imgur.com/URO6CiG.png" width="45" alt="" class="d-inline-block align-middle mr-3">

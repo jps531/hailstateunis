@@ -36,6 +36,8 @@
     <option>Ellis Johnson</option>
     <option>Larry Fedora</option>
     <option>Jeff Bower</option>
+    <option>Curley Hallman</option>
+    <option>Jim Carmody</option>
   </optgroup>
 </select>
 <button class="btn clear" id="usmGameBClear"><i class="fas fa-times-circle"></i></button>
