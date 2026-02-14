@@ -18,7 +18,7 @@
           echo "</optgroup>";
         }
         $currentHC = $row["head_coach"];
-        echo "<optgroup label='" . $currentHC . "'>";
+        echo '<optgroup label="' . htmlspecialchars($currentHC, ENT_QUOTES, 'UTF-8') . '">';
       }
       echo "<option>" . $row["yr"] . "</option>";
     }
