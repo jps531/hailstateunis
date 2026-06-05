@@ -105,6 +105,9 @@
       else if (strpos($row["location"], "Starkville") !== false){
         $typeBadge = "' style='background-color: #431724; color: white;'>";
       }
+      else if (strpos($row["location"], "Athens") !== false){
+        $typeBadge = "' style='background-color: #ba0d2f; color: white;'>";
+      }
       else if (strpos($row["location"], "Nashville") !== false){
         $typeBadge = "' style='background-color: #b8a160; color: black;'>";
       }
